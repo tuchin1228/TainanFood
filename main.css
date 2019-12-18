@@ -56,9 +56,16 @@ strong {
 }
 
 
+.banner img{
+    width: 100%;
+    border:1px black solid;
+    margin-top: 2%;
+}
+
+
 .areanav{
     width: 100%;
-   
+    margin: 3% auto;
 }
 .areanav ul{
     border-top: 1px #8FD8D2 solid;
@@ -192,5 +199,6 @@ strong {
     background-color: #e0f5b9;
 }
 .modal-body{
-    background-color:#c6f1d6
+    background-color:#c6f1d6;
+    -webkit-overflow-scrolling: touch;
 }

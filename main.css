@@ -1,0 +1,196 @@
+/*Reset*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+    display: block;
+}
+body {
+    line-height: 1;
+}
+ol, ul {
+    list-style: none;
+}
+blockquote, q {
+    quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+    content: '';
+    content: none;
+}
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+button:focus{
+    outline:none;
+}
+h1 { font-size: 24px;}
+h2 { font-size: 22px;}
+h3 { font-size: 18px;}
+h4 { font-size: 16px;}
+h5 { font-size: 12px;}
+h6 { font-size: 10px;}
+strong {
+  font-weight: bold;
+}
+
+
+.areanav{
+    width: 100%;
+   
+}
+.areanav ul{
+    border-top: 1px #8FD8D2 solid;
+    border-bottom: 1px #8FD8D2 solid;
+}
+.areanav ul li{
+   /*margin: auto 1% !important;*/
+
+}
+.nav-link{
+    padding:10px 91.8px !important;
+    color: #ff8080;
+    font-family: Microsoft JhengHei;
+    font-weight: bold;
+}
+.nav-link:hover{
+    color: #ffba92 !important;
+    
+}
+.areanav .nav .active{
+    transition: .3s;
+    background-color: #8FD8D2 !important;
+    color: rgb(255, 255, 255);
+   
+    border-radius: 0;
+}
+
+.areabtn{
+    width:100%;
+    text-align: center;
+}
+.navbar-toggler{
+    width: 150px;
+    margin-bottom:1% ;
+}
+.setarea{
+    width: 100%;
+    padding: 5%;
+    color: rgb(109, 207, 199);
+    font-family: Microsoft JhengHei;
+}
+.card{
+    padding: 1% 1% 0 1%  ;
+    border-color: #FEDCD2;
+    background-color: rgb(255, 255, 255);
+}
+.card-title{
+    font-family: Microsoft JhengHei;
+    color:rgb(83, 83, 83);
+}
+.card-text{
+    height:90px;
+    font-size: 14px;
+    font-family: Microsoft JhengHei;
+    line-height:18px;
+    color:rgb(102, 102, 102);
+    text-align: justify;
+}
+.card-deck ul{
+    border: none;
+    text-align: center;
+    font-family: Microsoft JhengHei;
+}
+.card-deck ul li:first-child{
+    border-bottom: none;
+}
+.card-deck ul li{
+    border-color:#FEDCD2 ;
+}
+.card-deck ul li:hover{
+    background-color: rgb(255, 203, 106);
+    border-radius: 5px;
+    transition: .3s;
+}
+
+.card-deck ul li a{
+    text-decoration: none;
+    color: #ff8080!important;
+    padding: 5% 10% ;
+    font-weight: bold;
+}
+
+.card-deck .card img{
+    border-radius: 5px;
+}
+
+.modal-content img{
+    width:70%;
+}
+.intro{
+    text-align: left;
+    margin:2% 5%;
+    font-family:  Microsoft JhengHei;
+}
+
+.intro p{
+    margin: 2% 3%;
+    line-height: 25px;
+    font-size: 11pt;
+    text-align: justify;
+    
+}
+
+.map span{
+    text-align: center;
+    font-family:  Microsoft JhengHei;
+    font-weight: bold;
+   
+}
+
+
+
+.maprwd {
+    position: relative;
+    overflow: hidden; 
+    height: 0; 
+    padding: 0;
+    padding-bottom: 75%;
+}
+    
+.maprwd iframe {
+    position: absolute;
+    height: 100%; 
+    width: 100%;
+    left: 0;
+    top:10px;
+    
+}
+
+.modal-header{
+    background-color: #e0f5b9;
+}
+.modal-body{
+    background-color:#c6f1d6
+}

@@ -15,7 +15,7 @@ time, mark, audio, video {
     margin: 0;
     padding: 0;
     border: 0;
-    font-size: 100%;
+    font-size: 12pt;
     font: inherit;
     vertical-align: baseline;
 }
@@ -55,14 +55,33 @@ strong {
   font-weight: bold;
 }
 
-
+.banner {
+    text-align: center;
+}
 .banner img{
-    width: 100%;
-    border:1px black solid;
+    width: 30%;
+    
     margin-top: 2%;
 }
+@media screen and (max-width: 320px){
+    body{
+       
+    }
+}
+@media screen and (max-width:425 px) and (min-width:320px){
+    body{
+      
+    }
+}
 
-
+.sectiontitle{
+    text-align: center;
+    font-family: Microsoft JhengHei;
+    font-size: 25pt;
+    font-weight: bolder;
+    color: rgb(248, 112, 112);
+    margin-bottom: 2%;
+}
 .areanav{
     width: 100%;
     margin: 3% auto;
@@ -71,21 +90,18 @@ strong {
     border-top: 1px #8FD8D2 solid;
     border-bottom: 1px #8FD8D2 solid;
 }
-.areanav ul li{
-   /*margin: auto 1% !important;*/
 
-}
-.nav-link{
+.nav-bar .nav-link{
     padding:10px 91.8px !important;
     color: #ff8080;
     font-family: Microsoft JhengHei;
     font-weight: bold;
 }
-.nav-link:hover{
+.nav-bar .nav-link:hover{
     color: #ffba92 !important;
     
 }
-.areanav .nav .active{
+.areanav .nav .active , .land .nav-bar .nav .active{
     transition: .3s;
     background-color: #8FD8D2 !important;
     color: rgb(255, 255, 255);
@@ -107,61 +123,61 @@ strong {
     color: rgb(109, 207, 199);
     font-family: Microsoft JhengHei;
 }
-.card{
+.areanav .card{
     padding: 1% 1% 0 1%  ;
     border-color: #FEDCD2;
     background-color: rgb(255, 255, 255);
 }
-.card-title{
+.areanav .card-title{
     font-family: Microsoft JhengHei;
     color:rgb(83, 83, 83);
 }
-.card-text{
-    height:90px;
+.areanav .card-text{
+    height:80px;
     font-size: 14px;
     font-family: Microsoft JhengHei;
     line-height:18px;
     color:rgb(102, 102, 102);
     text-align: justify;
 }
-.card-deck ul{
+.areanav .card-deck ul{
     border: none;
     text-align: center;
     font-family: Microsoft JhengHei;
 }
-.card-deck ul li:first-child{
+.areanav .card-deck ul li:first-child{
     border-bottom: none;
 }
-.card-deck ul li{
+.areanav .card-deck ul li{
     border-color:#FEDCD2 ;
 }
-.card-deck ul li:hover{
+.areanav .card-deck ul li:hover{
     background-color: rgb(255, 203, 106);
     border-radius: 5px;
     transition: .3s;
 }
 
-.card-deck ul li a{
+.areanav .card-deck ul li a{
     text-decoration: none;
     color: #ff8080!important;
     padding: 5% 10% ;
     font-weight: bold;
 }
 
-.card-deck .card img{
+.areanav .card-deck .card img{
     border-radius: 5px;
 }
 
-.modal-content img{
+.areanav .modal-content img{
     width:70%;
 }
-.intro{
+.areanav .intro{
     text-align: left;
     margin:2% 5%;
     font-family:  Microsoft JhengHei;
 }
 
-.intro p{
+.areanav .intro p{
     margin: 2% 3%;
     line-height: 25px;
     font-size: 11pt;
@@ -169,16 +185,14 @@ strong {
     
 }
 
-.map span{
+.areanav .map span{
     text-align: center;
     font-family:  Microsoft JhengHei;
     font-weight: bold;
    
 }
 
-
-
-.maprwd {
+.areanav .maprwd {
     position: relative;
     overflow: hidden; 
     height: 0; 
@@ -186,7 +200,7 @@ strong {
     padding-bottom: 75%;
 }
     
-.maprwd iframe {
+.areanav .maprwd iframe {
     position: absolute;
     height: 100%; 
     width: 100%;
@@ -195,10 +209,169 @@ strong {
     
 }
 
-.modal-header{
+.areanav .modal-header{
     background-color: #e0f5b9;
 }
-.modal-body{
+.areanav .modal-body{
     background-color:#c6f1d6;
-    -webkit-overflow-scrolling: touch;
+    
+}
+
+.activegroup{
+    margin-top:1% ;
+    margin-bottom: 5%;
+}
+
+.activegroup img{
+    width: 100%;
+    transition: .3s;
+}
+.activegroup a{
+    text-decoration: none;
+    font-family:  Microsoft JhengHei;
+    font-weight: bold;
+    color: #ff8080;
+    line-height: 20px;
+    padding: 1%;
+    text-align: center;
+    border: 2px #FEDCD2 solid;
+    
+}
+
+
+.activegroup a:hover{
+    border: 2px #8FD8D2 solid;
+    color:rgb(90, 182, 174);
+    transition: .3s;
+    transform: scale(1.2);
+}
+/*
+.imgbox{
+    width:100%;
+    overflow: hidden;
+}
+.activegroup img:hover{
+    transform: scale(1.4);
+}*/
+.activegroup .area .card-title{
+    margin: 2% 0 0 0 ; 
+}
+
+
+.land .nav-bar ul{
+    border-top: 1px #8FD8D2 solid;
+    border-bottom: 1px #8FD8D2 solid;
+}
+
+.landgroup{
+    margin-top:1% ;
+    margin-bottom: 5%;
+    font-family:  Microsoft JhengHei;
+    
+}
+.landgroup .card {
+    border: none;
+    overflow:hidden;
+}
+.landgroup .card .imgbox{
+    width:100%;
+    height:100%;
+}
+.landgroup .card:hover{
+    box-shadow: 0 0 10px rgb(226, 164, 123);
+}
+.landgroup .card .imgbox img:hover{
+    
+    transition: .5s;
+    transform: scale(1.2);
+}
+
+.land .tab-content .modal .modal-body .nav .active {
+    color: rgb(12, 95, 16);
+    font-weight: bold;
+    background-color: #fff8b6;
+    font-family:  Microsoft JhengHei;
+    font-size: 13pt;
+}
+.land .tab-content .modal .modal-body .nav a{
+    color:rgb(3, 145, 97);
+    
+    font-family:  Microsoft JhengHei;
+}
+
+
+.land .tab-content .modal .modal-body .nav-link {
+   padding: .5rem 10.9rem !important;
+}
+
+@media screen and (max-width: 990px) and (min-width:515px){
+    .land .tab-content .modal .modal-body .nav-link {
+        padding: .5rem 6.2rem !important;
+     }
+}
+@media screen and (max-width: 514px) and (min-width:425px){
+    .land .tab-content .modal .modal-body .nav-link {
+        padding: .5rem 4.7rem !important;
+     }
+}
+@media screen and (max-width: 424px) and (min-width:375px){
+    .land .tab-content .modal .modal-body .nav-link {
+        padding: .5rem 4rem !important;
+     }
+}
+@media screen and (max-width: 374px) {
+    .land .tab-content .modal .modal-body .nav-link {
+        padding: .5rem 3rem !important;
+     }
+}
+
+.land .modal  .tab-content {
+    text-align: center;
+}
+.land .modal  .tab-content .intro{
+    text-align: left;
+    margin:2% 5%;
+}
+.land .modal  .tab-content .intro p {
+    margin: 2% 3%;
+}
+.land .modal img{
+   width:85%;
+   margin-top: 2%;
+   border-radius: 5px;
+}
+
+.land .modal .modal-header{
+    background-color: #e0f5b9;
+}
+.land .modal .modal-body{
+    background-color: #c6f1d6;
+}
+.land .modal .modal-body ul{
+    border-color: rgb(240, 182, 128) ;
+}
+.land .modal .modal-body ul a{
+    border: none !important;
+}
+
+
+
+
+.land .tab-content .tab-pane .modal .modal-body  .maprwd {
+    position: relative;
+    overflow: hidden; 
+    height: 0; 
+    padding: 0;
+    padding-bottom: 68.9%;
+    
+}
+    
+
+.land .tab-content .tab-pane .modal .modal-body .maprwd iframe {
+    position: absolute;
+    height: 100%; 
+    width: 100%;
+    left: 0;
+    top:15px;
+    
 }

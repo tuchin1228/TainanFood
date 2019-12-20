@@ -82,28 +82,38 @@ strong {
     color: rgb(248, 112, 112);
     margin-bottom: 2%;
 }
-.areanav{
-    width: 100%;
-    margin: 3% auto;
+.activity .sectiontitle{
+    padding-top: 15%;
 }
-.areanav ul{
-    border-top: 1px #8FD8D2 solid;
-    border-bottom: 1px #8FD8D2 solid;
+.land .sectiontitle{
+    padding-top: 25%;
 }
 
-.nav-bar .nav-link{
+.areanav{
+    width: 100%;
+    padding: 10%;
+    background-image: url("img/background2.jpg");
+   
+    background-size: cover;
+    background-attachment: fixed;
+}
+.areanav ul{
+    border-top: 1px rgb(255, 200, 248) solid;
+    border-bottom: 1px rgb(255, 200, 248) solid;
+}
+
+.areanav .nav-bar .nav-link{
     padding:10px 91.8px !important;
-    color: #ff8080;
+    color: #ff4885;
     font-family: Microsoft JhengHei;
     font-weight: bold;
 }
-.nav-bar .nav-link:hover{
-    color: #ffba92 !important;
-    
+.areanav .nav-bar .nav-link:hover{
+    color: #ffdac5 !important;
 }
-.areanav .nav .active , .land .nav-bar .nav .active{
+.areanav .nav .active {
     transition: .3s;
-    background-color: #8FD8D2 !important;
+    background-color: rgb(255, 200, 248) !important;
     color: rgb(255, 255, 255);
    
     border-radius: 0;
@@ -117,16 +127,16 @@ strong {
     width: 150px;
     margin-bottom:1% ;
 }
-.setarea{
+.areanav .setarea{
     width: 100%;
     padding: 5%;
-    color: rgb(109, 207, 199);
+    color: rgb(255, 140, 221);
     font-family: Microsoft JhengHei;
 }
 .areanav .card{
     padding: 1% 1% 0 1%  ;
-    border-color: #FEDCD2;
-    background-color: rgb(255, 255, 255);
+    border:2px rgba(255, 172, 200, 0.733) solid;
+    background-color:transparent !important;
 }
 .areanav .card-title{
     font-family: Microsoft JhengHei;
@@ -156,10 +166,20 @@ strong {
     border-radius: 5px;
     transition: .3s;
 }
+.areanav .tab-content .card-deck .card ul li {
+    background-color: transparent !important;
+  
+}
+
+.areanav .tab-content .card-deck .card ul li:hover {
+    background-color: rgba(255, 255, 255, 0.603) !important;
+    transition: .5s;
+}
 
 .areanav .card-deck ul li a{
     text-decoration: none;
     color: #ff8080!important;
+
     padding: 5% 10% ;
     font-weight: bold;
 }
@@ -217,9 +237,20 @@ strong {
     
 }
 
+
+
+.activity{
+    background-image:url("img/background1.jpg");
+    background-attachment: fixed;
+
+}
 .activegroup{
     margin-top:1% ;
-    margin-bottom: 5%;
+    
+    padding-bottom: 15%;
+}
+.activity .card-deck .card{
+    background-color: transparent!important;
 }
 
 .activegroup img{
@@ -234,16 +265,15 @@ strong {
     line-height: 20px;
     padding: 1%;
     text-align: center;
-    border: 2px #FEDCD2 solid;
+    border: none;
     
 }
 
-
 .activegroup a:hover{
-    border: 2px #8FD8D2 solid;
+    /*border: 2px #8FD8D2 solid;*/
     color:rgb(90, 182, 174);
     transition: .3s;
-    transform: scale(1.2);
+    transform: scale(1.1);
 }
 /*
 .imgbox{
@@ -257,17 +287,45 @@ strong {
     margin: 2% 0 0 0 ; 
 }
 
+.land{
+    background-image: url("img/background3.jpg");
+    background-size: cover;
+    background-attachment: fixed;
+}
+.land .setarea{
+    width: 100%;
+    padding: 5%;
+    color: rgb(255, 159, 103);
+    font-family: Microsoft JhengHei;
+}
 
 .land .nav-bar ul{
-    border-top: 1px #8FD8D2 solid;
-    border-bottom: 1px #8FD8D2 solid;
+    border-top: 1px rgb(255, 133, 96) solid;
+    border-bottom: 1px rgb(255, 133, 96) solid;
+}
+
+.land .nav-bar .nav-link{
+    padding:10px 91.8px !important;
+    color: #ff8080;
+    font-family: Microsoft JhengHei;
+    font-weight: bold;
+}
+.land .nav-bar .nav .active{
+    transition: .3s;
+    background-color: rgb(255, 133, 96)!important;
+    color: rgb(255, 255, 255);
+   
+    border-radius: 0;
+}
+.land .nav-bar .nav-link:hover{
+    color: #ff6022 !important;
 }
 
 .landgroup{
     margin-top:1% ;
-    margin-bottom: 5%;
-    font-family:  Microsoft JhengHei;
     
+    font-family:  Microsoft JhengHei;
+    padding-bottom: 25%;
 }
 .landgroup .card {
     border: none;
@@ -278,7 +336,7 @@ strong {
     height:100%;
 }
 .landgroup .card:hover{
-    box-shadow: 0 0 10px rgb(226, 164, 123);
+    box-shadow: 0 0 10px rgb(255, 176, 103);
 }
 .landgroup .card .imgbox img:hover{
     
@@ -329,10 +387,11 @@ strong {
     text-align: center;
 }
 .land .modal  .tab-content .intro{
-    text-align: left;
+    
     margin:2% 5%;
 }
 .land .modal  .tab-content .intro p {
+    text-align: left;
     margin: 2% 3%;
 }
 .land .modal img{
@@ -366,7 +425,6 @@ strong {
     
 }
     
-
 .land .tab-content .tab-pane .modal .modal-body .maprwd iframe {
     position: absolute;
     height: 100%; 
@@ -375,3 +433,5 @@ strong {
     top:15px;
     
 }
+
+

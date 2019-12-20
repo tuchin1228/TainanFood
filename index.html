@@ -11,21 +11,24 @@
     <!--My CSS-->
     <link rel="stylesheet" href="main.css" />
     
-    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.0"></script>
-
-    <script type="text/javascript" src="main.js"></script>
+   
+    
 
 </head>
 <body>
-    <section class="container-fluid logo">Logo</section>
 
-    <section class="container banner" id="ban">
+
+    <!-- <section class="container banner" id="ban">
       <img src="youtubeback.jpg">
    
-    </section>
+    </section> -->
 
     <section class="container-fluid areanav">
+      
       <div class="container">
+            <div class="banner">
+              <img src="banner.jpg">
+            </div>
             <div class="sectiontitle"> 
               <span>美食報報</span>
             </div>
@@ -59,7 +62,7 @@
         <div class="tab-content" id="pills-tabContent">
             <div class="tab-pane fade  active show" id="pills-west" role="tabpanel" aria-labelledby="pills-home-tab">
                 <div class="card-deck ">
-                    <div class="card">
+                    <div class="card ">
                       <img src="img/west1.jpg" class="card-img-top " alt="...">
                       <div class="card-body">
                         <h3 class="card-title"><strong>鼎富發</strong></h3>
@@ -120,7 +123,7 @@
                       </ul>
                     </div>
 
-                    <div class="card">
+                    <div class="card ">
                       <img src="img/west2.jpg" class="card-img-top" alt="...">
                       <div class="card-body">
                         <h3 class="card-title"><strong>福記肉圓</strong></h3>
@@ -1342,6 +1345,7 @@
 
     <section class="container-fluid land">
       <div class="container">
+
         <div class="sectiontitle"> 
           <span>景點報報</span>
         </div>
@@ -1371,24 +1375,70 @@
                   <a class="nav-link" id="pills-anpingland-tab" data-toggle="pill" href="#pills-anpingland" role="tab" aria-controls="pills-anpingland" aria-selected="false">安平區</a>
               </li>
           </ul>
-      </div>
+        </div>
 
-      <div class="tab-content" id="pills-tabContent">
-        <div class="tab-pane fade show active" id="pills-westland" role="tabpanel" aria-labelledby="pills-home-tab">
-              <div class="landgroup card-deck">
+        <div class="tab-content" id="pills-tabContent">
+          <div class="tab-pane fade show active" id="pills-westland" role="tabpanel" aria-labelledby="pills-home-tab">
+                <div class="landgroup card-deck">
 
-                <a class="land card"  href="" data-toggle="modal" data-target="#westonelandModal">
-                  <div class="imgbox">
-                    <img src="img/landwest1.jpg" class="card-img-top" alt="...">
-                  </div>  
-                </a>
-                 <!-- Modal -->
-                 <div class="modal fade" id="westonelandModal" >
+                  <a class="land card"  href="" data-toggle="modal" data-target="#westonelandModal">
+                    <div class="imgbox">
+                      <img src="img/landwest1.jpg" class="card-img-top" alt="...">
+                    </div>  
+                  </a>
+                  <!-- Modal -->
+                  <div class="modal fade" id="westonelandModal" >
+                      <div class="modal-dialog modal-lg modal-dialog-centered">
+                          <!-- Modal Content -->
+                          <div class="modal-content">
+                              <div class="modal-header">
+                                  <h3 class="modal-title" id="westonelandModalTitle"><strong>景點介紹</strong></h3>
+                                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                      <span aria-hidden="true">&times;</span>
+                                  </button>
+                              </div>
+                              <div class="modal-body">
+
+                                <ul class="nav nav-tabs" id="myTab" role="tablist">
+                                  <li class="nav-item">
+                                    <a class="nav-link active" id="westlandintroone-tab" data-toggle="tab" href="#westlandintroone" role="tab" aria-controls="westlandintroone" aria-selected="true"><span>介紹</span></a>
+                                  </li>
+                                  <li class="nav-item">
+                                    <a class="nav-link" id="westlandmapone-tab" data-toggle="tab" href="#westlandmapone" role="tab" aria-controls="westlandmapone" aria-selected="false"><span>地圖</span></a>
+                                  </li>
+                                </ul>
+                                <div class="tab-content" id="myTabContent">
+                                  <div class="tab-pane fade show active" id="westlandintroone" role="tabpanel" aria-labelledby="westlandintroone-tab">
+                                      <img src="img/landwest1-2.jpg">
+                                      <div class="intro">
+                                          <span><h3><strong>藍晒圖文創園區</strong></h3></span>
+                                          <p>位於西門路與國華街間的新昌里舊司法宿舍群，部分為日治時期興建之木造日式建築，部分是民國51年所建的老式連排宿舍，此區域舊稱為「第一司法新村」，是當時臺南監獄、臺南看守所、高等法院臺南分院及高檢署之員工宿舍。
+  
+                                            司法新村歷經五十年的變遷，隨著居民之搬遷以及鄰近街道興起，附近高樓大廈林立，在大幅整修之前，多數空屋早已被攀藤植物與榕樹氣根吞噬屋角與紅磚牆面，破敗傾頹、呈現深具歷史痕跡的時代變遷。為保存空間記憶、活化城市空間，賦予老舊宿舍新生命並連結臺南文創產業及老屋再利用的風潮，臺南市政府整合地主國有財產署以及地上權所有者南監及院檢等意見，予以修復轉型活化，搭配「3D藍晒圖裝置藝術」，並融合原有的老樹、紅磚、綠蔭、新創與藝術等特質，在眾多優質文創品牌業者與創意人才的進駐後，使「藍晒圖文創園區」成為臺南市最重要的文創聚落。</p>
+                                      </div>
+                                  </div>
+                                  <div class="tab-pane fade maprwd" id="westlandmapone" role="tabpanel" aria-labelledby="westlandmapone-tab">
+                                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3672.997974002248!2d120.19515671474467!3d22.987101984971076!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x346e767bd141b7b5%3A0x58fa83c5a93881d4!2z6JeN5pmS5ZyW5paH5Ym15ZyS5Y2A!5e0!3m2!1szh-TW!2stw!4v1576759981231!5m2!1szh-TW!2stw" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
+                                  </div>
+                                </div>
+                            </div>
+                        </div>
+                      </div>
+                    </div>
+
+
+                  <a class="land card"  href=""  data-toggle="modal" data-target="#westtwolandModal">
+                    <div class="imgbox">
+                      <img src="img/landwest2.jpg" class="card-img-top" alt="...">
+                    </div>  
+                  </a>
+                  <!-- Modal -->
+                  <div class="modal fade" id="westtwolandModal" >
                     <div class="modal-dialog modal-lg modal-dialog-centered">
                         <!-- Modal Content -->
                         <div class="modal-content">
                             <div class="modal-header">
-                                <h3 class="modal-title" id="westonelandModalTitle"><strong>景點介紹</strong></h3>
+                                <h3 class="modal-title" id="westtwolandModalTitle"><strong>景點介紹</strong></h3>
                                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                                     <span aria-hidden="true">&times;</span>
                                 </button>
@@ -1397,23 +1447,118 @@
 
                               <ul class="nav nav-tabs" id="myTab" role="tablist">
                                 <li class="nav-item">
-                                  <a class="nav-link active" id="westlandintroone-tab" data-toggle="tab" href="#westlandintroone" role="tab" aria-controls="westlandintroone" aria-selected="true"><span>介紹</span></a>
+                                  <a class="nav-link active" id="westlandintrotwo-tab" data-toggle="tab" href="#westlandintrotwo" role="tab" aria-controls="westlandintrotwo" aria-selected="true"><span>介紹</span></a>
                                 </li>
                                 <li class="nav-item">
-                                  <a class="nav-link" id="westlandmapone-tab" data-toggle="tab" href="#westlandmapone" role="tab" aria-controls="westlandmapone" aria-selected="false"><span>地圖</span></a>
+                                  <a class="nav-link" id="westlandmaptwo-tab" data-toggle="tab" href="#westlandmaptwo" role="tab" aria-controls="westlandmaptwo" aria-selected="false"><span>地圖</span></a>
                                 </li>
                               </ul>
+                              
                               <div class="tab-content" id="myTabContent">
-                                <div class="tab-pane fade show active" id="westlandintroone" role="tabpanel" aria-labelledby="westlandintroone-tab">
-                                    <img src="img/landwest1-2.jpg">
+                                <div class="tab-pane fade show active" id="westlandintrotwo" role="tabpanel" aria-labelledby="westlandintrotwo-tab">
+                                    <img src="img/landwest2-2.jpg">
                                     <div class="intro">
-                                        <span><h3><strong>藍晒圖文創園區</strong></h3></span>
-                                        <p>intro</p>
+                                        <span><h3><strong>臺南市美術館2館</strong></h3></span>
+                                        <p>本館兩座建築分別為具古蹟身份的原臺南警察署，以及於公11基地上興建當代性建築，是由石昭永建築師及日本坂茂建築設計事務所共同設計建造。兩館所在區域富含深厚文化底蘊，新舊建築的重生與興起，為該區域融入藝術資源與創造互動，亦期盼作為臺南藝術發散與收攏的實驗基地。</p>
                                     </div>
                                 </div>
-                                <div class="tab-pane fade maprwd" id="westlandmapone" role="tabpanel" aria-labelledby="westlandmapone-tab">
-                                  <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3672.997974002248!2d120.19515671474467!3d22.987101984971076!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x346e767bd141b7b5%3A0x58fa83c5a93881d4!2z6JeN5pmS5ZyW5paH5Ym15ZyS5Y2A!5e0!3m2!1szh-TW!2stw!4v1576759981231!5m2!1szh-TW!2stw" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
+
+                                <div class="tab-pane fade maprwd" id="westlandmaptwo" role="tabpanel" aria-labelledby="westlandmaptwo-tab">
+                                  <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1544.2693493750617!2d120.20034496913442!3d22.990256060572587!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xae220201100c4e66!2z6Ie65Y2X5biC576O6KGT6aSoMumkqA!5e0!3m2!1szh-TW!2stw!4v1576767581873!5m2!1szh-TW!2stw" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
                                 </div>
+
+                              </div>
+                          </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <a class="land card"  href=""  data-toggle="modal" data-target="#westthreelandModal">
+                    <div class="imgbox">
+                      <img src="img/landwest3.jpg" class="card-img-top" alt="...">
+                    </div>  
+                  </a>
+                  <!-- Modal -->
+                  <div class="modal fade" id="westthreelandModal" >
+                    <div class="modal-dialog modal-lg modal-dialog-centered">
+                        <!-- Modal Content -->
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h3 class="modal-title" id="westthreelandModalTitle"><strong>景點介紹</strong></h3>
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                            </div>
+                            <div class="modal-body">
+
+                              <ul class="nav nav-tabs" id="myTab" role="tablist">
+                                <li class="nav-item">
+                                  <a class="nav-link active" id="westlandintrothree-tab" data-toggle="tab" href="#westlandintrothree" role="tab" aria-controls="westlandintrothree" aria-selected="true"><span>介紹</span></a>
+                                </li>
+                                <li class="nav-item">
+                                  <a class="nav-link" id="westlandmapthree-tab" data-toggle="tab" href="#westlandmapthree" role="tab" aria-controls="westlandmapthree" aria-selected="false"><span>地圖</span></a>
+                                </li>
+                              </ul>
+                              
+                              <div class="tab-content" id="myTabContent">
+                                <div class="tab-pane fade show active" id="westlandintrothree" role="tabpanel" aria-labelledby="westlandintrothree-tab">
+                                    <img src="img/landwest3-2.jpg">
+                                    <div class="intro">
+                                        <span><h3><strong>司法博物館</strong></h3></span>
+                                        <p>2016年11月是原台南地方法院修復後開放參觀的大日子，也是台南市當年的一大盛事，建於1912年的原台南地方法院，外觀有著壯觀的圓柱以及圓形的巴洛克式屋頂，進到內部之後就可見到美麗且採光極佳有如奇美博物館大廳一般的壯觀圓頂，圓頂邊的大圓柱雕刻非常精美，地板維持著日治時期原始的維多利亞風格幾何圖形彩色拼花地磚，進到法院裡面猶如進到真實版的近代巴洛克建築教科書中，處處令人讚嘆，這也都是來自森山松之助先生之手，在台灣的16年歲月裡不知設計出多少流傳後世的經典建築。</p>
+                                    </div>
+                                </div>
+
+                                <div class="tab-pane fade maprwd" id="westlandmapthree" role="tabpanel" aria-labelledby="westlandmapthree-tab">
+                                  <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1544.2704596079598!2d120.20109089354311!3d22.99015897202734!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x346e767cea4abcc9%3A0xcddeac2a17cb2a23!2z5Y-45rOV5Y2a54mp6aSo!5e0!3m2!1szh-TW!2stw!4v1576767820760!5m2!1szh-TW!2stw" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
+                                </div>
+
+                              </div>
+                          </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <a class="land card"  href=""  data-toggle="modal" data-target="#westfourlandModal">
+                    <div class="imgbox">
+                      <img src="img/landwest4.jpg" class="card-img-top" alt="...">
+                    </div>  
+                  </a>
+                  <!-- Modal -->
+                  <div class="modal fade" id="westfourlandModal" >
+                    <div class="modal-dialog modal-lg modal-dialog-centered">
+                        <!-- Modal Content -->
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h3 class="modal-title" id="westfourlandModalTitle"><strong>景點介紹</strong></h3>
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                            </div>
+                            <div class="modal-body">
+
+                              <ul class="nav nav-tabs" id="myTab" role="tablist">
+                                <li class="nav-item">
+                                  <a class="nav-link active" id="westlandintrofour-tab" data-toggle="tab" href="#westlandintrofour" role="tab" aria-controls="westlandintrofour" aria-selected="true"><span>介紹</span></a>
+                                </li>
+                                <li class="nav-item">
+                                  <a class="nav-link" id="westlandmapfour-tab" data-toggle="tab" href="#westlandmapfour" role="tab" aria-controls="westlandmapfour" aria-selected="false"><span>地圖</span></a>
+                                </li>
+                              </ul>
+                              
+                              <div class="tab-content" id="myTabContent">
+                                <div class="tab-pane fade show active" id="westlandintrofour" role="tabpanel" aria-labelledby="westlandintrofour-tab">
+                                    <img src="img/landwest4-2.jpg">
+                                    <div class="intro">
+                                        <span><h3><strong>赤崁樓</strong></h3></span>
+                                        <p>赤崁樓從荷蘭人據臺時期便是行政中心，西元1661年鄭成功驅逐荷蘭人後，即改普羅民遮城為承天府治。清初台江尚未淤塞前，浪濤可直達赤崁樓下，「赤崁夕照」是當時著名的臺灣八景之一。赤崁樓前有九座清代石龜馱碑，是從他處遷移至此，傳說石龜為龍生九子之一，因好負重而變成龜狀。另外「斷足石馬」的雕像有一傳說是因石馬入夜後會化作妖怪騷擾百姓，所以才被斷足，成為現在的模樣。後來，赤崁樓因民變的破壞及疏於管理而日漸頹圮，而原本荷式建築的主體也加上了中國式的建築，一度上面還祭祀了觀世音菩薩等神明。日治時期，赤崁樓改為陸軍衛戍醫院，也陸續展開修建及整修，光復後，將木製結構改建為鋼筋混凝土結構，並將主要入口改向，而成為今日赤崁樓的模樣。</p>
+                                    </div>
+                                </div>
+
+                                <div class="tab-pane fade maprwd" id="westlandmapfour" role="tabpanel" aria-labelledby="westlandmapfour-tab">
+                                  <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3672.7190446079035!2d120.20050711484922!3d22.997356723041257!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x346e7661777b896d%3A0xf2656ec0c86f579c!2z6LWk5bSB5qiT!5e0!3m2!1szh-TW!2stw!4v1576768000517!5m2!1szh-TW!2stw" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
+                                </div>
+
                               </div>
                           </div>
                       </div>
@@ -1421,18 +1566,71 @@
                   </div>
 
 
-                <a class="land card"  href=""  data-toggle="modal" data-target="#westtwolandModal">
-                  <div class="imgbox">
-                    <img src="img/landwest2.jpg" class="card-img-top" alt="...">
-                  </div>  
-                </a>
-                 <!-- Modal -->
-                 <div class="modal fade" id="westtwolandModal" >
+
+                  <a class="land card"  href=""  data-toggle="modal" data-target="#westfivelandModal">
+                    <div class="imgbox">
+                      <img src="img/landwest5.jpg" class="card-img-top" alt="...">
+                    </div>  
+                  </a>
+                  <!-- Modal -->
+                  <div class="modal fade" id="westfivelandModal" >
+                    <div class="modal-dialog modal-lg modal-dialog-centered">
+                        <!-- Modal Content -->
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h3 class="modal-title" id="westfivelandModalTitle"><strong>景點介紹</strong></h3>
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                            </div>
+                            <div class="modal-body">
+
+                              <ul class="nav nav-tabs" id="myTab" role="tablist">
+                                <li class="nav-item">
+                                  <a class="nav-link active" id="westlandintrofive-tab" data-toggle="tab" href="#westlandintrofive" role="tab" aria-controls="westlandintrofive" aria-selected="true"><span>介紹</span></a>
+                                </li>
+                                <li class="nav-item">
+                                  <a class="nav-link" id="westlandmapfive-tab" data-toggle="tab" href="#westlandmapfive" role="tab" aria-controls="westlandmapfive" aria-selected="false"><span>地圖</span></a>
+                                </li>
+                              </ul>
+                              
+                              <div class="tab-content" id="myTabContent">
+                                <div class="tab-pane fade show active" id="westlandintrofive" role="tabpanel" aria-labelledby="westlandintrofive-tab">
+                                    <img src="img/landwest4-2.jpg">
+                                    <div class="intro">
+                                        <span><h3><strong>孔廟文化園區</strong></h3></span>
+                                        <p>已有三百多年歷史的「全臺首學」台南孔廟，可說是台南為文化古都的核心，南門路上綿延的紅牆在穿透樹梢的陽光下顯得神聖，也呈現著台南古都的獨特韻味，以歷史悠久的孔廟為中心，串聯起舊街區並連接附近主要的古蹟點，大南門、府中街、延平郡王祠等，是一個可以穿街走巷盡情享受古城氛圍的文化園區。</p>
+                                    </div>
+                                </div>
+
+                                <div class="tab-pane fade maprwd" id="westlandmapfive" role="tabpanel" aria-labelledby="westlandmapfive-tab">
+                                  <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3672.9115369805104!2d120.20274346484915!3d22.990280273303622!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x346e7662acd5bc15%3A0xb225ac98ebd9091!2z6Ie65Y2X5a2U5buf!5e0!3m2!1szh-TW!2stw!4v1576768968216!5m2!1szh-TW!2stw" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen=""></iframe>                             
+                                </div>
+                              </div>
+                          </div>
+                      </div>
+                    </div>
+                  </div>
+
+                </div>
+          </div>
+
+  <!--EastLand-->       
+          <div class="tab-pane fade" id="pills-eastland" role="tabpanel" aria-labelledby="pills-eastland-tab">
+            <div class="landgroup card-deck">
+
+              <a class="land card"  href="" data-toggle="modal" data-target="#eastonelandModal">
+                <div class="imgbox">
+                  <img src="img/landeast1.jpg" class="card-img-top" alt="...">
+                </div>  
+              </a>
+              <!-- Modal -->
+              <div class="modal fade" id="eastonelandModal" >
                   <div class="modal-dialog modal-lg modal-dialog-centered">
                       <!-- Modal Content -->
                       <div class="modal-content">
                           <div class="modal-header">
-                              <h3 class="modal-title" id="westtwolandModalTitle"><strong>景點介紹</strong></h3>
+                              <h3 class="modal-title" id="eastonelandModalTitle"><strong>景點介紹</strong></h3>
                               <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                                   <span aria-hidden="true">&times;</span>
                               </button>
@@ -1441,118 +1639,23 @@
 
                             <ul class="nav nav-tabs" id="myTab" role="tablist">
                               <li class="nav-item">
-                                <a class="nav-link active" id="westlandintrotwo-tab" data-toggle="tab" href="#westlandintrotwo" role="tab" aria-controls="westlandintrotwo" aria-selected="true"><span>介紹</span></a>
+                                <a class="nav-link active" id="eastlandintroone-tab" data-toggle="tab" href="#eastlandintroone" role="tab" aria-controls="eastlandintroone" aria-selected="true"><span>介紹</span></a>
                               </li>
                               <li class="nav-item">
-                                <a class="nav-link" id="westlandmaptwo-tab" data-toggle="tab" href="#westlandmaptwo" role="tab" aria-controls="westlandmaptwo" aria-selected="false"><span>地圖</span></a>
+                                <a class="nav-link" id="eastlandmapone-tab" data-toggle="tab" href="#eastlandmapone" role="tab" aria-controls="eastlandintroone" aria-selected="false"><span>地圖</span></a>
                               </li>
                             </ul>
-                            
                             <div class="tab-content" id="myTabContent">
-                              <div class="tab-pane fade show active" id="westlandintrotwo" role="tabpanel" aria-labelledby="westlandintrotwo-tab">
-                                  <img src="img/landwest2-2.jpg">
+                              <div class="tab-pane fade show active" id="eastlandintroone" role="tabpanel" aria-labelledby="eastlandintroone-tab">
+                                  <img src="img/landeast1-2.jpg">
                                   <div class="intro">
-                                      <span><h3><strong>臺南市美術館2館</strong></h3></span>
-                                      <p>intro</p>
+                                      <span><h3><strong>國立成功大學榕園</strong></h3></span>
+                                      <p>成大的榕樹一直都是台南的形象代表之一，傳說為1923年日本裕仁太子（即昭和天皇）巡視台灣時親手種植，時至今日，榕樹有如慈祥的老校友一樣每日屹立看守著成大校園，迎接來自各地的新生，也目送許多完成學業的畢業生，每到畢業季時總是有不少學生在此合影留念，離情依依。</p>
                                   </div>
                               </div>
-
-                              <div class="tab-pane fade maprwd" id="westlandmaptwo" role="tabpanel" aria-labelledby="westlandmaptwo-tab">
-                                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1544.2693493750617!2d120.20034496913442!3d22.990256060572587!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xae220201100c4e66!2z6Ie65Y2X5biC576O6KGT6aSoMumkqA!5e0!3m2!1szh-TW!2stw!4v1576767581873!5m2!1szh-TW!2stw" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
+                              <div class="tab-pane fade maprwd" id="eastlandmapone" role="tabpanel" aria-labelledby="eastlandintroone-tab">
+                                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7345.351491182654!2d120.22228316870444!3d22.99894820795512!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xf5ff371618b46bab!2z5ZyL56uL5oiQ5Yqf5aSn5a245qaV5ZyS!5e0!3m2!1szh-TW!2stw!4v1576771844010!5m2!1szh-TW!2stw" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen=""></iframe>                            
                               </div>
-
-                            </div>
-                        </div>
-                    </div>
-                  </div>
-                </div>
-
-                <a class="land card"  href=""  data-toggle="modal" data-target="#westthreelandModal">
-                  <div class="imgbox">
-                    <img src="img/landwest3.jpg" class="card-img-top" alt="...">
-                  </div>  
-                </a>
-                 <!-- Modal -->
-                 <div class="modal fade" id="westthreelandModal" >
-                  <div class="modal-dialog modal-lg modal-dialog-centered">
-                      <!-- Modal Content -->
-                      <div class="modal-content">
-                          <div class="modal-header">
-                              <h3 class="modal-title" id="westthreelandModalTitle"><strong>景點介紹</strong></h3>
-                              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                  <span aria-hidden="true">&times;</span>
-                              </button>
-                          </div>
-                          <div class="modal-body">
-
-                            <ul class="nav nav-tabs" id="myTab" role="tablist">
-                              <li class="nav-item">
-                                <a class="nav-link active" id="westlandintrothree-tab" data-toggle="tab" href="#westlandintrothree" role="tab" aria-controls="westlandintrothree" aria-selected="true"><span>介紹</span></a>
-                              </li>
-                              <li class="nav-item">
-                                <a class="nav-link" id="westlandmapthree-tab" data-toggle="tab" href="#westlandmapthree" role="tab" aria-controls="westlandmapthree" aria-selected="false"><span>地圖</span></a>
-                              </li>
-                            </ul>
-                            
-                            <div class="tab-content" id="myTabContent">
-                              <div class="tab-pane fade show active" id="westlandintrothree" role="tabpanel" aria-labelledby="westlandintrothree-tab">
-                                  <img src="img/landwest3-2.jpg">
-                                  <div class="intro">
-                                      <span><h3><strong>司法博物館</strong></h3></span>
-                                      <p>intro</p>
-                                  </div>
-                              </div>
-
-                              <div class="tab-pane fade maprwd" id="westlandmapthree" role="tabpanel" aria-labelledby="westlandmapthree-tab">
-                                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1544.2704596079598!2d120.20109089354311!3d22.99015897202734!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x346e767cea4abcc9%3A0xcddeac2a17cb2a23!2z5Y-45rOV5Y2a54mp6aSo!5e0!3m2!1szh-TW!2stw!4v1576767820760!5m2!1szh-TW!2stw" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
-                              </div>
-
-                            </div>
-                        </div>
-                    </div>
-                  </div>
-                </div>
-
-                <a class="land card"  href=""  data-toggle="modal" data-target="#westfourlandModal">
-                  <div class="imgbox">
-                    <img src="img/landwest4.jpg" class="card-img-top" alt="...">
-                  </div>  
-                </a>
-                 <!-- Modal -->
-                 <div class="modal fade" id="westfourlandModal" >
-                  <div class="modal-dialog modal-lg modal-dialog-centered">
-                      <!-- Modal Content -->
-                      <div class="modal-content">
-                          <div class="modal-header">
-                              <h3 class="modal-title" id="westfourlandModalTitle"><strong>景點介紹</strong></h3>
-                              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                  <span aria-hidden="true">&times;</span>
-                              </button>
-                          </div>
-                          <div class="modal-body">
-
-                            <ul class="nav nav-tabs" id="myTab" role="tablist">
-                              <li class="nav-item">
-                                <a class="nav-link active" id="westlandintrofour-tab" data-toggle="tab" href="#westlandintrofour" role="tab" aria-controls="westlandintrofour" aria-selected="true"><span>介紹</span></a>
-                              </li>
-                              <li class="nav-item">
-                                <a class="nav-link" id="westlandmapfour-tab" data-toggle="tab" href="#westlandmapfour" role="tab" aria-controls="westlandmapfour" aria-selected="false"><span>地圖</span></a>
-                              </li>
-                            </ul>
-                            
-                            <div class="tab-content" id="myTabContent">
-                              <div class="tab-pane fade show active" id="westlandintrofour" role="tabpanel" aria-labelledby="westlandintrofour-tab">
-                                  <img src="img/landwest4-2.jpg">
-                                  <div class="intro">
-                                      <span><h3><strong>赤崁樓</strong></h3></span>
-                                      <p>intro</p>
-                                  </div>
-                              </div>
-
-                              <div class="tab-pane fade maprwd" id="westlandmapfour" role="tabpanel" aria-labelledby="westlandmapfour-tab">
-                                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3672.7190446079035!2d120.20050711484922!3d22.997356723041257!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x346e7661777b896d%3A0xf2656ec0c86f579c!2z6LWk5bSB5qiT!5e0!3m2!1szh-TW!2stw!4v1576768000517!5m2!1szh-TW!2stw" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
-                              </div>
-
                             </div>
                         </div>
                     </div>
@@ -1560,159 +1663,18 @@
                 </div>
 
 
-
-                <a class="land card"  href=""  data-toggle="modal" data-target="#westfivelandModal">
+                <a class="land card"  href="" data-toggle="modal" data-target="#easttwolandModal">
                   <div class="imgbox">
-                    <img src="img/landwest5.jpg" class="card-img-top" alt="...">
+                    <img src="img/landeast2.jpg" class="card-img-top" alt="...">
                   </div>  
                 </a>
                 <!-- Modal -->
-                <div class="modal fade" id="westfivelandModal" >
-                  <div class="modal-dialog modal-lg modal-dialog-centered">
-                      <!-- Modal Content -->
-                      <div class="modal-content">
-                          <div class="modal-header">
-                              <h3 class="modal-title" id="westfivelandModalTitle"><strong>景點介紹</strong></h3>
-                              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                  <span aria-hidden="true">&times;</span>
-                              </button>
-                          </div>
-                          <div class="modal-body">
-
-                            <ul class="nav nav-tabs" id="myTab" role="tablist">
-                              <li class="nav-item">
-                                <a class="nav-link active" id="westlandintrofive-tab" data-toggle="tab" href="#westlandintrofive" role="tab" aria-controls="westlandintrofive" aria-selected="true"><span>介紹</span></a>
-                              </li>
-                              <li class="nav-item">
-                                <a class="nav-link" id="westlandmapfive-tab" data-toggle="tab" href="#westlandmapfive" role="tab" aria-controls="westlandmapfive" aria-selected="false"><span>地圖</span></a>
-                              </li>
-                            </ul>
-                            
-                            <div class="tab-content" id="myTabContent">
-                              <div class="tab-pane fade show active" id="westlandintrofive" role="tabpanel" aria-labelledby="westlandintrofive-tab">
-                                  <img src="img/landwest4-2.jpg">
-                                  <div class="intro">
-                                      <span><h3><strong>臺南孔廟</strong></h3></span>
-                                      <p>intro</p>
-                                  </div>
-                              </div>
-
-                              <div class="tab-pane fade maprwd" id="westlandmapfive" role="tabpanel" aria-labelledby="westlandmapfive-tab">
-                                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3672.9115369805104!2d120.20274346484915!3d22.990280273303622!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x346e7662acd5bc15%3A0xb225ac98ebd9091!2z6Ie65Y2X5a2U5buf!5e0!3m2!1szh-TW!2stw!4v1576768968216!5m2!1szh-TW!2stw" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen=""></iframe>                             
-                               </div>
-                            </div>
-                        </div>
-                    </div>
-                  </div>
-                </div>
-
-               </div>
-         </div>
-
- <!--EastLand-->       
-        <div class="tab-pane fade" id="pills-eastland" role="tabpanel" aria-labelledby="pills-eastland-tab">
-          <div class="landgroup card-deck">
-
-            <a class="land card"  href="" data-toggle="modal" data-target="#eastonelandModal">
-              <div class="imgbox">
-                <img src="img/landeast1.jpg" class="card-img-top" alt="...">
-              </div>  
-            </a>
-             <!-- Modal -->
-             <div class="modal fade" id="eastonelandModal" >
-                <div class="modal-dialog modal-lg modal-dialog-centered">
-                    <!-- Modal Content -->
-                    <div class="modal-content">
-                        <div class="modal-header">
-                            <h3 class="modal-title" id="eastonelandModalTitle"><strong>景點介紹</strong></h3>
-                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                <span aria-hidden="true">&times;</span>
-                            </button>
-                        </div>
-                        <div class="modal-body">
-
-                          <ul class="nav nav-tabs" id="myTab" role="tablist">
-                            <li class="nav-item">
-                              <a class="nav-link active" id="eastlandintroone-tab" data-toggle="tab" href="#eastlandintroone" role="tab" aria-controls="eastlandintroone" aria-selected="true"><span>介紹</span></a>
-                            </li>
-                            <li class="nav-item">
-                              <a class="nav-link" id="eastlandmapone-tab" data-toggle="tab" href="#eastlandmapone" role="tab" aria-controls="eastlandintroone" aria-selected="false"><span>地圖</span></a>
-                            </li>
-                          </ul>
-                          <div class="tab-content" id="myTabContent">
-                            <div class="tab-pane fade show active" id="eastlandintroone" role="tabpanel" aria-labelledby="eastlandintroone-tab">
-                                <img src="img/landeast1-2.jpg">
-                                <div class="intro">
-                                    <span><h3><strong>國立成功大學榕園</strong></h3></span>
-                                    <p>intro</p>
-                                </div>
-                            </div>
-                            <div class="tab-pane fade maprwd" id="eastlandmapone" role="tabpanel" aria-labelledby="eastlandintroone-tab">
-                              <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7345.351491182654!2d120.22228316870444!3d22.99894820795512!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xf5ff371618b46bab!2z5ZyL56uL5oiQ5Yqf5aSn5a245qaV5ZyS!5e0!3m2!1szh-TW!2stw!4v1576771844010!5m2!1szh-TW!2stw" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen=""></iframe>                            
-                            </div>
-                          </div>
-                      </div>
-                  </div>
-                </div>
-              </div>
-
-
-              <a class="land card"  href="" data-toggle="modal" data-target="#easttwolandModal">
-                <div class="imgbox">
-                  <img src="img/landeast2.jpg" class="card-img-top" alt="...">
-                </div>  
-              </a>
-               <!-- Modal -->
-               <div class="modal fade" id="easttwolandModal" >
-                  <div class="modal-dialog modal-lg modal-dialog-centered">
-                      <!-- Modal Content -->
-                      <div class="modal-content">
-                          <div class="modal-header">
-                              <h3 class="modal-title" id="easttwolandModalTitle"><strong>景點介紹</strong></h3>
-                              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                  <span aria-hidden="true">&times;</span>
-                              </button>
-                          </div>
-                          <div class="modal-body">
-  
-                            <ul class="nav nav-tabs" id="myTab" role="tablist">
-                              <li class="nav-item">
-                                <a class="nav-link active" id="eastlandintrotwo-tab" data-toggle="tab" href="#eastlandintrotwo" role="tab" aria-controls="eastlandintrotwo" aria-selected="true"><span>介紹</span></a>
-                              </li>
-                              <li class="nav-item">
-                                <a class="nav-link" id="eastlandmaptwo-tab" data-toggle="tab" href="#eastlandmaptwo" role="tab" aria-controls="eastlandintrotwo" aria-selected="false"><span>地圖</span></a>
-                              </li>
-                            </ul>
-                            <div class="tab-content" id="myTabContent">
-                              <div class="tab-pane fade show active" id="eastlandintrotwo" role="tabpanel" aria-labelledby="eastlandintrotwo-tab">
-                                  <img src="img/landeast2-2.jpg">
-                                  <div class="intro">
-                                      <span><h3><strong>巴克禮紀念公園</strong></h3></span>
-                                      <p>intro</p>
-                                  </div>
-                              </div>
-                              <div class="tab-pane fade maprwd" id="eastlandmaptwo" role="tabpanel" aria-labelledby="eastlandintrotwo-tab">
-                                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d12355.848990440274!2d120.2186630129901!3d22.971729615765693!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x346e7421350b0a33%3A0x2dbbd32dfa02333c!2z5be05YWL56au57SA5b-15YWs5ZyS!5e0!3m2!1szh-TW!2stw!4v1576771922945!5m2!1szh-TW!2stw" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
-                              </div>
-                            </div>
-                        </div>
-                    </div>
-                  </div>
-                </div>
-
-             
-                <a class="land card"  href="" data-toggle="modal" data-target="#eastthreelandModal">
-                  <div class="imgbox">
-                    <img src="img/landeast3.jpg" class="card-img-top" alt="...">
-                  </div>  
-                </a>
-                 <!-- Modal -->
-                 <div class="modal fade" id="eastthreelandModal" >
+                <div class="modal fade" id="easttwolandModal" >
                     <div class="modal-dialog modal-lg modal-dialog-centered">
                         <!-- Modal Content -->
                         <div class="modal-content">
                             <div class="modal-header">
-                                <h3 class="modal-title" id="eastthreelandModalTitle"><strong>景點介紹</strong></h3>
+                                <h3 class="modal-title" id="easttwolandModalTitle"><strong>景點介紹</strong></h3>
                                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                                     <span aria-hidden="true">&times;</span>
                                 </button>
@@ -1721,22 +1683,22 @@
     
                               <ul class="nav nav-tabs" id="myTab" role="tablist">
                                 <li class="nav-item">
-                                  <a class="nav-link active" id="eastlandintrothree-tab" data-toggle="tab" href="#eastlandintrothree" role="tab" aria-controls="eastlandintrothree" aria-selected="true"><span>介紹</span></a>
+                                  <a class="nav-link active" id="eastlandintrotwo-tab" data-toggle="tab" href="#eastlandintrotwo" role="tab" aria-controls="eastlandintrotwo" aria-selected="true"><span>介紹</span></a>
                                 </li>
                                 <li class="nav-item">
-                                  <a class="nav-link" id="eastlandmapthree-tab" data-toggle="tab" href="#eastlandmapthree" role="tab" aria-controls="eastlandintrothree" aria-selected="false"><span>地圖</span></a>
+                                  <a class="nav-link" id="eastlandmaptwo-tab" data-toggle="tab" href="#eastlandmaptwo" role="tab" aria-controls="eastlandintrotwo" aria-selected="false"><span>地圖</span></a>
                                 </li>
                               </ul>
                               <div class="tab-content" id="myTabContent">
-                                <div class="tab-pane fade show active" id="eastlandintrothree" role="tabpanel" aria-labelledby="eastlandintrothree-tab">
-                                    <img src="img/landeast3-2.jpg">
+                                <div class="tab-pane fade show active" id="eastlandintrotwo" role="tabpanel" aria-labelledby="eastlandintrotwo-tab">
+                                    <img src="img/landeast2-2.jpg">
                                     <div class="intro">
-                                        <span><h3><strong>南紡購物中心</strong></h3></span>
-                                        <p>intro</p>
+                                        <span><h3><strong>巴克禮紀念公園</strong></h3></span>
+                                        <p>位於台南市東區崇明里，與台南文化中心相對望的巴克禮公園腹地廣大，是台南的城市之肺，說是台南最受歡迎的且附有文藝氣息的公園也不為過，春夏時綠意盎然，夜間偶而伴隨著點點螢光，秋冬樹上則是多了黃紅色落羽松的點綴，走在裡面處處是光影，來到這裡的人們總是忍不住按了許多快門，陽光穿透林間，暗與亮的交界明顯，構成公園最美的景致，地面上僅存的老樹頭，像是縮小版的山峰一樣靜靜地座落於池塘倒影旁，有如國外景致一般的悠閒。走在裡面總是不難發現在樹下、草地上、長椅上，都可見歡樂野餐的人群們，有如紐約的中央公園一樣。</p>
                                     </div>
                                 </div>
-                                <div class="tab-pane fade maprwd" id="eastlandmapthree" role="tabpanel" aria-labelledby="eastlandintrothree-tab">
-                                  <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d8736.12816596944!2d120.22637855280274!3d22.983738733875914!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x346e76bea4df0e25%3A0xe307d34670241186!2z5Y2X57Sh6LO854mp5Lit5b-D!5e0!3m2!1szh-TW!2stw!4v1576772013678!5m2!1szh-TW!2stw" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
+                                <div class="tab-pane fade maprwd" id="eastlandmaptwo" role="tabpanel" aria-labelledby="eastlandintrotwo-tab">
+                                  <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d12355.848990440274!2d120.2186630129901!3d22.971729615765693!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x346e7421350b0a33%3A0x2dbbd32dfa02333c!2z5be05YWL56au57SA5b-15YWs5ZyS!5e0!3m2!1szh-TW!2stw!4v1576771922945!5m2!1szh-TW!2stw" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
                                 </div>
                               </div>
                           </div>
@@ -1744,18 +1706,19 @@
                     </div>
                   </div>
 
-                  <a class="land card"  href="" data-toggle="modal" data-target="#eastfourlandModal">
+              
+                  <a class="land card"  href="" data-toggle="modal" data-target="#eastthreelandModal">
                     <div class="imgbox">
-                      <img src="img/landeast4.jpg" class="card-img-top" alt="...">
+                      <img src="img/landeast3.jpg" class="card-img-top" alt="...">
                     </div>  
                   </a>
-                   <!-- Modal -->
-                   <div class="modal fade" id="eastfourlandModal" >
+                  <!-- Modal -->
+                  <div class="modal fade" id="eastthreelandModal" >
                       <div class="modal-dialog modal-lg modal-dialog-centered">
                           <!-- Modal Content -->
                           <div class="modal-content">
                               <div class="modal-header">
-                                  <h3 class="modal-title" id="eastfourlandModalTitle"><strong>景點介紹</strong></h3>
+                                  <h3 class="modal-title" id="eastthreelandModalTitle"><strong>景點介紹</strong></h3>
                                   <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                                       <span aria-hidden="true">&times;</span>
                                   </button>
@@ -1764,41 +1727,41 @@
       
                                 <ul class="nav nav-tabs" id="myTab" role="tablist">
                                   <li class="nav-item">
-                                    <a class="nav-link active" id="eastlandintrofour-tab" data-toggle="tab" href="#eastlandintrofour" role="tab" aria-controls="eastlandintrothree" aria-selected="true"><span>介紹</span></a>
+                                    <a class="nav-link active" id="eastlandintrothree-tab" data-toggle="tab" href="#eastlandintrothree" role="tab" aria-controls="eastlandintrothree" aria-selected="true"><span>介紹</span></a>
                                   </li>
                                   <li class="nav-item">
-                                    <a class="nav-link" id="eastlandmapfour-tab" data-toggle="tab" href="#eastlandmapfour" role="tab" aria-controls="eastlandintrothree" aria-selected="false"><span>地圖</span></a>
+                                    <a class="nav-link" id="eastlandmapthree-tab" data-toggle="tab" href="#eastlandmapthree" role="tab" aria-controls="eastlandintrothree" aria-selected="false"><span>地圖</span></a>
                                   </li>
                                 </ul>
                                 <div class="tab-content" id="myTabContent">
-                                  <div class="tab-pane fade show active" id="eastlandintrofour" role="tabpanel" aria-labelledby="eastlandintrofour-tab">
-                                      <img src="img/landeast4-2.jpg">
+                                  <div class="tab-pane fade show active" id="eastlandintrothree" role="tabpanel" aria-labelledby="eastlandintrothree-tab">
+                                      <img src="img/landeast3-2.jpg">
                                       <div class="intro">
-                                          <span><h3><strong>臺南神學院</strong></h3></span>
-                                          <p>intro</p>
+                                          <span><h3><strong>南紡購物中心</strong></h3></span>
+                                          <p>台南紡織股份有限公司秉持提供消費者更美好生活品質的使命，創立台南最大的複合式購物商場「南紡購物中心」！融合購物、娛樂、餐飲、休閒、藝文等五大元素，邀請您一同來南紡購物中心體驗創新的生活與幸福感動！</p>
                                       </div>
                                   </div>
-                                  <div class="tab-pane fade maprwd" id="eastlandmapfour" role="tabpanel" aria-labelledby="eastlandintrofour-tab">
-                                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3672.9587521548738!2d120.21184831484915!3d22.98854422336799!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x346e768f80f3692f%3A0xced611af8eb497e4!2z6Ie65Y2X56We5a246Zmi!5e0!3m2!1szh-TW!2stw!4v1576772052486!5m2!1szh-TW!2stw" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
+                                  <div class="tab-pane fade maprwd" id="eastlandmapthree" role="tabpanel" aria-labelledby="eastlandintrothree-tab">
+                                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d8736.12816596944!2d120.22637855280274!3d22.983738733875914!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x346e76bea4df0e25%3A0xe307d34670241186!2z5Y2X57Sh6LO854mp5Lit5b-D!5e0!3m2!1szh-TW!2stw!4v1576772013678!5m2!1szh-TW!2stw" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
                                   </div>
                                 </div>
                             </div>
                         </div>
                       </div>
                     </div>
-  
-                    <a class="land card"  href="" data-toggle="modal" data-target="#eastfivelandModal">
+
+                    <a class="land card"  href="" data-toggle="modal" data-target="#eastfourlandModal">
                       <div class="imgbox">
-                        <img src="img/landeast5.jpg" class="card-img-top" alt="...">
+                        <img src="img/landeast4.jpg" class="card-img-top" alt="...">
                       </div>  
                     </a>
-                     <!-- Modal -->
-                     <div class="modal fade" id="eastfivelandModal" >
+                    <!-- Modal -->
+                    <div class="modal fade" id="eastfourlandModal" >
                         <div class="modal-dialog modal-lg modal-dialog-centered">
                             <!-- Modal Content -->
                             <div class="modal-content">
                                 <div class="modal-header">
-                                    <h3 class="modal-title" id="eastfivelandModalTitle"><strong>景點介紹</strong></h3>
+                                    <h3 class="modal-title" id="eastfourlandModalTitle"><strong>景點介紹</strong></h3>
                                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                                         <span aria-hidden="true">&times;</span>
                                     </button>
@@ -1807,823 +1770,754 @@
         
                                   <ul class="nav nav-tabs" id="myTab" role="tablist">
                                     <li class="nav-item">
-                                      <a class="nav-link active" id="eastlandintrofive-tab" data-toggle="tab" href="#eastlandintrofive" role="tab" aria-controls="eastlandintrofive" aria-selected="true"><span>介紹</span></a>
+                                      <a class="nav-link active" id="eastlandintrofour-tab" data-toggle="tab" href="#eastlandintrofour" role="tab" aria-controls="eastlandintrothree" aria-selected="true"><span>介紹</span></a>
                                     </li>
                                     <li class="nav-item">
-                                      <a class="nav-link" id="eastlandmapfive-tab" data-toggle="tab" href="#eastlandmapfive" role="tab" aria-controls="eastlandintrofive" aria-selected="false"><span>地圖</span></a>
+                                      <a class="nav-link" id="eastlandmapfour-tab" data-toggle="tab" href="#eastlandmapfour" role="tab" aria-controls="eastlandintrothree" aria-selected="false"><span>地圖</span></a>
                                     </li>
                                   </ul>
                                   <div class="tab-content" id="myTabContent">
-                                    <div class="tab-pane fade show active" id="eastlandintrofive" role="tabpanel" aria-labelledby="eastlandintrofive-tab">
-                                        <img src="img/landeast5-2.jpg">
+                                    <div class="tab-pane fade show active" id="eastlandintrofour" role="tabpanel" aria-labelledby="eastlandintrofour-tab">
+                                        <img src="img/landeast4-2.jpg">
                                         <div class="intro">
-                                            <span><h3><strong>台南知事官邸</strong></h3></span>
-                                            <p>intro</p>
+                                            <span><h3><strong>臺南神學院</strong></h3></span>
+                                            <p>在戲劇「一把青」中人物朱青就讀的神學院場景，取景地點就是台南神學院，也因為戲劇爆紅的緣故，讓原本就有許多遊客到訪的神學院更是紅透半邊天，位在台南東區的神學院在1903年建立，目前四周都是住宅區，寧靜的氛圍與神學院非常的契合，簡單樸素的灰色牆面點綴著清新TIFFANY綠的尖拱木窗，讓帶點歐式風格的神學院增添了不少浪漫，走在白色的教室長廊上，灑進廊裡的陽光更是讓神學院內充滿了神聖的氛圍，中央的小噴水池是許多遊客喜愛的地方，看著池裡優游的鯉魚有種心靈沉澱的感受。平日學生上課為求寧靜，校園並不開放參觀，只在假日開放進入。</p>
                                         </div>
                                     </div>
-                                    <div class="tab-pane fade maprwd" id="eastlandmapfive" role="tabpanel" aria-labelledby="eastlandintrofive-tab">
-                                      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d5194.303132139794!2d120.20780127687871!3d22.989712895263512!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x346e768eed0351a9%3A0xc4ec76bfc1dc3738!2z5Y-w5Y2X55-l5LqL5a6Y6YK4!5e0!3m2!1szh-TW!2stw!4v1576772077866!5m2!1szh-TW!2stw" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
+                                    <div class="tab-pane fade maprwd" id="eastlandmapfour" role="tabpanel" aria-labelledby="eastlandintrofour-tab">
+                                      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3672.9587521548738!2d120.21184831484915!3d22.98854422336799!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x346e768f80f3692f%3A0xced611af8eb497e4!2z6Ie65Y2X56We5a246Zmi!5e0!3m2!1szh-TW!2stw!4v1576772052486!5m2!1szh-TW!2stw" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
                                     </div>
                                   </div>
                               </div>
                           </div>
                         </div>
                       </div>
-           
-          </div>  
-        </div>
-        <div class="tab-pane fade" id="pills-northland" role="tabpanel" aria-labelledby="pills-northland-tab">
-          <div class="landgroup card-deck">
-
-            <a class="land card"  href="" data-toggle="modal" data-target="#northonelandModal">
-              <div class="imgbox">
-                <img src="img/landnorth1.jpg" class="card-img-top" alt="...">
-              </div>  
-            </a>
-             <!-- Modal -->
-             <div class="modal fade" id="northonelandModal" >
-                <div class="modal-dialog modal-lg modal-dialog-centered">
-                    <!-- Modal Content -->
-                    <div class="modal-content">
-                        <div class="modal-header">
-                            <h3 class="modal-title" id="northonelandModalTitle"><strong>景點介紹</strong></h3>
-                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                <span aria-hidden="true">&times;</span>
-                            </button>
-                        </div>
-                        <div class="modal-body">
-
-                          <ul class="nav nav-tabs" id="myTab" role="tablist">
-                            <li class="nav-item">
-                              <a class="nav-link active" id="northlandintroone-tab" data-toggle="tab" href="#northlandintroone" role="tab" aria-controls="northlandintroone" aria-selected="true"><span>介紹</span></a>
-                            </li>
-                            <li class="nav-item">
-                              <a class="nav-link" id="northlandmapone-tab" data-toggle="tab" href="#northlandmapone" role="tab" aria-controls="northlandintroone" aria-selected="false"><span>地圖</span></a>
-                            </li>
-                          </ul>
-                          <div class="tab-content" id="myTabContent">
-                            <div class="tab-pane fade show active" id="northlandintroone" role="tabpanel" aria-labelledby="northlandintroone-tab">
-                                <img src="img/landnorth1-2.jpg">
-                                <div class="intro">
-                                    <span><h3><strong>321巷 藝術聚落</strong></h3></span>
-                                    <p>intro</p>
-                                </div>
-                            </div>
-                            <div class="tab-pane fade maprwd" id="northlandmapone" role="tabpanel" aria-labelledby="northlandintroone-tab">
-                              <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7344.898756610144!2d120.20755984319398!3d23.00726679717132!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xcf6853bf4ecf33d3!2zMzIx5be3IOiXneihk-iBmuiQvQ!5e0!3m2!1szh-TW!2stw!4v1576839895987!5m2!1szh-TW!2stw" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
-                            </div>
-                          </div>
-                      </div>
-                  </div>
-                </div>
-              </div>
-
-
-              <a class="land card"  href="" data-toggle="modal" data-target="#northtwolandModal">
-                <div class="imgbox">
-                  <img src="img/landnorth2.jpg" class="card-img-top" alt="...">
-                </div>  
-              </a>
-               <!-- Modal -->
-               <div class="modal fade" id="northtwolandModal" >
-                  <div class="modal-dialog modal-lg modal-dialog-centered">
-                      <!-- Modal Content -->
-                      <div class="modal-content">
-                          <div class="modal-header">
-                              <h3 class="modal-title" id="northtwolandModalTitle"><strong>景點介紹</strong></h3>
-                              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                  <span aria-hidden="true">&times;</span>
-                              </button>
-                          </div>
-                          <div class="modal-body">
-  
-                            <ul class="nav nav-tabs" id="myTab" role="tablist">
-                              <li class="nav-item">
-                                <a class="nav-link active" id="northlandintrotwo-tab" data-toggle="tab" href="#northlandintrotwo" role="tab" aria-controls="northlandintrotwo" aria-selected="true"><span>介紹</span></a>
-                              </li>
-                              <li class="nav-item">
-                                <a class="nav-link" id="northlandmaptwo-tab" data-toggle="tab" href="#northlandmaptwo" role="tab" aria-controls="northlandintrotwo" aria-selected="false"><span>地圖</span></a>
-                              </li>
-                            </ul>
-                            <div class="tab-content" id="myTabContent">
-                              <div class="tab-pane fade show active" id="northlandintrotwo" role="tabpanel" aria-labelledby="northlandintrotwo-tab">
-                                  <img src="img/landnorth2-2.jpg">
-                                  <div class="intro">
-                                      <span><h3><strong>台南公園</strong></h3></span>
-                                      <p>intro</p>
-                                  </div>
-                              </div>
-                              <div class="tab-pane fade maprwd" id="northlandmaptwo" role="tabpanel" aria-labelledby="northlandintrotwo-tab">
-                                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14689.66204632224!2d120.20421244644935!3d23.00851109358438!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x346e76f4a63bc707%3A0x8ded7cac76070cb5!2z5Y-w5Y2X5YWs5ZyS!5e0!3m2!1szh-TW!2stw!4v1576839880974!5m2!1szh-TW!2stw" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
-                              </div>
-                            </div>
-                        </div>
-                    </div>
-                  </div>
-                </div>
-
-             
-                <a class="land card"  href="" data-toggle="modal" data-target="#norththreelandModal">
-                  <div class="imgbox">
-                    <img src="img/landnorth3.jpg" class="card-img-top" alt="...">
-                  </div>  
-                </a>
-                 <!-- Modal -->
-                 <div class="modal fade" id="norththreelandModal" >
-                    <div class="modal-dialog modal-lg modal-dialog-centered">
-                        <!-- Modal Content -->
-                        <div class="modal-content">
-                            <div class="modal-header">
-                                <h3 class="modal-title" id="norththreelandModalTitle"><strong>景點介紹</strong></h3>
-                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                    <span aria-hidden="true">&times;</span>
-                                </button>
-                            </div>
-                            <div class="modal-body">
     
-                              <ul class="nav nav-tabs" id="myTab" role="tablist">
-                                <li class="nav-item">
-                                  <a class="nav-link active" id="northlandintrothree-tab" data-toggle="tab" href="#northlandintrothree" role="tab" aria-controls="northlandintrothree" aria-selected="true"><span>介紹</span></a>
-                                </li>
-                                <li class="nav-item">
-                                  <a class="nav-link" id="northlandmapthree-tab" data-toggle="tab" href="#northlandmapthree" role="tab" aria-controls="northlandintrothree" aria-selected="false"><span>地圖</span></a>
-                                </li>
-                              </ul>
-                              <div class="tab-content" id="myTabContent">
-                                <div class="tab-pane fade show active" id="northlandintrothree" role="tabpanel" aria-labelledby="northlandintrothree-tab">
-                                    <img src="img/landnorth3-2.jpg">
-                                    <div class="intro">
-                                        <span><h3><strong>Starbucks 星巴克台南-小北門市</strong></h3></span>
-                                        <p>intro</p>
-                                    </div>
-                                </div>
-                                <div class="tab-pane fade maprwd" id="northlandmapthree" role="tabpanel" aria-labelledby="northlandintrothree-tab">
-                                  <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14689.66204632224!2d120.20421244644935!3d23.00851109358438!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xd2110414e5f5284a!2zU3RhcmJ1Y2tzIOaYn-W3tOWFi-WPsOWNl-Wwj-WMl-mWgOW4gg!5e0!3m2!1szh-TW!2stw!4v1576839861275!5m2!1szh-TW!2stw" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
-                                </div>
-                              </div>
-                          </div>
-                      </div>
-                    </div>
-                  </div>
-
-                  <a class="land card"  href="" data-toggle="modal" data-target="#northfourlandModal">
-                    <div class="imgbox">
-                      <img src="img/landnorth4.jpg" class="card-img-top" alt="...">
-                    </div>  
-                  </a>
-                   <!-- Modal -->
-                   <div class="modal fade" id="northfourlandModal" >
-                      <div class="modal-dialog modal-lg modal-dialog-centered">
-                          <!-- Modal Content -->
-                          <div class="modal-content">
-                              <div class="modal-header">
-                                  <h3 class="modal-title" id="northfourlandModalTitle"><strong>景點介紹</strong></h3>
-                                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                      <span aria-hidden="true">&times;</span>
-                                  </button>
-                              </div>
-                              <div class="modal-body">
-      
-                                <ul class="nav nav-tabs" id="myTab" role="tablist">
-                                  <li class="nav-item">
-                                    <a class="nav-link active" id="northlandintrofour-tab" data-toggle="tab" href="#northlandintrofour" role="tab" aria-controls="northlandintrothree" aria-selected="true"><span>介紹</span></a>
-                                  </li>
-                                  <li class="nav-item">
-                                    <a class="nav-link" id="northlandmapfour-tab" data-toggle="tab" href="#northlandmapfour" role="tab" aria-controls="northlandintrothree" aria-selected="false"><span>地圖</span></a>
-                                  </li>
-                                </ul>
-                                <div class="tab-content" id="myTabContent">
-                                  <div class="tab-pane fade show active" id="northlandintrofour" role="tabpanel" aria-labelledby="northlandintrofour-tab">
-                                      <img src="img/landnorth4-2.jpg">
-                                      <div class="intro">
-                                          <span><h3><strong>千畦種子博物館</strong></h3></span>
-                                          <p>intro</p>
+                      <a class="land card"  href="" data-toggle="modal" data-target="#eastfivelandModal">
+                        <div class="imgbox">
+                          <img src="img/landeast5.jpg" class="card-img-top" alt="...">
+                        </div>  
+                      </a>
+                      <!-- Modal -->
+                      <div class="modal fade" id="eastfivelandModal" >
+                          <div class="modal-dialog modal-lg modal-dialog-centered">
+                              <!-- Modal Content -->
+                              <div class="modal-content">
+                                  <div class="modal-header">
+                                      <h3 class="modal-title" id="eastfivelandModalTitle"><strong>景點介紹</strong></h3>
+                                      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                          <span aria-hidden="true">&times;</span>
+                                      </button>
+                                  </div>
+                                  <div class="modal-body">
+          
+                                    <ul class="nav nav-tabs" id="myTab" role="tablist">
+                                      <li class="nav-item">
+                                        <a class="nav-link active" id="eastlandintrofive-tab" data-toggle="tab" href="#eastlandintrofive" role="tab" aria-controls="eastlandintrofive" aria-selected="true"><span>介紹</span></a>
+                                      </li>
+                                      <li class="nav-item">
+                                        <a class="nav-link" id="eastlandmapfive-tab" data-toggle="tab" href="#eastlandmapfive" role="tab" aria-controls="eastlandintrofive" aria-selected="false"><span>地圖</span></a>
+                                      </li>
+                                    </ul>
+                                    <div class="tab-content" id="myTabContent">
+                                      <div class="tab-pane fade show active" id="eastlandintrofive" role="tabpanel" aria-labelledby="eastlandintrofive-tab">
+                                          <img src="img/landeast5-2.jpg">
+                                          <div class="intro">
+                                              <span><h3><strong>台南知事官邸</strong></h3></span>
+                                              <p>原臺南縣知事官邸，建於1900年，是台南人口中的「時鐘樓」，會有此稱呼是因為原有屋頂山牆圖騰狀似時鐘而得名，該建築除作為縣知事的官邸外，另一個重要的用途是作為日本皇族外出時的「御泊所」，在台灣歷史上該建築是南台灣唯一設計作為供皇族居住的行館，至1941年為止，有近二十位日本皇族曾到訪停留於此地，比作為總督官邸的台北賓館數量還來得多，足見該建築在台灣日治時期歷史中重要的角色，尤其是1923年當時的裕仁皇太子(後為昭和天皇)來台南行啟時曾下塌於此，為了皇太子的來臨官邸左側還特地新建了木造的廂房，右側當時也還有兩座網球場供皇太子休閒運動，雖然現在網球場已經毫無痕跡，但仍可見當時對於皇族巡視的重視與謹慎。</p>
+                                          </div>
                                       </div>
-                                  </div>
-                                  <div class="tab-pane fade maprwd" id="northlandmapfour" role="tabpanel" aria-labelledby="northlandintrofour-tab">
-                                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3672.3752738306184!2d120.20315801474513!3d23.009989384959454!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x346e76c2797fb1e5%3A0x3e14ca7e0eb902d0!2z5Y2D55Wm56iu5a2Q5Y2a54mp6aSo!5e0!3m2!1szh-TW!2stw!4v1576839821122!5m2!1szh-TW!2stw" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
-                                  </div>
-                                </div>
-                            </div>
-                        </div>
-                      </div>
-                    </div>
-  
-                    <a class="land card"  href="" data-toggle="modal" data-target="#northfivelandModal">
-                      <div class="imgbox">
-                        <img src="img/landnorth5.jpg" class="card-img-top" alt="...">
-                      </div>  
-                    </a>
-                     <!-- Modal -->
-                     <div class="modal fade" id="northfivelandModal" >
-                        <div class="modal-dialog modal-lg modal-dialog-centered">
-                            <!-- Modal Content -->
-                            <div class="modal-content">
-                                <div class="modal-header">
-                                    <h3 class="modal-title" id="northfivelandModalTitle"><strong>景點介紹</strong></h3>
-                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                        <span aria-hidden="true">&times;</span>
-                                    </button>
-                                </div>
-                                <div class="modal-body">
-        
-                                  <ul class="nav nav-tabs" id="myTab" role="tablist">
-                                    <li class="nav-item">
-                                      <a class="nav-link active" id="northlandintrofive-tab" data-toggle="tab" href="#northlandintrofive" role="tab" aria-controls="northlandintrofive" aria-selected="true"><span>介紹</span></a>
-                                    </li>
-                                    <li class="nav-item">
-                                      <a class="nav-link" id="northlandmapfive-tab" data-toggle="tab" href="#northlandmapfive" role="tab" aria-controls="northlandintrofive" aria-selected="false"><span>地圖</span></a>
-                                    </li>
-                                  </ul>
-                                  <div class="tab-content" id="myTabContent">
-                                    <div class="tab-pane fade show active" id="northlandintrofive" role="tabpanel" aria-labelledby="northlandintrofive-tab">
-                                        <img src="img/landnorth5-2.jpg">
-                                        <div class="intro">
-                                            <span><h3><strong>立德公園</strong></h3></span>
-                                            <p>intro</p>
-                                        </div>
-                                    </div>
-                                    <div class="tab-pane fade maprwd" id="northlandmapfive" role="tabpanel" aria-labelledby="northlandintrofive-tab">
-                                      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3672.3752738306184!2d120.20315801474513!3d23.009989384959454!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x346e76f7d9163321%3A0xcda9eef5197c6d74!2z56uL5b635YWs5ZyS!5e0!3m2!1szh-TW!2stw!4v1576839781914!5m2!1szh-TW!2stw" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
-                                    </div>
-                                  </div>
-                              </div>
-                          </div>
-                        </div>
-                      </div>
-           
-          </div>  
-
-
-
-
-        </div>
-        <div class="tab-pane fade" id="pills-southland" role="tabpanel" aria-labelledby="pills-southland-tab">
-          <div class="landgroup card-deck">
-
-            <a class="land card"  href="" data-toggle="modal" data-target="#southonelandModal">
-              <div class="imgbox">
-                <img src="img/landsouth1.jpg" class="card-img-top" alt="...">
-              </div>  
-            </a>
-             <!-- Modal -->
-             <div class="modal fade" id="southonelandModal" >
-                <div class="modal-dialog modal-lg modal-dialog-centered">
-                    <!-- Modal Content -->
-                    <div class="modal-content">
-                        <div class="modal-header">
-                            <h3 class="modal-title" id="southonelandModalTitle"><strong>景點介紹</strong></h3>
-                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                <span aria-hidden="true">&times;</span>
-                            </button>
-                        </div>
-                        <div class="modal-body">
-
-                          <ul class="nav nav-tabs" id="myTab" role="tablist">
-                            <li class="nav-item">
-                              <a class="nav-link active" id="southlandintroone-tab" data-toggle="tab" href="#southlandintroone" role="tab" aria-controls="southlandintroone" aria-selected="true"><span>介紹</span></a>
-                            </li>
-                            <li class="nav-item">
-                              <a class="nav-link" id="southlandmapone-tab" data-toggle="tab" href="#southlandmapone" role="tab" aria-controls="southlandintroone" aria-selected="false"><span>地圖</span></a>
-                            </li>
-                          </ul>
-                          <div class="tab-content" id="myTabContent">
-                            <div class="tab-pane fade show active" id="southlandintroone" role="tabpanel" aria-labelledby="southlandintroone-tab">
-                                <img src="img/landsouth1-2.jpg">
-                                <div class="intro">
-                                    <span><h3><strong>水萍塭公園</strong></h3></span>
-                                    <p>intro</p>
-                                </div>
-                            </div>
-                            <div class="tab-pane fade maprwd" id="southlandmapone" role="tabpanel" aria-labelledby="southlandintroone-tab">
-                              <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14692.774421705059!2d120.20108451312913!3d22.97990708442114!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x346e767741ce0257%3A0x7c1cb74e5bb9ec17!2z5rC06JCN5aGt5YWs5ZyS!5e0!3m2!1szh-TW!2stw!4v1576840110758!5m2!1szh-TW!2stw" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
-                            </div>
-                          </div>
-                      </div>
-                  </div>
-                </div>
-              </div>
-
-
-              <a class="land card"  href="" data-toggle="modal" data-target="#southtwolandModal">
-                <div class="imgbox">
-                  <img src="img/landsouth2.jpg" class="card-img-top" alt="...">
-                </div>  
-              </a>
-               <!-- Modal -->
-               <div class="modal fade" id="southtwolandModal" >
-                  <div class="modal-dialog modal-lg modal-dialog-centered">
-                      <!-- Modal Content -->
-                      <div class="modal-content">
-                          <div class="modal-header">
-                              <h3 class="modal-title" id="southtwolandModalTitle"><strong>景點介紹</strong></h3>
-                              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                  <span aria-hidden="true">&times;</span>
-                              </button>
-                          </div>
-                          <div class="modal-body">
-  
-                            <ul class="nav nav-tabs" id="myTab" role="tablist">
-                              <li class="nav-item">
-                                <a class="nav-link active" id="southlandintrotwo-tab" data-toggle="tab" href="#southlandintrotwo" role="tab" aria-controls="southlandintrotwo" aria-selected="true"><span>介紹</span></a>
-                              </li>
-                              <li class="nav-item">
-                                <a class="nav-link" id="southlandmaptwo-tab" data-toggle="tab" href="#southlandmaptwo" role="tab" aria-controls="southlandintrotwo" aria-selected="false"><span>地圖</span></a>
-                              </li>
-                            </ul>
-                            <div class="tab-content" id="myTabContent">
-                              <div class="tab-pane fade show active" id="southlandintrotwo" role="tabpanel" aria-labelledby="southlandintrotwo-tab">
-                                  <img src="img/landsouth2-2.jpg">
-                                  <div class="intro">
-                                      <span><h3><strong>黑橋牌香腸博物館</strong></h3></span>
-                                      <p>intro</p>
-                                  </div>
-                              </div>
-                              <div class="tab-pane fade maprwd" id="southlandmaptwo" role="tabpanel" aria-labelledby="southlandintrotwo-tab">
-                                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d12355.635414229897!2d120.18862834044513!3d22.97406590264002!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x346e75de6122a339%3A0x9970a43ee4051ee6!2z6buR5qmL54mM6aaZ6IW45Y2a54mp6aSo!5e0!3m2!1szh-TW!2stw!4v1576840327374!5m2!1szh-TW!2stw" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
-                              </div>
-                            </div>
-                        </div>
-                    </div>
-                  </div>
-                </div>
-
-             
-                <a class="land card"  href="" data-toggle="modal" data-target="#souththreelandModal">
-                  <div class="imgbox">
-                    <img src="img/landsouth3.jpg" class="card-img-top" alt="...">
-                  </div>  
-                </a>
-                 <!-- Modal -->
-                 <div class="modal fade" id="souththreelandModal" >
-                    <div class="modal-dialog modal-lg modal-dialog-centered">
-                        <!-- Modal Content -->
-                        <div class="modal-content">
-                            <div class="modal-header">
-                                <h3 class="modal-title" id="souththreelandModalTitle"><strong>景點介紹</strong></h3>
-                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                    <span aria-hidden="true">&times;</span>
-                                </button>
-                            </div>
-                            <div class="modal-body">
-    
-                              <ul class="nav nav-tabs" id="myTab" role="tablist">
-                                <li class="nav-item">
-                                  <a class="nav-link active" id="southlandintrothree-tab" data-toggle="tab" href="#southlandintrothree" role="tab" aria-controls="southlandintrothree" aria-selected="true"><span>介紹</span></a>
-                                </li>
-                                <li class="nav-item">
-                                  <a class="nav-link" id="southlandmapthree-tab" data-toggle="tab" href="#southlandmapthree" role="tab" aria-controls="southlandintrothree" aria-selected="false"><span>地圖</span></a>
-                                </li>
-                              </ul>
-                              <div class="tab-content" id="myTabContent">
-                                <div class="tab-pane fade show active" id="southlandintrothree" role="tabpanel" aria-labelledby="southlandintrothree-tab">
-                                    <img src="img/landsouth3-2.jpg">
-                                    <div class="intro">
-                                        <span><h3><strong>黃金海岸</strong></h3></span>
-                                        <p>intro</p>
-                                    </div>
-                                </div>
-                                <div class="tab-pane fade maprwd" id="southlandmapthree" role="tabpanel" aria-labelledby="southlandintrothree-tab">
-                                  <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d29394.370820923625!2d120.20079374583314!3d22.93931050479753!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x346e75721ffd3031%3A0xb4dec7201f75490b!2z6buD6YeR5rW35bK4!5e0!3m2!1szh-TW!2stw!4v1576840492832!5m2!1szh-TW!2stw" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
-                                </div>
-                              </div>
-                          </div>
-                      </div>
-                    </div>
-                  </div>
-
-                  <a class="land card"  href="" data-toggle="modal" data-target="#southfourlandModal">
-                    <div class="imgbox">
-                      <img src="img/landsouth4.jpg" class="card-img-top" alt="...">
-                    </div>  
-                  </a>
-                   <!-- Modal -->
-                   <div class="modal fade" id="southfourlandModal" >
-                      <div class="modal-dialog modal-lg modal-dialog-centered">
-                          <!-- Modal Content -->
-                          <div class="modal-content">
-                              <div class="modal-header">
-                                  <h3 class="modal-title" id="southfourlandModalTitle"><strong>景點介紹</strong></h3>
-                                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                      <span aria-hidden="true">&times;</span>
-                                  </button>
-                              </div>
-                              <div class="modal-body">
-      
-                                <ul class="nav nav-tabs" id="myTab" role="tablist">
-                                  <li class="nav-item">
-                                    <a class="nav-link active" id="southlandintrofour-tab" data-toggle="tab" href="#southlandintrofour" role="tab" aria-controls="southlandintrothree" aria-selected="true"><span>介紹</span></a>
-                                  </li>
-                                  <li class="nav-item">
-                                    <a class="nav-link" id="southlandmapfour-tab" data-toggle="tab" href="#southlandmapfour" role="tab" aria-controls="southlandintrothree" aria-selected="false"><span>地圖</span></a>
-                                  </li>
-                                </ul>
-                                <div class="tab-content" id="myTabContent">
-                                  <div class="tab-pane fade show active" id="southlandintrofour" role="tabpanel" aria-labelledby="southlandintrofour-tab">
-                                      <img src="img/landsouth4-2.jpg">
-                                      <div class="intro">
-                                          <span><h3><strong>奇美食品幸福工廠</strong></h3></span>
-                                          <p>intro</p>
+                                      <div class="tab-pane fade maprwd" id="eastlandmapfive" role="tabpanel" aria-labelledby="eastlandintrofive-tab">
+                                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d5194.303132139794!2d120.20780127687871!3d22.989712895263512!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x346e768eed0351a9%3A0xc4ec76bfc1dc3738!2z5Y-w5Y2X55-l5LqL5a6Y6YK4!5e0!3m2!1szh-TW!2stw!4v1576772077866!5m2!1szh-TW!2stw" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
                                       </div>
-                                  </div>
-                                  <div class="tab-pane fade maprwd" id="southlandmapfour" role="tabpanel" aria-labelledby="southlandintrofour-tab">
-                                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d12357.937341805213!2d120.21268595207023!3d22.948873513946562!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x346e75f376ea9fb5%3A0xf3c1553119c2a00f!2z5aWH576O6aOf5ZOB5bm456aP5bel5bug!5e0!3m2!1szh-TW!2stw!4v1576840676208!5m2!1szh-TW!2stw" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
-                                  </div>
-                                </div>
-                            </div>
-                        </div>
-                      </div>
-                    </div>
-  
-                    <a class="land card"  href="" data-toggle="modal" data-target="#southfivelandModal">
-                      <div class="imgbox">
-                        <img src="img/landsouth5.jpg" class="card-img-top" alt="...">
-                      </div>  
-                    </a>
-                     <!-- Modal -->
-                     <div class="modal fade" id="southfivelandModal" >
-                        <div class="modal-dialog modal-lg modal-dialog-centered">
-                            <!-- Modal Content -->
-                            <div class="modal-content">
-                                <div class="modal-header">
-                                    <h3 class="modal-title" id="southfivelandModalTitle"><strong>景點介紹</strong></h3>
-                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                        <span aria-hidden="true">&times;</span>
-                                    </button>
-                                </div>
-                                <div class="modal-body">
-        
-                                  <ul class="nav nav-tabs" id="myTab" role="tablist">
-                                    <li class="nav-item">
-                                      <a class="nav-link active" id="southlandintrofive-tab" data-toggle="tab" href="#southlandintrofive" role="tab" aria-controls="southlandintrofive" aria-selected="true"><span>介紹</span></a>
-                                    </li>
-                                    <li class="nav-item">
-                                      <a class="nav-link" id="southlandmapfive-tab" data-toggle="tab" href="#southlandmapfive" role="tab" aria-controls="southlandintrofive" aria-selected="false"><span>地圖</span></a>
-                                    </li>
-                                  </ul>
-                                  <div class="tab-content" id="myTabContent">
-                                    <div class="tab-pane fade show active" id="southlandintrofive" role="tabpanel" aria-labelledby="southlandintrofive-tab">
-                                        <img src="img/landsouth5-2.jpg">
-                                        <div class="intro">
-                                            <span><h3><strong>喜樹老街</strong></h3></span>
-                                            <p>intro</p>
-                                        </div>
-                                    </div>
-                                    <div class="tab-pane fade maprwd" id="southlandmapfive" role="tabpanel" aria-labelledby="southlandintrofive-tab">
-                                      <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d14697.068311970506!2d120.1777971!3d22.9403891!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xd494bfd0a66a9b63!2z5Zac5qi56ICB6KGX!5e0!3m2!1szh-TW!2stw!4v1576840924380!5m2!1szh-TW!2stw" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
-                                    </div>
-                                  </div>
-                              </div>
-                          </div>
-                        </div>
-                      </div>
-           
-          </div>  
-        </div>
-
-        <div class="tab-pane fade" id="pills-anpingland" role="tabpanel" aria-labelledby="pills-anpingland-tab">
-          <div class="landgroup card-deck">
-
-            <a class="land card"  href="" data-toggle="modal" data-target="#anpingonelandModal">
-              <div class="imgbox">
-                <img src="img/landanping1.jpg" class="card-img-top" alt="...">
-              </div>  
-            </a>
-             <!-- Modal -->
-             <div class="modal fade" id="anpingonelandModal" >
-                <div class="modal-dialog modal-lg modal-dialog-centered">
-                    <!-- Modal Content -->
-                    <div class="modal-content">
-                        <div class="modal-header">
-                            <h3 class="modal-title" id="anpingonelandModalTitle"><strong>景點介紹</strong></h3>
-                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                <span aria-hidden="true">&times;</span>
-                            </button>
-                        </div>
-                        <div class="modal-body">
-
-                          <ul class="nav nav-tabs" id="myTab" role="tablist">
-                            <li class="nav-item">
-                              <a class="nav-link active" id="anpinglandintroone-tab" data-toggle="tab" href="#anpinglandintroone" role="tab" aria-controls="anpinglandintroone" aria-selected="true"><span>介紹</span></a>
-                            </li>
-                            <li class="nav-item">
-                              <a class="nav-link" id="anpinglandmapone-tab" data-toggle="tab" href="#anpinglandmapone" role="tab" aria-controls="anpinglandintroone" aria-selected="false"><span>地圖</span></a>
-                            </li>
-                          </ul>
-                          <div class="tab-content" id="myTabContent">
-                            <div class="tab-pane fade show active" id="anpinglandintroone" role="tabpanel" aria-labelledby="anpinglandintroone-tab">
-                                <img src="img/landanping1-2.jpg">
-                                <div class="intro">
-                                    <span><h3><strong>安平古堡</strong></h3></span>
-                                    <p>intro</p>
-                                </div>
-                            </div>
-                            <div class="tab-pane fade maprwd" id="anpinglandmapone" role="tabpanel" aria-labelledby="anpinglandintroone-tab">
-                              <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d7782.069103121937!2d120.16124851164336!3d22.999982164395607!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x346e767378e3e467%3A0x9b1e15dd6ac9adf1!2z5a6J5bmz5Y-k5aCh!5e0!3m2!1szh-TW!2stw!4v1576841229421!5m2!1szh-TW!2stw" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
-                            </div>
-                          </div>
-                      </div>
-                  </div>
-                </div>
-              </div>
-
-
-              <a class="land card"  href="" data-toggle="modal" data-target="#anpingtwolandModal">
-                <div class="imgbox">
-                  <img src="img/landanping2.jpg" class="card-img-top" alt="...">
-                </div>  
-              </a>
-               <!-- Modal -->
-               <div class="modal fade" id="anpingtwolandModal" >
-                  <div class="modal-dialog modal-lg modal-dialog-centered">
-                      <!-- Modal Content -->
-                      <div class="modal-content">
-                          <div class="modal-header">
-                              <h3 class="modal-title" id="anpingtwolandModalTitle"><strong>景點介紹</strong></h3>
-                              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                  <span aria-hidden="true">&times;</span>
-                              </button>
-                          </div>
-                          <div class="modal-body">
-  
-                            <ul class="nav nav-tabs" id="myTab" role="tablist">
-                              <li class="nav-item">
-                                <a class="nav-link active" id="anpinglandintrotwo-tab" data-toggle="tab" href="#anpinglandintrotwo" role="tab" aria-controls="anpinglandintrotwo" aria-selected="true"><span>介紹</span></a>
-                              </li>
-                              <li class="nav-item">
-                                <a class="nav-link" id="anpinglandmaptwo-tab" data-toggle="tab" href="#anpinglandmaptwo" role="tab" aria-controls="anpinglandintrotwo" aria-selected="false"><span>地圖</span></a>
-                              </li>
-                            </ul>
-                            <div class="tab-content" id="myTabContent">
-                              <div class="tab-pane fade show active" id="anpinglandintrotwo" role="tabpanel" aria-labelledby="anpinglandintrotwo-tab">
-                                  <img src="img/landanping2-2.jpg">
-                                  <div class="intro">
-                                      <span><h3><strong>觀夕平臺</strong></h3></span>
-                                      <p>intro</p>
-                                  </div>
-                              </div>
-                              <div class="tab-pane fade maprwd" id="anpinglandmaptwo" role="tabpanel" aria-labelledby="anpinglandintrotwo-tab">
-                                <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d7782.450723423407!2d120.14619346460914!3d22.993362033451362!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x346e7603ffffffff%3A0xd4dc6d7696b10aa2!2z6KeA5aSV5bmz6Ie6!5e0!3m2!1szh-TW!2stw!4v1576841375353!5m2!1szh-TW!2stw" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
-                              </div>
-                            </div>
-                        </div>
-                    </div>
-                  </div>
-                </div>
-
-             
-                <a class="land card"  href="" data-toggle="modal" data-target="#anpingthreelandModal">
-                  <div class="imgbox">
-                    <img src="img/landanping3.jpg" class="card-img-top" alt="...">
-                  </div>  
-                </a>
-                 <!-- Modal -->
-                 <div class="modal fade" id="anpingthreelandModal" >
-                    <div class="modal-dialog modal-lg modal-dialog-centered">
-                        <!-- Modal Content -->
-                        <div class="modal-content">
-                            <div class="modal-header">
-                                <h3 class="modal-title" id="anpingthreelandModalTitle"><strong>景點介紹</strong></h3>
-                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                    <span aria-hidden="true">&times;</span>
-                                </button>
-                            </div>
-                            <div class="modal-body">
-    
-                              <ul class="nav nav-tabs" id="myTab" role="tablist">
-                                <li class="nav-item">
-                                  <a class="nav-link active" id="anpinglandintrothree-tab" data-toggle="tab" href="#anpinglandintrothree" role="tab" aria-controls="anpinglandintrothree" aria-selected="true"><span>介紹</span></a>
-                                </li>
-                                <li class="nav-item">
-                                  <a class="nav-link" id="anpinglandmapthree-tab" data-toggle="tab" href="#anpinglandmapthree" role="tab" aria-controls="anpinglandintrothree" aria-selected="false"><span>地圖</span></a>
-                                </li>
-                              </ul>
-                              <div class="tab-content" id="myTabContent">
-                                <div class="tab-pane fade show active" id="anpinglandintrothree" role="tabpanel" aria-labelledby="anpinglandintrothree-tab">
-                                    <img src="img/landanping3-2.jpg">
-                                    <div class="intro">
-                                        <span><h3><strong>林默娘公園</strong></h3></span>
-                                        <p>intro</p>
                                     </div>
                                 </div>
-                                <div class="tab-pane fade maprwd" id="anpinglandmapthree" role="tabpanel" aria-labelledby="anpinglandintrothree-tab">
-                                  <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d11005.903414082375!2d120.15863025695083!3d22.995127939273292!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x140772ce114f5c1b%3A0xacf29a4cc22c2a88!2z5p6X6buY5aiY5YWs5ZyS!5e0!3m2!1szh-TW!2stw!4v1576841590853!5m2!1szh-TW!2stw" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
-                                </div>
-                              </div>
-                          </div>
-                      </div>
-                    </div>
-                  </div>
-
-                  <a class="land card"  href="" data-toggle="modal" data-target="#anpingfourlandModal">
-                    <div class="imgbox">
-                      <img src="img/landanping4.jpg" class="card-img-top" alt="...">
-                    </div>  
-                  </a>
-                   <!-- Modal -->
-                   <div class="modal fade" id="anpingfourlandModal" >
-                      <div class="modal-dialog modal-lg modal-dialog-centered">
-                          <!-- Modal Content -->
-                          <div class="modal-content">
-                              <div class="modal-header">
-                                  <h3 class="modal-title" id="anpingfourlandModalTitle"><strong>景點介紹</strong></h3>
-                                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                      <span aria-hidden="true">&times;</span>
-                                  </button>
-                              </div>
-                              <div class="modal-body">
-      
-                                <ul class="nav nav-tabs" id="myTab" role="tablist">
-                                  <li class="nav-item">
-                                    <a class="nav-link active" id="anpinglandintrofour-tab" data-toggle="tab" href="#anpinglandintrofour" role="tab" aria-controls="anpinglandintrothree" aria-selected="true"><span>介紹</span></a>
-                                  </li>
-                                  <li class="nav-item">
-                                    <a class="nav-link" id="anpinglandmapfour-tab" data-toggle="tab" href="#anpinglandmapfour" role="tab" aria-controls="anpinglandintrothree" aria-selected="false"><span>地圖</span></a>
-                                  </li>
-                                </ul>
-                                <div class="tab-content" id="myTabContent">
-                                  <div class="tab-pane fade show active" id="anpinglandintrofour" role="tabpanel" aria-labelledby="anpinglandintrofour-tab">
-                                      <img src="img/landanping4-2.jpg">
-                                      <div class="intro">
-                                          <span><h3><strong>億載金城</strong></h3></span>
-                                          <p>intro</p>
-                                      </div>
-                                  </div>
-                                  <div class="tab-pane fade maprwd" id="anpinglandmapfour" role="tabpanel" aria-labelledby="anpinglandintrofour-tab">
-                                    <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d5194.34467173811!2d120.16046087685126!3d22.988632874296727!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x346e75fff4a4fa93%3A0xb74ad4513660894e!2z5LqM6a-k6a-T56Cy6Ie6KOWEhOi8iemHkeWfjik!5e0!3m2!1szh-TW!2stw!4v1576841861028!5m2!1szh-TW!2stw" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
-                                  </div>
-                                </div>
                             </div>
-                        </div>
-                      </div>
-                    </div>
-  
-                    <a class="land card"  href="" data-toggle="modal" data-target="#anpingfivelandModal">
-                      <div class="imgbox">
-                        <img src="img/landanping5.jpg" class="card-img-top" alt="...">
-                      </div>  
-                    </a>
-                     <!-- Modal -->
-                     <div class="modal fade" id="anpingfivelandModal" >
-                        <div class="modal-dialog modal-lg modal-dialog-centered">
-                            <!-- Modal Content -->
-                            <div class="modal-content">
-                                <div class="modal-header">
-                                    <h3 class="modal-title" id="anpingfivelandModalTitle"><strong>景點介紹</strong></h3>
-                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                        <span aria-hidden="true">&times;</span>
-                                    </button>
-                                </div>
-                                <div class="modal-body">
-        
-                                  <ul class="nav nav-tabs" id="myTab" role="tablist">
-                                    <li class="nav-item">
-                                      <a class="nav-link active" id="anpinglandintrofive-tab" data-toggle="tab" href="#anpinglandintrofive" role="tab" aria-controls="anpinglandintrofive" aria-selected="true"><span>介紹</span></a>
-                                    </li>
-                                    <li class="nav-item">
-                                      <a class="nav-link" id="anpinglandmapfive-tab" data-toggle="tab" href="#anpinglandmapfive" role="tab" aria-controls="anpinglandintrofive" aria-selected="false"><span>地圖</span></a>
-                                    </li>
-                                  </ul>
-                                  <div class="tab-content" id="myTabContent">
-                                    <div class="tab-pane fade show active" id="anpinglandintrofive" role="tabpanel" aria-labelledby="anpinglandintrofive-tab">
-                                        <img src="img/landanping5-2.jpg">
-                                        <div class="intro">
-                                            <span><h3><strong>漁光島</strong></h3></span>
-                                            <p>intro</p>
-                                        </div>
-                                    </div>
-                                    <div class="tab-pane fade maprwd" id="anpinglandmapfive" role="tabpanel" aria-labelledby="anpinglandintrofive-tab">
-                                      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3673.162696624974!2d120.15348061474445!3d22.981043984974118!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x346e75fd29b0baf3%3A0x7f45ba897226e132!2z5ryB5YWJ5bO2!5e0!3m2!1szh-TW!2stw!4v1576841951387!5m2!1szh-TW!2stw" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
-                                    </div>
-                                  </div>
-                              </div>
                           </div>
                         </div>
-                      </div>
-           
-          </div>  
-
-
-
-        </div>
-
-
-      </div>
-    </div>
-
-
-
-
-
-        <!-- <div class="tab-pane fade show active" id="pills-westland" role="tabpanel" aria-labelledby="pills-home-tab">
             
+            </div>  
+          </div>
+          <div class="tab-pane fade" id="pills-northland" role="tabpanel" aria-labelledby="pills-northland-tab">
             <div class="landgroup card-deck">
-              <a class="land card"  href="">
+
+              <a class="land card"  href="" data-toggle="modal" data-target="#northonelandModal">
                 <div class="imgbox">
-                  <img src="img/landwest1.jpg" class="card-img-top" alt="...">
+                  <img src="img/landnorth1.jpg" class="card-img-top" alt="...">
                 </div>  
               </a>
-              <a class="land card"  href="">
-                <div class="imgbox">
-                  <img src="img/landwest2.jpg" class="card-img-top" alt="...">
-                </div>  
-              </a>
-              <a class="land card"  href="">
-                <div class="imgbox">
-                  <img src="img/landwest3.jpg" class="card-img-top" alt="...">
-                </div>  
-              </a>
-              <a class="land card"  href="">
-                <div class="imgbox">
-                  <img src="img/landwest4.jpg" class="card-img-top" alt="...">
-                </div>  
-              </a>
-              <a class="land card"  href="">
-                <div class="imgbox">
-                  <img src="img/landwest5.jpg" class="card-img-top" alt="...">
-                </div>  
-              </a>
-           </div>
-        </div>
+              <!-- Modal -->
+              <div class="modal fade" id="northonelandModal" >
+                  <div class="modal-dialog modal-lg modal-dialog-centered">
+                      <!-- Modal Content -->
+                      <div class="modal-content">
+                          <div class="modal-header">
+                              <h3 class="modal-title" id="northonelandModalTitle"><strong>景點介紹</strong></h3>
+                              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                  <span aria-hidden="true">&times;</span>
+                              </button>
+                          </div>
+                          <div class="modal-body">
+
+                            <ul class="nav nav-tabs" id="myTab" role="tablist">
+                              <li class="nav-item">
+                                <a class="nav-link active" id="northlandintroone-tab" data-toggle="tab" href="#northlandintroone" role="tab" aria-controls="northlandintroone" aria-selected="true"><span>介紹</span></a>
+                              </li>
+                              <li class="nav-item">
+                                <a class="nav-link" id="northlandmapone-tab" data-toggle="tab" href="#northlandmapone" role="tab" aria-controls="northlandintroone" aria-selected="false"><span>地圖</span></a>
+                              </li>
+                            </ul>
+                            <div class="tab-content" id="myTabContent">
+                              <div class="tab-pane fade show active" id="northlandintroone" role="tabpanel" aria-labelledby="northlandintroone-tab">
+                                  <img src="img/landnorth1-2.jpg">
+                                  <div class="intro">
+                                      <span><h3><strong>321巷 藝術聚落</strong></h3></span>
+                                      <p>「321巷藝術聚落」位於臺南市北區，2003年5月13日公告為市立古蹟。該區在臺灣日治時期屬於老松町，附近有山砲兵部隊與工兵營，為原日軍步兵第二聯隊官舍群。二戰後成為成大教授宿舍，其中一戶為臺灣知名美術家郭柏川故居，現為其紀念館。</p>
+                                  </div>
+                              </div>
+                              <div class="tab-pane fade maprwd" id="northlandmapone" role="tabpanel" aria-labelledby="northlandintroone-tab">
+                                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7344.898756610144!2d120.20755984319398!3d23.00726679717132!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xcf6853bf4ecf33d3!2zMzIx5be3IOiXneihk-iBmuiQvQ!5e0!3m2!1szh-TW!2stw!4v1576839895987!5m2!1szh-TW!2stw" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
+                              </div>
+                            </div>
+                        </div>
+                    </div>
+                  </div>
+                </div>
+
+
+                <a class="land card"  href="" data-toggle="modal" data-target="#northtwolandModal">
+                  <div class="imgbox">
+                    <img src="img/landnorth2.jpg" class="card-img-top" alt="...">
+                  </div>  
+                </a>
+                <!-- Modal -->
+                <div class="modal fade" id="northtwolandModal" >
+                    <div class="modal-dialog modal-lg modal-dialog-centered">
+                        <!-- Modal Content -->
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h3 class="modal-title" id="northtwolandModalTitle"><strong>景點介紹</strong></h3>
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                            </div>
+                            <div class="modal-body">
+    
+                              <ul class="nav nav-tabs" id="myTab" role="tablist">
+                                <li class="nav-item">
+                                  <a class="nav-link active" id="northlandintrotwo-tab" data-toggle="tab" href="#northlandintrotwo" role="tab" aria-controls="northlandintrotwo" aria-selected="true"><span>介紹</span></a>
+                                </li>
+                                <li class="nav-item">
+                                  <a class="nav-link" id="northlandmaptwo-tab" data-toggle="tab" href="#northlandmaptwo" role="tab" aria-controls="northlandintrotwo" aria-selected="false"><span>地圖</span></a>
+                                </li>
+                              </ul>
+                              <div class="tab-content" id="myTabContent">
+                                <div class="tab-pane fade show active" id="northlandintrotwo" role="tabpanel" aria-labelledby="northlandintrotwo-tab">
+                                    <img src="img/landnorth2-2.jpg">
+                                    <div class="intro">
+                                        <span><h3><strong>台南公園</strong></h3></span>
+                                        <p>已有百年歷史的台南公園最為人津津樂道的就是流傳已久的燕潭曉月，形容月亮高掛天空時，猶如明月落在燕潭的倒映美景。每天從早到晚都有不少遊客在潭邊散步運動或是約會談情，假日時潭邊更是許多親子嬉戲的場所，也是攝影留念的最佳取景點，是許多台南人與遊客對台南的共同印象。</p>
+                                    </div>
+                                </div>
+                                <div class="tab-pane fade maprwd" id="northlandmaptwo" role="tabpanel" aria-labelledby="northlandintrotwo-tab">
+                                  <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14689.66204632224!2d120.20421244644935!3d23.00851109358438!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x346e76f4a63bc707%3A0x8ded7cac76070cb5!2z5Y-w5Y2X5YWs5ZyS!5e0!3m2!1szh-TW!2stw!4v1576839880974!5m2!1szh-TW!2stw" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
+                                </div>
+                              </div>
+                          </div>
+                      </div>
+                    </div>
+                  </div>
+
+              
+                  <a class="land card"  href="" data-toggle="modal" data-target="#norththreelandModal">
+                    <div class="imgbox">
+                      <img src="img/landnorth3.jpg" class="card-img-top" alt="...">
+                    </div>  
+                  </a>
+                  <!-- Modal -->
+                  <div class="modal fade" id="norththreelandModal" >
+                      <div class="modal-dialog modal-lg modal-dialog-centered">
+                          <!-- Modal Content -->
+                          <div class="modal-content">
+                              <div class="modal-header">
+                                  <h3 class="modal-title" id="norththreelandModalTitle"><strong>景點介紹</strong></h3>
+                                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                      <span aria-hidden="true">&times;</span>
+                                  </button>
+                              </div>
+                              <div class="modal-body">
+      
+                                <ul class="nav nav-tabs" id="myTab" role="tablist">
+                                  <li class="nav-item">
+                                    <a class="nav-link active" id="northlandintrothree-tab" data-toggle="tab" href="#northlandintrothree" role="tab" aria-controls="northlandintrothree" aria-selected="true"><span>介紹</span></a>
+                                  </li>
+                                  <li class="nav-item">
+                                    <a class="nav-link" id="northlandmapthree-tab" data-toggle="tab" href="#northlandmapthree" role="tab" aria-controls="northlandintrothree" aria-selected="false"><span>地圖</span></a>
+                                  </li>
+                                </ul>
+                                <div class="tab-content" id="myTabContent">
+                                  <div class="tab-pane fade show active" id="northlandintrothree" role="tabpanel" aria-labelledby="northlandintrothree-tab">
+                                      <img src="img/landnorth3-2.jpg">
+                                      <div class="intro">
+                                          <span><h3><strong>Starbucks 星巴克台南-小北門市</strong></h3></span>
+                                          <p>星巴克(Starbucks)成立於1971年，總部在美國華盛頓州西雅圖市，台灣的統一星巴克股份有限公司於1998年1月1日正式成立，是由美國Starbucks Coffee International公司與台灣統一集團旗下統一企業、統一超商三家公司合資成立，共同在台灣開設經營Starbucks Coffee門市。</p>
+                                      </div>
+                                  </div>
+                                  <div class="tab-pane fade maprwd" id="northlandmapthree" role="tabpanel" aria-labelledby="northlandintrothree-tab">
+                                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14689.66204632224!2d120.20421244644935!3d23.00851109358438!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xd2110414e5f5284a!2zU3RhcmJ1Y2tzIOaYn-W3tOWFi-WPsOWNl-Wwj-WMl-mWgOW4gg!5e0!3m2!1szh-TW!2stw!4v1576839861275!5m2!1szh-TW!2stw" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
+                                  </div>
+                                </div>
+                            </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <a class="land card"  href="" data-toggle="modal" data-target="#northfourlandModal">
+                      <div class="imgbox">
+                        <img src="img/landnorth4.jpg" class="card-img-top" alt="...">
+                      </div>  
+                    </a>
+                    <!-- Modal -->
+                    <div class="modal fade" id="northfourlandModal" >
+                        <div class="modal-dialog modal-lg modal-dialog-centered">
+                            <!-- Modal Content -->
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h3 class="modal-title" id="northfourlandModalTitle"><strong>景點介紹</strong></h3>
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                    </button>
+                                </div>
+                                <div class="modal-body">
         
+                                  <ul class="nav nav-tabs" id="myTab" role="tablist">
+                                    <li class="nav-item">
+                                      <a class="nav-link active" id="northlandintrofour-tab" data-toggle="tab" href="#northlandintrofour" role="tab" aria-controls="northlandintrothree" aria-selected="true"><span>介紹</span></a>
+                                    </li>
+                                    <li class="nav-item">
+                                      <a class="nav-link" id="northlandmapfour-tab" data-toggle="tab" href="#northlandmapfour" role="tab" aria-controls="northlandintrothree" aria-selected="false"><span>地圖</span></a>
+                                    </li>
+                                  </ul>
+                                  <div class="tab-content" id="myTabContent">
+                                    <div class="tab-pane fade show active" id="northlandintrofour" role="tabpanel" aria-labelledby="northlandintrofour-tab">
+                                        <img src="img/landnorth4-2.jpg">
+                                        <div class="intro">
+                                            <span><h3><strong>千畦種子博物館</strong></h3></span>
+                                            <p>這是一對夫妻在從事綠美化工程二十多年後，本著熱愛台灣這塊土地的心孕育出的美麗園地，這𥚃沒有人工斧鑿的精雕細琢，只有大自然的趣緻溫柔，這裡沒有僭越大地的人定勝天，只有與自然共存的草生採集。
+                                              歡迎各位來到我們的種子館，來到這塊為種子專設的園地。一直以來，我們只看見它們生成之後枝繁葉茂或是花團錦簇，卻忽略了那些沈默低調卻是植物之源的種子，其實它們長相和色彩絕對是你料想不到的多元和斑斕。</p>
+                                        </div>
+                                    </div>
+                                    <div class="tab-pane fade maprwd" id="northlandmapfour" role="tabpanel" aria-labelledby="northlandintrofour-tab">
+                                      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3672.3752738306184!2d120.20315801474513!3d23.009989384959454!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x346e76c2797fb1e5%3A0x3e14ca7e0eb902d0!2z5Y2D55Wm56iu5a2Q5Y2a54mp6aSo!5e0!3m2!1szh-TW!2stw!4v1576839821122!5m2!1szh-TW!2stw" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
+                                    </div>
+                                  </div>
+                              </div>
+                          </div>
+                        </div>
+                      </div>
+    
+                      <a class="land card"  href="" data-toggle="modal" data-target="#northfivelandModal">
+                        <div class="imgbox">
+                          <img src="img/landnorth5.jpg" class="card-img-top" alt="...">
+                        </div>  
+                      </a>
+                      <!-- Modal -->
+                      <div class="modal fade" id="northfivelandModal" >
+                          <div class="modal-dialog modal-lg modal-dialog-centered">
+                              <!-- Modal Content -->
+                              <div class="modal-content">
+                                  <div class="modal-header">
+                                      <h3 class="modal-title" id="northfivelandModalTitle"><strong>景點介紹</strong></h3>
+                                      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                          <span aria-hidden="true">&times;</span>
+                                      </button>
+                                  </div>
+                                  <div class="modal-body">
+          
+                                    <ul class="nav nav-tabs" id="myTab" role="tablist">
+                                      <li class="nav-item">
+                                        <a class="nav-link active" id="northlandintrofive-tab" data-toggle="tab" href="#northlandintrofive" role="tab" aria-controls="northlandintrofive" aria-selected="true"><span>介紹</span></a>
+                                      </li>
+                                      <li class="nav-item">
+                                        <a class="nav-link" id="northlandmapfive-tab" data-toggle="tab" href="#northlandmapfive" role="tab" aria-controls="northlandintrofive" aria-selected="false"><span>地圖</span></a>
+                                      </li>
+                                    </ul>
+                                    <div class="tab-content" id="myTabContent">
+                                      <div class="tab-pane fade show active" id="northlandintrofive" role="tabpanel" aria-labelledby="northlandintrofive-tab">
+                                          <img src="img/landnorth5-2.jpg">
+                                          <div class="intro">
+                                              <span><h3><strong>立德公園</strong></h3></span>
+                                              <p>這座北區的小型公園，藏著厲害的攀爬網設施，去年由編織藝術家曾靖婷改造的立德公園攀爬網，今年又追加了新的關卡，最新加強版的立德公園攀爬網，不但好玩，更可以讓孩子爬上爬下鍛鍊肌肉，可以說是名符其實的親子公園。</p>
+                                          </div>
+                                      </div>
+                                      <div class="tab-pane fade maprwd" id="northlandmapfive" role="tabpanel" aria-labelledby="northlandintrofive-tab">
+                                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3672.3752738306184!2d120.20315801474513!3d23.009989384959454!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x346e76f7d9163321%3A0xcda9eef5197c6d74!2z56uL5b635YWs5ZyS!5e0!3m2!1szh-TW!2stw!4v1576839781914!5m2!1szh-TW!2stw" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
+                                      </div>
+                                    </div>
+                                </div>
+                            </div>
+                          </div>
+                        </div>
+            
+            </div>  
 
-        <div class="tab-pane fade" id="pills-eastland" role="tabpanel" aria-labelledby="pills-profile-tab">
 
-          <div class="landgroup card-deck">
-            <a class="land card"  href="">
-              <div class="imgbox">
-                <img src="img/landwest1.jpg" class="card-img-top" alt="...">
-              </div>  
-            </a>
-            <a class="land card"  href="">
-              <div class="imgbox">
-                <img src="img/landwest2.jpg" class="card-img-top" alt="...">
-              </div>  
-            </a>
-            <a class="land card"  href="">
-              <div class="imgbox">
-                <img src="img/landwest3.jpg" class="card-img-top" alt="...">
-              </div>  
-            </a>
-            <a class="land card"  href="">
-              <div class="imgbox">
-                <img src="img/landwest4.jpg" class="card-img-top" alt="...">
-              </div>  
-            </a>
-            <a class="land card"  href="">
-              <div class="imgbox">
-                <img src="img/landwest5.jpg" class="card-img-top" alt="...">
-              </div>  
-            </a>
+
+
+          </div>
+          <div class="tab-pane fade" id="pills-southland" role="tabpanel" aria-labelledby="pills-southland-tab">
+            <div class="landgroup card-deck">
+
+              <a class="land card"  href="" data-toggle="modal" data-target="#southonelandModal">
+                <div class="imgbox">
+                  <img src="img/landsouth1.jpg" class="card-img-top" alt="...">
+                </div>  
+              </a>
+              <!-- Modal -->
+              <div class="modal fade" id="southonelandModal" >
+                  <div class="modal-dialog modal-lg modal-dialog-centered">
+                      <!-- Modal Content -->
+                      <div class="modal-content">
+                          <div class="modal-header">
+                              <h3 class="modal-title" id="southonelandModalTitle"><strong>景點介紹</strong></h3>
+                              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                  <span aria-hidden="true">&times;</span>
+                              </button>
+                          </div>
+                          <div class="modal-body">
+
+                            <ul class="nav nav-tabs" id="myTab" role="tablist">
+                              <li class="nav-item">
+                                <a class="nav-link active" id="southlandintroone-tab" data-toggle="tab" href="#southlandintroone" role="tab" aria-controls="southlandintroone" aria-selected="true"><span>介紹</span></a>
+                              </li>
+                              <li class="nav-item">
+                                <a class="nav-link" id="southlandmapone-tab" data-toggle="tab" href="#southlandmapone" role="tab" aria-controls="southlandintroone" aria-selected="false"><span>地圖</span></a>
+                              </li>
+                            </ul>
+                            <div class="tab-content" id="myTabContent">
+                              <div class="tab-pane fade show active" id="southlandintroone" role="tabpanel" aria-labelledby="southlandintroone-tab">
+                                  <img src="img/landsouth1-2.jpg">
+                                  <div class="intro">
+                                      <span><h3><strong>水萍塭公園</strong></h3></span>
+                                      <p>水萍塭公園位於夏林路、永華路、建南路與金華路相交的四角方格內，以前為台江內港的一部分，後來因為海岸線西退，內港便成為了水塘，2000年經過重新規劃，將此改造成一處附近居民運動、散步的好去處。公園占地有十公頃，中間有一個大廣場，小朋友可以在此奔跑、遊戲，還另外設有兩個遊樂場，豐富的遊樂設施是週末假日親子共遊的歡樂之地，或是三五好友齊聚草地野餐、享受陽光，也是悠閒午後的好時光。</p>
+                                  </div>
+                              </div>
+                              <div class="tab-pane fade maprwd" id="southlandmapone" role="tabpanel" aria-labelledby="southlandintroone-tab">
+                                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14692.774421705059!2d120.20108451312913!3d22.97990708442114!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x346e767741ce0257%3A0x7c1cb74e5bb9ec17!2z5rC06JCN5aGt5YWs5ZyS!5e0!3m2!1szh-TW!2stw!4v1576840110758!5m2!1szh-TW!2stw" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
+                              </div>
+                            </div>
+                        </div>
+                    </div>
+                  </div>
+                </div>
+
+
+                <a class="land card"  href="" data-toggle="modal" data-target="#southtwolandModal">
+                  <div class="imgbox">
+                    <img src="img/landsouth2.jpg" class="card-img-top" alt="...">
+                  </div>  
+                </a>
+                <!-- Modal -->
+                <div class="modal fade" id="southtwolandModal" >
+                    <div class="modal-dialog modal-lg modal-dialog-centered">
+                        <!-- Modal Content -->
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h3 class="modal-title" id="southtwolandModalTitle"><strong>景點介紹</strong></h3>
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                            </div>
+                            <div class="modal-body">
+    
+                              <ul class="nav nav-tabs" id="myTab" role="tablist">
+                                <li class="nav-item">
+                                  <a class="nav-link active" id="southlandintrotwo-tab" data-toggle="tab" href="#southlandintrotwo" role="tab" aria-controls="southlandintrotwo" aria-selected="true"><span>介紹</span></a>
+                                </li>
+                                <li class="nav-item">
+                                  <a class="nav-link" id="southlandmaptwo-tab" data-toggle="tab" href="#southlandmaptwo" role="tab" aria-controls="southlandintrotwo" aria-selected="false"><span>地圖</span></a>
+                                </li>
+                              </ul>
+                              <div class="tab-content" id="myTabContent">
+                                <div class="tab-pane fade show active" id="southlandintrotwo" role="tabpanel" aria-labelledby="southlandintrotwo-tab">
+                                    <img src="img/landsouth2-2.jpg">
+                                    <div class="intro">
+                                        <span><h3><strong>黑橋牌香腸博物館</strong></h3></span>
+                                        <p>黑橋牌香腸博物館在台南頗富盛名，早期是由府前路旁的烏橋仔起家，所以命名為黑橋牌，來到工廠門口就令人驚豔，外觀有如精品店一般華麗，門口的大碗公仿造以往廟口香腸攤玩骰子的情景，讓遊客一進門就開始玩起來。</p>
+                                    </div>
+                                </div>
+                                <div class="tab-pane fade maprwd" id="southlandmaptwo" role="tabpanel" aria-labelledby="southlandintrotwo-tab">
+                                  <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d12355.635414229897!2d120.18862834044513!3d22.97406590264002!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x346e75de6122a339%3A0x9970a43ee4051ee6!2z6buR5qmL54mM6aaZ6IW45Y2a54mp6aSo!5e0!3m2!1szh-TW!2stw!4v1576840327374!5m2!1szh-TW!2stw" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
+                                </div>
+                              </div>
+                          </div>
+                      </div>
+                    </div>
+                  </div>
+
+              
+                  <a class="land card"  href="" data-toggle="modal" data-target="#souththreelandModal">
+                    <div class="imgbox">
+                      <img src="img/landsouth3.jpg" class="card-img-top" alt="...">
+                    </div>  
+                  </a>
+                  <!-- Modal -->
+                  <div class="modal fade" id="souththreelandModal" >
+                      <div class="modal-dialog modal-lg modal-dialog-centered">
+                          <!-- Modal Content -->
+                          <div class="modal-content">
+                              <div class="modal-header">
+                                  <h3 class="modal-title" id="souththreelandModalTitle"><strong>景點介紹</strong></h3>
+                                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                      <span aria-hidden="true">&times;</span>
+                                  </button>
+                              </div>
+                              <div class="modal-body">
+      
+                                <ul class="nav nav-tabs" id="myTab" role="tablist">
+                                  <li class="nav-item">
+                                    <a class="nav-link active" id="southlandintrothree-tab" data-toggle="tab" href="#southlandintrothree" role="tab" aria-controls="southlandintrothree" aria-selected="true"><span>介紹</span></a>
+                                  </li>
+                                  <li class="nav-item">
+                                    <a class="nav-link" id="southlandmapthree-tab" data-toggle="tab" href="#southlandmapthree" role="tab" aria-controls="southlandintrothree" aria-selected="false"><span>地圖</span></a>
+                                  </li>
+                                </ul>
+                                <div class="tab-content" id="myTabContent">
+                                  <div class="tab-pane fade show active" id="southlandintrothree" role="tabpanel" aria-labelledby="southlandintrothree-tab">
+                                      <img src="img/landsouth3-2.jpg">
+                                      <div class="intro">
+                                          <span><h3><strong>黃金海岸</strong></h3></span>
+                                          <p>黃金海岸是台南最南端的海岸線與高雄茄萣相鄰。從台南安平漁光島起至黃金海岸，有長達近5公里的海岸線沙灘，每天下午總是有許多遊客在此散步、踏浪、放風箏，金黃色的夕陽打在沙灘上呈現出一片有如黃金般閃亮的沙灘景致，這也是黃金海岸的名稱由來，日落傍晚時分是黃金海岸最熱鬧的時候，入夜後人潮不但沒有散去，反倒被海岸邊的露天咖啡座所吸引，此時繽紛色彩的燈光亮起，從熱情的黃金海岸變身為浪漫的月光海岸，是許多情侶約會跟三兩好友夜間聚會的好去處。</p>
+                                      </div>
+                                  </div>
+                                  <div class="tab-pane fade maprwd" id="southlandmapthree" role="tabpanel" aria-labelledby="southlandintrothree-tab">
+                                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d29394.370820923625!2d120.20079374583314!3d22.93931050479753!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x346e75721ffd3031%3A0xb4dec7201f75490b!2z6buD6YeR5rW35bK4!5e0!3m2!1szh-TW!2stw!4v1576840492832!5m2!1szh-TW!2stw" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
+                                  </div>
+                                </div>
+                            </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <a class="land card"  href="" data-toggle="modal" data-target="#southfourlandModal">
+                      <div class="imgbox">
+                        <img src="img/landsouth4.jpg" class="card-img-top" alt="...">
+                      </div>  
+                    </a>
+                    <!-- Modal -->
+                    <div class="modal fade" id="southfourlandModal" >
+                        <div class="modal-dialog modal-lg modal-dialog-centered">
+                            <!-- Modal Content -->
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h3 class="modal-title" id="southfourlandModalTitle"><strong>景點介紹</strong></h3>
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                    </button>
+                                </div>
+                                <div class="modal-body">
+        
+                                  <ul class="nav nav-tabs" id="myTab" role="tablist">
+                                    <li class="nav-item">
+                                      <a class="nav-link active" id="southlandintrofour-tab" data-toggle="tab" href="#southlandintrofour" role="tab" aria-controls="southlandintrothree" aria-selected="true"><span>介紹</span></a>
+                                    </li>
+                                    <li class="nav-item">
+                                      <a class="nav-link" id="southlandmapfour-tab" data-toggle="tab" href="#southlandmapfour" role="tab" aria-controls="southlandintrothree" aria-selected="false"><span>地圖</span></a>
+                                    </li>
+                                  </ul>
+                                  <div class="tab-content" id="myTabContent">
+                                    <div class="tab-pane fade show active" id="southlandintrofour" role="tabpanel" aria-labelledby="southlandintrofour-tab">
+                                        <img src="img/landsouth4-2.jpg">
+                                        <div class="intro">
+                                            <span><h3><strong>奇美食品幸福工廠</strong></h3></span>
+                                            <p>位在台南國際門戶-台南機場前的奇美食品幸福工廠，奇美一直都是台南精神的企業代表，但大家往往只想到博物館或奇美電子，比較少會想到奇美食品。但奇美食品也是大家平常會常接觸到的喔，7-11裡面常買到的包子，甚至是國外迪士尼買到的刈包通通來自這裡，很符合他們國際化的形象，工廠內部除了參觀食品製程以外，可愛的老街商店布景是親子家庭最愛的拍照留念處，精緻的烘焙DIY體驗讓孩子像是專業的小廚師一樣做出好吃的甜點，琳瑯滿目的商品區及餐廳除了填飽五臟廟更能買到不少精美的伴手禮。</p>
+                                        </div>
+                                    </div>
+                                    <div class="tab-pane fade maprwd" id="southlandmapfour" role="tabpanel" aria-labelledby="southlandintrofour-tab">
+                                      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d12357.937341805213!2d120.21268595207023!3d22.948873513946562!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x346e75f376ea9fb5%3A0xf3c1553119c2a00f!2z5aWH576O6aOf5ZOB5bm456aP5bel5bug!5e0!3m2!1szh-TW!2stw!4v1576840676208!5m2!1szh-TW!2stw" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
+                                    </div>
+                                  </div>
+                              </div>
+                          </div>
+                        </div>
+                      </div>
+    
+                      <a class="land card"  href="" data-toggle="modal" data-target="#southfivelandModal">
+                        <div class="imgbox">
+                          <img src="img/landsouth5.jpg" class="card-img-top" alt="...">
+                        </div>  
+                      </a>
+                      <!-- Modal -->
+                      <div class="modal fade" id="southfivelandModal" >
+                          <div class="modal-dialog modal-lg modal-dialog-centered">
+                              <!-- Modal Content -->
+                              <div class="modal-content">
+                                  <div class="modal-header">
+                                      <h3 class="modal-title" id="southfivelandModalTitle"><strong>景點介紹</strong></h3>
+                                      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                          <span aria-hidden="true">&times;</span>
+                                      </button>
+                                  </div>
+                                  <div class="modal-body">
+          
+                                    <ul class="nav nav-tabs" id="myTab" role="tablist">
+                                      <li class="nav-item">
+                                        <a class="nav-link active" id="southlandintrofive-tab" data-toggle="tab" href="#southlandintrofive" role="tab" aria-controls="southlandintrofive" aria-selected="true"><span>介紹</span></a>
+                                      </li>
+                                      <li class="nav-item">
+                                        <a class="nav-link" id="southlandmapfive-tab" data-toggle="tab" href="#southlandmapfive" role="tab" aria-controls="southlandintrofive" aria-selected="false"><span>地圖</span></a>
+                                      </li>
+                                    </ul>
+                                    <div class="tab-content" id="myTabContent">
+                                      <div class="tab-pane fade show active" id="southlandintrofive" role="tabpanel" aria-labelledby="southlandintrofive-tab">
+                                          <img src="img/landsouth5-2.jpg">
+                                          <div class="intro">
+                                              <span><h3><strong>喜樹老街</strong></h3></span>
+                                              <p>「喜樹老街」位於台南市南區，約有三百年歷史的老聚落，在都市發展、人口外移中逐漸罵沒落而被淡忘，隨著社區改造、藝術與文創發展，以海濱環境特色推廣休閒運動，以傳統歷史聚落和民俗人文為主軸，運用彩繪塗鴉出傳統的古樸風氣，讓這裡成為近年來新興的彩繪文創聚落。除了彩繪外，這裡還有街頭藝人市集可以逛遊，不定期還會舉辦「喜事集藝術聚落」相關活動，創造出海濱新聚落文化。</p>
+                                          </div>
+                                      </div>
+                                      <div class="tab-pane fade maprwd" id="southlandmapfive" role="tabpanel" aria-labelledby="southlandintrofive-tab">
+                                        <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d14697.068311970506!2d120.1777971!3d22.9403891!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xd494bfd0a66a9b63!2z5Zac5qi56ICB6KGX!5e0!3m2!1szh-TW!2stw!4v1576840924380!5m2!1szh-TW!2stw" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
+                                      </div>
+                                    </div>
+                                </div>
+                            </div>
+                          </div>
+                        </div>
+            
+            </div>  
           </div>
 
-        </div>
-        <div class="tab-pane fade" id="pills-northland" role="tabpanel" aria-labelledby="pills-contact-tab">
+          <div class="tab-pane fade" id="pills-anpingland" role="tabpanel" aria-labelledby="pills-anpingland-tab">
+            <div class="landgroup card-deck">
 
-        </div>
-        <div class="tab-pane fade" id="pills-southland" role="tabpanel" aria-labelledby="pills-contact-tab">
+              <a class="land card"  href="" data-toggle="modal" data-target="#anpingonelandModal">
+                <div class="imgbox">
+                  <img src="img/landanping1.jpg" class="card-img-top" alt="...">
+                </div>  
+              </a>
+              <!-- Modal -->
+              <div class="modal fade" id="anpingonelandModal" >
+                  <div class="modal-dialog modal-lg modal-dialog-centered">
+                      <!-- Modal Content -->
+                      <div class="modal-content">
+                          <div class="modal-header">
+                              <h3 class="modal-title" id="anpingonelandModalTitle"><strong>景點介紹</strong></h3>
+                              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                  <span aria-hidden="true">&times;</span>
+                              </button>
+                          </div>
+                          <div class="modal-body">
+
+                            <ul class="nav nav-tabs" id="myTab" role="tablist">
+                              <li class="nav-item">
+                                <a class="nav-link active" id="anpinglandintroone-tab" data-toggle="tab" href="#anpinglandintroone" role="tab" aria-controls="anpinglandintroone" aria-selected="true"><span>介紹</span></a>
+                              </li>
+                              <li class="nav-item">
+                                <a class="nav-link" id="anpinglandmapone-tab" data-toggle="tab" href="#anpinglandmapone" role="tab" aria-controls="anpinglandintroone" aria-selected="false"><span>地圖</span></a>
+                              </li>
+                            </ul>
+                            <div class="tab-content" id="myTabContent">
+                              <div class="tab-pane fade show active" id="anpinglandintroone" role="tabpanel" aria-labelledby="anpinglandintroone-tab">
+                                  <img src="img/landanping1-2.jpg">
+                                  <div class="intro">
+                                      <span><h3><strong>安平古堡</strong></h3></span>
+                                      <p>17世紀初荷蘭人以軍商結合的隊伍，於1624年占領今日安平，並建熱蘭遮城為其防禦要塞，全部工程完成於1634年。1662年鄭成功取荷蘭城後，改稱安平鎮，改內城為內府，臺人因此稱其為王城。清領時代，因台江陸浮失卻其重要性，加上清兵破壞熱蘭遮城建億載金城，故日漸荒廢。日治後重建，二戰後乃稱「安平古堡」。目前真正的荷蘭時期遺跡僅存古堡前方外城南城垣的磚牆。老榕盤根，無限滄桑，見證著盡400年來的台江的歷史。</p>
+                                  </div>
+                              </div>
+                              <div class="tab-pane fade maprwd" id="anpinglandmapone" role="tabpanel" aria-labelledby="anpinglandintroone-tab">
+                                <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d7782.069103121937!2d120.16124851164336!3d22.999982164395607!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x346e767378e3e467%3A0x9b1e15dd6ac9adf1!2z5a6J5bmz5Y-k5aCh!5e0!3m2!1szh-TW!2stw!4v1576841229421!5m2!1szh-TW!2stw" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
+                              </div>
+                            </div>
+                        </div>
+                    </div>
+                  </div>
+                </div>
+
+
+                <a class="land card"  href="" data-toggle="modal" data-target="#anpingtwolandModal">
+                  <div class="imgbox">
+                    <img src="img/landanping2.jpg" class="card-img-top" alt="...">
+                  </div>  
+                </a>
+                <!-- Modal -->
+                <div class="modal fade" id="anpingtwolandModal" >
+                    <div class="modal-dialog modal-lg modal-dialog-centered">
+                        <!-- Modal Content -->
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h3 class="modal-title" id="anpingtwolandModalTitle"><strong>景點介紹</strong></h3>
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                            </div>
+                            <div class="modal-body">
+    
+                              <ul class="nav nav-tabs" id="myTab" role="tablist">
+                                <li class="nav-item">
+                                  <a class="nav-link active" id="anpinglandintrotwo-tab" data-toggle="tab" href="#anpinglandintrotwo" role="tab" aria-controls="anpinglandintrotwo" aria-selected="true"><span>介紹</span></a>
+                                </li>
+                                <li class="nav-item">
+                                  <a class="nav-link" id="anpinglandmaptwo-tab" data-toggle="tab" href="#anpinglandmaptwo" role="tab" aria-controls="anpinglandintrotwo" aria-selected="false"><span>地圖</span></a>
+                                </li>
+                              </ul>
+                              <div class="tab-content" id="myTabContent">
+                                <div class="tab-pane fade show active" id="anpinglandintrotwo" role="tabpanel" aria-labelledby="anpinglandintrotwo-tab">
+                                    <img src="img/landanping2-2.jpg">
+                                    <div class="intro">
+                                        <span><h3><strong>觀夕平臺</strong></h3></span>
+                                        <p>位於安平港國家歷史風景區內的觀夕平台是近年相當熱門的景點，三角形的平台與兩側的防風林營造出綠意盎然的景色，平台前就是湛藍的海洋美景，午後時分常見家庭帶著小孩在沙灘上玩沙放風箏，或是三兩好友捲起褲管沿著岸邊踏浪，夕陽黃昏時天空雲彩變化是最多人佇足的時候。</p>
+                                    </div>
+                                </div>
+                                <div class="tab-pane fade maprwd" id="anpinglandmaptwo" role="tabpanel" aria-labelledby="anpinglandintrotwo-tab">
+                                  <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d7782.450723423407!2d120.14619346460914!3d22.993362033451362!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x346e7603ffffffff%3A0xd4dc6d7696b10aa2!2z6KeA5aSV5bmz6Ie6!5e0!3m2!1szh-TW!2stw!4v1576841375353!5m2!1szh-TW!2stw" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
+                                </div>
+                              </div>
+                          </div>
+                      </div>
+                    </div>
+                  </div>
+
+              
+                  <a class="land card"  href="" data-toggle="modal" data-target="#anpingthreelandModal">
+                    <div class="imgbox">
+                      <img src="img/landanping3.jpg" class="card-img-top" alt="...">
+                    </div>  
+                  </a>
+                  <!-- Modal -->
+                  <div class="modal fade" id="anpingthreelandModal" >
+                      <div class="modal-dialog modal-lg modal-dialog-centered">
+                          <!-- Modal Content -->
+                          <div class="modal-content">
+                              <div class="modal-header">
+                                  <h3 class="modal-title" id="anpingthreelandModalTitle"><strong>景點介紹</strong></h3>
+                                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                      <span aria-hidden="true">&times;</span>
+                                  </button>
+                              </div>
+                              <div class="modal-body">
+      
+                                <ul class="nav nav-tabs" id="myTab" role="tablist">
+                                  <li class="nav-item">
+                                    <a class="nav-link active" id="anpinglandintrothree-tab" data-toggle="tab" href="#anpinglandintrothree" role="tab" aria-controls="anpinglandintrothree" aria-selected="true"><span>介紹</span></a>
+                                  </li>
+                                  <li class="nav-item">
+                                    <a class="nav-link" id="anpinglandmapthree-tab" data-toggle="tab" href="#anpinglandmapthree" role="tab" aria-controls="anpinglandintrothree" aria-selected="false"><span>地圖</span></a>
+                                  </li>
+                                </ul>
+                                <div class="tab-content" id="myTabContent">
+                                  <div class="tab-pane fade show active" id="anpinglandintrothree" role="tabpanel" aria-labelledby="anpinglandintrothree-tab">
+                                      <img src="img/landanping3-2.jpg">
+                                      <div class="intro">
+                                          <span><h3><strong>林默娘公園</strong></h3></span>
+                                          <p>來到安平漁港邊，最顯眼的莫過於聳立在港邊的林默娘雕像，有如台南的自由女神般的看顧著每天進出的船隻，白天的藍天白雲讓媽祖有如身在雲端神力無邊，直至黃昏，父母親開始帶著小朋友們出來散步，孩子們在周邊的草皮開心跟著泡泡街頭藝人嬉戲，或是放著風箏，當中也有不少主人帶著毛孩子解開束縛，歡欣的在草皮上奔跑。</p>
+                                      </div>
+                                  </div>
+                                  <div class="tab-pane fade maprwd" id="anpinglandmapthree" role="tabpanel" aria-labelledby="anpinglandintrothree-tab">
+                                    <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d11005.903414082375!2d120.15863025695083!3d22.995127939273292!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x140772ce114f5c1b%3A0xacf29a4cc22c2a88!2z5p6X6buY5aiY5YWs5ZyS!5e0!3m2!1szh-TW!2stw!4v1576841590853!5m2!1szh-TW!2stw" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
+                                  </div>
+                                </div>
+                            </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <a class="land card"  href="" data-toggle="modal" data-target="#anpingfourlandModal">
+                      <div class="imgbox">
+                        <img src="img/landanping4.jpg" class="card-img-top" alt="...">
+                      </div>  
+                    </a>
+                    <!-- Modal -->
+                    <div class="modal fade" id="anpingfourlandModal" >
+                        <div class="modal-dialog modal-lg modal-dialog-centered">
+                            <!-- Modal Content -->
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h3 class="modal-title" id="anpingfourlandModalTitle"><strong>景點介紹</strong></h3>
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                    </button>
+                                </div>
+                                <div class="modal-body">
+        
+                                  <ul class="nav nav-tabs" id="myTab" role="tablist">
+                                    <li class="nav-item">
+                                      <a class="nav-link active" id="anpinglandintrofour-tab" data-toggle="tab" href="#anpinglandintrofour" role="tab" aria-controls="anpinglandintrothree" aria-selected="true"><span>介紹</span></a>
+                                    </li>
+                                    <li class="nav-item">
+                                      <a class="nav-link" id="anpinglandmapfour-tab" data-toggle="tab" href="#anpinglandmapfour" role="tab" aria-controls="anpinglandintrothree" aria-selected="false"><span>地圖</span></a>
+                                    </li>
+                                  </ul>
+                                  <div class="tab-content" id="myTabContent">
+                                    <div class="tab-pane fade show active" id="anpinglandintrofour" role="tabpanel" aria-labelledby="anpinglandintrofour-tab">
+                                        <img src="img/landanping4-2.jpg">
+                                        <div class="intro">
+                                            <span><h3><strong>億載金城</strong></h3></span>
+                                            <p>億載金城又名「二鯤鯓砲台」，是一個四方型四周有稜堡且有護城河圍繞的紅色城堡，中央處的草皮則是當時用來操練士兵的所在地，從地圖上看是一個非常勻稱的菱形設計，隨著歷史演進，億載金城已失去軍事據點的作用，轉變為相當受歡迎的景點，假日偶有穿著清兵服裝的工作人員在砲台上演練著砲操，有如時光倒流的場景讓許多遊客驚喜不已，三-四月周邊黃花風鈴木盛開時更是絕美，常可見遊客踩踏著天鵝船在護城河中緩緩前進，與生活在此的野鴨及天鵝一同在水域裡嬉戲著。</p>
+                                        </div>
+                                    </div>
+                                    <div class="tab-pane fade maprwd" id="anpinglandmapfour" role="tabpanel" aria-labelledby="anpinglandintrofour-tab">
+                                      <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d5194.34467173811!2d120.16046087685126!3d22.988632874296727!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x346e75fff4a4fa93%3A0xb74ad4513660894e!2z5LqM6a-k6a-T56Cy6Ie6KOWEhOi8iemHkeWfjik!5e0!3m2!1szh-TW!2stw!4v1576841861028!5m2!1szh-TW!2stw" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
+                                    </div>
+                                  </div>
+                              </div>
+                          </div>
+                        </div>
+                      </div>
+    
+                      <a class="land card"  href="" data-toggle="modal" data-target="#anpingfivelandModal">
+                        <div class="imgbox">
+                          <img src="img/landanping5.jpg" class="card-img-top" alt="...">
+                        </div>  
+                      </a>
+                      <!-- Modal -->
+                      <div class="modal fade" id="anpingfivelandModal" >
+                          <div class="modal-dialog modal-lg modal-dialog-centered">
+                              <!-- Modal Content -->
+                              <div class="modal-content">
+                                  <div class="modal-header">
+                                      <h3 class="modal-title" id="anpingfivelandModalTitle"><strong>景點介紹</strong></h3>
+                                      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                          <span aria-hidden="true">&times;</span>
+                                      </button>
+                                  </div>
+                                  <div class="modal-body">
           
+                                    <ul class="nav nav-tabs" id="myTab" role="tablist">
+                                      <li class="nav-item">
+                                        <a class="nav-link active" id="anpinglandintrofive-tab" data-toggle="tab" href="#anpinglandintrofive" role="tab" aria-controls="anpinglandintrofive" aria-selected="true"><span>介紹</span></a>
+                                      </li>
+                                      <li class="nav-item">
+                                        <a class="nav-link" id="anpinglandmapfive-tab" data-toggle="tab" href="#anpinglandmapfive" role="tab" aria-controls="anpinglandintrofive" aria-selected="false"><span>地圖</span></a>
+                                      </li>
+                                    </ul>
+                                    <div class="tab-content" id="myTabContent">
+                                      <div class="tab-pane fade show active" id="anpinglandintrofive" role="tabpanel" aria-labelledby="anpinglandintrofive-tab">
+                                          <img src="img/landanping5-2.jpg">
+                                          <div class="intro">
+                                              <span><h3><strong>漁光島</strong></h3></span>
+                                              <p>漁光島真的是一座島，位於台南府城安平港的南側，僅藉著漁光橋與府城相連，原本叫做三鯤鯓，是府城最僻靜的小漁村，但自從漁光島那1.5公里長的月牙灣海灘公諸於世，漁光島已經成為台南最熱血的景點，沖浪、風浪板、立槳沖浪都可以玩，也是最浪漫的景點，超級適合漫步、吹風、看夕陽。</p>
+                                          </div>
+                                      </div>
+                                      <div class="tab-pane fade maprwd" id="anpinglandmapfive" role="tabpanel" aria-labelledby="anpinglandintrofive-tab">
+                                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3673.162696624974!2d120.15348061474445!3d22.981043984974118!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x346e75fd29b0baf3%3A0x7f45ba897226e132!2z5ryB5YWJ5bO2!5e0!3m2!1szh-TW!2stw!4v1576841951387!5m2!1szh-TW!2stw" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
+                                      </div>
+                                    </div>
+                                </div>
+                            </div>
+                          </div>
+                        </div>
+            
+            </div>  
+
+
+
+          </div>
+
+
         </div>
-        <div class="tab-pane fade" id="pills-anpingland" role="tabpanel" aria-labelledby="pills-contact-tab">
 
-        </div>
-
- -->
-
-
-<!-- 
-        <div class="landgroup card-deck">
-
-          <a class="land card"  href="">
-            <div class="imgbox">
-              <img src="img/land1.jpg" class="card-img-top" alt="...">
-            </div>  
-          </a>
-          <a class="land card"  href="">
-            <div class="imgbox">
-              <img src="img/land2.jpg" class="card-img-top" alt="...">
-            </div>  
-          </a>
-          <a class="land card"  href="">
-            <div class="imgbox">
-              <img src="img/land3.jpg" class="card-img-top" alt="...">
-            </div>  
-          </a>
-          <a class="land card"  href="">
-            <div class="imgbox">
-              <img src="img/land4.jpg" class="card-img-top" alt="...">
-            </div>  
-          </a>
-          <a class="land card"  href="">
-            <div class="imgbox">
-              <img src="img/land5.jpg" class="card-img-top" alt="...">
-            </div>  
-          </a>
-
-        </div> -->
-
-
-
+    </div>
 
     </section>
 

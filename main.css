@@ -59,10 +59,11 @@ strong {
     text-align: center;
 }
 .banner img{
-    width: 30%;
+    width: 100%;
+   
     
-    margin-top: 2%;
 }
+
 @media screen and (max-width: 320px){
     body{
        
@@ -88,12 +89,14 @@ strong {
 .land .sectiontitle{
     padding-top: 25%;
 }
-
+.areanav .sectiontitle{
+    padding-top: 15%;
+}
 .areanav{
     width: 100%;
-    padding: 10%;
+    
     background-image: url("img/background2.jpg");
-   
+    padding-bottom:10% ;
     background-size: cover;
     background-attachment: fixed;
 }
@@ -130,7 +133,7 @@ strong {
 .areanav .setarea{
     width: 100%;
     padding: 5%;
-    color: rgb(255, 140, 221);
+    color: rgb(255, 172, 217);
     font-family: Microsoft JhengHei;
 }
 .areanav .card{
@@ -236,6 +239,10 @@ strong {
     background-color:#c6f1d6;
     
 }
+
+
+
+
 
 
 
@@ -413,7 +420,12 @@ strong {
     border: none !important;
 }
 
-
+.land .modal .modal-body .tab-content .intro p{
+    font-family:  Microsoft JhengHei;
+    line-height:25px;
+    text-align: justify;
+    font-size: 11pt;
+}
 
 
 .land .tab-content .tab-pane .modal .modal-body  .maprwd {

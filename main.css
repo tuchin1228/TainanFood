@@ -447,3 +447,10 @@ strong {
 }
 
 
+footer{
+    background-color: wheat;
+    padding: 1%;
+    text-align: center;
+   font-size: 9pt;
+    font-family: 'Times New Roman', Times, serif;
+}

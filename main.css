@@ -65,14 +65,10 @@ strong {
 }
 
 @media screen and (max-width: 320px){
-    body{
-       
-    }
+   
 }
 @media screen and (max-width:425 px) and (min-width:320px){
-    body{
-      
-    }
+    
 }
 
 .sectiontitle{
@@ -100,21 +96,33 @@ strong {
     background-size: cover;
     background-attachment: fixed;
 }
-.areanav ul{
+.areanav ul,.land .nav-bar ul{
     border-top: 1px rgb(255, 173, 118) solid;
     border-bottom: 1px rgb(255, 173, 118)  solid;
 }
 
-.areanav .nav-bar .nav-link{
+.areanav .nav-bar .nav-link,.land .nav-bar .nav-link{
     padding:10px 91.8px !important;
     color: #ff8080;
     font-family: Microsoft JhengHei;
     font-weight: bold;
 }
-.areanav .nav-bar .nav-link:hover{
+@media screen and (max-width:769px) and (min-width:492px){
+    .areanav .nav-bar .nav-link,.land .nav-bar .nav-link{
+        padding:10px 20px !important;
+    }
+}
+@media screen and (max-width:1199px) and (min-width:770px){
+    .areanav .nav-bar .nav-link,.land .nav-bar .nav-link{
+        padding:10px 49px !important;
+    }
+}
+
+
+.areanav .nav-bar .nav-link:hover ,.land .nav-bar .nav-link:hover{
     color: #ff6022 !important;
 }
-.areanav .nav .active {
+.areanav .nav .active, .land .nav .active{
     transition: .3s;
     background-color: rgb(255, 133, 96)!important;
     color: rgb(255, 255, 255);
@@ -305,7 +313,7 @@ strong {
     color: rgb(255, 159, 103);
     font-family: Microsoft JhengHei;
 }
-
+/*
 .land .nav-bar ul{
     border-top: 1px rgb(255, 133, 96) solid;
     border-bottom: 1px rgb(255, 133, 96) solid;
@@ -317,6 +325,8 @@ strong {
     font-family: Microsoft JhengHei;
     font-weight: bold;
 }
+
+
 .land .nav-bar .nav .active{
     transition: .3s;
     background-color: rgb(255, 133, 96)!important;
@@ -327,7 +337,7 @@ strong {
 .land .nav-bar .nav-link:hover{
     color: #ff6022 !important;
 }
-
+*/
 .landgroup{
     margin-top:1% ;
     
@@ -368,6 +378,7 @@ strong {
 .land .tab-content .modal .modal-body .nav-link {
    padding: .5rem 10.9rem !important;
 }
+
 
 @media screen and (max-width: 990px) and (min-width:515px){
     .land .tab-content .modal .modal-body .nav-link {

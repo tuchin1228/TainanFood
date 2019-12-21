@@ -161,6 +161,42 @@ strong {
     color:rgb(102, 102, 102);
     text-align: justify;
 }
+@media screen and (max-width:769px) and (min-width:576px){
+    
+    .areanav .card-title{
+        height:40px;
+    }
+    .areanav .card-text{
+        line-height: 15.5px;
+    }
+    .areanav .card-body{
+        padding: 0;
+        margin-bottom: 100%;
+    }
+    .areanav  .list-group li{
+        font-size: 8pt;
+        padding: 10% 0;
+    }
+}
+@media screen and (max-width:991px) and (min-width:770px){
+    .areanav .card-title{
+        height:36px;
+    }
+    .areanav .card-body{
+        padding: 0;
+        margin-bottom: 45%;
+    }
+}
+@media screen and (max-width:1199px) and (min-width:992px){
+    .areanav .card-title{
+        height:20px;
+    }
+    .areanav .card-body{
+        padding: 0;
+        margin-bottom: 10%;
+    }
+}
+
 .areanav .card-deck ul{
     border: none;
     text-align: center;

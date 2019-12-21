@@ -179,8 +179,10 @@ strong {
     }
 }
 @media screen and (max-width:991px) and (min-width:768px){
+
     .areanav .card-title{
         height:36px;
+       
     }
     .areanav .card-body{
         padding: 0;

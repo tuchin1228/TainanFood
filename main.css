@@ -161,7 +161,7 @@ strong {
     color:rgb(102, 102, 102);
     text-align: justify;
 }
-@media screen and (max-width:769px) and (min-width:576px){
+@media screen and (max-width:767px) and (min-width:576px){
     
     .areanav .card-title{
         height:40px;
@@ -178,7 +178,7 @@ strong {
         padding: 10% 0;
     }
 }
-@media screen and (max-width:991px) and (min-width:770px){
+@media screen and (max-width:991px) and (min-width:768px){
     .areanav .card-title{
         height:36px;
     }

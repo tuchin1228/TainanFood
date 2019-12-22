@@ -10,20 +10,19 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
     <!--My CSS-->
     <link rel="stylesheet" href="main.css" />
-    
-   
-    
+
+
+    <link rel="stylesheet" href="https://unpkg.com/swiper/css/swiper.min.css">
+    <script src="https://unpkg.com/swiper/js/swiper.js"></script>
 
 </head>
 <body>
 
 
-    <!-- <section class="container banner" id="ban">
-      <img src="youtubeback.jpg">
-   
-    </section> -->
 
-    <section class="container-fluid areanav">
+
+
+    <section class="container-fluid areanav ">
       
       <div class="container">
             <div class="banner">
@@ -59,261 +58,539 @@
             </div>
         
 
-        <div class="tab-content" id="pills-tabContent">
+        <div class="tab-content " id="pills-tabContent">
+
             <div class="tab-pane fade  active show" id="pills-west" role="tabpanel" aria-labelledby="pills-home-tab">
-                <div class="row carddeck ">
-
-                    <div class=" col-xs-5 col-sm-5 col-md-5  col-lg-3 col-xl-3 card ">
-                      <img src="img/west1.jpg" class="card-img-top " alt="...">
-                      <div class="card-body">
-                        <h3 class="card-title"><strong>鼎富發</strong></h3>
-                        <p class="card-text">台灣正宗古早味，搭配燒烤、冷盤、飲料，午晚餐、內用外帶，喚醒兒時飽足幸福的回憶。</p>
-                      </div>
-                      <ul class="list-group list-group-flush">
-                        <li class="list-group-item">
-                            <a  href="" type="input" data-toggle="modal" data-target="#westoneModal">了解更多</a>
-                        </li>
-                        <!-- Modal -->
-                        <div class="modal fade " id="westoneModal" >
-                            <div class="modal-dialog modal-lg  modal-dialog-centered">
-                                <!-- Modal Content -->
-                                <div class="modal-content">
-                                    <div class="modal-header">
-                                        <h3 class="modal-title" id="westoneModalTitle"><strong>店家資訊</strong></h3>
-                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                            <span aria-hidden="true">&times;</span>
-                                        </button>
-                                    </div>
-                                    <div class="modal-body">
-                                    <img src="img/west1-2.jpg">
-                                      <div class="intro">
-                                        <span><h3><strong>介紹：</strong></h3></span>
-                                        <p>鼎富發從一磚一瓦開始，感謝各位廠商、師傅、夥伴的加持，及各位鄉親好友粉絲的支持，讓小店將於3/16正式開幕，透過鼎富發對美味的堅持，用最道地的美食，喚醒鄉親們兒時年代的初衷。</p>
-                                        <span><h3><strong>營業時間：</strong></h3></span>
-                                        <p>每日 10:30 ~ 19:30 </p>
+                      
+                              <div class="swiper-container row carddeck  ">
+                                <div class="swiper-wrapper">
+                                                            
+                                    <div class="swiper-slide col-xs-5 col-sm-5 col-md-5  col-lg-3 col-xl-3 card ">
+                                      <img src="img/west1.jpg" class="card-img-top " alt="...">
+                                      <div class="card-body">
+                                        <h3 class="card-title"><strong>鼎富發</strong></h3>
+                                        <p class="card-text">台灣正宗古早味，搭配燒烤、冷盤、飲料，午晚餐、內用外帶，喚醒兒時飽足幸福的回憶。</p>
                                       </div>
+                                      <ul class="list-group list-group-flush">
+                                        <li class="list-group-item">
+                                            <a  href="" type="input" data-toggle="modal" data-target="#westoneModal">了解更多</a>
+                                        </li>
+                                       
+
+                                        <li class="list-group-item">
+                                          <a  href="" type="input" data-toggle="modal" data-target="#westonemapModal">觀看地圖</a>
+                                        </li>
+                                        
+
+                                      </ul>
                                     </div>
-                                </div>
-                            </div>
-                        </div>
 
-                        <li class="list-group-item">
-                           <a  href="" type="input" data-toggle="modal" data-target="#westonemapModal">觀看地圖</a>
-                        </li>
-                        <!-- Map Modal -->
-                        <div class="modal fade " id="westonemapModal" >
-                          <div class="modal-dialog modal-lg  modal-dialog-centered">
-                              <!-- Modal Content -->
-                              <div class="modal-content">
-                                  <div class="modal-header">
-                                      <h3 class="modal-title" id="westonemapModalTitle"><strong>店家位置</strong></h3>
-                                      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                          <span aria-hidden="true">&times;</span>
-                                      </button>
-                                  </div>
-                                  <div class="modal-body map">
-                                    <span>地址:台南市中西區大德街38號</span>
-                                    <div class="maprwd">
-                                      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3672.9342073754806!2d120.1935340148491!3d22.989446723334563!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x346e767a5787e2eb%3A0xf1654c4cccd5968f!2z6byO5a-M55m86LGs5rK55ouM6aOvL-WPsOWNl-Wwj-WQgy_lj7DljZfnvo7po58v5Y-w5Y2X5YKz57Wx576O6aOfL-WPsOWNl-WPpOaXqeWRs-Wwj-WQgy_lj7DljZfppJDlu7Mv5Y-w5Y2X5Y-k5pep5ZGz576O6aOf!5e0!3m2!1szh-TW!2stw!4v1576655074529!5m2!1szh-TW!2stw" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
-                                    </div>
-                                  </div>
-                              </div>
-                          </div>
-                         </div>
-
-                      </ul>
-                    </div>
-
-                    <div class="col-xs-5 col-sm-5 col-md-5 col-lg-3 col-xl-3 card ">
-                      <img src="img/west2.jpg" class="card-img-top" alt="...">
-                      <div class="card-body">
-                        <h3 class="card-title"><strong>福記肉圓</strong></h3>
-                        <p class="card-text">內餡較大塊且以原味呈現，對於喜歡吃蒸肉圓或是比較清淡口味的人來說，福記算是不錯的選擇。</p>
-                      </div>
-                      <ul class="list-group list-group-flush">
-                        <li class="list-group-item">
-                            <a href="" type="input" data-toggle="modal" data-target="#westtwoModal">了解更多</a>
-                        </li>
-                        <!-- Modal -->
-                        <div class="modal fade" id="westtwoModal" >
-                          <div class="modal-dialog modal-lg ">
-                              <!-- Modal Content -->
-                              <div class="modal-content">
-                                  <div class="modal-header">
-                                      <h3 class="modal-title" id="westtwoModalTitle"><strong>店家資訊</strong></h3>
-                                      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                          <span aria-hidden="true">&times;</span>
-                                      </button>
-                                  </div>
-                                  <div class="modal-body">
-                                  <img src="img/west2-2.jpg">
-                                    <div class="intro">
-                                      <span><h3><strong>介紹：</strong></h3></span>
-                                      <p>不同於北部常見的炸肉圓，屬於台南人口味的福記肉圓，先以米漿包覆內餡，再放入蒸籠炊煮，出爐的那一刻熱氣蒸騰，晶瑩剔透的外表讓人垂涎三尺，淋上店家特製醬料，豬後腿肉製成的內餡，口滿綿密好吃，有嚼勁不油膩，但阿東覺得口感順滑，但卻少了點Q彈，不過比起油炸肉圓，福記肉圓吃起來更清爽。</p>
-                                      <span><h3><strong>營業時間：</strong></h3></span>
-                                      <p>每日 06:30 ~ 20:30 </p>
-                                    </div>
-                                  </div>
-                              </div>
-                          </div>
-                      </div>
-
-                        <li class="list-group-item">
-                          <a href="" type="input" data-toggle="modal" data-target="#westtwomapModal">觀看地圖</a>
-                        </li>
-                        <!-- Map Modal -->
-                        <div class="modal fade " id="westtwomapModal" >
-                          <div class="modal-dialog modal-lg  modal-dialog-centered">
-                              <!-- Modal Content -->
-                              <div class="modal-content">
-                                  <div class="modal-header">
-                                      <h3 class="modal-title" id="westtwomapModalTitle"><strong>店家位置</strong></h3>
-                                      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                          <span aria-hidden="true">&times;</span>
-                                      </button>
-                                  </div>
-                                  <div class="modal-body map">
-                                    <span>地址:台南市中西區府前路一段215號</span>
-                                    <div class="maprwd">
-                                      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3672.9366319779106!2d120.20043801484908!3d22.989357573337802!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x346e767d6a3643bd%3A0x288ba3f817dab812!2z56aP6KiY6IKJ5ZyT57i95bqX!5e0!3m2!1szh-TW!2stw!4v1576656362893!5m2!1szh-TW!2stw" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen=""></iframe>                                  
-                                    </div>  
-                                  </div>
-                              </div>
-                          </div>
-                        </div>
-
-                      </ul>
-                    </div>
-
-                   
-
-                    <div class="col-xs-5 col-sm-5 col-md-5 col-lg-3 col-xl-3 card">
-                      <img src="img/west3.jpg" class="card-img-top" alt="...">
-                      <div class="card-body">
-                        <h3 class="card-title"><strong>冰鄉</strong></h3>
-                        <p class="card-text">台南好吃冰店推薦，沒吃到芒果牛奶冰、草莓牛奶冰，還是值得一來。</p>
-                      </div>
-                      <ul class="list-group list-group-flush">
-                        <li class="list-group-item">
-                            <a href=""  data-toggle="modal" data-target="#westthreeModal">了解更多</a>
-                        </li>
-                        <!-- Modal -->
-                        <div class="modal fade" id="westthreeModal" >
-                            <div class="modal-dialog modal-lg ">
-                                <!-- Modal Content -->
-                                <div class="modal-content">
-                                    <div class="modal-header">
-                                        <h3 class="modal-title" id="westthreeModalTitle"><strong>店家資訊</strong></h3>
-                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                            <span aria-hidden="true">&times;</span>
-                                        </button>
-                                    </div>
-                                    <div class="modal-body">
-                                    <img src="img/west3-2.jpg">
-                                      <div class="intro">
-                                        <span><h3><strong>介紹：</strong></h3></span>
-                                        <p>府城40年老冰果店有四季流轉的香甜滋味、時節輪替的人潮景觀，「冰鄉」每逢推出季節限定冰品便會造成誇張的排隊人潮，無論是夏季的芒果牛奶冰、冬天的草苺牛奶冰，還有那實在難以碰上的荔枝冰，視覺與味覺充滿高爽度，滿滿的芒果、滿滿的草莓鮮果淹沒理性，不管要等待1小時、3小時都願意，心悅誠服於沁涼的水果剉冰。</p>
-                                        <span><h3><strong>營業時間：</strong></h3></span>
-                                        <p>每日 12:00 ~ 21:00 </p>
+                                    <div class="swiper-slide col-xs-5 col-sm-5 col-md-5 col-lg-3 col-xl-3 card ">
+                                      <img src="img/west2.jpg" class="card-img-top" alt="...">
+                                      <div class="card-body">
+                                        <h3 class="card-title"><strong>福記肉圓</strong></h3>
+                                        <p class="card-text">內餡較大塊且以原味呈現，對於喜歡吃蒸肉圓或是比較清淡口味的人來說，福記算是不錯的選擇。</p>
                                       </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+                                      <ul class="list-group list-group-flush">
+                                        <li class="list-group-item">
+                                            <a href="" type="input" data-toggle="modal" data-target="#westtwoModal">了解更多</a>
+                                        </li>
+                                       
 
-                        <li class="list-group-item">
-                          <a href="" type="input" data-toggle="modal" data-target="#westthreemapModal">觀看地圖</a>
-                        </li>
-                        <!-- Map Modal -->
-                        <div class="modal fade " id="westthreemapModal" >
-                          <div class="modal-dialog modal-lg  modal-dialog-centered">
-                              <!-- Modal Content -->
-                              <div class="modal-content">
-                                  <div class="modal-header">
-                                      <h3 class="modal-title" id="westthreemapModalTitle"><strong>店家位置</strong></h3>
-                                      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                          <span aria-hidden="true">&times;</span>
-                                      </button>
-                                  </div>
-                                  <div class="modal-body map">
-                                    <span>地址:台南市中西區民生路一段160號</span>
-                                    <div class="maprwd">
-                                      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3672.8039456972615!2d120.19805681484915!3d22.994235823156913!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x346e76639c610e1f%3A0xb9ee035db6787283!2z5Yaw6YSJ!5e0!3m2!1szh-TW!2stw!4v1576656389556!5m2!1szh-TW!2stw" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
+                                        <li class="list-group-item">
+                                          <a href="" type="input" data-toggle="modal" data-target="#westtwomapModal">觀看地圖</a>
+                                        </li>
+                                         
+
+                                      </ul>
                                     </div>
-                                  </div>
+
+                                  
+                                    <div class="swiper-slide col-xs-5 col-sm-5 col-md-5 col-lg-3 col-xl-3 card ">
+                                      <img src="img/west3.jpg" class="card-img-top" alt="...">
+                                      <div class="card-body">
+                                        <h3 class="card-title"><strong>冰鄉</strong></h3>
+                                        <p class="card-text">台南好吃冰店推薦，沒吃到芒果牛奶冰、草莓牛奶冰，還是值得一來。</p>
+                                      </div>
+                                      <ul class="list-group list-group-flush">
+                                        <li class="list-group-item">
+                                            <a href=""  data-toggle="modal" data-target="#westthreeModal">了解更多</a>
+                                        </li>
+                                      
+
+                                        <li class="list-group-item">
+                                          <a href="" type="input" data-toggle="modal" data-target="#westthreemapModal">觀看地圖</a>
+                                        </li>
+                                      
+                                      </ul>
+                                    </div>
+
+                                    <div class="swiper-slide col-xs-5 col-sm-5 col-md-5 col-lg-3 col-xl-3 card ">
+                                        <img src="img/west4.jpg" class="card-img-top" alt="...">
+                                        <div class="card-body">
+                                            <h3 class="card-title"><strong>雙生綠豆沙</strong></h3>
+                                          <p class="card-text">喝上一口，滿滿香醇的奶味，加上冰沙口感相當細緻綿順，價格又十分親民超值。</p>
+                                        </div>
+                                        <ul class="list-group list-group-flush">
+                                            <li class="list-group-item">
+                                                <a href="" type="input" data-toggle="modal" data-target="#westfourModal">了解更多</a>
+                                            </li>
+                                          
+
+                                            <li class="list-group-item">
+                                              <a  href="" type="input" data-toggle="modal" data-target="#westfourmapModal">觀看地圖</a>
+                                            </li>
+                                             
+                                        </ul>
+                                    </div>
+                                
+                                    <!-- Page 2-->
+                                    <div class="swiper-slide col-xs-5 col-sm-5 col-md-5  col-lg-3 col-xl-3 card ">
+                                      <img src="img/west5.jpg" class="card-img-top " alt="...">
+                                      <div class="card-body">
+                                        <h3 class="card-title"><strong>游爸爸白糖糕</strong></h3>
+                                        <p class="card-text">創立於民國62年 現由第二代經營，台南特有的小吃 沒有試過的朋友一定要試試哦。</p>
+                                      </div>
+                                      <ul class="list-group list-group-flush">
+                                        <li class="list-group-item">
+                                            <a  href="" type="input" data-toggle="modal" data-target="#westfiveModal">了解更多</a>
+                                        </li>
+                                       
+                                        <li class="list-group-item">
+                                          <a  href="" type="input" data-toggle="modal" data-target="#westfivemapModal">觀看地圖</a>
+                                        </li>
+                                        
+
+                                      </ul>
+                                    </div>
+
+                                    <div class="swiper-slide col-xs-5 col-sm-5 col-md-5 col-lg-3 col-xl-3 card ">
+                                      <img src="img/west6.jpg" class="card-img-top" alt="...">
+                                      <div class="card-body">
+                                        <h3 class="card-title"><strong>富盛號碗粿</strong></h3>
+                                        <p class="card-text">富盛號碗粿。只賣兩種東西，一賣就是70年！國華街必吃古早味。</p>
+                                      </div>
+                                      <ul class="list-group list-group-flush">
+                                        <li class="list-group-item">
+                                            <a href="" type="input" data-toggle="modal" data-target="#westsixModal">了解更多</a>
+                                        </li>
+                                       
+
+                                        <li class="list-group-item">
+                                          <a href="" type="input" data-toggle="modal" data-target="#westsixmapModal">觀看地圖</a>
+                                        </li>
+                                         
+
+                                      </ul>
+                                    </div>
+
+                                  
+                                    <div class="swiper-slide col-xs-5 col-sm-5 col-md-5 col-lg-3 col-xl-3 card ">
+                                      <img src="img/west7.jpg" class="card-img-top" alt="...">
+                                      <div class="card-body">
+                                        <h3 class="card-title"><strong>義豐阿川冬瓜茶</strong></h3>
+                                        <p class="card-text">清晨４點，高齡84歲的林嵩山老伯已經起床，攪動著剛剛下灶的冬瓜與白砂糖。</p>
+                                      </div>
+                                      <ul class="list-group list-group-flush">
+                                        <li class="list-group-item">
+                                            <a href=""  data-toggle="modal" data-target="#westsevenModal">了解更多</a>
+                                        </li>
+                                      
+
+                                        <li class="list-group-item">
+                                          <a href="" type="input" data-toggle="modal" data-target="#westsevenmapModal">觀看地圖</a>
+                                        </li>
+                                       
+
+                                      </ul>
+                                    </div>
+
+                                    <div class="swiper-slide col-xs-5 col-sm-5 col-md-5 col-lg-3 col-xl-3 card ">
+                                        <img src="img/west8.jpg" class="card-img-top" alt="...">
+                                        <div class="card-body">
+                                            <h3 class="card-title"><strong>逐鹿炭火燒肉</strong></h3>
+                                          <p class="card-text">逐鹿炭火燒肉台南店，優質燒肉和鮮蝦、哈根達斯冰淇淋吃到飽。</p>
+                                        </div>
+                                        <ul class="list-group list-group-flush">
+                                            <li class="list-group-item">
+                                                <a href="" type="input" data-toggle="modal" data-target="#westeightModal">了解更多</a>
+                                            </li>
+                                          
+
+                                            <li class="list-group-item">
+                                              <a  href="" type="input" data-toggle="modal" data-target="#westeightmapModal">觀看地圖</a>
+                                            </li>
+                                             
+                                        </ul>
+                                    </div>
+                                  
                               </div>
-                          </div>
-                        </div>
+                          
+                              <div class="swiper-scrollbar"></div>
+                              </div>
 
-                      </ul>
-                    </div>
-
-                    <div class="col-xs-5 col-sm-5 col-md-5 col-lg-3 col-xl-3 card">
-                        <img src="img/west4.jpg" class="card-img-top" alt="...">
-                        <div class="card-body">
-                            <h3 class="card-title"><strong>雙生綠豆沙</strong></h3>
-                          <p class="card-text">喝上一口，不僅沁心涼消暑又退火，還有滿滿香醇的奶味~加上冰沙口感相當細緻綿順，價格又十分親民超值。</p>
-                        </div>
-                        <ul class="list-group list-group-flush">
-                            <li class="list-group-item">
-                                <a href="" type="input" data-toggle="modal" data-target="#westfourModal">了解更多</a>
-                            </li>
-                            <!-- Modal -->
-                            <div class="modal fade" id="westfourModal" >
-                                <div class="modal-dialog modal-lg ">
+                               <!-- Modal west 1-->
+                               <div class="modal fade " id="westoneModal" >
+                                <div class="modal-dialog modal-lg  modal-dialog-centered">
                                     <!-- Modal Content -->
                                     <div class="modal-content">
                                         <div class="modal-header">
-                                            <h3 class="modal-title" id="westfourModalTitle"><strong>店家資訊</strong></h3>
+                                            <h3 class="modal-title" id="westoneModalTitle"><strong>店家資訊</strong></h3>
                                             <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                                                 <span aria-hidden="true">&times;</span>
                                             </button>
                                         </div>
                                         <div class="modal-body">
-                                        <img src="img/west4-2.jpg">
+                                        <img src="img/west1-2.jpg">
                                           <div class="intro">
                                             <span><h3><strong>介紹：</strong></h3></span>
-                                            <p>兩個來自台中大甲小鎮大男生賣了咖啡早午餐後，2017年7月20日又誕生了一間飲料店，賣的都是小時候最喜歡的傳統飲料。</p>
+                                            <p>鼎富發從一磚一瓦開始，感謝各位廠商、師傅、夥伴的加持，及各位鄉親好友粉絲的支持，讓小店將於3/16正式開幕，透過鼎富發對美味的堅持，用最道地的美食，喚醒鄉親們兒時年代的初衷。</p>
                                             <span><h3><strong>營業時間：</strong></h3></span>
-                                            <p>週二~四 11:00 ~ 18:00 </p>
+                                            <p>每日 10:30 ~ 19:30 </p>
                                           </div>
                                         </div>
                                     </div>
                                 </div>
-                            </div>
-
-                            <li class="list-group-item">
-                              <a  href="" type="input" data-toggle="modal" data-target="#westfourmapModal">觀看地圖</a>
-                            </li>
-                            <!-- Map Modal -->
-                            <div class="modal fade " id="westfourmapModal" >
-                              <div class="modal-dialog modal-lg  modal-dialog-centered">
-                                  <!-- Modal Content -->
-                                  <div class="modal-content">
-                                      <div class="modal-header">
-                                          <h3 class="modal-title" id="westfourmapModalTitle"><strong>店家位置</strong></h3>
-                                          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                              <span aria-hidden="true">&times;</span>
-                                          </button>
-                                      </div>
-                                      <div class="modal-body map">
-                                        <span>地址:台南市中西區民族路二段281號</span>
-                                        <div class="maprwd">
-                                          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3672.8039456972615!2d120.19805681484915!3d22.994235823156913!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x346e76618b8e473f%3A0x20a3af429da352a4!2z5Y-M55Sf57ag6LGG5rKZ54mb5aW2IFNodcOgbnPDqm4gYmV2ZXJhZ2Vz!5e0!3m2!1szh-TW!2stw!4v1576656406757!5m2!1szh-TW!2stw" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
-                                        </div>
+                                </div>
+                                <!-- Map Modal west 1-->
+                                <div class="modal fade " id="westonemapModal" >
+                                  <div class="modal-dialog modal-lg  modal-dialog-centered">
+                                      <!-- Modal Content -->
+                                      <div class="modal-content">
+                                          <div class="modal-header">
+                                              <h3 class="modal-title" id="westonemapModalTitle"><strong>店家位置</strong></h3>
+                                              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                  <span aria-hidden="true">&times;</span>
+                                              </button>
+                                          </div>
+                                          <div class="modal-body map">
+                                            <span>地址:台南市中西區大德街38號</span>
+                                            <div class="maprwd">
+                                              <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3672.9342073754806!2d120.1935340148491!3d22.989446723334563!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x346e767a5787e2eb%3A0xf1654c4cccd5968f!2z6byO5a-M55m86LGs5rK55ouM6aOvL-WPsOWNl-Wwj-WQgy_lj7DljZfnvo7po58v5Y-w5Y2X5YKz57Wx576O6aOfL-WPsOWNl-WPpOaXqeWRs-Wwj-WQgy_lj7DljZfppJDlu7Mv5Y-w5Y2X5Y-k5pep5ZGz576O6aOf!5e0!3m2!1szh-TW!2stw!4v1576655074529!5m2!1szh-TW!2stw" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
+                                            </div>
+                                          </div>
                                       </div>
                                   </div>
-                              </div>
-                            </div>
+                                </div>
+                                <!-- Modal west 2-->
+                                <div class="modal fade" id="westtwoModal" >
+                                          <div class="modal-dialog modal-lg ">
+                                              <!-- Modal Content -->
+                                              <div class="modal-content">
+                                                  <div class="modal-header">
+                                                      <h3 class="modal-title" id="westtwoModalTitle"><strong>店家資訊</strong></h3>
+                                                      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                          <span aria-hidden="true">&times;</span>
+                                                      </button>
+                                                  </div>
+                                                  <div class="modal-body">
+                                                  <img src="img/west2-2.jpg">
+                                                    <div class="intro">
+                                                      <span><h3><strong>介紹：</strong></h3></span>
+                                                      <p>不同於北部常見的炸肉圓，屬於台南人口味的福記肉圓，先以米漿包覆內餡，再放入蒸籠炊煮，出爐的那一刻熱氣蒸騰，晶瑩剔透的外表讓人垂涎三尺，淋上店家特製醬料，豬後腿肉製成的內餡，口滿綿密好吃，有嚼勁不油膩，但阿東覺得口感順滑，但卻少了點Q彈，不過比起油炸肉圓，福記肉圓吃起來更清爽。</p>
+                                                      <span><h3><strong>營業時間：</strong></h3></span>
+                                                      <p>每日 06:30 ~ 20:30 </p>
+                                                    </div>
+                                                  </div>
+                                              </div>
+                                          </div>
+                                </div>
+                                <!-- Map Modal west 2-->
+                                <div class="modal fade " id="westtwomapModal" >
+                                          <div class="modal-dialog modal-lg  modal-dialog-centered">
+                                              <!-- Modal Content -->
+                                              <div class="modal-content">
+                                                  <div class="modal-header">
+                                                      <h3 class="modal-title" id="westtwomapModalTitle"><strong>店家位置</strong></h3>
+                                                      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                          <span aria-hidden="true">&times;</span>
+                                                      </button>
+                                                  </div>
+                                                  <div class="modal-body map">
+                                                    <span>地址:台南市中西區府前路一段215號</span>
+                                                    <div class="maprwd">
+                                                      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3672.9366319779106!2d120.20043801484908!3d22.989357573337802!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x346e767d6a3643bd%3A0x288ba3f817dab812!2z56aP6KiY6IKJ5ZyT57i95bqX!5e0!3m2!1szh-TW!2stw!4v1576656362893!5m2!1szh-TW!2stw" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen=""></iframe>                                  
+                                                    </div>  
+                                                  </div>
+                                              </div>
+                                          </div>
+                                </div>
+                                 <!-- Modal west 3-->
+                                 <div class="modal fade" id="westthreeModal" >
+                                  <div class="modal-dialog modal-lg ">
+                                      <!-- Modal Content -->
+                                      <div class="modal-content">
+                                          <div class="modal-header">
+                                              <h3 class="modal-title" id="westthreeModalTitle"><strong>店家資訊</strong></h3>
+                                              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                  <span aria-hidden="true">&times;</span>
+                                              </button>
+                                          </div>
+                                          <div class="modal-body">
+                                          <img src="img/west3-2.jpg">
+                                            <div class="intro">
+                                              <span><h3><strong>介紹：</strong></h3></span>
+                                              <p>府城40年老冰果店有四季流轉的香甜滋味、時節輪替的人潮景觀，「冰鄉」每逢推出季節限定冰品便會造成誇張的排隊人潮，無論是夏季的芒果牛奶冰、冬天的草苺牛奶冰，還有那實在難以碰上的荔枝冰，視覺與味覺充滿高爽度，滿滿的芒果、滿滿的草莓鮮果淹沒理性，不管要等待1小時、3小時都願意，心悅誠服於沁涼的水果剉冰。</p>
+                                              <span><h3><strong>營業時間：</strong></h3></span>
+                                              <p>每日 12:00 ~ 21:00 </p>
+                                            </div>
+                                          </div>
+                                      </div>
+                                  </div>
+                                 </div>
+                                 <!-- Map Modal west 3-->
+                                 <div class="modal fade " id="westthreemapModal" >
+                                    <div class="modal-dialog modal-lg  modal-dialog-centered">
+                                        <!-- Modal Content -->
+                                        <div class="modal-content">
+                                            <div class="modal-header">
+                                                <h3 class="modal-title" id="westthreemapModalTitle"><strong>店家位置</strong></h3>
+                                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                    <span aria-hidden="true">&times;</span>
+                                                </button>
+                                            </div>
+                                            <div class="modal-body map">
+                                              <span>地址:台南市中西區民生路一段160號</span>
+                                              <div class="maprwd">
+                                                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3672.8039456972615!2d120.19805681484915!3d22.994235823156913!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x346e76639c610e1f%3A0xb9ee035db6787283!2z5Yaw6YSJ!5e0!3m2!1szh-TW!2stw!4v1576656389556!5m2!1szh-TW!2stw" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
+                                              </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                  </div>
+                                   <!-- Modal west 4-->
+                                   <div class="modal fade" id="westfourModal" >
+                                    <div class="modal-dialog modal-lg ">
+                                        <!-- Modal Content -->
+                                        <div class="modal-content">
+                                            <div class="modal-header">
+                                                <h3 class="modal-title" id="westfourModalTitle"><strong>店家資訊</strong></h3>
+                                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                    <span aria-hidden="true">&times;</span>
+                                                </button>
+                                            </div>
+                                            <div class="modal-body">
+                                            <img src="img/west4-2.jpg">
+                                              <div class="intro">
+                                                <span><h3><strong>介紹：</strong></h3></span>
+                                                <p>兩個來自台中大甲小鎮大男生賣了咖啡早午餐後，2017年7月20日又誕生了一間飲料店，賣的都是小時候最喜歡的傳統飲料。</p>
+                                                <span><h3><strong>營業時間：</strong></h3></span>
+                                                <p>週二~四 11:00 ~ 18:00 </p>
+                                              </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                  </div>
+                                  <!-- Map Modal west 4-->
+                                  <div class="modal fade " id="westfourmapModal" >
+                                    <div class="modal-dialog modal-lg  modal-dialog-centered">
+                                        <!-- Modal Content -->
+                                        <div class="modal-content">
+                                            <div class="modal-header">
+                                                <h3 class="modal-title" id="westfourmapModalTitle"><strong>店家位置</strong></h3>
+                                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                    <span aria-hidden="true">&times;</span>
+                                                </button>
+                                            </div>
+                                            <div class="modal-body map">
+                                              <span>地址:台南市中西區民族路二段281號</span>
+                                              <div class="maprwd">
+                                                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3672.8039456972615!2d120.19805681484915!3d22.994235823156913!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x346e76618b8e473f%3A0x20a3af429da352a4!2z5Y-M55Sf57ag6LGG5rKZ54mb5aW2IFNodcOgbnPDqm4gYmV2ZXJhZ2Vz!5e0!3m2!1szh-TW!2stw!4v1576656406757!5m2!1szh-TW!2stw" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
+                                              </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                  </div>
+                                  
+                                  <!-- Modal west 5-->
+                                  <div class="modal fade" id="westfiveModal" >
+                                    <div class="modal-dialog modal-lg ">
+                                        <!-- Modal Content -->
+                                        <div class="modal-content">
+                                            <div class="modal-header">
+                                                <h3 class="modal-title" id="westfiveModalTitle"><strong>店家資訊</strong></h3>
+                                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                    <span aria-hidden="true">&times;</span>
+                                                </button>
+                                            </div>
+                                            <div class="modal-body">
+                                            <img src="img/west5-2.jpg">
+                                              <div class="intro">
+                                                <span><h3><strong>介紹：</strong></h3></span>
+                                                <p>游爸爸蕃薯椪除了賣的東西實在又好吃之外，雖然他們生意很好卻總是笑臉迎人，也感覺彵們非常有活力，令人覺得非常的舒服～所以只要走到這裡，總是忍不住要買來吃～</p>
+                                                <span><h3><strong>營業時間：</strong></h3></span>
+                                                <p>週日~五 11:30 ~ 19:30 週六至 20:00 </p>
+                                              </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                  </div>
+                                  <!-- Map Modal west 5-->
+                                  <div class="modal fade " id="westfivemapModal" >
+                                    <div class="modal-dialog modal-lg  modal-dialog-centered">
+                                        <!-- Modal Content -->
+                                        <div class="modal-content">
+                                            <div class="modal-header">
+                                                <h3 class="modal-title" id="westfivemapModalTitle"><strong>店家位置</strong></h3>
+                                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                    <span aria-hidden="true">&times;</span>
+                                                </button>
+                                            </div>
+                                            <div class="modal-body map">
+                                              <span>地址:台南市中西區友愛街170號</span>
+                                              <div class="maprwd">
+                                                <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d14691.45865801504!2d120.1971816!3d22.9920036!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xebae4155e56de240!2z5ri454i454i46JWD6Jav5qSq!5e0!3m2!1szh-TW!2stw!4v1577009139592!5m2!1szh-TW!2stw" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
+                                              </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                  </div>
 
-                        </ul>
-                    </div>
-                  </div>
+                                  <!-- Modal west 6-->
+                                  <div class="modal fade" id="westsixModal" >
+                                    <div class="modal-dialog modal-lg ">
+                                        <!-- Modal Content -->
+                                        <div class="modal-content">
+                                            <div class="modal-header">
+                                                <h3 class="modal-title" id="westsixModalTitle"><strong>店家資訊</strong></h3>
+                                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                    <span aria-hidden="true">&times;</span>
+                                                </button>
+                                            </div>
+                                            <div class="modal-body">
+                                            <img src="img/west6-2.jpg">
+                                              <div class="intro">
+                                                <span><h3><strong>介紹：</strong></h3></span>
+                                                <p>富盛號碗粿只要一到假日就是人滿為患，富盛號碗粿在永樂市場有兩家店，原本的老店在西門路二段上座位數比較少。</p>
+                                                <span><h3><strong>營業時間：</strong></h3></span>
+                                                <p>每日 07:00 ~ 17:30 周四公休</p>
+                                              </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                  </div>
+                                  <!-- Map Modal west 6-->
+                                  <div class="modal fade " id="westsixmapModal" >
+                                    <div class="modal-dialog modal-lg  modal-dialog-centered">
+                                        <!-- Modal Content -->
+                                        <div class="modal-content">
+                                            <div class="modal-header">
+                                                <h3 class="modal-title" id="westsixmapModalTitle"><strong>店家位置</strong></h3>
+                                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                    <span aria-hidden="true">&times;</span>
+                                                </button>
+                                            </div>
+                                            <div class="modal-body map">
+                                              <span>地址:台南市中西區民族路三段11號</span>
+                                              <div class="maprwd">
+                                                <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d14690.841226712946!2d120.1991609!3d22.9976779!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x94c9fffaa462db0d!2z5Y-w5Y2X5a-M55ub6Jmf56KX57K_!5e0!3m2!1szh-TW!2stw!4v1577009701502!5m2!1szh-TW!2stw" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
+                                              </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                  </div>
+
+                                  <!-- Modal west 7-->
+                                  <div class="modal fade" id="westsevenModal" >
+                                    <div class="modal-dialog modal-lg ">
+                                        <!-- Modal Content -->
+                                        <div class="modal-content">
+                                            <div class="modal-header">
+                                                <h3 class="modal-title" id="westsevenModalTitle"><strong>店家資訊</strong></h3>
+                                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                    <span aria-hidden="true">&times;</span>
+                                                </button>
+                                            </div>
+                                            <div class="modal-body">
+                                            <img src="img/west7-2.jpg">
+                                              <div class="intro">
+                                                <span><h3><strong>介紹：</strong></h3></span>
+                                                <p>座落於永福路上祀典武廟對面的「義豐冬瓜工廠」，是府城碩果僅存的傳統製作冬瓜糖的老店。現年八十歲的第三代傳人林嵩山先生，親身見證了冬瓜糖的興衰史，在超過半個世紀經營祖傳冬瓜工廠的過程中，始終堅持遵循古法，以手工熬煮製作冬瓜糖、冬瓜露、冰糖，對他而言，這是對先祖代代相傳的技藝的尊重，也是忠於原味的最高表現。
+
+                                                  由於商業時代來臨，傳統手工產業日漸沒落，冬瓜伯有打算結束義豐冬瓜工廠意念，但冬瓜伯小兒子林科川了解自家「冬瓜露」曾有輝煌時代，為了喚起兒時冬瓜茶盛況，重新改變行銷策略，在自家門口賣冬瓜茶並改變冬瓜茶單一口味，創意加入檸檬、金桔、珍珠、波霸．．．等，開創「義豐阿川冬瓜茶」新時代，新創意加流行終獲得年輕顧客口碑肯定，在口耳相傳下客人越來越多，進而帶動冬瓜工廠冬瓜露銷售大幅成長，義豐阿川冬瓜茶新創意包裝行銷，透過文化詮釋創新品牌價值，建立新的消費認同擴大市場，終使即將結束傳統手工產業重新開啟新里程。</p>
+                                                <span><h3><strong>營業時間：</strong></h3></span>
+                                                <p>美日 09:00 ~ 22:00 </p>
+                                              </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                  </div>
+                                  <!-- Map Modal west 7-->
+                                  <div class="modal fade " id="westsevenmapModal" >
+                                    <div class="modal-dialog modal-lg  modal-dialog-centered">
+                                        <!-- Modal Content -->
+                                        <div class="modal-content">
+                                            <div class="modal-header">
+                                                <h3 class="modal-title" id="westsevenmapModalTitle"><strong>店家位置</strong></h3>
+                                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                    <span aria-hidden="true">&times;</span>
+                                                </button>
+                                            </div>
+                                            <div class="modal-body map">
+                                              <span>地址:台南市中西區永福路二段196號</span>
+                                              <div class="maprwd">
+                                                <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d14691.015427375916!2d120.2022209!3d22.9960771!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x7c3f58859bacea83!2z6Zi_5bed5Yas55Oc6Iy2!5e0!3m2!1szh-TW!2stw!4v1577010231504!5m2!1szh-TW!2stw" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
+                                              </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                  </div>
+                              
+                                  <!-- Modal west 8-->
+                                  <div class="modal fade" id="westeightModal" >
+                                    <div class="modal-dialog modal-lg ">
+                                        <!-- Modal Content -->
+                                        <div class="modal-content">
+                                            <div class="modal-header">
+                                                <h3 class="modal-title" id="westeightModalTitle"><strong>店家資訊</strong></h3>
+                                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                    <span aria-hidden="true">&times;</span>
+                                                </button>
+                                            </div>
+                                            <div class="modal-body">
+                                            <img src="img/west8-2.jpg">
+                                              <div class="intro">
+                                                <span><h3><strong>介紹：</strong></h3></span>
+                                                <p>逐鹿炭火燒肉，以逐鹿中原為故事背景的燒肉店。在逐鹿不僅可以大口呷肉，大碗飲酒，盡嚐人間佳餚美酒，更希望您所有美好的相遇也都在此發生....</p>
+                                                <span><h3><strong>營業時間：</strong></h3></span>
+                                                <p>11:00 ~ 15:30 17:00 ~ 22:30 周六、日不休息</p>
+                                              </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                  </div>
+                                  <!-- Map Modal west 8-->
+                                  <div class="modal fade " id="westeightmapModal" >
+                                    <div class="modal-dialog modal-lg  modal-dialog-centered">
+                                        <!-- Modal Content -->
+                                        <div class="modal-content">
+                                            <div class="modal-header">
+                                                <h3 class="modal-title" id="westeightmapModalTitle"><strong>店家位置</strong></h3>
+                                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                    <span aria-hidden="true">&times;</span>
+                                                </button>
+                                            </div>
+                                            <div class="modal-body map">
+                                              <span>地址:台南市中西區環河街92號</span>
+                                              <div class="maprwd">
+                                                <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d14691.149225894942!2d120.192528!3d22.9948475!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xe5cafae404689de4!2z6YCQ6bm_54Kt54Gr54eS6IKJ!5e0!3m2!1szh-TW!2stw!4v1577010309220!5m2!1szh-TW!2stw" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
+                                              </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                  </div>
+
+
+
+
             </div>
 
-            <div class="tab-pane fade" id="pills-east" role="tabpanel" aria-labelledby="pills-contact-tab"> 
-                <div class="row carddeck ">
-                    <div class="col-xs-5 col-sm-5 col-md-5  col-lg-3 col-xl-3 card">
+            <div class="tab-pane fade " id="pills-east" role="tabpanel" aria-labelledby="pills-contact-tab"> 
+                
+              <div class="swiper-container  row carddeck ">
+                <div class="swiper-wrapper">
+                
+                    <div class="swiper-slide col-xs-5 col-sm-5 col-md-5  col-lg-3 col-xl-3 card">
                       <img src="img/east1.jpg" class="card-img-top " alt="...">
                       <div class="card-body">
                         <h3 class="card-title"><strong>上海好味道小籠湯包</strong></h3>
@@ -323,58 +600,17 @@
                         <li class="list-group-item">
                             <a href="" type="input" data-toggle="modal" data-target="#eastoneModal">了解更多</a>
                         </li>
-                        <!-- Modal -->
-                        <div class="modal fade" id="eastoneModal" >
-                          <div class="modal-dialog modal-lg ">
-                              <!-- Modal Content -->
-                              <div class="modal-content">
-                                  <div class="modal-header ">
-                                      <h3 class="modal-title" id="eastoneModalTitle"><strong>店家資訊</strong></h3>
-                                      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                          <span aria-hidden="true">&times;</span>
-                                      </button>
-                                  </div>
-                                  <div class="modal-body">
-                                  <img src="img/east1-2.jpg">
-                                    <div class="intro">
-                                      <span><h3><strong>介紹：</strong></h3></span>
-                                      <p>好味道的小籠湯包的特色在於皮Q、餡料實在，並有濃郁的金黃湯汁，從選料、皮凍的製作、高湯的熬製以及調味，每一細節都是我們的精心之作。</p>
-                                      <span><h3><strong>營業時間：</strong></h3></span>
-                                      <p>每日 10:30 ~ 23:00 </p>
-                                    </div>
-                                  </div>
-                              </div>
-                          </div>
-                         </div>
+                        
 
                         <li class="list-group-item">
                           <a href="" type="input" data-toggle="modal" data-target="#eastonemapModal">觀看地圖</a>
                         </li>
-                        <!-- Map Modal -->
-                        <div class="modal fade " id="eastonemapModal" >
-                          <div class="modal-dialog modal-lg  modal-dialog-centered">
-                              <!-- Modal Content -->
-                              <div class="modal-content">
-                                  <div class="modal-header">
-                                      <h3 class="modal-title" id="eastonemapModalTitle"><strong>店家位置</strong></h3>
-                                      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                          <span aria-hidden="true">&times;</span>
-                                      </button>
-                                  </div>
-                                  <div class="modal-body map">
-                                    <span>地址:台南市東區東安路26號</span>
-                                    <div class="maprwd">
-                                      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3672.7445060131413!2d120.20123091484933!3d22.996420823075933!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x346e7695d97d83a3%3A0xcbb0a8bc6649d6ae!2z5LiK5rW35aW95ZGz6YGT5bCP57Gg5rmv5YyF!5e0!3m2!1szh-TW!2stw!4v1576656421305!5m2!1szh-TW!2stw" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
-                                    </div>
-                                  </div>
-                              </div>
-                          </div>
-                        </div>
+                        
 
                       </ul>
                     </div>
 
-                    <div class="col-xs-5 col-sm-5 col-md-5  col-lg-3 col-xl-3 card">
+                    <div class="swiper-slide col-xs-5 col-sm-5 col-md-5  col-lg-3 col-xl-3 card">
                       <img src="img/east2.jpg" class="card-img-top" alt="...">
                       <div class="card-body">
                         <h3 class="card-title"><strong>東洲黑糖奶舖</strong></h3>
@@ -384,58 +620,17 @@
                         <li class="list-group-item">
                             <a href="" type="input" data-toggle="modal" data-target="#easttwoModal">了解更多</a>
                         </li>
-                        <!-- Modal -->
-                        <div class="modal fade" id="easttwoModal" >
-                          <div class="modal-dialog modal-lg ">
-                              <!-- Modal Content -->
-                              <div class="modal-content">
-                                  <div class="modal-header">
-                                      <h3 class="modal-title " id="easttwoModalTitle"><strong>店家資訊</strong></h3>
-                                      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                          <span aria-hidden="true">&times;</span>
-                                      </button>
-                                  </div>
-                                  <div class="modal-body">
-                                  <img src="img/east2-2.jpg">
-                                    <div class="intro">
-                                      <span><h3><strong>介紹：</strong></h3></span>
-                                      <p>東洲黑糖奶舖創始於2006年，秉持「醫食同源」的經營理念，藉著含有豐富營養價值的黑糖飲品，加上堅持傳統、無添加、健康養生的獨家製程，保留住最真實的黑糖原味，製作出香味濃郁的黑糖。</p>
-                                      <span><h3><strong>營業時間：</strong></h3></span>
-                                      <p>每日 07:00 ~ 23:00 </p>
-                                    </div>
-                                  </div>
-                              </div>
-                          </div>
-                         </div>
+                        
 
                         <li class="list-group-item">
                           <a href="" type="input" data-toggle="modal" data-target="#easttwomapModal">觀看地圖</a>
                         </li>
-                        <!-- Map Modal -->
-                        <div class="modal fade " id="easttwomapModal" >
-                          <div class="modal-dialog modal-lg  modal-dialog-centered">
-                              <!-- Modal Content -->
-                              <div class="modal-content">
-                                  <div class="modal-header">
-                                      <h3 class="modal-title" id="easttwomapModalTitle"><strong>店家位置</strong></h3>
-                                      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                          <span aria-hidden="true">&times;</span>
-                                      </button>
-                                  </div>
-                                  <div class="modal-body map">
-                                    <span>地址:台南市東區東寧路122號</span>
-                                    <div class="maprwd">
-                                      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3672.877153900502!2d120.22409141484918!3d22.991544423256684!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x346e769159b91769%3A0x208d2042fdb12ac3!2z5p2x5rSy6buR57OW5aW26IiW!5e0!3m2!1szh-TW!2stw!4v1576656441302!5m2!1szh-TW!2stw" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
-                                    </div>
-                                  </div>
-                              </div>
-                          </div>
-                        </div>
+                        
 
                       </ul>
                     </div>
 
-                    <div class="col-xs-5 col-sm-5 col-md-5  col-lg-3 col-xl-3 card">
+                    <div class="swiper-slide col-xs-5 col-sm-5 col-md-5  col-lg-3 col-xl-3 card">
                       <img src="img/east3.jpg" class="card-img-top" alt="...">
                       <div class="card-body">
                         <h3 class="card-title"><strong>福吉串炸</strong></h3>
@@ -445,58 +640,15 @@
                         <li class="list-group-item">
                             <a href="" type="input" data-toggle="modal" data-target="#eastthreeModal">了解更多</a>
                         </li>
-                        <!-- Modal -->
-                        <div class="modal fade" id="eastthreeModal" >
-                          <div class="modal-dialog modal-lg ">
-                              <!-- Modal Content -->
-                              <div class="modal-content">
-                                  <div class="modal-header">
-                                      <h3 class="modal-title" id="eastthreeModalTitle"><strong>店家資訊</strong></h3>
-                                      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                          <span aria-hidden="true">&times;</span>
-                                      </button>
-                                  </div>
-                                  <div class="modal-body">
-                                  <img src="img/east3-2.jpg">
-                                    <div class="intro">
-                                      <span><h3><strong>介紹：</strong></h3></span>
-                                      <p>日本國民美食，串炸外帶專賣店，堅持使用生鮮原料。將食材切塊裹漿並炸至金黃色，食用時沾上店家的特製醬汁。在日本文化裡，串炸沾醬是一次性的，福吉串炸提供三種主廚特製醬料外帶回去，美味享受快來試試大家都在談論的福吉串炸吧。</p>
-                                      <span><h3><strong>營業時間：</strong></h3></span>
-                                      <p>每日 17:30 ~ 01:00 </p>
-                                    </div>
-                                  </div>
-                              </div>
-                          </div>
-                         </div>
-
+                        
                         <li class="list-group-item">
                           <a href="" type="input" data-toggle="modal" data-target="#eastthreemapModal">觀看地圖</a>
                         </li>
-                        <!-- Map Modal -->
-                        <div class="modal fade " id="eastthreemapModal" >
-                          <div class="modal-dialog modal-lg  modal-dialog-centered">
-                              <!-- Modal Content -->
-                              <div class="modal-content">
-                                  <div class="modal-header">
-                                      <h3 class="modal-title" id="eastthreemapModalTitle"><strong>店家位置</strong></h3>
-                                      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                          <span aria-hidden="true">&times;</span>
-                                      </button>
-                                  </div>
-                                  <div class="modal-body map">
-                                    <span>地址:台南市東區裕農路623號</span>
-                                    <div class="maprwd">
-                                      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14691.618288893858!2d120.22813407538241!3d22.990536349252768!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x346e775471c4a593%3A0xe5507d5fabb168bb!2z56aP5ZCJ5Liy54K4LSDoo5XovrLlupc!5e0!3m2!1szh-TW!2stw!4v1576656465851!5m2!1szh-TW!2stw" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
-                                    </div>
-                                  </div>
-                              </div>
-                          </div>
-                        </div>
-
+                        
                       </ul>
                     </div>
 
-                    <div class="col-xs-5 col-sm-5 col-md-5  col-lg-3 col-xl-3 card">
+                    <div class="swiper-slide col-xs-5 col-sm-5 col-md-5  col-lg-3 col-xl-3 card">
                         <img src="img/east4.jpg" class="card-img-top" alt="...">
                         <div class="card-body">
                             <h3 class="card-title"><strong>米谷手作料理食堂</strong></h3>
@@ -506,310 +658,471 @@
                             <li class="list-group-item">
                                 <a href="" type="input" data-toggle="modal" data-target="#eastfourModal">了解更多</a>
                             </li>
-                            <!-- Modal -->
-                            <div class="modal fade" id="eastfourModal" >
-                              <div class="modal-dialog modal-lg ">
-                                  <!-- Modal Content -->
-                                  <div class="modal-content">
-                                      <div class="modal-header">
-                                          <h3 class="modal-title" id="eastfourModalTitle"><strong>店家資訊</strong></h3>
-                                          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                              <span aria-hidden="true">&times;</span>
-                                          </button>
-                                      </div>
-                                      <div class="modal-body">
-                                      <img src="img/east4-2.jpg">
-                                        <div class="intro">
-                                          <span><h3><strong>介紹：</strong></h3></span>
-                                          <p>米谷手作料理的餐廳，販賣的品項非常多樣，而且十分平價，像是燒物、冷盤、丼飯、炸物、定食、手捲這裡通通有，就連外帶便當也有，而且還有外送服務，十分貼心啊！</p>
-                                          <span><h3><strong>營業時間：</strong></h3></span>
-                                          <p>每日 11:00 ~ 14:00 、 17:00 ~ 21:30</p>
-                                        </div>
-                                      </div>
-                                  </div>
-                              </div>
-                            </div>
+                           
 
                             <li class="list-group-item">
                               <a href="" type="input" data-toggle="modal" data-target="#eastfourmapModal">觀看地圖</a>
                             </li>
-                            <!-- Map Modal -->
-                            <div class="modal fade " id="eastfourmapModal" >
-                              <div class="modal-dialog modal-lg  modal-dialog-centered">
-                                  <!-- Modal Content -->
-                                  <div class="modal-content">
-                                      <div class="modal-header">
-                                          <h3 class="modal-title" id="eastfourmapModalTitle"><strong>店家位置</strong></h3>
-                                          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                              <span aria-hidden="true">&times;</span>
-                                          </button>
-                                      </div>
-                                      <div class="modal-body map">
-                                        <span>地址:台南市東區中華東路三段206號</span>
-                                        <div class="maprwd">
-                                          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14691.618288893858!2d120.22813407538241!3d22.990536349252768!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x346e769fb5240307%3A0x8003aa15897f3439!2z57Gz6LC35omL5L2c5paZ55CG6aOf5aCC!5e0!3m2!1szh-TW!2stw!4v1576656489540!5m2!1szh-TW!2stw" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
-                                        </div>
-                                      </div>
-                                  </div>
-                              </div>
-                            </div>
+                             
 
                         </ul>
                     </div>
+
+
+                  </div>
+                  <div class="swiper-scrollbar"></div>
                 </div>
+
+
+                <!-- Modal east 1-->
+                <div class="modal fade" id="eastoneModal" >
+                  <div class="modal-dialog modal-lg ">
+                      <!-- Modal Content -->
+                      <div class="modal-content">
+                          <div class="modal-header ">
+                              <h3 class="modal-title" id="eastoneModalTitle"><strong>店家資訊</strong></h3>
+                              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                  <span aria-hidden="true">&times;</span>
+                              </button>
+                          </div>
+                          <div class="modal-body">
+                          <img src="img/east1-2.jpg">
+                            <div class="intro">
+                              <span><h3><strong>介紹：</strong></h3></span>
+                              <p>好味道的小籠湯包的特色在於皮Q、餡料實在，並有濃郁的金黃湯汁，從選料、皮凍的製作、高湯的熬製以及調味，每一細節都是我們的精心之作。</p>
+                              <span><h3><strong>營業時間：</strong></h3></span>
+                              <p>每日 10:30 ~ 23:00 </p>
+                            </div>
+                          </div>
+                      </div>
+                  </div>
+                 </div>
+                <!-- Map Modal east 1-->
+                <div class="modal fade " id="eastonemapModal" >
+                  <div class="modal-dialog modal-lg  modal-dialog-centered">
+                      <!-- Modal Content -->
+                      <div class="modal-content">
+                          <div class="modal-header">
+                              <h3 class="modal-title" id="eastonemapModalTitle"><strong>店家位置</strong></h3>
+                              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                  <span aria-hidden="true">&times;</span>
+                              </button>
+                          </div>
+                          <div class="modal-body map">
+                            <span>地址:台南市東區東安路26號</span>
+                            <div class="maprwd">
+                              <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3672.7445060131413!2d120.20123091484933!3d22.996420823075933!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x346e7695d97d83a3%3A0xcbb0a8bc6649d6ae!2z5LiK5rW35aW95ZGz6YGT5bCP57Gg5rmv5YyF!5e0!3m2!1szh-TW!2stw!4v1576656421305!5m2!1szh-TW!2stw" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
+                            </div>
+                          </div>
+                      </div>
+                  </div>
+                </div>
+
+                <!-- Modal east 2-->
+                <div class="modal fade" id="easttwoModal" >
+                  <div class="modal-dialog modal-lg ">
+                      <!-- Modal Content -->
+                      <div class="modal-content">
+                          <div class="modal-header">
+                              <h3 class="modal-title " id="easttwoModalTitle"><strong>店家資訊</strong></h3>
+                              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                  <span aria-hidden="true">&times;</span>
+                              </button>
+                          </div>
+                          <div class="modal-body">
+                          <img src="img/east2-2.jpg">
+                            <div class="intro">
+                              <span><h3><strong>介紹：</strong></h3></span>
+                              <p>東洲黑糖奶舖創始於2006年，秉持「醫食同源」的經營理念，藉著含有豐富營養價值的黑糖飲品，加上堅持傳統、無添加、健康養生的獨家製程，保留住最真實的黑糖原味，製作出香味濃郁的黑糖。</p>
+                              <span><h3><strong>營業時間：</strong></h3></span>
+                              <p>每日 07:00 ~ 23:00 </p>
+                            </div>
+                          </div>
+                      </div>
+                  </div>
+                 </div>
+                <!-- Map Modal east 2-->
+                <div class="modal fade " id="easttwomapModal" >
+                  <div class="modal-dialog modal-lg  modal-dialog-centered">
+                      <!-- Modal Content -->
+                      <div class="modal-content">
+                          <div class="modal-header">
+                              <h3 class="modal-title" id="easttwomapModalTitle"><strong>店家位置</strong></h3>
+                              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                  <span aria-hidden="true">&times;</span>
+                              </button>
+                          </div>
+                          <div class="modal-body map">
+                            <span>地址:台南市東區東寧路122號</span>
+                            <div class="maprwd">
+                              <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3672.877153900502!2d120.22409141484918!3d22.991544423256684!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x346e769159b91769%3A0x208d2042fdb12ac3!2z5p2x5rSy6buR57OW5aW26IiW!5e0!3m2!1szh-TW!2stw!4v1576656441302!5m2!1szh-TW!2stw" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
+                            </div>
+                          </div>
+                      </div>
+                  </div>
+                </div>
+
+                <!-- Modal east 3-->
+                <div class="modal fade" id="eastthreeModal" >
+                  <div class="modal-dialog modal-lg ">
+                      <!-- Modal Content -->
+                      <div class="modal-content">
+                          <div class="modal-header">
+                              <h3 class="modal-title" id="eastthreeModalTitle"><strong>店家資訊</strong></h3>
+                              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                  <span aria-hidden="true">&times;</span>
+                              </button>
+                          </div>
+                          <div class="modal-body">
+                          <img src="img/east3-2.jpg">
+                            <div class="intro">
+                              <span><h3><strong>介紹：</strong></h3></span>
+                              <p>日本國民美食，串炸外帶專賣店，堅持使用生鮮原料。將食材切塊裹漿並炸至金黃色，食用時沾上店家的特製醬汁。在日本文化裡，串炸沾醬是一次性的，福吉串炸提供三種主廚特製醬料外帶回去，美味享受快來試試大家都在談論的福吉串炸吧。</p>
+                              <span><h3><strong>營業時間：</strong></h3></span>
+                              <p>每日 17:30 ~ 01:00 </p>
+                            </div>
+                          </div>
+                      </div>
+                  </div>
+                 </div>
+
+                <!-- Map Modal east 3-->
+                <div class="modal fade " id="eastthreemapModal" >
+                  <div class="modal-dialog modal-lg  modal-dialog-centered">
+                      <!-- Modal Content -->
+                      <div class="modal-content">
+                          <div class="modal-header">
+                              <h3 class="modal-title" id="eastthreemapModalTitle"><strong>店家位置</strong></h3>
+                              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                  <span aria-hidden="true">&times;</span>
+                              </button>
+                          </div>
+                          <div class="modal-body map">
+                            <span>地址:台南市東區裕農路623號</span>
+                            <div class="maprwd">
+                              <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14691.618288893858!2d120.22813407538241!3d22.990536349252768!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x346e775471c4a593%3A0xe5507d5fabb168bb!2z56aP5ZCJ5Liy54K4LSDoo5XovrLlupc!5e0!3m2!1szh-TW!2stw!4v1576656465851!5m2!1szh-TW!2stw" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
+                            </div>
+                          </div>
+                      </div>
+                  </div>
+                </div>
+
+                <!-- Modal east 4-->
+                <div class="modal fade" id="eastfourModal" >
+                  <div class="modal-dialog modal-lg ">
+                      <!-- Modal Content -->
+                      <div class="modal-content">
+                          <div class="modal-header">
+                              <h3 class="modal-title" id="eastfourModalTitle"><strong>店家資訊</strong></h3>
+                              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                  <span aria-hidden="true">&times;</span>
+                              </button>
+                          </div>
+                          <div class="modal-body">
+                          <img src="img/east4-2.jpg">
+                            <div class="intro">
+                              <span><h3><strong>介紹：</strong></h3></span>
+                              <p>米谷手作料理的餐廳，販賣的品項非常多樣，而且十分平價，像是燒物、冷盤、丼飯、炸物、定食、手捲這裡通通有，就連外帶便當也有，而且還有外送服務，十分貼心啊！</p>
+                              <span><h3><strong>營業時間：</strong></h3></span>
+                              <p>每日 11:00 ~ 14:00 、 17:00 ~ 21:30</p>
+                            </div>
+                          </div>
+                      </div>
+                  </div>
+                </div>
+                <!-- Map Modal east 4-->
+                <div class="modal fade " id="eastfourmapModal" >
+                  <div class="modal-dialog modal-lg  modal-dialog-centered">
+                      <!-- Modal Content -->
+                      <div class="modal-content">
+                          <div class="modal-header">
+                              <h3 class="modal-title" id="eastfourmapModalTitle"><strong>店家位置</strong></h3>
+                              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                  <span aria-hidden="true">&times;</span>
+                              </button>
+                          </div>
+                          <div class="modal-body map">
+                            <span>地址:台南市東區中華東路三段206號</span>
+                            <div class="maprwd">
+                              <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14691.618288893858!2d120.22813407538241!3d22.990536349252768!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x346e769fb5240307%3A0x8003aa15897f3439!2z57Gz6LC35omL5L2c5paZ55CG6aOf5aCC!5e0!3m2!1szh-TW!2stw!4v1576656489540!5m2!1szh-TW!2stw" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
+                            </div>
+                          </div>
+                      </div>
+                  </div>
+                </div>
+
             </div>
+            
+            
 
             <div class="tab-pane fade" id="pills-north" role="tabpanel" aria-labelledby="pills-contact-tab">
-                <div class="row carddeck ">
-                    <div class="col-xs-5 col-sm-5 col-md-5  col-lg-3 col-xl-3 card">
-                      <img src="img/north1.jpg" class="card-img-top " alt="...">
-                      <div class="card-body">
-                        <h3 class="card-title"><strong>吉美冰店</strong></h3>
-                        <p class="card-text">「吉美冰店」位處深巷近40年，40年的圓椅凳、40年的果汁杯，店裡的大型傳統製冰機正「噠噠噠」作響，觀光客甚少。</p>
-                      </div>
-                      <ul class="list-group list-group-flush">
-                        <li class="list-group-item">
-                            <a href="" type="input"  data-toggle="modal" data-target="#northoneModal">了解更多</a>
-                        </li>
-                        <!-- Modal -->
-                        <div class="modal fade" id="northoneModal" >
-                          <div class="modal-dialog modal-lg ">
-                              <!-- Modal Content -->
-                              <div class="modal-content">
-                                  <div class="modal-header">
-                                      <h3 class="modal-title" id="northoneModalTitle"><strong>店家資訊</strong></h3>
-                                      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                          <span aria-hidden="true">&times;</span>
-                                      </button>
-                                  </div>
-                                  <div class="modal-body">
-                                  <img src="img/north1-2.jpg">
-                                    <div class="intro">
-                                      <span><h3><strong>介紹：</strong></h3></span>
-                                      <p>「吉美冰店」位處深巷近40年，在這裡的時光是凝結的， 40 年的圓椅凳、 40年的果汁杯，店裡的大型傳統製冰機正「噠噠噠」作響，觀光客甚少。第二代老闆說，家裡從他幼稚園就開始做冰了，每天一到中午就開始忙碌，所有的品項都已用毛筆書寫在牆上紅紙上。</p>
-                                      <span><h3><strong>營業時間：</strong></h3></span>
-                                      <p>每日 10:00 ~ 21:00 </p>
-                                    </div>
-                                  </div>
-                              </div>
-                          </div>
-                        </div>
+                
+                <div class="swiper-container row carddeck ">
+                    <div class="swiper-wrapper">
 
-                        <li class="list-group-item">
-                          <a href="" type="input" data-toggle="modal" data-target="#northonemapModal">觀看地圖</a>
-                        </li>
-                        <!-- Map Modal -->
-                        <div class="modal fade " id="northonemapModal" >
-                          <div class="modal-dialog modal-lg  modal-dialog-centered">
-                              <!-- Modal Content -->
-                              <div class="modal-content">
-                                  <div class="modal-header">
-                                      <h3 class="modal-title" id="northonemapModalTitle"><strong>店家位置</strong></h3>
-                                      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                          <span aria-hidden="true">&times;</span>
-                                      </button>
-                                  </div>
-                                  <div class="modal-body map">
-                                    <span>地址:台南市北區長榮路五段246巷34號</span>
-                                    <div class="maprwd">
-                                      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3672.276960775558!2d120.21625291484942!3d23.013600922438602!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x346e76e4a3e6e4f1%3A0x126d6a8521cefda5!2z5ZCJ576O5Yaw5bqX!5e0!3m2!1szh-TW!2stw!4v1576656506755!5m2!1szh-TW!2stw" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
-                                    </div>
-                                  </div>
-                              </div>
-                          </div>
-                        </div>
-
-                      </ul>
-                    </div>
-
-                    <div class="col-xs-5 col-sm-5 col-md-5  col-lg-3 col-xl-3 card">
-                      <img src="img/north2.jpg" class="card-img-top" alt="...">
-                      <div class="card-body">
-                        <h3 class="card-title"><strong>北海燒烤熱炒</strong></h3>
-                        <p class="card-text">吃好、吃飽、吃得划算，山珍海味一應俱全，吃多少都一樣價錢的熱炒吃到飽。菜單有中式燒烤、揚物、冷盤、火鍋、點心等，料理現點現做。</p>
-                      </div>
-                      <ul class="list-group list-group-flush">
-                        <li class="list-group-item">
-                            <a href="" type="input" data-toggle="modal" data-target="#northtwoModal">了解更多</a>
-                        </li>
-                        <!-- Modal -->
-                        <div class="modal fade" id="northtwoModal" >
-                          <div class="modal-dialog modal-lg ">
-                              <!-- Modal Content -->
-                              <div class="modal-content">
-                                  <div class="modal-header">
-                                      <h3 class="modal-title" id="northtwoModalTitle"><strong>店家資訊</strong></h3>
-                                      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                          <span aria-hidden="true">&times;</span>
-                                      </button>
-                                  </div>
-                                  <div class="modal-body">
-                                  <img src="img/north2-2.jpg">
-                                    <div class="intro">
-                                      <span><h3><strong>介紹：</strong></h3></span>
-                                      <p>熱炒~炭烤~火鍋~揚物吃到飽，不限制用餐時間，謝師宴、團體聚餐、家庭聚會最佳首選全台首創，中式精緻料理吃到飽。</p>
-                                      <span><h3><strong>營業時間：</strong></h3></span>
-                                      <p>每日 17:30 ~ 11:00 </p>
-                                    </div>
-                                  </div>
-                              </div>
-                          </div>
-                        </div>
-
-                        <li class="list-group-item">
-                          <a href="" type="input" data-toggle="modal" data-target="#northtwomapModal">觀看地圖</a>
-                        </li>
-                        <!-- Map Modal -->
-                        <div class="modal fade " id="northtwomapModal" >
-                          <div class="modal-dialog modal-lg  modal-dialog-centered">
-                              <!-- Modal Content -->
-                              <div class="modal-content">
-                                  <div class="modal-header">
-                                      <h3 class="modal-title" id="northtwomapModalTitle"><strong>店家位置</strong></h3>
-                                      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                          <span aria-hidden="true">&times;</span>
-                                      </button>
-                                  </div>
-                                  <div class="modal-body map">
-                                    <span>地址:台南市北區北安路一段277號</span>
-                                    <div class="maprwd">
-                                      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3672.276960775558!2d120.21625291484942!3d23.013600922438602!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x346e76ff7572f67b%3A0x924377288202134f!2z5YyX5rW354eS54KS54mp6KqeLeeis-eDpOeGseeCkuWQg-WIsOmjvSDlj7DlvI_mlpnnkIYo5bmz5YO56IGa6aSQ5o6o6JamKQ!5e0!3m2!1szh-TW!2stw!4v1576656523831!5m2!1szh-TW!2stw" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
-                                    </div>
-                                  </div>
-                              </div>
-                          </div>
-                        </div>
-
-                      </ul>
-                    </div>
-
-                    <div class=" col-xs-5 col-sm-5 col-md-5  col-lg-3 col-xl-3 card">
-                      <img src="img/north3.jpg" class="card-img-top" alt="...">
-                      <div class="card-body">
-                        <h3 class="card-title"><strong>米式幽默</strong></h3>
-                        <p class="card-text">米腸歐巴從一輛小小的「三輪車」起家，到現在擁有自己的店面米式幽默，一路走來真的非常不容易，一群死忠的顧客還是一路相隨。</p>
-                      </div>
-                      <ul class="list-group list-group-flush">
-                        <li class="list-group-item">
-                            <a href="" type="input" data-toggle="modal" data-target="#norththreeModal">了解更多</a>
-                        </li>
-                        <!-- Modal -->
-                        <div class="modal fade" id="norththreeModal" >
-                          <div class="modal-dialog modal-lg ">
-                              <!-- Modal Content -->
-                              <div class="modal-content">
-                                  <div class="modal-header">
-                                      <h3 class="modal-title" id="norththreeModalTitle"><strong>店家資訊</strong></h3>
-                                      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                          <span aria-hidden="true">&times;</span>
-                                      </button>
-                                  </div>
-                                  <div class="modal-body">
-                                  <img src="img/north3-2.jpg">
-                                    <div class="intro">
-                                      <span><h3><strong>介紹：</strong></h3></span>
-                                      <p>老闆有帥氣的外表早期以餐車的方式出現在台南，馬上風靡萬千少女前往購買，那時候單只賣單一產品＂炙燒米腸＂，現在他把招牌的手工米腸再加上更多菜色以店面的方式呈現啦！</p>
-                                      <span><h3><strong>營業時間：</strong></h3></span>
-                                      <p>每日 11:00 ~ 14:00 、 17:00 ~ 20:00 </p>
-                                    </div>
-                                  </div>
-                              </div>
-                          </div>
-                        </div>
-
-                        <li class="list-group-item">
-                          <a  href="" type="input" data-toggle="modal" data-target="#norththreemapModal">觀看地圖</a>
-                        </li> 
-                        <!-- Map Modal -->
-                        <div class="modal fade " id="norththreemapModal" >
-                          <div class="modal-dialog modal-lg  modal-dialog-centered">
-                              <!-- Modal Content -->
-                              <div class="modal-content">
-                                  <div class="modal-header">
-                                      <h3 class="modal-title" id="norththreemapModalTitle"><strong>店家位置</strong></h3>
-                                      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                          <span aria-hidden="true">&times;</span>
-                                      </button>
-                                  </div>
-                                  <div class="modal-body map">
-                                    <span>地址:台南市北區文賢路287號</span>
-                                    <div class="maprwd">
-                                      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3672.4824833874945!2d120.19128971484938!3d23.006050422718708!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x346e7664ed20e1c3%3A0x3c00689b0670dfb5!2z57Gz6IW45q2Q5be0!5e0!3m2!1szh-TW!2stw!4v1576656540604!5m2!1szh-TW!2stw" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
-                                    </div>
-                                    </div>
-                              </div>
-                          </div>
-                        </div>
-
-                      </ul>
-                    </div>
-
-                    <div class="col-xs-5 col-sm-5 col-md-5  col-lg-3 col-xl-3 card">
-                        <img src="img/north4.jpg" class="card-img-top" alt="...">
+                      <div class="swiper-slide col-xs-5 col-sm-5 col-md-5  col-lg-3 col-xl-3 card">
+                        <img src="img/north1.jpg" class="card-img-top " alt="...">
                         <div class="card-body">
-                            <h3 class="card-title"><strong>記愣蔥油餅</strong></h3>
-                          <p class="card-text">裡面的半熟蛋，溫熱的香濃的口感，搭配香酥彈牙的蔥油餅，而且只要30元。</p>
+                          <h3 class="card-title"><strong>吉美冰店</strong></h3>
+                          <p class="card-text">「吉美冰店」位處深巷近40年，40年的圓椅凳、40年的果汁杯，店裡的大型傳統製冰機正「噠噠噠」作響，觀光客甚少。</p>
                         </div>
                         <ul class="list-group list-group-flush">
-                            <li class="list-group-item">
-                                <a href="" type="input" data-toggle="modal" data-target="#northfourModal">了解更多</a>
-                            </li>
-                            <!-- Modal -->
-                            <div class="modal fade" id="northfourModal" >
-                              <div class="modal-dialog modal-lg ">
-                                  <!-- Modal Content -->
-                                  <div class="modal-content">
-                                      <div class="modal-header">
-                                          <h3 class="modal-title" id="northfourModalTitle"><strong>店家資訊</strong></h3>
-                                          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                              <span aria-hidden="true">&times;</span>
-                                          </button>
-                                      </div>
-                                      <div class="modal-body">
-                                      <img src="img/north4-2.jpg">
-                                        <div class="intro">
-                                          <span><h3><strong>介紹：</strong></h3></span>
-                                          <p>限量販售打拋豬口味的炸彈蔥油餅~ 辣度和蛋的熟度都可以調整，餅皮炸的酥脆又Q， 咬下去蛋液流出來的樣子真的超可口！打拋豬味道很濃很香，每一口都很夠味，越吃越涮嘴，也不會太油膩</p>
-                                          <span><h3><strong>營業時間：</strong></h3></span>
-                                          <p>每日 14:00 ~ 19:00 </p>
-                                        </div>
-                                      </div>
-                                  </div>
-                              </div>
-                            </div>
+                          <li class="list-group-item">
+                              <a href="" type="input"  data-toggle="modal" data-target="#northoneModal">了解更多</a>
+                          </li>
+                          
 
-                            <li class="list-group-item">
-                              <a href="" type="input" data-toggle="modal" data-target="#northfourmapModal">觀看地圖</a>
-                            </li>
-                            <!-- Map Modal -->
-                            <div class="modal fade " id="northfourmapModal" >
-                              <div class="modal-dialog modal-lg  modal-dialog-centered">
-                                  <!-- Modal Content -->
-                                  <div class="modal-content">
-                                      <div class="modal-header">
-                                          <h3 class="modal-title" id="northfourmapModalTitle"><strong>店家位置</strong></h3>
-                                          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                              <span aria-hidden="true">&times;</span>
-                                          </button>
-                                      </div>
-                                      <div class="modal-body map">
-                                        <span>地址:台南市北區西門路四段193號寶雅旁小空地</span>
-                                        <div class="maprwd">
-                                          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3672.4824833874945!2d120.19128971484938!3d23.006050422718708!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x346e76f779ccc9c3%3A0xe24616d206a1703e!2z6KiY5oSj6JSl5rK56aSF!5e0!3m2!1szh-TW!2stw!4v1576656553398!5m2!1szh-TW!2stw" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
-                                        </div>
-                                      </div>
-                                  </div>
-                              </div>
-                            </div>
+                          <li class="list-group-item">
+                            <a href="" type="input" data-toggle="modal" data-target="#northonemapModal">觀看地圖</a>
+                          </li>
+                          
+                        </ul>
+                      </div>
+
+                      <div class="swiper-slide col-xs-5 col-sm-5 col-md-5  col-lg-3 col-xl-3 card">
+                        <img src="img/north2.jpg" class="card-img-top" alt="...">
+                        <div class="card-body">
+                          <h3 class="card-title"><strong>北海燒烤熱炒</strong></h3>
+                          <p class="card-text">吃好、吃飽、吃得划算，山珍海味一應俱全，吃多少都一樣價錢的熱炒吃到飽。菜單有中式燒烤、揚物、冷盤、火鍋、點心等，料理現點現做。</p>
+                        </div>
+                        <ul class="list-group list-group-flush">
+                          <li class="list-group-item">
+                              <a href="" type="input" data-toggle="modal" data-target="#northtwoModal">了解更多</a>
+                          </li>
+                          
+                          <li class="list-group-item">
+                            <a href="" type="input" data-toggle="modal" data-target="#northtwomapModal">觀看地圖</a>
+                          </li>
+                          
+                        </ul>
+                      </div>
+
+                      <div class="swiper-slide col-xs-5 col-sm-5 col-md-5  col-lg-3 col-xl-3 card">
+                        <img src="img/north3.jpg" class="card-img-top" alt="...">
+                        <div class="card-body">
+                          <h3 class="card-title"><strong>米式幽默</strong></h3>
+                          <p class="card-text">米腸歐巴從一輛小小的「三輪車」起家，到現在擁有自己的店面米式幽默，一路走來真的非常不容易，一群死忠的顧客還是一路相隨。</p>
+                        </div>
+                        <ul class="list-group list-group-flush">
+                          <li class="list-group-item">
+                              <a href="" type="input" data-toggle="modal" data-target="#norththreeModal">了解更多</a>
+                          </li>
+                          
+
+                          <li class="list-group-item">
+                            <a  href="" type="input" data-toggle="modal" data-target="#norththreemapModal">觀看地圖</a>
+                          </li> 
+                          
 
                         </ul>
+                      </div>
+
+                      <div class="swiper-slide col-xs-5 col-sm-5 col-md-5  col-lg-3 col-xl-3 card">
+                          <img src="img/north4.jpg" class="card-img-top" alt="...">
+                          <div class="card-body">
+                              <h3 class="card-title"><strong>記愣蔥油餅</strong></h3>
+                            <p class="card-text">裡面的半熟蛋，溫熱的香濃的口感，搭配香酥彈牙的蔥油餅，而且只要30元。</p>
+                          </div>
+                          <ul class="list-group list-group-flush">
+                              <li class="list-group-item">
+                                  <a href="" type="input" data-toggle="modal" data-target="#northfourModal">了解更多</a>
+                              </li>
+                              
+
+                              <li class="list-group-item">
+                                <a href="" type="input" data-toggle="modal" data-target="#northfourmapModal">觀看地圖</a>
+                              </li>
+                            
+
+                          </ul>
+                      </div>
+                   
+                    </div>
+                    <div class="swiper-scrollbar"></div>
+                  </div>
+                  
+                  <!-- Modal north 1-->
+                  <div class="modal fade" id="northoneModal" >
+                    <div class="modal-dialog modal-lg ">
+                        <!-- Modal Content -->
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h3 class="modal-title" id="northoneModalTitle"><strong>店家資訊</strong></h3>
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                            </div>
+                            <div class="modal-body">
+                            <img src="img/north1-2.jpg">
+                              <div class="intro">
+                                <span><h3><strong>介紹：</strong></h3></span>
+                                <p>「吉美冰店」位處深巷近40年，在這裡的時光是凝結的， 40 年的圓椅凳、 40年的果汁杯，店裡的大型傳統製冰機正「噠噠噠」作響，觀光客甚少。第二代老闆說，家裡從他幼稚園就開始做冰了，每天一到中午就開始忙碌，所有的品項都已用毛筆書寫在牆上紅紙上。</p>
+                                <span><h3><strong>營業時間：</strong></h3></span>
+                                <p>每日 10:00 ~ 21:00 </p>
+                              </div>
+                            </div>
+                        </div>
                     </div>
                   </div>
+                  <!-- Map Modal north 1-->
+                  <div class="modal fade " id="northonemapModal" >
+                    <div class="modal-dialog modal-lg  modal-dialog-centered">
+                        <!-- Modal Content -->
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h3 class="modal-title" id="northonemapModalTitle"><strong>店家位置</strong></h3>
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                            </div>
+                            <div class="modal-body map">
+                              <span>地址:台南市北區長榮路五段246巷34號</span>
+                              <div class="maprwd">
+                                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3672.276960775558!2d120.21625291484942!3d23.013600922438602!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x346e76e4a3e6e4f1%3A0x126d6a8521cefda5!2z5ZCJ576O5Yaw5bqX!5e0!3m2!1szh-TW!2stw!4v1576656506755!5m2!1szh-TW!2stw" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
+                              </div>
+                            </div>
+                        </div>
+                    </div>
+                  </div>
+                  <!-- Modal north 2-->
+                  <div class="modal fade" id="northtwoModal" >
+                    <div class="modal-dialog modal-lg ">
+                        <!-- Modal Content -->
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h3 class="modal-title" id="northtwoModalTitle"><strong>店家資訊</strong></h3>
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                            </div>
+                            <div class="modal-body">
+                            <img src="img/north2-2.jpg">
+                              <div class="intro">
+                                <span><h3><strong>介紹：</strong></h3></span>
+                                <p>熱炒~炭烤~火鍋~揚物吃到飽，不限制用餐時間，謝師宴、團體聚餐、家庭聚會最佳首選全台首創，中式精緻料理吃到飽。</p>
+                                <span><h3><strong>營業時間：</strong></h3></span>
+                                <p>每日 17:30 ~ 11:00 </p>
+                              </div>
+                            </div>
+                        </div>
+                    </div>
+                  </div>
+
+                  <!-- Map Modal north 2-->
+                  <div class="modal fade " id="northtwomapModal" >
+                    <div class="modal-dialog modal-lg  modal-dialog-centered">
+                        <!-- Modal Content -->
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h3 class="modal-title" id="northtwomapModalTitle"><strong>店家位置</strong></h3>
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                            </div>
+                            <div class="modal-body map">
+                              <span>地址:台南市北區北安路一段277號</span>
+                              <div class="maprwd">
+                                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3672.276960775558!2d120.21625291484942!3d23.013600922438602!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x346e76ff7572f67b%3A0x924377288202134f!2z5YyX5rW354eS54KS54mp6KqeLeeis-eDpOeGseeCkuWQg-WIsOmjvSDlj7DlvI_mlpnnkIYo5bmz5YO56IGa6aSQ5o6o6JamKQ!5e0!3m2!1szh-TW!2stw!4v1576656523831!5m2!1szh-TW!2stw" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
+                              </div>
+                            </div>
+                        </div>
+                    </div>
+                  </div>
+                  <!-- Modal north 3-->
+                  <div class="modal fade" id="norththreeModal" >
+                    <div class="modal-dialog modal-lg ">
+                        <!-- Modal Content -->
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h3 class="modal-title" id="norththreeModalTitle"><strong>店家資訊</strong></h3>
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                            </div>
+                            <div class="modal-body">
+                            <img src="img/north3-2.jpg">
+                              <div class="intro">
+                                <span><h3><strong>介紹：</strong></h3></span>
+                                <p>老闆有帥氣的外表早期以餐車的方式出現在台南，馬上風靡萬千少女前往購買，那時候單只賣單一產品＂炙燒米腸＂，現在他把招牌的手工米腸再加上更多菜色以店面的方式呈現啦！</p>
+                                <span><h3><strong>營業時間：</strong></h3></span>
+                                <p>每日 11:00 ~ 14:00 、 17:00 ~ 20:00 </p>
+                              </div>
+                            </div>
+                        </div>
+                    </div>
+                  </div>
+                  <!-- Map Modal north 3-->
+                  <div class="modal fade " id="norththreemapModal" >
+                    <div class="modal-dialog modal-lg  modal-dialog-centered">
+                        <!-- Modal Content -->
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h3 class="modal-title" id="norththreemapModalTitle"><strong>店家位置</strong></h3>
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                            </div>
+                            <div class="modal-body map">
+                              <span>地址:台南市北區文賢路287號</span>
+                              <div class="maprwd">
+                                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3672.4824833874945!2d120.19128971484938!3d23.006050422718708!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x346e7664ed20e1c3%3A0x3c00689b0670dfb5!2z57Gz6IW45q2Q5be0!5e0!3m2!1szh-TW!2stw!4v1576656540604!5m2!1szh-TW!2stw" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
+                              </div>
+                              </div>
+                        </div>
+                    </div>
+                  </div>
+                   <!-- Modal north 4-->
+                   <div class="modal fade" id="northfourModal" >
+                    <div class="modal-dialog modal-lg ">
+                        <!-- Modal Content -->
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h3 class="modal-title" id="northfourModalTitle"><strong>店家資訊</strong></h3>
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                            </div>
+                            <div class="modal-body">
+                            <img src="img/north4-2.jpg">
+                              <div class="intro">
+                                <span><h3><strong>介紹：</strong></h3></span>
+                                <p>限量販售打拋豬口味的炸彈蔥油餅~ 辣度和蛋的熟度都可以調整，餅皮炸的酥脆又Q， 咬下去蛋液流出來的樣子真的超可口！打拋豬味道很濃很香，每一口都很夠味，越吃越涮嘴，也不會太油膩</p>
+                                <span><h3><strong>營業時間：</strong></h3></span>
+                                <p>每日 14:00 ~ 19:00 </p>
+                              </div>
+                            </div>
+                        </div>
+                    </div>
+                  </div>
+                  <!-- Map Modal north 4-->
+                  <div class="modal fade " id="northfourmapModal" >
+                    <div class="modal-dialog modal-lg  modal-dialog-centered">
+                        <!-- Modal Content -->
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h3 class="modal-title" id="northfourmapModalTitle"><strong>店家位置</strong></h3>
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                            </div>
+                            <div class="modal-body map">
+                              <span>地址:台南市北區西門路四段193號寶雅旁小空地</span>
+                              <div class="maprwd">
+                                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3672.4824833874945!2d120.19128971484938!3d23.006050422718708!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x346e76f779ccc9c3%3A0xe24616d206a1703e!2z6KiY5oSj6JSl5rK56aSF!5e0!3m2!1szh-TW!2stw!4v1576656553398!5m2!1szh-TW!2stw" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
+                              </div>
+                            </div>
+                        </div>
+                    </div>
+                  </div>
+   
+
             </div>
 
             <div class="tab-pane fade" id="pills-south" role="tabpanel" aria-labelledby="pills-contact-tab">
-                <div class="row carddeck ">
-                    <div class="col-xs-5 col-sm-5 col-md-5  col-lg-3 col-xl-3 card">
+                <div class="swiper-container row carddeck ">
+                  <div class="swiper-wrapper">
+                  
+                    <div class="swiper-slide col-xs-5 col-sm-5 col-md-5  col-lg-3 col-xl-3 card">
                       <img src="img/south1.jpg" class="card-img-top " alt="...">
                       <div class="card-body">
                         <h3 class="card-title"><strong>是吉祥精緻火鍋館</strong></h3>
@@ -819,58 +1132,17 @@
                         <li class="list-group-item">
                             <a href="" type="input" data-toggle="modal" data-target="#southoneModal">了解更多</a>
                         </li>
-                        <!-- Modal -->
-                        <div class="modal fade" id="southoneModal" >
-                          <div class="modal-dialog modal-lg ">
-                              <!-- Modal Content -->
-                              <div class="modal-content">
-                                  <div class="modal-header">
-                                      <h3 class="modal-title" id="southoneModalTitle"><strong>店家資訊</strong></h3>
-                                      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                          <span aria-hidden="true">&times;</span>
-                                      </button>
-                                  </div>
-                                  <div class="modal-body">
-                                  <img src="img/south1-2.jpg">
-                                    <div class="intro">
-                                      <span><h3><strong>介紹：</strong></h3></span>
-                                      <p>是吉祥精緻火鍋館。超高人氣的排隊在地名店，不用花大錢也能吃好吃飽，建議兩個人合點一鍋再加點肉即可。</p>
-                                      <span><h3><strong>營業時間：</strong></h3></span>
-                                      <p>每日 11:00 ~ 21:00 </p>
-                                    </div>
-                                  </div>
-                              </div>
-                          </div>
-                        </div>
+                       
 
                         <li class="list-group-item">
                           <a href="" type="input" data-toggle="modal" data-target="#southonemapModal">觀看地圖</a>
                         </li>
-                        <!-- Map Modal -->
-                        <div class="modal fade " id="southonemapModal" >
-                          <div class="modal-dialog modal-lg  modal-dialog-centered">
-                              <!-- Modal Content -->
-                              <div class="modal-content">
-                                  <div class="modal-header">
-                                      <h3 class="modal-title" id="southonemapModalTitle"><strong>店家位置</strong></h3>
-                                      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                          <span aria-hidden="true">&times;</span>
-                                      </button>
-                                  </div>
-                                  <div class="modal-body map">
-                                    <span>地址:台南市南區新孝路128號</span>
-                                    <div class="maprwd">
-                                      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3673.2462131190878!2d120.18416331484899!3d22.977971923759963!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x346e75dc1f7ffc55%3A0x161a7eae361912aa!2z5piv5ZCJ56Wl57K-57e754Gr6Y2L6aSo!5e0!3m2!1szh-TW!2stw!4v1576656567520!5m2!1szh-TW!2stw" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
-                                    </div>
-                                  </div>
-                              </div>
-                          </div>
-                        </div>
+                        
                           
                       </ul>
                     </div>
 
-                    <div class="col-xs-5 col-sm-5 col-md-5  col-lg-3 col-xl-3 card">
+                    <div class="swiper-slide col-xs-5 col-sm-5 col-md-5  col-lg-3 col-xl-3 card">
                       <img src="img/south2.jpg" class="card-img-top" alt="...">
                       <div class="card-body">
                         <h3 class="card-title"><strong>伍捌鍋燒</strong></h3>
@@ -880,58 +1152,16 @@
                         <li class="list-group-item">
                             <a href="" type="input" data-toggle="modal" data-target="#southtwoModal">了解更多</a>
                         </li>
-                        <!-- Modal -->
-                        <div class="modal fade" id="southtwoModal" >
-                          <div class="modal-dialog modal-lg ">
-                              <!-- Modal Content -->
-                              <div class="modal-content">
-                                  <div class="modal-header">
-                                      <h3 class="modal-title" id="southtwoModalTitle"><strong>店家資訊</strong></h3>
-                                      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                          <span aria-hidden="true">&times;</span>
-                                      </button>
-                                  </div>
-                                  <div class="modal-body">
-                                  <img src="img/south2-2.jpg">
-                                    <div class="intro">
-                                      <span><h3><strong>介紹：</strong></h3></span>
-                                      <p>平價鍋燒意麵，伍捌鍋燒，真材實料大骨熬煮湯頭，推薦泡菜/味噌/麻辣鍋燒，內用紅茶喝到飽!</p>
-                                      <span><h3><strong>營業時間：</strong></h3></span>
-                                      <p>每日 11:30 ~ 14:00 、 17:00 ~ 20:30</p>
-                                    </div>
-                                  </div>
-                              </div>
-                          </div>
-                        </div>
+                        
 
                         <li class="list-group-item">
                           <a href="" type="input" data-toggle="modal" data-target="#southtwomapModal">觀看地圖</a>
                         </li> 
-                        <!-- Map Modal -->
-                        <div class="modal fade " id="southtwomapModal" >
-                          <div class="modal-dialog modal-lg  modal-dialog-centered">
-                              <!-- Modal Content -->
-                              <div class="modal-content">
-                                  <div class="modal-header">
-                                      <h3 class="modal-title" id="southtwomapModalTitle"><strong>店家位置</strong></h3>
-                                      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                          <span aria-hidden="true">&times;</span>
-                                      </button>
-                                  </div>
-                                  <div class="modal-body map">
-                                    <span>地址:台南市南區健康路一段393號</span>
-                                    <div class="maprwd">
-                                      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d117543.7504370317!2d120.11631149159759!3d22.97811950819007!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x346e7678acb0efd9%3A0x7af2de015fb8860d!2z5LyN5o2M6Y2L54eSLeWBpeW6t-W6lw!5e0!3m2!1szh-TW!2stw!4v1576656587528!5m2!1szh-TW!2stw" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
-                                    </div>
-                                  </div>
-                              </div>
-                          </div>
-                        </div>
-
+                       
                       </ul>
                     </div>
 
-                    <div class="col-xs-5 col-sm-5 col-md-5  col-lg-3 col-xl-3 card">
+                    <div class="swiper-slide col-xs-5 col-sm-5 col-md-5  col-lg-3 col-xl-3 card">
                       <img src="img/south3.jpg" class="card-img-top" alt="...">
                       <div class="card-body">
                         <h3 class="card-title"><strong>我們家</strong></h3>
@@ -941,58 +1171,17 @@
                         <li class="list-group-item">
                             <a href="" type="input" data-toggle="modal" data-target="#souththreeModal">了解更多</a>
                         </li>
-                        <!-- Modal -->
-                        <div class="modal fade" id="souththreeModal" >
-                          <div class="modal-dialog modal-lg ">
-                              <!-- Modal Content -->
-                              <div class="modal-content">
-                                  <div class="modal-header">
-                                      <h3 class="modal-title" id="souththreeModalTitle"><strong>店家資訊</strong></h3>
-                                      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                          <span aria-hidden="true">&times;</span>
-                                      </button>
-                                  </div>
-                                  <div class="modal-body">
-                                  <img src="img/south3-2.jpg">
-                                    <div class="intro">
-                                      <span><h3><strong>介紹：</strong></h3></span>
-                                      <p>有時候想在外面吃美食但卻常常感受不到溫度，我們家主打的就是溫馨的感覺，而且每個餐的份量都很足夠，而且還能吃到各種港式、泰式和各種特色餐點，這家的甜點更是美麗的收尾，這裡滿適合喜歡好好吃頓飯的人來吃飯，有時候美食跟裝潢不用過多的包裝，單純的感覺反而讓人感覺溫暖呢！</p>
-                                      <span><h3><strong>營業時間：</strong></h3></span>
-                                      <p>每日 10:00 ~ 21:00 週三公休</p>
-                                    </div>
-                                  </div>
-                              </div>
-                          </div>
-                        </div>
+                        
 
                         <li class="list-group-item">
                           <a  href="" type="input" data-toggle="modal" data-target="#souththreemapModal">觀看地圖</a>
                         </li>
-                        <!-- Map Modal -->
-                        <div class="modal fade " id="souththreemapModal" >
-                          <div class="modal-dialog modal-lg  modal-dialog-centered">
-                              <!-- Modal Content -->
-                              <div class="modal-content">
-                                  <div class="modal-header">
-                                      <h3 class="modal-title" id="souththreemapModalTitle"><strong>店家位置</strong></h3>
-                                      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                          <span aria-hidden="true">&times;</span>
-                                      </button>
-                                  </div>
-                                  <div class="modal-body map">
-                                    <span>地址:台南市南區金華路二段345巷26弄37號</span>
-                                    <div class="maprwd">
-                                      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3673.001625142767!2d120.18855831484908!3d22.986967723426435!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x346e77257d572191%3A0xdd17917cf119d565!2z5oiR5YCR5a62!5e0!3m2!1szh-TW!2stw!4v1576656604714!5m2!1szh-TW!2stw" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
-                                    </div>
-                                  </div>
-                              </div>
-                          </div>
-                        </div>
+                       
 
                       </ul>
                     </div>
 
-                    <div class="col-xs-5 col-sm-5 col-md-5  col-lg-3 col-xl-3 card">
+                    <div class="swiper-slide col-xs-5 col-sm-5 col-md-5  col-lg-3 col-xl-3 card">
                         <img src="img/south4.jpg" class="card-img-top" alt="...">
                         <div class="card-body">
                             <h3 class="card-title"><strong>老陳炸雞</strong></h3>
@@ -1002,62 +1191,203 @@
                             <li class="list-group-item">
                                 <a href="" type="input" data-toggle="modal" data-target="#southfourModal">了解更多</a>
                             </li>
-                            <!-- Modal -->
-                            <div class="modal fade" id="southfourModal" >
-                              <div class="modal-dialog modal-lg ">
-                                  <!-- Modal Content -->
-                                  <div class="modal-content">
-                                      <div class="modal-header">
-                                          <h3 class="modal-title" id="southfourModalTitle"><strong>店家資訊</strong></h3>
-                                          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                              <span aria-hidden="true">&times;</span>
-                                          </button>
-                                      </div>
-                                      <div class="modal-body">
-                                      <img src="img/south4-2.jpg">
-                                        <div class="intro">
-                                          <span><h3><strong>介紹：</strong></h3></span>
-                                          <p>從市場內小攤販賣到在外面開店面的炸物攤，一賣就是20多年，下午才營業只賣3小時，所有產品都是當天備料現炸，經常一開店就排隊，是許多在地人從小吃到大的台式下午茶。</p>
-                                          <span><h3><strong>營業時間：</strong></h3></span>
-                                          <p>每日 15:00 ~ 18:00 </p>
-                                        </div>
-                                      </div>
-                                  </div>
-                              </div>
-                            </div>
+                           
 
                             <li class="list-group-item">
                               <a href="" type="input" data-toggle="modal" data-target="#southfourmapModal">觀看地圖</a>
                             </li>
-                            <!-- Map Modal -->
-                            <div class="modal fade " id="southfourmapModal" >
-                              <div class="modal-dialog modal-lg  modal-dialog-centered">
-                                  <!-- Modal Content -->
-                                  <div class="modal-content">
-                                      <div class="modal-header">
-                                          <h3 class="modal-title" id="southfourmapModalTitle"><strong>店家位置</strong></h3>
-                                          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                              <span aria-hidden="true">&times;</span>
-                                          </button>
-                                      </div>
-                                      <div class="modal-body map">
-                                        <span>地址:台南市南區新興路533巷33弄38號</span>
-                                        <div class="maprwd">
-                                          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3673.36657061446!2d120.18595711484896!3d22.973544023923886!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x346e7573adedb6b9%3A0xfffcdb4d1cf7a36d!2z6ICB6Zmz54K46Zue!5e0!3m2!1szh-TW!2stw!4v1576656628799!5m2!1szh-TW!2stw" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
-                                        </div>
-                                      </div>
-                                  </div>
-                              </div>
-                            </div>
+                            
 
                         </ul>
                     </div>
+
+                    </div>
+                    <div class="swiper-scrollbar"></div>
                   </div>
+                   <!-- Modal south 1-->
+                   <div class="modal fade" id="southoneModal" >
+                    <div class="modal-dialog modal-lg ">
+                        <!-- Modal Content -->
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h3 class="modal-title" id="southoneModalTitle"><strong>店家資訊</strong></h3>
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                            </div>
+                            <div class="modal-body">
+                            <img src="img/south1-2.jpg">
+                              <div class="intro">
+                                <span><h3><strong>介紹：</strong></h3></span>
+                                <p>是吉祥精緻火鍋館。超高人氣的排隊在地名店，不用花大錢也能吃好吃飽，建議兩個人合點一鍋再加點肉即可。</p>
+                                <span><h3><strong>營業時間：</strong></h3></span>
+                                <p>每日 11:00 ~ 21:00 </p>
+                              </div>
+                            </div>
+                        </div>
+                    </div>
+                  </div>
+                  <!-- Map Modal south 1-->
+                  <div class="modal fade " id="southonemapModal" >
+                    <div class="modal-dialog modal-lg  modal-dialog-centered">
+                        <!-- Modal Content -->
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h3 class="modal-title" id="southonemapModalTitle"><strong>店家位置</strong></h3>
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                            </div>
+                            <div class="modal-body map">
+                              <span>地址:台南市南區新孝路128號</span>
+                              <div class="maprwd">
+                                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3673.2462131190878!2d120.18416331484899!3d22.977971923759963!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x346e75dc1f7ffc55%3A0x161a7eae361912aa!2z5piv5ZCJ56Wl57K-57e754Gr6Y2L6aSo!5e0!3m2!1szh-TW!2stw!4v1576656567520!5m2!1szh-TW!2stw" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
+                              </div>
+                            </div>
+                        </div>
+                    </div>
+                  </div>
+                   <!-- Modal south 2-->
+                   <div class="modal fade" id="southtwoModal" >
+                    <div class="modal-dialog modal-lg ">
+                        <!-- Modal Content -->
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h3 class="modal-title" id="southtwoModalTitle"><strong>店家資訊</strong></h3>
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                            </div>
+                            <div class="modal-body">
+                            <img src="img/south2-2.jpg">
+                              <div class="intro">
+                                <span><h3><strong>介紹：</strong></h3></span>
+                                <p>平價鍋燒意麵，伍捌鍋燒，真材實料大骨熬煮湯頭，推薦泡菜/味噌/麻辣鍋燒，內用紅茶喝到飽!</p>
+                                <span><h3><strong>營業時間：</strong></h3></span>
+                                <p>每日 11:30 ~ 14:00 、 17:00 ~ 20:30</p>
+                              </div>
+                            </div>
+                        </div>
+                    </div>
+                  </div>
+                  <!-- Map Modal south 2-->
+                  <div class="modal fade " id="southtwomapModal" >
+                    <div class="modal-dialog modal-lg  modal-dialog-centered">
+                        <!-- Modal Content -->
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h3 class="modal-title" id="southtwomapModalTitle"><strong>店家位置</strong></h3>
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                            </div>
+                            <div class="modal-body map">
+                              <span>地址:台南市南區健康路一段393號</span>
+                              <div class="maprwd">
+                                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d117543.7504370317!2d120.11631149159759!3d22.97811950819007!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x346e7678acb0efd9%3A0x7af2de015fb8860d!2z5LyN5o2M6Y2L54eSLeWBpeW6t-W6lw!5e0!3m2!1szh-TW!2stw!4v1576656587528!5m2!1szh-TW!2stw" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
+                              </div>
+                            </div>
+                        </div>
+                    </div>
+                  </div>
+                   <!-- Modal south 3-->
+                   <div class="modal fade" id="souththreeModal" >
+                    <div class="modal-dialog modal-lg ">
+                        <!-- Modal Content -->
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h3 class="modal-title" id="souththreeModalTitle"><strong>店家資訊</strong></h3>
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                            </div>
+                            <div class="modal-body">
+                            <img src="img/south3-2.jpg">
+                              <div class="intro">
+                                <span><h3><strong>介紹：</strong></h3></span>
+                                <p>有時候想在外面吃美食但卻常常感受不到溫度，我們家主打的就是溫馨的感覺，而且每個餐的份量都很足夠，而且還能吃到各種港式、泰式和各種特色餐點，這家的甜點更是美麗的收尾，這裡滿適合喜歡好好吃頓飯的人來吃飯，有時候美食跟裝潢不用過多的包裝，單純的感覺反而讓人感覺溫暖呢！</p>
+                                <span><h3><strong>營業時間：</strong></h3></span>
+                                <p>每日 10:00 ~ 21:00 週三公休</p>
+                              </div>
+                            </div>
+                        </div>
+                    </div>
+                  </div>
+                  <!-- Map Modal south 3-->
+                  <div class="modal fade " id="souththreemapModal" >
+                    <div class="modal-dialog modal-lg  modal-dialog-centered">
+                        <!-- Modal Content -->
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h3 class="modal-title" id="souththreemapModalTitle"><strong>店家位置</strong></h3>
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                            </div>
+                            <div class="modal-body map">
+                              <span>地址:台南市南區金華路二段345巷26弄37號</span>
+                              <div class="maprwd">
+                                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3673.001625142767!2d120.18855831484908!3d22.986967723426435!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x346e77257d572191%3A0xdd17917cf119d565!2z5oiR5YCR5a62!5e0!3m2!1szh-TW!2stw!4v1576656604714!5m2!1szh-TW!2stw" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
+                              </div>
+                            </div>
+                        </div>
+                    </div>
+                  </div>
+                   <!-- Modal south 4-->
+                   <div class="modal fade" id="southfourModal" >
+                    <div class="modal-dialog modal-lg ">
+                        <!-- Modal Content -->
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h3 class="modal-title" id="southfourModalTitle"><strong>店家資訊</strong></h3>
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                            </div>
+                            <div class="modal-body">
+                            <img src="img/south4-2.jpg">
+                              <div class="intro">
+                                <span><h3><strong>介紹：</strong></h3></span>
+                                <p>從市場內小攤販賣到在外面開店面的炸物攤，一賣就是20多年，下午才營業只賣3小時，所有產品都是當天備料現炸，經常一開店就排隊，是許多在地人從小吃到大的台式下午茶。</p>
+                                <span><h3><strong>營業時間：</strong></h3></span>
+                                <p>每日 15:00 ~ 18:00 </p>
+                              </div>
+                            </div>
+                        </div>
+                    </div>
+                  </div>
+                  <!-- Map Modal south 4-->
+                  <div class="modal fade " id="southfourmapModal" >
+                    <div class="modal-dialog modal-lg  modal-dialog-centered">
+                        <!-- Modal Content -->
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h3 class="modal-title" id="southfourmapModalTitle"><strong>店家位置</strong></h3>
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                            </div>
+                            <div class="modal-body map">
+                              <span>地址:台南市南區新興路533巷33弄38號</span>
+                              <div class="maprwd">
+                                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3673.36657061446!2d120.18595711484896!3d22.973544023923886!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x346e7573adedb6b9%3A0xfffcdb4d1cf7a36d!2z6ICB6Zmz54K46Zue!5e0!3m2!1szh-TW!2stw!4v1576656628799!5m2!1szh-TW!2stw" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
+                              </div>
+                            </div>
+                        </div>
+                    </div>
+                  </div>
+
             </div>
 
+
+
+
+
             <div class="tab-pane fade" id="pills-anping" role="tabpanel" aria-labelledby="pills-contact-tab">
-                <div class="row carddeck">
-                    <div class="col-xs-5 col-sm-5 col-md-5  col-lg-3 col-xl-3 card">
+                <div class="swiper-container row carddeck">
+                  <div class="swiper-wrapper">
+
+                    <div class="swiper-slide col-xs-5 col-sm-5 col-md-5  col-lg-3 col-xl-3 card">
                       <img src="img/anping1.jpg" class="card-img-top " alt="...">
                       <div class="card-body">
                         <h3 class="card-title"><strong>碳佐麻里</strong></h3>
@@ -1067,58 +1397,17 @@
                         <li class="list-group-item">
                             <a href="" type="input"  data-toggle="modal" data-target="#anpingoneModal">了解更多</a>
                         </li>
-                        <!-- Modal -->
-                        <div class="modal fade" id="anpingoneModal" >
-                          <div class="modal-dialog modal-lg ">
-                              <!-- Modal Content -->
-                              <div class="modal-content">
-                                  <div class="modal-header">
-                                      <h3 class="modal-title" id="anpingoneModalTitle"><strong>店家資訊</strong></h3>
-                                      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                          <span aria-hidden="true">&times;</span>
-                                      </button>
-                                  </div>
-                                  <div class="modal-body">
-                                  <img src="img/anping1-2.jpg">
-                                    <div class="intro">
-                                      <span><h3><strong>介紹：</strong></h3></span>
-                                      <p>邱董事長學生時期留學日本，很喜歡吃燒烤，更愛邊吃燒烤邊品酒，他表示，每每坐在角落，觀看客人享受燒烤的樂趣，心中好生感動，特別是一家人圍在炭爐四周，大人烤給小孩吃或是小孩烤給父母吃，那種親子間的感情流露，也成為他再開分店的原因之一，堅持提供一個最優質的燒肉環境給愛好此道的好朋友，大口大口喝酒、 大嘴大嘴吃肉、大聲吆喝也沒關係、就算翹腿也無所謂，專業無煙燒肉，正是邱董事長心目中最理想的燒肉店。</p>
-                                      <span><h3><strong>營業時間：</strong></h3></span>
-                                      <p>每日 11:30 ~ 24:00 </p>
-                                    </div>
-                                  </div>
-                              </div>
-                          </div>
-                        </div>
+                        
 
                         <li class="list-group-item">
                           <a  href="" type="input" data-toggle="modal" data-target="#anpingonemapModal">觀看地圖</a>
                         </li>
-                        <!-- Map Modal -->
-                        <div class="modal fade " id="anpingonemapModal" >
-                          <div class="modal-dialog modal-lg  modal-dialog-centered">
-                              <!-- Modal Content -->
-                              <div class="modal-content">
-                                  <div class="modal-header">
-                                      <h3 class="modal-title" id="anpingonemapModalTitle"><strong>店家位置</strong></h3>
-                                      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                          <span aria-hidden="true">&times;</span>
-                                      </button>
-                                  </div>
-                                  <div class="modal-body map">
-                                    <span>地址:台南市安平區府前路二段630號</span>
-                                    <div class="maprwd">
-                                      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d29386.92311213653!2d120.17063617327247!3d22.973587498300727!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x346e7672eacec435%3A0x98309e6dd400b108!2z56Kz5L2Q6bq76YeMIOeyvuWTgeeHkuiCiSAtIOWPsOWNl-W6nOWJjeW6lw!5e0!3m2!1szh-TW!2stw!4v1576656648708!5m2!1szh-TW!2stw" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
-                                    </div>
-                                  </div>
-                              </div>
-                          </div>
-                        </div>
+                        
 
                       </ul>
                     </div>
 
-                    <div class="col-xs-5 col-sm-5 col-md-5  col-lg-3 col-xl-3 card">
+                    <div class="swiper-slide col-xs-5 col-sm-5 col-md-5  col-lg-3 col-xl-3 card">
                       <img src="img/anping2.jpg" class="card-img-top" alt="...">
                       <div class="card-body">
                         <h3 class="card-title"><strong>依蕾特布丁</strong></h3>
@@ -1128,58 +1417,18 @@
                         <li class="list-group-item">
                             <a href="" type="input"  data-toggle="modal" data-target="#anpingtwoModal">了解更多</a>
                         </li>
-                        <!-- Modal -->
-                        <div class="modal fade" id="anpingtwoModal" >
-                          <div class="modal-dialog modal-lg ">
-                              <!-- Modal Content -->
-                              <div class="modal-content">
-                                  <div class="modal-header">
-                                      <h3 class="modal-title" id="anpingtwoModalTitle"><strong>店家資訊</strong></h3>
-                                      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                          <span aria-hidden="true">&times;</span>
-                                      </button>
-                                  </div>
-                                  <div class="modal-body">
-                                  <img src="img/anping2-2.jpg">
-                                    <div class="intro">
-                                      <span><h3><strong>介紹：</strong></h3></span>
-                                      <p>2000年的夏天，莘莘學子們正埋首苦讀準備七月的大專聯考，平日善廚的父親看著日夜苦讀的小女兒因為沒有食慾而日漸消瘦，覺得十分心疼，於是著手細心地調理出乳香濃郁、富水感而又兼具營養的鮮奶布丁，來替代女兒每天的餐點。</p>
-                                      <span><h3><strong>營業時間：</strong></h3></span>
-                                      <p>每日 10:30 ~ 21:00 </p>
-                                    </div>
-                                  </div>
-                              </div>
-                          </div>
-                        </div>
+                        
 
                         <li class="list-group-item">
                           <a href="" type="input"  data-toggle="modal" data-target="#anpingtwomapModal">觀看地圖</a>
                         </li> 
-                        <!-- Map Modal -->
-                        <div class="modal fade " id="anpingtwomapModal" >
-                          <div class="modal-dialog modal-lg  modal-dialog-centered">
-                              <!-- Modal Content -->
-                              <div class="modal-content">
-                                  <div class="modal-header">
-                                      <h3 class="modal-title" id="anpingtwomapModalTitle"><strong>店家位置</strong></h3>
-                                      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                          <span aria-hidden="true">&times;</span>
-                                      </button>
-                                  </div>
-                                  <div class="modal-body map">
-                                    <span>地址:台南市安平區安平路422號</span>
-                                    <div class="maprwd">
-                                      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d29386.92311213653!2d120.17063617327247!3d22.973587498300727!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x346e7611c7ee33f9%3A0xe9ba4768fc39b826!2z5L6d6JW-54m55biD5LiB!5e0!3m2!1szh-TW!2stw!4v1576656663764!5m2!1szh-TW!2stw" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
-                                    </div>
-                                  </div>
-                              </div>
-                          </div>
-                        </div>
+
+                        
 
                       </ul>
                     </div>
 
-                    <div class="col-xs-5 col-sm-5 col-md-5  col-lg-3 col-xl-3 card">
+                    <div class="swiper-slide col-xs-5 col-sm-5 col-md-5  col-lg-3 col-xl-3 card">
                       <img src="img/anping3.jpg" class="card-img-top" alt="...">
                       <div class="card-body">
                         <h3 class="card-title"><strong>同記安平豆花</strong></h3>
@@ -1189,58 +1438,17 @@
                         <li class="list-group-item">
                             <a href="" type="input" data-toggle="modal" data-target="#anpingthreeModal">了解更多</a>
                         </li>
-                        <!-- Modal -->
-                        <div class="modal fade" id="anpingthreeModal" >
-                          <div class="modal-dialog modal-lg ">
-                              <!-- Modal Content -->
-                              <div class="modal-content">
-                                  <div class="modal-header">
-                                      <h3 class="modal-title" id="anpingthreeModalTitle"><strong>店家資訊</strong></h3>
-                                      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                          <span aria-hidden="true">&times;</span>
-                                      </button>
-                                  </div>
-                                  <div class="modal-body">
-                                  <img src="img/anping3-2.jpg">
-                                    <div class="intro">
-                                      <span><h3><strong>介紹：</strong></h3></span>
-                                      <p>同記安平豆花的細緻，香濃是最大賣點。創始人黃慶同表示，為作出豆花的特色，因為市面上的豆花很多都以洋菜粉勾芡，不僅失去了豆花的原味與與香氣，也讓豆花口感完全喪失，他懷念起小時後的傳統豆花香，決定不厭其煩的依傳統製造，除採用價格貴一倍的非基因改造有機黃豆來製作，製程中不添加防腐劑及香料，保證是最天然健康又美味的小吃。</p>
-                                      <span><h3><strong>營業時間：</strong></h3></span>
-                                      <p>每日 10:00 ~ 22:00 </p>
-                                    </div>
-                                  </div>
-                              </div>
-                          </div>
-                        </div>
+                       
 
                         <li class="list-group-item">
                           <a href="" type="input"  data-toggle="modal" data-target="#anpingthreemapModal">觀看地圖</a>
                         </li>
-                        <!-- Map Modal -->
-                        <div class="modal fade " id="anpingthreemapModal" >
-                          <div class="modal-dialog modal-lg  modal-dialog-centered">
-                              <!-- Modal Content -->
-                              <div class="modal-content">
-                                  <div class="modal-header">
-                                      <h3 class="modal-title" id="anpingthreemapModalTitle"><strong>店家位置</strong></h3>
-                                      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                          <span aria-hidden="true">&times;</span>
-                                      </button>
-                                  </div>
-                                  <div class="modal-body map">
-                                    <span>地址:台南市安平區安北路433號</span>
-                                    <div class="maprwd">
-                                      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14690.795655183178!2d120.1654280281794!3d22.998096657738348!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x346dd8a8caa4f10b%3A0x4cff94ea8c6109f0!2z5ZCM6KiY5a6J5bmz6LGG6Iqx!5e0!3m2!1szh-TW!2stw!4v1576656683497!5m2!1szh-TW!2stw" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
-                                    </div>
-                                  </div>
-                              </div>
-                          </div>
-                        </div>
+                         
 
                       </ul>
                     </div>
 
-                    <div class="col-xs-5 col-sm-5 col-md-5  col-lg-3 col-xl-3 card">
+                    <div class="swiper-slide col-xs-5 col-sm-5 col-md-5  col-lg-3 col-xl-3 card">
                         <img src="img/anping4.jpg" class="card-img-top" alt="...">
                         <div class="card-body">
                             <h3 class="card-title"><strong>王氏魚皮店</strong></h3>
@@ -1250,58 +1458,200 @@
                             <li class="list-group-item">
                                 <a href="" type="input" data-toggle="modal" data-target="#anpingfourModal">了解更多</a>
                             </li>    
-                            <!-- Modal -->
-                            <div class="modal fade" id="anpingfourModal" >
-                              <div class="modal-dialog modal-lg ">
-                                  <!-- Modal Content -->
-                                  <div class="modal-content">
-                                      <div class="modal-header">
-                                          <h3 class="modal-title" id="anpingfourModalTitle"><strong>店家資訊</strong></h3>
-                                          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                              <span aria-hidden="true">&times;</span>
-                                          </button>
-                                      </div>
-                                      <div class="modal-body">
-                                      <img src="img/anping4-2.jpg">
-                                        <div class="intro">
-                                          <span><h3><strong></strong>介紹：</strong></h3></span>
-                                          <p>王氏魚皮餐點的選擇挺豐富，重點是價位很平實，來碗肉燥飯和一碗湯，幫一天的開始注入滿滿的元氣，只要百元有找就能搞定！</p>
-                                          <span><h3><strong>營業時間：</strong></h3></span>
-                                          <p>每日 04:00 ~ 14:00 週六、日營業至15:00</p>
-                                        </div>
-                                      </div>
-                                  </div>
-                              </div>
-                            </div>
-
+                           
                             <li class="list-group-item">
                                <a href="" type="input" data-toggle="modal" data-target="#anpingfourmapModal">觀看地圖</a>
                             </li>
-                            <!-- Map Modal -->
-                            <div class="modal fade " id="anpingfourmapModal" >
-                              <div class="modal-dialog modal-lg  modal-dialog-centered">
-                                  <!-- Modal Content -->
-                                  <div class="modal-content">
-                                      <div class="modal-header">
-                                          <h3 class="modal-title" id="anpingfourmapModalTitle"><strong>店家位置</strong></h3>
-                                          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                              <span aria-hidden="true">&times;</span>
-                                          </button>
-                                      </div>
-                                      <div class="modal-body map">
-                                        <span>地址:台南市安平區安平路612號</span>
-                                        <div class="maprwd">
-                                          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14690.795655183178!2d120.1654280281794!3d22.998096657738348!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x346e761ac0ceaf85%3A0x6ccc24c6324363a7!2z546L5rCP6a2a55qu5bqX!5e0!3m2!1szh-TW!2stw!4v1576656705021!5m2!1szh-TW!2stw" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
-                                        </div>
-                                      </div>
-                                  </div>
-                              </div>
-                            </div>
+                            
 
                         </ul>
                     </div>
+
+
+                    </div>
+                    <div class="swiper-scrollbar"></div>
                   </div>
+
+                  <!-- Modal anping 1-->
+                  <div class="modal fade" id="anpingoneModal" >
+                    <div class="modal-dialog modal-lg ">
+                        <!-- Modal Content -->
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h3 class="modal-title" id="anpingoneModalTitle"><strong>店家資訊</strong></h3>
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                            </div>
+                            <div class="modal-body">
+                            <img src="img/anping1-2.jpg">
+                              <div class="intro">
+                                <span><h3><strong>介紹：</strong></h3></span>
+                                <p>邱董事長學生時期留學日本，很喜歡吃燒烤，更愛邊吃燒烤邊品酒，他表示，每每坐在角落，觀看客人享受燒烤的樂趣，心中好生感動，特別是一家人圍在炭爐四周，大人烤給小孩吃或是小孩烤給父母吃，那種親子間的感情流露，也成為他再開分店的原因之一，堅持提供一個最優質的燒肉環境給愛好此道的好朋友，大口大口喝酒、 大嘴大嘴吃肉、大聲吆喝也沒關係、就算翹腿也無所謂，專業無煙燒肉，正是邱董事長心目中最理想的燒肉店。</p>
+                                <span><h3><strong>營業時間：</strong></h3></span>
+                                <p>每日 11:30 ~ 24:00 </p>
+                              </div>
+                            </div>
+                        </div>
+                    </div>
+                  </div>
+                  <!-- Map Modal anping 1-->
+                  <div class="modal fade " id="anpingonemapModal" >
+                    <div class="modal-dialog modal-lg  modal-dialog-centered">
+                        <!-- Modal Content -->
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h3 class="modal-title" id="anpingonemapModalTitle"><strong>店家位置</strong></h3>
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                            </div>
+                            <div class="modal-body map">
+                              <span>地址:台南市安平區府前路二段630號</span>
+                              <div class="maprwd">
+                                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d29386.92311213653!2d120.17063617327247!3d22.973587498300727!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x346e7672eacec435%3A0x98309e6dd400b108!2z56Kz5L2Q6bq76YeMIOeyvuWTgeeHkuiCiSAtIOWPsOWNl-W6nOWJjeW6lw!5e0!3m2!1szh-TW!2stw!4v1576656648708!5m2!1szh-TW!2stw" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
+                              </div>
+                            </div>
+                        </div>
+                    </div>
+                  </div>
+                  <!-- Modal anping 2-->
+                  <div class="modal fade" id="anpingtwoModal" >
+                    <div class="modal-dialog modal-lg ">
+                        <!-- Modal Content -->
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h3 class="modal-title" id="anpingtwoModalTitle"><strong>店家資訊</strong></h3>
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                            </div>
+                            <div class="modal-body">
+                            <img src="img/anping2-2.jpg">
+                              <div class="intro">
+                                <span><h3><strong>介紹：</strong></h3></span>
+                                <p>2000年的夏天，莘莘學子們正埋首苦讀準備七月的大專聯考，平日善廚的父親看著日夜苦讀的小女兒因為沒有食慾而日漸消瘦，覺得十分心疼，於是著手細心地調理出乳香濃郁、富水感而又兼具營養的鮮奶布丁，來替代女兒每天的餐點。</p>
+                                <span><h3><strong>營業時間：</strong></h3></span>
+                                <p>每日 10:30 ~ 21:00 </p>
+                              </div>
+                            </div>
+                        </div>
+                    </div>
+                  </div>
+                  <!-- Map Modal anping 2-->
+                  <div class="modal fade " id="anpingtwomapModal" >
+                    <div class="modal-dialog modal-lg  modal-dialog-centered">
+                        <!-- Modal Content -->
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h3 class="modal-title" id="anpingtwomapModalTitle"><strong>店家位置</strong></h3>
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                            </div>
+                            <div class="modal-body map">
+                              <span>地址:台南市安平區安平路422號</span>
+                              <div class="maprwd">
+                                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d29386.92311213653!2d120.17063617327247!3d22.973587498300727!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x346e7611c7ee33f9%3A0xe9ba4768fc39b826!2z5L6d6JW-54m55biD5LiB!5e0!3m2!1szh-TW!2stw!4v1576656663764!5m2!1szh-TW!2stw" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
+                              </div>
+                            </div>
+                        </div>
+                    </div>
+                  </div>
+                  <!-- Modal anping 3-->
+                  <div class="modal fade" id="anpingthreeModal" >
+                    <div class="modal-dialog modal-lg ">
+                        <!-- Modal Content -->
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h3 class="modal-title" id="anpingthreeModalTitle"><strong>店家資訊</strong></h3>
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                            </div>
+                            <div class="modal-body">
+                            <img src="img/anping3-2.jpg">
+                              <div class="intro">
+                                <span><h3><strong>介紹：</strong></h3></span>
+                                <p>同記安平豆花的細緻，香濃是最大賣點。創始人黃慶同表示，為作出豆花的特色，因為市面上的豆花很多都以洋菜粉勾芡，不僅失去了豆花的原味與與香氣，也讓豆花口感完全喪失，他懷念起小時後的傳統豆花香，決定不厭其煩的依傳統製造，除採用價格貴一倍的非基因改造有機黃豆來製作，製程中不添加防腐劑及香料，保證是最天然健康又美味的小吃。</p>
+                                <span><h3><strong>營業時間：</strong></h3></span>
+                                <p>每日 10:00 ~ 22:00 </p>
+                              </div>
+                            </div>
+                        </div>
+                    </div>
+                  </div>
+                  <!-- Map Modal anping 3-->
+                  <div class="modal fade " id="anpingthreemapModal" >
+                    <div class="modal-dialog modal-lg  modal-dialog-centered">
+                        <!-- Modal Content -->
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h3 class="modal-title" id="anpingthreemapModalTitle"><strong>店家位置</strong></h3>
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                            </div>
+                            <div class="modal-body map">
+                              <span>地址:台南市安平區安北路433號</span>
+                              <div class="maprwd">
+                                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14690.795655183178!2d120.1654280281794!3d22.998096657738348!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x346dd8a8caa4f10b%3A0x4cff94ea8c6109f0!2z5ZCM6KiY5a6J5bmz6LGG6Iqx!5e0!3m2!1szh-TW!2stw!4v1576656683497!5m2!1szh-TW!2stw" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
+                              </div>
+                            </div>
+                        </div>
+                    </div>
+                  </div>  
+                   <!-- Modal anping 4-->
+                   <div class="modal fade" id="anpingfourModal" >
+                    <div class="modal-dialog modal-lg ">
+                        <!-- Modal Content -->
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h3 class="modal-title" id="anpingfourModalTitle"><strong>店家資訊</strong></h3>
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                            </div>
+                            <div class="modal-body">
+                            <img src="img/anping4-2.jpg">
+                              <div class="intro">
+                                <span><h3><strong></strong>介紹：</strong></h3></span>
+                                <p>王氏魚皮餐點的選擇挺豐富，重點是價位很平實，來碗肉燥飯和一碗湯，幫一天的開始注入滿滿的元氣，只要百元有找就能搞定！</p>
+                                <span><h3><strong>營業時間：</strong></h3></span>
+                                <p>每日 04:00 ~ 14:00 週六、日營業至15:00</p>
+                              </div>
+                            </div>
+                        </div>
+                    </div>
+                  </div>
+
+                  <!-- Map Modal anping 4-->
+                  <div class="modal fade " id="anpingfourmapModal" >
+                    <div class="modal-dialog modal-lg  modal-dialog-centered">
+                        <!-- Modal Content -->
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h3 class="modal-title" id="anpingfourmapModalTitle"><strong>店家位置</strong></h3>
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                            </div>
+                            <div class="modal-body map">
+                              <span>地址:台南市安平區安平路612號</span>
+                              <div class="maprwd">
+                                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14690.795655183178!2d120.1654280281794!3d22.998096657738348!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x346e761ac0ceaf85%3A0x6ccc24c6324363a7!2z546L5rCP6a2a55qu5bqX!5e0!3m2!1szh-TW!2stw!4v1576656705021!5m2!1szh-TW!2stw" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
+                              </div>
+                            </div>
+                        </div>
+                    </div>
+                  </div>
+
+
             </div>    
+
+
+
+
         </div>
       </div>
     </section>
@@ -2528,6 +2878,73 @@
       <span>Copyright © 2019 Tu ChihWei</span>
     </footer>
 
+
+
+    <script>
+
+      
+
+      
+      var swiper = new Swiper('.swiper-container', {
+       
+        scrollbar: {
+  			el: ".swiper-scrollbar", // 捲軸物件
+      
+  		},
+      slidesPerView: 4,
+      spaceBetween: 10,
+      observer:true,
+            observeParents:true,
+
+      breakpoints: {
+        320:{
+          slidesPerView: 1,
+          spaceBetween: 10,
+        },
+        375:{
+          slidesPerView: 1,
+          spaceBetween: 10,
+        },
+        425:{
+          slidesPerView: 1,
+          spaceBetween: 10,
+        },
+        577:{
+          slidesPerView: 2,
+          spaceBetween: 43,
+        },
+        640:{
+          slidesPerView: 2,
+          spaceBetween: 40,
+        },
+        768: {
+          slidesPerView: 2,
+          spaceBetween: 60,
+        },
+        992: {
+          slidesPerView: 4,
+          spaceBetween: 10,
+        },
+
+        1024: {
+          slidesPerView: 4 ,
+          spaceBetween: 10,
+        },
+        
+      }
+
+      
+    });
+    
+
+
+
+
+    </script>
+
+
+
+
     <!--Bootstrap Popper jquery script-->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
@@ -2536,3 +2953,9 @@
     
 </body>
 </html>
+
+
+
+
+
+

@@ -157,7 +157,7 @@ strong {
     color:rgb(83, 83, 83);
 }
 .areanav .card-text{
-    height:80px;
+    height:75px;
     font-size: 14px;
     font-family: Microsoft JhengHei;
     line-height:18px;
@@ -171,27 +171,13 @@ strong {
     }
 }
 
+
 @media screen and (max-width:767px) and (min-width:576px){
     
     .areanav .card{
         margin: 4%;
     }
-    
-    /*
-    .areanav .card-title{
-        height:40px;
-    }
-    .areanav .card-text{
-        line-height: 15.5px;
-    }
-    .areanav .card-body{
-        padding: 0;
-        margin-bottom: 100%;
-    }
-    .areanav  .list-group li{
-        font-size: 8pt;
-        padding: 10% 0;
-    }*/
+  
 }
 @media screen and (max-width:991px) and (min-width:768px){
 
@@ -200,26 +186,11 @@ strong {
     }
     
  
-    /*
-    .areanav .card-title{
-        height:36px;
-       
-    }
-    .areanav .card-body{
-        padding: 0;
-        margin-bottom: 45%;
-    }*/
+   
 }
 @media screen and (max-width:1199px) and (min-width:992px){
     
-    /*
-    .areanav .card-title{
-        height:20px;
-    }
-    .areanav .card-body{
-        padding: 0;
-        margin-bottom: 10%;
-    }*/
+   
     .card{
         flex-basis: 23%;
         max-width: 23%;
@@ -327,10 +298,13 @@ strong {
     width: 100%;
 }
 
-
+.swiper-scrollbar{
+    top:99%;
+}
 .swiper-scrollbar-drag{
     background-color: rgb(255, 184, 91) !important;
-    height:1%;
+    
+   
 }
     /*
 .areanav .tab-content .tab-pane ::-webkit-scrollbar-track

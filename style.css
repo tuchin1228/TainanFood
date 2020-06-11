@@ -1,0 +1,139 @@
+h1,h2,h3,h4,h5,h6,p{
+    padding: 0;
+    margin: 0;
+}
+
+body{
+    margin: 0;
+    font-family: 'Noto Sans TC', sans-serif;
+}
+li.active {
+    text-decoration: line-through;
+}
+
+h1{
+    color: white;
+    margin: auto 1vw;
+}
+.navbar{
+    position: relative;
+    background-color: #ff5e44;
+    width: 100%;
+    height: 60px;
+    top: 0;
+    display: flex;
+    justify-content: center;
+}
+.listside {
+    margin-top: 80px;
+   
+}
+
+.listside .box {
+    margin: 1vh 0.5vw;
+    padding: 1vh 1vw;
+    border: 1px solid #ff5e44;
+    width: 280px;
+    
+}
+
+.listside .box .imgbox {
+    width: 100%;
+    height: 270px;
+    overflow: hidden;
+    text-align: center;
+    position: relative;
+}
+
+.listside .box .imgbox img {
+    height: 100%;
+    width: auto;
+    transform: translateX(-50%);
+    position: absolute;
+    transition:all .5s linear;
+}
+.listside .box .contents h3{
+    font-size: 1.3em;
+    font-weight: 600;
+    color: rgb(255, 117, 117);
+    text-align: center;
+    margin: 1vh 0;
+}
+.listside .box .contents p{
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 3;
+    display: -webkit-box;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    line-height: 1.8;
+    font-size: 14px;
+    margin-top: 0.5vh;
+    color: rgb(61, 61, 61);
+}
+.listside .box .contents .sp1{
+    padding: 0.2vh 0.5vw;
+    border-radius: 50px;
+    font-size: 0.9em;
+    border: 1px solid #ff9c8c;
+    background-color: #ff9c8c;
+    color: #ad3000;
+    margin-right:0.5vw;
+}
+.listside .box .contents .sp2{
+    padding: 0.2vh 0.5vw;
+    font-size: 0.9em;
+
+    color: rgb(26, 26, 26);
+
+}
+.listside .box:hover .imgbox img{
+    transition:all .5s linear;
+    height: 110%;
+}
+
+.listside .filterbox span{
+    padding: 0vh 1vw;
+    border: 1px solid black;
+    border-radius: 50px;
+    margin: 0 0.5vw; 
+}
+.listside .filterbox span a{
+    text-decoration: none;
+    color: black;
+}
+
+.viewbox{
+    display:flex;
+    
+}
+.viewbox .fiterbox{
+    width: 15vw;
+    padding: 5vh 3vw;
+}
+.viewbox .fiterbox h4{
+    font-size: 1.4em;
+    font-weight: 400;
+    margin-top: 3vh;
+}
+.viewbox .fiterbox select{
+    width: 100px;
+    height: 35px;
+}
+.viewbox .fiterbox .check{
+    margin-top: 3vh;
+}
+.viewbox .listside{
+    width: 85vw;
+}
+.viewbox .listside .dataarea{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: left;
+}
+
+i.loadicon{
+    font-size: 3em;
+    position: relative;
+    margin: 25% 25% ;
+}

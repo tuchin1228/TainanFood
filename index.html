@@ -1,403 +1,2538 @@
 <!DOCTYPE html>
-<html lang="en">
 
+<html lang="zh-Hant-TW">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Tainan Foods</title>
+    <!--Bootstrap CSS-->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
 
-    <script src="https://code.jquery.com/jquery-3.5.1.js"
-        integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
-
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/x2js/1.2.0/xml2json.min.js"
-        integrity="sha256-RbFvov4fXA9DW/RzOAcIC0ZHIDmghGdsoug5slJHMMI=" crossorigin="anonymous"></script>
-
-    <link href="https://fonts.googleapis.com/css?family=Noto+Sans+TC" rel="stylesheet" />
-
-    <link rel="stylesheet" href="style.css">
-
-    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
-
+    
+  
+    <!--My CSS-->
+    <link rel="stylesheet" href="main.css" />
 
 </head>
-
 <body>
 
-    <div id="todoclass">
 
-        <div class="navbar">
-            <h1>高雄景點</h1>
-            <div class="inputbox" style="display: flex; align-items: center;">
-                <h3 style="color:white;margin: 0 1vw;">搜<br>尋</h3>
-                <input type="text" style="height:40px;margin: auto 0;" v-model="inputcontens">
-            </div>
-        </div>
+    <!-- <section class="container banner" id="ban">
+      <img src="youtubeback.jpg">
    
-        <div class="viewbox">
-            <div class="fiterbox">
-                <h4>地區</h4>
-                <select name="" id="" v-model="areamod">
-                    <option value="all"> 全　部</option>
-                    <option :value="items" v-for="items in difzone">{{items}}</option>
-                </select>
-                <h4>類別</h4>
-                <select name="" id="" v-model="kindmod">
-                    <option value="all">全　部</option>
-                    <option :value="items" 　v-for="items in difkind">{{items}}</option>
-                </select>
-                <div class="check">
-                    <label><input type="checkbox" name="" value="forfree" v-model="checked">免費</label><br>
-                    <label><input type="checkbox" name="" value="alltime" v-model="checked">24H開放</label>
-                </div>
+    </section> -->
+
+    <section class="container-fluid areanav">
+      
+      <div class="container">
+            <div class="banner">
+              <img src="img/banner.jpg">
             </div>
-            <div class="listside">
-                <h5 style="width: 100%;margin: 1vh 0;">共 {{allfilter.length}} 筆搜尋結果...</h5>
-                <div class="filterbox" style="width: 100%;">
-                    <span class="filtertag" v-if="areamod !== 'all'">{{ areamod }}
-                        <a href="javascript:;" @click.prevent="areamod = 'all'">X</a>
-                    </span>
-                    <span class="filtertag" v-if="kindmod !== 'all'">{{ kindmod }}
-                         <a href="javascript:;" @click.prevent="kindmod = 'all'">X</a>
-                    </span>
-                    <span class="filtertag" v-if="checked.indexOf('forfree') !==-1 ">免費
-                        <a href="javascript:;" @click.prevent="checked.splice(checked.indexOf('forfree'),1)">X</a>
-                   </span>
-                   <span class="filtertag" v-if="checked.indexOf('alltime') !==-1 ">24H
-                    <a href="javascript:;" @click.prevent="checked.splice(checked.indexOf('alltime'),1)">X</a>
-               </span>
-                </div>
-                <i class=" loadicon fas fa-spinner fa-spin"  v-show="isloading"></i>
-                <div class="dataarea" v-show="!isloading">
-                    
-                    <div class="box" v-for="item in allfilter">
-                        <div class="imgbox">
-                            <img :src="item.Picture1" alt="">
+            <div class="sectiontitle"> 
+              <span>美食報報</span>
+            </div>
+            <div class="areabtn">
+                <button class="navbar-toggler " type="button" data-toggle="collapse" data-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="setarea"><strong>選擇區域</strong></span>
+                </button>
+            </div>
+
+            <div class="nav-bar  collapse "  id="navbarTogglerDemo01">
+                <ul class="nav nav-pills mb-3  justify-content-center" id="pills-tab" role="tablist">
+                    <li class="nav-item ">
+                    <a class="nav-link active" id="pills-home-tab" data-toggle="pill" href="#pills-west" role="tab" aria-controls="pills-home" aria-selected="true">中西區</a>
+                    </li>
+                    <li class="nav-item ">
+                    <a class="nav-link" id="pills-profile-tab" data-toggle="pill" href="#pills-east" role="tab" aria-controls="pills-contact" aria-selected="false">東區</a>
+                    </li>
+                    <li class="nav-item ">
+                    <a class="nav-link" id="pills-contact-tab" data-toggle="pill" href="#pills-north" role="tab" aria-controls="pills-contact" aria-selected="false">北區</a>
+                    </li>
+                    <li class="nav-item ">
+                        <a class="nav-link" id="pills-contact-tab" data-toggle="pill" href="#pills-south" role="tab" aria-controls="pills-contact" aria-selected="false">南區</a>
+                    </li>
+                    <li class="nav-item ">
+                        <a class="nav-link" id="pills-contact-tab" data-toggle="pill" href="#pills-anping" role="tab" aria-controls="pills-contact" aria-selected="false">安平區</a>
+                    </li>
+                </ul>
+            </div>
+        
+
+        <div class="tab-content" id="pills-tabContent">
+            <div class="tab-pane fade  active show" id="pills-west" role="tabpanel" aria-labelledby="pills-home-tab">
+                <div class="row carddeck ">
+
+                    <div class=" col-xs-5 col-sm-5 col-md-5  col-lg-3 col-xl-3 card ">
+                      <img src="img/west1.jpg" class="card-img-top " alt="...">
+                      <div class="card-body">
+                        <h3 class="card-title"><strong>鼎富發</strong></h3>
+                        <p class="card-text">台灣正宗古早味，搭配燒烤、冷盤、飲料，午晚餐、內用外帶，喚醒兒時飽足幸福的回憶。</p>
+                      </div>
+                      <ul class="list-group list-group-flush">
+                        <li class="list-group-item">
+                            <a  href="" type="input" data-toggle="modal" data-target="#westoneModal">了解更多</a>
+                        </li>
+                        <!-- Modal -->
+                        <div class="modal fade " id="westoneModal" >
+                            <div class="modal-dialog modal-lg  modal-dialog-centered">
+                                <!-- Modal Content -->
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h3 class="modal-title" id="westoneModalTitle"><strong>店家資訊</strong></h3>
+                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                            <span aria-hidden="true">&times;</span>
+                                        </button>
+                                    </div>
+                                    <div class="modal-body">
+                                    <img src="img/west1-2.jpg">
+                                      <div class="intro">
+                                        <span><h3><strong>介紹：</strong></h3></span>
+                                        <p>鼎富發從一磚一瓦開始，感謝各位廠商、師傅、夥伴的加持，及各位鄉親好友粉絲的支持，讓小店將於3/16正式開幕，透過鼎富發對美味的堅持，用最道地的美食，喚醒鄉親們兒時年代的初衷。</p>
+                                        <span><h3><strong>營業時間：</strong></h3></span>
+                                        <p>每日 10:30 ~ 19:30 </p>
+                                      </div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
-                        <div class="contents">
-                            <h3>{{item.Name  }}</h3>
-                            <span class="sp1">{{item.Zone}} </span>
-                            <span class="sp1">{{cls(item.Class1)}} </span>
-                            <span class="sp1" v-if="item.Ticketinfo=='免費參觀'">免錢</span>
-                            <span class="sp1" v-if="item.Opentime=='全天候開放'">24H</span>
-                            <p>{{item.Description}}</p>
+
+                        <li class="list-group-item">
+                           <a  href="" type="input" data-toggle="modal" data-target="#westonemapModal">觀看地圖</a>
+                        </li>
+                        <!-- Map Modal -->
+                        <div class="modal fade " id="westonemapModal" >
+                          <div class="modal-dialog modal-lg  modal-dialog-centered">
+                              <!-- Modal Content -->
+                              <div class="modal-content">
+                                  <div class="modal-header">
+                                      <h3 class="modal-title" id="westonemapModalTitle"><strong>店家位置</strong></h3>
+                                      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                          <span aria-hidden="true">&times;</span>
+                                      </button>
+                                  </div>
+                                  <div class="modal-body map">
+                                    <span>地址:台南市中西區大德街38號</span>
+                                    <div class="maprwd">
+                                      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3672.9342073754806!2d120.1935340148491!3d22.989446723334563!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x346e767a5787e2eb%3A0xf1654c4cccd5968f!2z6byO5a-M55m86LGs5rK55ouM6aOvL-WPsOWNl-Wwj-WQgy_lj7DljZfnvo7po58v5Y-w5Y2X5YKz57Wx576O6aOfL-WPsOWNl-WPpOaXqeWRs-Wwj-WQgy_lj7DljZfppJDlu7Mv5Y-w5Y2X5Y-k5pep5ZGz576O6aOf!5e0!3m2!1szh-TW!2stw!4v1576655074529!5m2!1szh-TW!2stw" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
+                                    </div>
+                                  </div>
+                              </div>
+                          </div>
+                         </div>
+
+                      </ul>
+                    </div>
+
+                    <div class="col-xs-5 col-sm-5 col-md-5 col-lg-3 col-xl-3 card ">
+                      <img src="img/west2.jpg" class="card-img-top" alt="...">
+                      <div class="card-body">
+                        <h3 class="card-title"><strong>福記肉圓</strong></h3>
+                        <p class="card-text">內餡較大塊且以原味呈現，對於喜歡吃蒸肉圓或是比較清淡口味的人來說，福記算是不錯的選擇。</p>
+                      </div>
+                      <ul class="list-group list-group-flush">
+                        <li class="list-group-item">
+                            <a href="" type="input" data-toggle="modal" data-target="#westtwoModal">了解更多</a>
+                        </li>
+                        <!-- Modal -->
+                        <div class="modal fade" id="westtwoModal" >
+                          <div class="modal-dialog modal-lg ">
+                              <!-- Modal Content -->
+                              <div class="modal-content">
+                                  <div class="modal-header">
+                                      <h3 class="modal-title" id="westtwoModalTitle"><strong>店家資訊</strong></h3>
+                                      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                          <span aria-hidden="true">&times;</span>
+                                      </button>
+                                  </div>
+                                  <div class="modal-body">
+                                  <img src="img/west2-2.jpg">
+                                    <div class="intro">
+                                      <span><h3><strong>介紹：</strong></h3></span>
+                                      <p>不同於北部常見的炸肉圓，屬於台南人口味的福記肉圓，先以米漿包覆內餡，再放入蒸籠炊煮，出爐的那一刻熱氣蒸騰，晶瑩剔透的外表讓人垂涎三尺，淋上店家特製醬料，豬後腿肉製成的內餡，口滿綿密好吃，有嚼勁不油膩，但阿東覺得口感順滑，但卻少了點Q彈，不過比起油炸肉圓，福記肉圓吃起來更清爽。</p>
+                                      <span><h3><strong>營業時間：</strong></h3></span>
+                                      <p>每日 06:30 ~ 20:30 </p>
+                                    </div>
+                                  </div>
+                              </div>
+                          </div>
+                      </div>
+
+                        <li class="list-group-item">
+                          <a href="" type="input" data-toggle="modal" data-target="#westtwomapModal">觀看地圖</a>
+                        </li>
+                        <!-- Map Modal -->
+                        <div class="modal fade " id="westtwomapModal" >
+                          <div class="modal-dialog modal-lg  modal-dialog-centered">
+                              <!-- Modal Content -->
+                              <div class="modal-content">
+                                  <div class="modal-header">
+                                      <h3 class="modal-title" id="westtwomapModalTitle"><strong>店家位置</strong></h3>
+                                      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                          <span aria-hidden="true">&times;</span>
+                                      </button>
+                                  </div>
+                                  <div class="modal-body map">
+                                    <span>地址:台南市中西區府前路一段215號</span>
+                                    <div class="maprwd">
+                                      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3672.9366319779106!2d120.20043801484908!3d22.989357573337802!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x346e767d6a3643bd%3A0x288ba3f817dab812!2z56aP6KiY6IKJ5ZyT57i95bqX!5e0!3m2!1szh-TW!2stw!4v1576656362893!5m2!1szh-TW!2stw" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen=""></iframe>                                  
+                                    </div>  
+                                  </div>
+                              </div>
+                          </div>
                         </div>
+
+                      </ul>
+                    </div>
+
+                   
+
+                    <div class="col-xs-5 col-sm-5 col-md-5 col-lg-3 col-xl-3 card">
+                      <img src="img/west3.jpg" class="card-img-top" alt="...">
+                      <div class="card-body">
+                        <h3 class="card-title"><strong>冰鄉</strong></h3>
+                        <p class="card-text">台南好吃冰店推薦，沒吃到芒果牛奶冰、草莓牛奶冰，還是值得一來。</p>
+                      </div>
+                      <ul class="list-group list-group-flush">
+                        <li class="list-group-item">
+                            <a href=""  data-toggle="modal" data-target="#westthreeModal">了解更多</a>
+                        </li>
+                        <!-- Modal -->
+                        <div class="modal fade" id="westthreeModal" >
+                            <div class="modal-dialog modal-lg ">
+                                <!-- Modal Content -->
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h3 class="modal-title" id="westthreeModalTitle"><strong>店家資訊</strong></h3>
+                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                            <span aria-hidden="true">&times;</span>
+                                        </button>
+                                    </div>
+                                    <div class="modal-body">
+                                    <img src="img/west3-2.jpg">
+                                      <div class="intro">
+                                        <span><h3><strong>介紹：</strong></h3></span>
+                                        <p>府城40年老冰果店有四季流轉的香甜滋味、時節輪替的人潮景觀，「冰鄉」每逢推出季節限定冰品便會造成誇張的排隊人潮，無論是夏季的芒果牛奶冰、冬天的草苺牛奶冰，還有那實在難以碰上的荔枝冰，視覺與味覺充滿高爽度，滿滿的芒果、滿滿的草莓鮮果淹沒理性，不管要等待1小時、3小時都願意，心悅誠服於沁涼的水果剉冰。</p>
+                                        <span><h3><strong>營業時間：</strong></h3></span>
+                                        <p>每日 12:00 ~ 21:00 </p>
+                                      </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <li class="list-group-item">
+                          <a href="" type="input" data-toggle="modal" data-target="#westthreemapModal">觀看地圖</a>
+                        </li>
+                        <!-- Map Modal -->
+                        <div class="modal fade " id="westthreemapModal" >
+                          <div class="modal-dialog modal-lg  modal-dialog-centered">
+                              <!-- Modal Content -->
+                              <div class="modal-content">
+                                  <div class="modal-header">
+                                      <h3 class="modal-title" id="westthreemapModalTitle"><strong>店家位置</strong></h3>
+                                      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                          <span aria-hidden="true">&times;</span>
+                                      </button>
+                                  </div>
+                                  <div class="modal-body map">
+                                    <span>地址:台南市中西區民生路一段160號</span>
+                                    <div class="maprwd">
+                                      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3672.8039456972615!2d120.19805681484915!3d22.994235823156913!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x346e76639c610e1f%3A0xb9ee035db6787283!2z5Yaw6YSJ!5e0!3m2!1szh-TW!2stw!4v1576656389556!5m2!1szh-TW!2stw" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
+                                    </div>
+                                  </div>
+                              </div>
+                          </div>
+                        </div>
+
+                      </ul>
+                    </div>
+
+                    <div class="col-xs-5 col-sm-5 col-md-5 col-lg-3 col-xl-3 card">
+                        <img src="img/west4.jpg" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h3 class="card-title"><strong>雙生綠豆沙</strong></h3>
+                          <p class="card-text">喝上一口，不僅沁心涼消暑又退火，還有滿滿香醇的奶味~加上冰沙口感相當細緻綿順，價格又十分親民超值。</p>
+                        </div>
+                        <ul class="list-group list-group-flush">
+                            <li class="list-group-item">
+                                <a href="" type="input" data-toggle="modal" data-target="#westfourModal">了解更多</a>
+                            </li>
+                            <!-- Modal -->
+                            <div class="modal fade" id="westfourModal" >
+                                <div class="modal-dialog modal-lg ">
+                                    <!-- Modal Content -->
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <h3 class="modal-title" id="westfourModalTitle"><strong>店家資訊</strong></h3>
+                                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                <span aria-hidden="true">&times;</span>
+                                            </button>
+                                        </div>
+                                        <div class="modal-body">
+                                        <img src="img/west4-2.jpg">
+                                          <div class="intro">
+                                            <span><h3><strong>介紹：</strong></h3></span>
+                                            <p>兩個來自台中大甲小鎮大男生賣了咖啡早午餐後，2017年7月20日又誕生了一間飲料店，賣的都是小時候最喜歡的傳統飲料。</p>
+                                            <span><h3><strong>營業時間：</strong></h3></span>
+                                            <p>週二~四 11:00 ~ 18:00 </p>
+                                          </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <li class="list-group-item">
+                              <a  href="" type="input" data-toggle="modal" data-target="#westfourmapModal">觀看地圖</a>
+                            </li>
+                            <!-- Map Modal -->
+                            <div class="modal fade " id="westfourmapModal" >
+                              <div class="modal-dialog modal-lg  modal-dialog-centered">
+                                  <!-- Modal Content -->
+                                  <div class="modal-content">
+                                      <div class="modal-header">
+                                          <h3 class="modal-title" id="westfourmapModalTitle"><strong>店家位置</strong></h3>
+                                          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                              <span aria-hidden="true">&times;</span>
+                                          </button>
+                                      </div>
+                                      <div class="modal-body map">
+                                        <span>地址:台南市中西區民族路二段281號</span>
+                                        <div class="maprwd">
+                                          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3672.8039456972615!2d120.19805681484915!3d22.994235823156913!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x346e76618b8e473f%3A0x20a3af429da352a4!2z5Y-M55Sf57ag6LGG5rKZ54mb5aW2IFNodcOgbnPDqm4gYmV2ZXJhZ2Vz!5e0!3m2!1szh-TW!2stw!4v1576656406757!5m2!1szh-TW!2stw" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
+                                        </div>
+                                      </div>
+                                  </div>
+                              </div>
+                            </div>
+
+                        </ul>
+                    </div>
+                  </div>
+            </div>
+
+            <div class="tab-pane fade" id="pills-east" role="tabpanel" aria-labelledby="pills-contact-tab"> 
+                <div class="row carddeck ">
+                    <div class="col-xs-5 col-sm-5 col-md-5  col-lg-3 col-xl-3 card">
+                      <img src="img/east1.jpg" class="card-img-top " alt="...">
+                      <div class="card-body">
+                        <h3 class="card-title"><strong>上海好味道小籠湯包</strong></h3>
+                        <p class="card-text">好味道小籠湯包特色是皮薄、餡嫩、湯鮮加上細緻18摺手工，除了在地人喜愛，也是眾多美食節目報導的主角。</p>
+                      </div>
+                      <ul class="list-group list-group-flush">
+                        <li class="list-group-item">
+                            <a href="" type="input" data-toggle="modal" data-target="#eastoneModal">了解更多</a>
+                        </li>
+                        <!-- Modal -->
+                        <div class="modal fade" id="eastoneModal" >
+                          <div class="modal-dialog modal-lg ">
+                              <!-- Modal Content -->
+                              <div class="modal-content">
+                                  <div class="modal-header ">
+                                      <h3 class="modal-title" id="eastoneModalTitle"><strong>店家資訊</strong></h3>
+                                      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                          <span aria-hidden="true">&times;</span>
+                                      </button>
+                                  </div>
+                                  <div class="modal-body">
+                                  <img src="img/east1-2.jpg">
+                                    <div class="intro">
+                                      <span><h3><strong>介紹：</strong></h3></span>
+                                      <p>好味道的小籠湯包的特色在於皮Q、餡料實在，並有濃郁的金黃湯汁，從選料、皮凍的製作、高湯的熬製以及調味，每一細節都是我們的精心之作。</p>
+                                      <span><h3><strong>營業時間：</strong></h3></span>
+                                      <p>每日 10:30 ~ 23:00 </p>
+                                    </div>
+                                  </div>
+                              </div>
+                          </div>
+                         </div>
+
+                        <li class="list-group-item">
+                          <a href="" type="input" data-toggle="modal" data-target="#eastonemapModal">觀看地圖</a>
+                        </li>
+                        <!-- Map Modal -->
+                        <div class="modal fade " id="eastonemapModal" >
+                          <div class="modal-dialog modal-lg  modal-dialog-centered">
+                              <!-- Modal Content -->
+                              <div class="modal-content">
+                                  <div class="modal-header">
+                                      <h3 class="modal-title" id="eastonemapModalTitle"><strong>店家位置</strong></h3>
+                                      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                          <span aria-hidden="true">&times;</span>
+                                      </button>
+                                  </div>
+                                  <div class="modal-body map">
+                                    <span>地址:台南市東區東安路26號</span>
+                                    <div class="maprwd">
+                                      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3672.7445060131413!2d120.20123091484933!3d22.996420823075933!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x346e7695d97d83a3%3A0xcbb0a8bc6649d6ae!2z5LiK5rW35aW95ZGz6YGT5bCP57Gg5rmv5YyF!5e0!3m2!1szh-TW!2stw!4v1576656421305!5m2!1szh-TW!2stw" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
+                                    </div>
+                                  </div>
+                              </div>
+                          </div>
+                        </div>
+
+                      </ul>
+                    </div>
+
+                    <div class="col-xs-5 col-sm-5 col-md-5  col-lg-3 col-xl-3 card">
+                      <img src="img/east2.jpg" class="card-img-top" alt="...">
+                      <div class="card-body">
+                        <h3 class="card-title"><strong>東洲黑糖奶舖</strong></h3>
+                        <p class="card-text">堅持傳統、無添加、健康養生的獨家製程，保留住最真實的黑糖原味，製作出香味濃郁的黑糖。</p>
+                      </div>
+                      <ul class="list-group list-group-flush">
+                        <li class="list-group-item">
+                            <a href="" type="input" data-toggle="modal" data-target="#easttwoModal">了解更多</a>
+                        </li>
+                        <!-- Modal -->
+                        <div class="modal fade" id="easttwoModal" >
+                          <div class="modal-dialog modal-lg ">
+                              <!-- Modal Content -->
+                              <div class="modal-content">
+                                  <div class="modal-header">
+                                      <h3 class="modal-title " id="easttwoModalTitle"><strong>店家資訊</strong></h3>
+                                      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                          <span aria-hidden="true">&times;</span>
+                                      </button>
+                                  </div>
+                                  <div class="modal-body">
+                                  <img src="img/east2-2.jpg">
+                                    <div class="intro">
+                                      <span><h3><strong>介紹：</strong></h3></span>
+                                      <p>東洲黑糖奶舖創始於2006年，秉持「醫食同源」的經營理念，藉著含有豐富營養價值的黑糖飲品，加上堅持傳統、無添加、健康養生的獨家製程，保留住最真實的黑糖原味，製作出香味濃郁的黑糖。</p>
+                                      <span><h3><strong>營業時間：</strong></h3></span>
+                                      <p>每日 07:00 ~ 23:00 </p>
+                                    </div>
+                                  </div>
+                              </div>
+                          </div>
+                         </div>
+
+                        <li class="list-group-item">
+                          <a href="" type="input" data-toggle="modal" data-target="#easttwomapModal">觀看地圖</a>
+                        </li>
+                        <!-- Map Modal -->
+                        <div class="modal fade " id="easttwomapModal" >
+                          <div class="modal-dialog modal-lg  modal-dialog-centered">
+                              <!-- Modal Content -->
+                              <div class="modal-content">
+                                  <div class="modal-header">
+                                      <h3 class="modal-title" id="easttwomapModalTitle"><strong>店家位置</strong></h3>
+                                      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                          <span aria-hidden="true">&times;</span>
+                                      </button>
+                                  </div>
+                                  <div class="modal-body map">
+                                    <span>地址:台南市東區東寧路122號</span>
+                                    <div class="maprwd">
+                                      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3672.877153900502!2d120.22409141484918!3d22.991544423256684!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x346e769159b91769%3A0x208d2042fdb12ac3!2z5p2x5rSy6buR57OW5aW26IiW!5e0!3m2!1szh-TW!2stw!4v1576656441302!5m2!1szh-TW!2stw" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
+                                    </div>
+                                  </div>
+                              </div>
+                          </div>
+                        </div>
+
+                      </ul>
+                    </div>
+
+                    <div class="col-xs-5 col-sm-5 col-md-5  col-lg-3 col-xl-3 card">
+                      <img src="img/east3.jpg" class="card-img-top" alt="...">
+                      <div class="card-body">
+                        <h3 class="card-title"><strong>福吉串炸</strong></h3>
+                        <p class="card-text">堅持使用生鮮原料，將食材切塊裹漿炸至金黃色，食用時沾上店家的特製醬汁。</p>
+                      </div>
+                      <ul class="list-group list-group-flush">
+                        <li class="list-group-item">
+                            <a href="" type="input" data-toggle="modal" data-target="#eastthreeModal">了解更多</a>
+                        </li>
+                        <!-- Modal -->
+                        <div class="modal fade" id="eastthreeModal" >
+                          <div class="modal-dialog modal-lg ">
+                              <!-- Modal Content -->
+                              <div class="modal-content">
+                                  <div class="modal-header">
+                                      <h3 class="modal-title" id="eastthreeModalTitle"><strong>店家資訊</strong></h3>
+                                      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                          <span aria-hidden="true">&times;</span>
+                                      </button>
+                                  </div>
+                                  <div class="modal-body">
+                                  <img src="img/east3-2.jpg">
+                                    <div class="intro">
+                                      <span><h3><strong>介紹：</strong></h3></span>
+                                      <p>日本國民美食，串炸外帶專賣店，堅持使用生鮮原料。將食材切塊裹漿並炸至金黃色，食用時沾上店家的特製醬汁。在日本文化裡，串炸沾醬是一次性的，福吉串炸提供三種主廚特製醬料外帶回去，美味享受快來試試大家都在談論的福吉串炸吧。</p>
+                                      <span><h3><strong>營業時間：</strong></h3></span>
+                                      <p>每日 17:30 ~ 01:00 </p>
+                                    </div>
+                                  </div>
+                              </div>
+                          </div>
+                         </div>
+
+                        <li class="list-group-item">
+                          <a href="" type="input" data-toggle="modal" data-target="#eastthreemapModal">觀看地圖</a>
+                        </li>
+                        <!-- Map Modal -->
+                        <div class="modal fade " id="eastthreemapModal" >
+                          <div class="modal-dialog modal-lg  modal-dialog-centered">
+                              <!-- Modal Content -->
+                              <div class="modal-content">
+                                  <div class="modal-header">
+                                      <h3 class="modal-title" id="eastthreemapModalTitle"><strong>店家位置</strong></h3>
+                                      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                          <span aria-hidden="true">&times;</span>
+                                      </button>
+                                  </div>
+                                  <div class="modal-body map">
+                                    <span>地址:台南市東區裕農路623號</span>
+                                    <div class="maprwd">
+                                      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14691.618288893858!2d120.22813407538241!3d22.990536349252768!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x346e775471c4a593%3A0xe5507d5fabb168bb!2z56aP5ZCJ5Liy54K4LSDoo5XovrLlupc!5e0!3m2!1szh-TW!2stw!4v1576656465851!5m2!1szh-TW!2stw" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
+                                    </div>
+                                  </div>
+                              </div>
+                          </div>
+                        </div>
+
+                      </ul>
+                    </div>
+
+                    <div class="col-xs-5 col-sm-5 col-md-5  col-lg-3 col-xl-3 card">
+                        <img src="img/east4.jpg" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h3 class="card-title"><strong>米谷手作料理食堂</strong></h3>
+                          <p class="card-text">有丼飯有定食，也有炒麵炒飯類，炸物跟燒物的部分也沒少，就算一個禮拜吃兩天，也要吃幾個月才能吃過一輪呢!!</p>
+                        </div>
+                        <ul class="list-group list-group-flush">
+                            <li class="list-group-item">
+                                <a href="" type="input" data-toggle="modal" data-target="#eastfourModal">了解更多</a>
+                            </li>
+                            <!-- Modal -->
+                            <div class="modal fade" id="eastfourModal" >
+                              <div class="modal-dialog modal-lg ">
+                                  <!-- Modal Content -->
+                                  <div class="modal-content">
+                                      <div class="modal-header">
+                                          <h3 class="modal-title" id="eastfourModalTitle"><strong>店家資訊</strong></h3>
+                                          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                              <span aria-hidden="true">&times;</span>
+                                          </button>
+                                      </div>
+                                      <div class="modal-body">
+                                      <img src="img/east4-2.jpg">
+                                        <div class="intro">
+                                          <span><h3><strong>介紹：</strong></h3></span>
+                                          <p>米谷手作料理的餐廳，販賣的品項非常多樣，而且十分平價，像是燒物、冷盤、丼飯、炸物、定食、手捲這裡通通有，就連外帶便當也有，而且還有外送服務，十分貼心啊！</p>
+                                          <span><h3><strong>營業時間：</strong></h3></span>
+                                          <p>每日 11:00 ~ 14:00 、 17:00 ~ 21:30</p>
+                                        </div>
+                                      </div>
+                                  </div>
+                              </div>
+                            </div>
+
+                            <li class="list-group-item">
+                              <a href="" type="input" data-toggle="modal" data-target="#eastfourmapModal">觀看地圖</a>
+                            </li>
+                            <!-- Map Modal -->
+                            <div class="modal fade " id="eastfourmapModal" >
+                              <div class="modal-dialog modal-lg  modal-dialog-centered">
+                                  <!-- Modal Content -->
+                                  <div class="modal-content">
+                                      <div class="modal-header">
+                                          <h3 class="modal-title" id="eastfourmapModalTitle"><strong>店家位置</strong></h3>
+                                          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                              <span aria-hidden="true">&times;</span>
+                                          </button>
+                                      </div>
+                                      <div class="modal-body map">
+                                        <span>地址:台南市東區中華東路三段206號</span>
+                                        <div class="maprwd">
+                                          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14691.618288893858!2d120.22813407538241!3d22.990536349252768!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x346e769fb5240307%3A0x8003aa15897f3439!2z57Gz6LC35omL5L2c5paZ55CG6aOf5aCC!5e0!3m2!1szh-TW!2stw!4v1576656489540!5m2!1szh-TW!2stw" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
+                                        </div>
+                                      </div>
+                                  </div>
+                              </div>
+                            </div>
+
+                        </ul>
                     </div>
                 </div>
-
             </div>
 
+            <div class="tab-pane fade" id="pills-north" role="tabpanel" aria-labelledby="pills-contact-tab">
+                <div class="row carddeck ">
+                    <div class="col-xs-5 col-sm-5 col-md-5  col-lg-3 col-xl-3 card">
+                      <img src="img/north1.jpg" class="card-img-top " alt="...">
+                      <div class="card-body">
+                        <h3 class="card-title"><strong>吉美冰店</strong></h3>
+                        <p class="card-text">「吉美冰店」位處深巷近40年，40年的圓椅凳、40年的果汁杯，店裡的大型傳統製冰機正「噠噠噠」作響，觀光客甚少。</p>
+                      </div>
+                      <ul class="list-group list-group-flush">
+                        <li class="list-group-item">
+                            <a href="" type="input"  data-toggle="modal" data-target="#northoneModal">了解更多</a>
+                        </li>
+                        <!-- Modal -->
+                        <div class="modal fade" id="northoneModal" >
+                          <div class="modal-dialog modal-lg ">
+                              <!-- Modal Content -->
+                              <div class="modal-content">
+                                  <div class="modal-header">
+                                      <h3 class="modal-title" id="northoneModalTitle"><strong>店家資訊</strong></h3>
+                                      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                          <span aria-hidden="true">&times;</span>
+                                      </button>
+                                  </div>
+                                  <div class="modal-body">
+                                  <img src="img/north1-2.jpg">
+                                    <div class="intro">
+                                      <span><h3><strong>介紹：</strong></h3></span>
+                                      <p>「吉美冰店」位處深巷近40年，在這裡的時光是凝結的， 40 年的圓椅凳、 40年的果汁杯，店裡的大型傳統製冰機正「噠噠噠」作響，觀光客甚少。第二代老闆說，家裡從他幼稚園就開始做冰了，每天一到中午就開始忙碌，所有的品項都已用毛筆書寫在牆上紅紙上。</p>
+                                      <span><h3><strong>營業時間：</strong></h3></span>
+                                      <p>每日 10:00 ~ 21:00 </p>
+                                    </div>
+                                  </div>
+                              </div>
+                          </div>
+                        </div>
+
+                        <li class="list-group-item">
+                          <a href="" type="input" data-toggle="modal" data-target="#northonemapModal">觀看地圖</a>
+                        </li>
+                        <!-- Map Modal -->
+                        <div class="modal fade " id="northonemapModal" >
+                          <div class="modal-dialog modal-lg  modal-dialog-centered">
+                              <!-- Modal Content -->
+                              <div class="modal-content">
+                                  <div class="modal-header">
+                                      <h3 class="modal-title" id="northonemapModalTitle"><strong>店家位置</strong></h3>
+                                      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                          <span aria-hidden="true">&times;</span>
+                                      </button>
+                                  </div>
+                                  <div class="modal-body map">
+                                    <span>地址:台南市北區長榮路五段246巷34號</span>
+                                    <div class="maprwd">
+                                      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3672.276960775558!2d120.21625291484942!3d23.013600922438602!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x346e76e4a3e6e4f1%3A0x126d6a8521cefda5!2z5ZCJ576O5Yaw5bqX!5e0!3m2!1szh-TW!2stw!4v1576656506755!5m2!1szh-TW!2stw" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
+                                    </div>
+                                  </div>
+                              </div>
+                          </div>
+                        </div>
+
+                      </ul>
+                    </div>
+
+                    <div class="col-xs-5 col-sm-5 col-md-5  col-lg-3 col-xl-3 card">
+                      <img src="img/north2.jpg" class="card-img-top" alt="...">
+                      <div class="card-body">
+                        <h3 class="card-title"><strong>北海燒烤熱炒</strong></h3>
+                        <p class="card-text">吃好、吃飽、吃得划算，山珍海味一應俱全，吃多少都一樣價錢的熱炒吃到飽。菜單有中式燒烤、揚物、冷盤、火鍋、點心等，料理現點現做。</p>
+                      </div>
+                      <ul class="list-group list-group-flush">
+                        <li class="list-group-item">
+                            <a href="" type="input" data-toggle="modal" data-target="#northtwoModal">了解更多</a>
+                        </li>
+                        <!-- Modal -->
+                        <div class="modal fade" id="northtwoModal" >
+                          <div class="modal-dialog modal-lg ">
+                              <!-- Modal Content -->
+                              <div class="modal-content">
+                                  <div class="modal-header">
+                                      <h3 class="modal-title" id="northtwoModalTitle"><strong>店家資訊</strong></h3>
+                                      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                          <span aria-hidden="true">&times;</span>
+                                      </button>
+                                  </div>
+                                  <div class="modal-body">
+                                  <img src="img/north2-2.jpg">
+                                    <div class="intro">
+                                      <span><h3><strong>介紹：</strong></h3></span>
+                                      <p>熱炒~炭烤~火鍋~揚物吃到飽，不限制用餐時間，謝師宴、團體聚餐、家庭聚會最佳首選全台首創，中式精緻料理吃到飽。</p>
+                                      <span><h3><strong>營業時間：</strong></h3></span>
+                                      <p>每日 17:30 ~ 11:00 </p>
+                                    </div>
+                                  </div>
+                              </div>
+                          </div>
+                        </div>
+
+                        <li class="list-group-item">
+                          <a href="" type="input" data-toggle="modal" data-target="#northtwomapModal">觀看地圖</a>
+                        </li>
+                        <!-- Map Modal -->
+                        <div class="modal fade " id="northtwomapModal" >
+                          <div class="modal-dialog modal-lg  modal-dialog-centered">
+                              <!-- Modal Content -->
+                              <div class="modal-content">
+                                  <div class="modal-header">
+                                      <h3 class="modal-title" id="northtwomapModalTitle"><strong>店家位置</strong></h3>
+                                      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                          <span aria-hidden="true">&times;</span>
+                                      </button>
+                                  </div>
+                                  <div class="modal-body map">
+                                    <span>地址:台南市北區北安路一段277號</span>
+                                    <div class="maprwd">
+                                      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3672.276960775558!2d120.21625291484942!3d23.013600922438602!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x346e76ff7572f67b%3A0x924377288202134f!2z5YyX5rW354eS54KS54mp6KqeLeeis-eDpOeGseeCkuWQg-WIsOmjvSDlj7DlvI_mlpnnkIYo5bmz5YO56IGa6aSQ5o6o6JamKQ!5e0!3m2!1szh-TW!2stw!4v1576656523831!5m2!1szh-TW!2stw" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
+                                    </div>
+                                  </div>
+                              </div>
+                          </div>
+                        </div>
+
+                      </ul>
+                    </div>
+
+                    <div class=" col-xs-5 col-sm-5 col-md-5  col-lg-3 col-xl-3 card">
+                      <img src="img/north3.jpg" class="card-img-top" alt="...">
+                      <div class="card-body">
+                        <h3 class="card-title"><strong>米式幽默</strong></h3>
+                        <p class="card-text">米腸歐巴從一輛小小的「三輪車」起家，到現在擁有自己的店面米式幽默，一路走來真的非常不容易，一群死忠的顧客還是一路相隨。</p>
+                      </div>
+                      <ul class="list-group list-group-flush">
+                        <li class="list-group-item">
+                            <a href="" type="input" data-toggle="modal" data-target="#norththreeModal">了解更多</a>
+                        </li>
+                        <!-- Modal -->
+                        <div class="modal fade" id="norththreeModal" >
+                          <div class="modal-dialog modal-lg ">
+                              <!-- Modal Content -->
+                              <div class="modal-content">
+                                  <div class="modal-header">
+                                      <h3 class="modal-title" id="norththreeModalTitle"><strong>店家資訊</strong></h3>
+                                      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                          <span aria-hidden="true">&times;</span>
+                                      </button>
+                                  </div>
+                                  <div class="modal-body">
+                                  <img src="img/north3-2.jpg">
+                                    <div class="intro">
+                                      <span><h3><strong>介紹：</strong></h3></span>
+                                      <p>老闆有帥氣的外表早期以餐車的方式出現在台南，馬上風靡萬千少女前往購買，那時候單只賣單一產品＂炙燒米腸＂，現在他把招牌的手工米腸再加上更多菜色以店面的方式呈現啦！</p>
+                                      <span><h3><strong>營業時間：</strong></h3></span>
+                                      <p>每日 11:00 ~ 14:00 、 17:00 ~ 20:00 </p>
+                                    </div>
+                                  </div>
+                              </div>
+                          </div>
+                        </div>
+
+                        <li class="list-group-item">
+                          <a  href="" type="input" data-toggle="modal" data-target="#norththreemapModal">觀看地圖</a>
+                        </li> 
+                        <!-- Map Modal -->
+                        <div class="modal fade " id="norththreemapModal" >
+                          <div class="modal-dialog modal-lg  modal-dialog-centered">
+                              <!-- Modal Content -->
+                              <div class="modal-content">
+                                  <div class="modal-header">
+                                      <h3 class="modal-title" id="norththreemapModalTitle"><strong>店家位置</strong></h3>
+                                      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                          <span aria-hidden="true">&times;</span>
+                                      </button>
+                                  </div>
+                                  <div class="modal-body map">
+                                    <span>地址:台南市北區文賢路287號</span>
+                                    <div class="maprwd">
+                                      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3672.4824833874945!2d120.19128971484938!3d23.006050422718708!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x346e7664ed20e1c3%3A0x3c00689b0670dfb5!2z57Gz6IW45q2Q5be0!5e0!3m2!1szh-TW!2stw!4v1576656540604!5m2!1szh-TW!2stw" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
+                                    </div>
+                                    </div>
+                              </div>
+                          </div>
+                        </div>
+
+                      </ul>
+                    </div>
+
+                    <div class="col-xs-5 col-sm-5 col-md-5  col-lg-3 col-xl-3 card">
+                        <img src="img/north4.jpg" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h3 class="card-title"><strong>記愣蔥油餅</strong></h3>
+                          <p class="card-text">裡面的半熟蛋，溫熱的香濃的口感，搭配香酥彈牙的蔥油餅，而且只要30元。</p>
+                        </div>
+                        <ul class="list-group list-group-flush">
+                            <li class="list-group-item">
+                                <a href="" type="input" data-toggle="modal" data-target="#northfourModal">了解更多</a>
+                            </li>
+                            <!-- Modal -->
+                            <div class="modal fade" id="northfourModal" >
+                              <div class="modal-dialog modal-lg ">
+                                  <!-- Modal Content -->
+                                  <div class="modal-content">
+                                      <div class="modal-header">
+                                          <h3 class="modal-title" id="northfourModalTitle"><strong>店家資訊</strong></h3>
+                                          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                              <span aria-hidden="true">&times;</span>
+                                          </button>
+                                      </div>
+                                      <div class="modal-body">
+                                      <img src="img/north4-2.jpg">
+                                        <div class="intro">
+                                          <span><h3><strong>介紹：</strong></h3></span>
+                                          <p>限量販售打拋豬口味的炸彈蔥油餅~ 辣度和蛋的熟度都可以調整，餅皮炸的酥脆又Q， 咬下去蛋液流出來的樣子真的超可口！打拋豬味道很濃很香，每一口都很夠味，越吃越涮嘴，也不會太油膩</p>
+                                          <span><h3><strong>營業時間：</strong></h3></span>
+                                          <p>每日 14:00 ~ 19:00 </p>
+                                        </div>
+                                      </div>
+                                  </div>
+                              </div>
+                            </div>
+
+                            <li class="list-group-item">
+                              <a href="" type="input" data-toggle="modal" data-target="#northfourmapModal">觀看地圖</a>
+                            </li>
+                            <!-- Map Modal -->
+                            <div class="modal fade " id="northfourmapModal" >
+                              <div class="modal-dialog modal-lg  modal-dialog-centered">
+                                  <!-- Modal Content -->
+                                  <div class="modal-content">
+                                      <div class="modal-header">
+                                          <h3 class="modal-title" id="northfourmapModalTitle"><strong>店家位置</strong></h3>
+                                          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                              <span aria-hidden="true">&times;</span>
+                                          </button>
+                                      </div>
+                                      <div class="modal-body map">
+                                        <span>地址:台南市北區西門路四段193號寶雅旁小空地</span>
+                                        <div class="maprwd">
+                                          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3672.4824833874945!2d120.19128971484938!3d23.006050422718708!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x346e76f779ccc9c3%3A0xe24616d206a1703e!2z6KiY5oSj6JSl5rK56aSF!5e0!3m2!1szh-TW!2stw!4v1576656553398!5m2!1szh-TW!2stw" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
+                                        </div>
+                                      </div>
+                                  </div>
+                              </div>
+                            </div>
+
+                        </ul>
+                    </div>
+                  </div>
+            </div>
+
+            <div class="tab-pane fade" id="pills-south" role="tabpanel" aria-labelledby="pills-contact-tab">
+                <div class="row carddeck ">
+                    <div class="col-xs-5 col-sm-5 col-md-5  col-lg-3 col-xl-3 card">
+                      <img src="img/south1.jpg" class="card-img-top " alt="...">
+                      <div class="card-body">
+                        <h3 class="card-title"><strong>是吉祥精緻火鍋館</strong></h3>
+                        <p class="card-text">工業區旁的小巷裡竟然隱藏超高CP值美食，網路人氣高，現場排隊人潮滿滿滿的是吉祥火鍋。</p>
+                      </div>
+                      <ul class="list-group list-group-flush">
+                        <li class="list-group-item">
+                            <a href="" type="input" data-toggle="modal" data-target="#southoneModal">了解更多</a>
+                        </li>
+                        <!-- Modal -->
+                        <div class="modal fade" id="southoneModal" >
+                          <div class="modal-dialog modal-lg ">
+                              <!-- Modal Content -->
+                              <div class="modal-content">
+                                  <div class="modal-header">
+                                      <h3 class="modal-title" id="southoneModalTitle"><strong>店家資訊</strong></h3>
+                                      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                          <span aria-hidden="true">&times;</span>
+                                      </button>
+                                  </div>
+                                  <div class="modal-body">
+                                  <img src="img/south1-2.jpg">
+                                    <div class="intro">
+                                      <span><h3><strong>介紹：</strong></h3></span>
+                                      <p>是吉祥精緻火鍋館。超高人氣的排隊在地名店，不用花大錢也能吃好吃飽，建議兩個人合點一鍋再加點肉即可。</p>
+                                      <span><h3><strong>營業時間：</strong></h3></span>
+                                      <p>每日 11:00 ~ 21:00 </p>
+                                    </div>
+                                  </div>
+                              </div>
+                          </div>
+                        </div>
+
+                        <li class="list-group-item">
+                          <a href="" type="input" data-toggle="modal" data-target="#southonemapModal">觀看地圖</a>
+                        </li>
+                        <!-- Map Modal -->
+                        <div class="modal fade " id="southonemapModal" >
+                          <div class="modal-dialog modal-lg  modal-dialog-centered">
+                              <!-- Modal Content -->
+                              <div class="modal-content">
+                                  <div class="modal-header">
+                                      <h3 class="modal-title" id="southonemapModalTitle"><strong>店家位置</strong></h3>
+                                      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                          <span aria-hidden="true">&times;</span>
+                                      </button>
+                                  </div>
+                                  <div class="modal-body map">
+                                    <span>地址:台南市南區新孝路128號</span>
+                                    <div class="maprwd">
+                                      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3673.2462131190878!2d120.18416331484899!3d22.977971923759963!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x346e75dc1f7ffc55%3A0x161a7eae361912aa!2z5piv5ZCJ56Wl57K-57e754Gr6Y2L6aSo!5e0!3m2!1szh-TW!2stw!4v1576656567520!5m2!1szh-TW!2stw" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
+                                    </div>
+                                  </div>
+                              </div>
+                          </div>
+                        </div>
+                          
+                      </ul>
+                    </div>
+
+                    <div class="col-xs-5 col-sm-5 col-md-5  col-lg-3 col-xl-3 card">
+                      <img src="img/south2.jpg" class="card-img-top" alt="...">
+                      <div class="card-body">
+                        <h3 class="card-title"><strong>伍捌鍋燒</strong></h3>
+                        <p class="card-text">我們秉持著湯頭全程不使用味精食材，都是當天嚴選採買，讓每個人吃到都是最新鮮最天然。</p>
+                      </div>
+                      <ul class="list-group list-group-flush">
+                        <li class="list-group-item">
+                            <a href="" type="input" data-toggle="modal" data-target="#southtwoModal">了解更多</a>
+                        </li>
+                        <!-- Modal -->
+                        <div class="modal fade" id="southtwoModal" >
+                          <div class="modal-dialog modal-lg ">
+                              <!-- Modal Content -->
+                              <div class="modal-content">
+                                  <div class="modal-header">
+                                      <h3 class="modal-title" id="southtwoModalTitle"><strong>店家資訊</strong></h3>
+                                      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                          <span aria-hidden="true">&times;</span>
+                                      </button>
+                                  </div>
+                                  <div class="modal-body">
+                                  <img src="img/south2-2.jpg">
+                                    <div class="intro">
+                                      <span><h3><strong>介紹：</strong></h3></span>
+                                      <p>平價鍋燒意麵，伍捌鍋燒，真材實料大骨熬煮湯頭，推薦泡菜/味噌/麻辣鍋燒，內用紅茶喝到飽!</p>
+                                      <span><h3><strong>營業時間：</strong></h3></span>
+                                      <p>每日 11:30 ~ 14:00 、 17:00 ~ 20:30</p>
+                                    </div>
+                                  </div>
+                              </div>
+                          </div>
+                        </div>
+
+                        <li class="list-group-item">
+                          <a href="" type="input" data-toggle="modal" data-target="#southtwomapModal">觀看地圖</a>
+                        </li> 
+                        <!-- Map Modal -->
+                        <div class="modal fade " id="southtwomapModal" >
+                          <div class="modal-dialog modal-lg  modal-dialog-centered">
+                              <!-- Modal Content -->
+                              <div class="modal-content">
+                                  <div class="modal-header">
+                                      <h3 class="modal-title" id="southtwomapModalTitle"><strong>店家位置</strong></h3>
+                                      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                          <span aria-hidden="true">&times;</span>
+                                      </button>
+                                  </div>
+                                  <div class="modal-body map">
+                                    <span>地址:台南市南區健康路一段393號</span>
+                                    <div class="maprwd">
+                                      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d117543.7504370317!2d120.11631149159759!3d22.97811950819007!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x346e7678acb0efd9%3A0x7af2de015fb8860d!2z5LyN5o2M6Y2L54eSLeWBpeW6t-W6lw!5e0!3m2!1szh-TW!2stw!4v1576656587528!5m2!1szh-TW!2stw" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
+                                    </div>
+                                  </div>
+                              </div>
+                          </div>
+                        </div>
+
+                      </ul>
+                    </div>
+
+                    <div class="col-xs-5 col-sm-5 col-md-5  col-lg-3 col-xl-3 card">
+                      <img src="img/south3.jpg" class="card-img-top" alt="...">
+                      <div class="card-body">
+                        <h3 class="card-title"><strong>我們家</strong></h3>
+                        <p class="card-text">簡單的裝潢，溫暖的料理，還有來自法國ENSP學院的甜點。</p>
+                      </div>
+                      <ul class="list-group list-group-flush">
+                        <li class="list-group-item">
+                            <a href="" type="input" data-toggle="modal" data-target="#souththreeModal">了解更多</a>
+                        </li>
+                        <!-- Modal -->
+                        <div class="modal fade" id="souththreeModal" >
+                          <div class="modal-dialog modal-lg ">
+                              <!-- Modal Content -->
+                              <div class="modal-content">
+                                  <div class="modal-header">
+                                      <h3 class="modal-title" id="souththreeModalTitle"><strong>店家資訊</strong></h3>
+                                      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                          <span aria-hidden="true">&times;</span>
+                                      </button>
+                                  </div>
+                                  <div class="modal-body">
+                                  <img src="img/south3-2.jpg">
+                                    <div class="intro">
+                                      <span><h3><strong>介紹：</strong></h3></span>
+                                      <p>有時候想在外面吃美食但卻常常感受不到溫度，我們家主打的就是溫馨的感覺，而且每個餐的份量都很足夠，而且還能吃到各種港式、泰式和各種特色餐點，這家的甜點更是美麗的收尾，這裡滿適合喜歡好好吃頓飯的人來吃飯，有時候美食跟裝潢不用過多的包裝，單純的感覺反而讓人感覺溫暖呢！</p>
+                                      <span><h3><strong>營業時間：</strong></h3></span>
+                                      <p>每日 10:00 ~ 21:00 週三公休</p>
+                                    </div>
+                                  </div>
+                              </div>
+                          </div>
+                        </div>
+
+                        <li class="list-group-item">
+                          <a  href="" type="input" data-toggle="modal" data-target="#souththreemapModal">觀看地圖</a>
+                        </li>
+                        <!-- Map Modal -->
+                        <div class="modal fade " id="souththreemapModal" >
+                          <div class="modal-dialog modal-lg  modal-dialog-centered">
+                              <!-- Modal Content -->
+                              <div class="modal-content">
+                                  <div class="modal-header">
+                                      <h3 class="modal-title" id="souththreemapModalTitle"><strong>店家位置</strong></h3>
+                                      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                          <span aria-hidden="true">&times;</span>
+                                      </button>
+                                  </div>
+                                  <div class="modal-body map">
+                                    <span>地址:台南市南區金華路二段345巷26弄37號</span>
+                                    <div class="maprwd">
+                                      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3673.001625142767!2d120.18855831484908!3d22.986967723426435!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x346e77257d572191%3A0xdd17917cf119d565!2z5oiR5YCR5a62!5e0!3m2!1szh-TW!2stw!4v1576656604714!5m2!1szh-TW!2stw" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
+                                    </div>
+                                  </div>
+                              </div>
+                          </div>
+                        </div>
+
+                      </ul>
+                    </div>
+
+                    <div class="col-xs-5 col-sm-5 col-md-5  col-lg-3 col-xl-3 card">
+                        <img src="img/south4.jpg" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h3 class="card-title"><strong>老陳炸雞</strong></h3>
+                          <p class="card-text">從市場內小攤販賣到在外面開店面的炸物攤，一賣就是20多年，下午才營業只賣3小時，所有產品都是當天備料現炸。</p>
+                        </div>
+                        <ul class="list-group list-group-flush">
+                            <li class="list-group-item">
+                                <a href="" type="input" data-toggle="modal" data-target="#southfourModal">了解更多</a>
+                            </li>
+                            <!-- Modal -->
+                            <div class="modal fade" id="southfourModal" >
+                              <div class="modal-dialog modal-lg ">
+                                  <!-- Modal Content -->
+                                  <div class="modal-content">
+                                      <div class="modal-header">
+                                          <h3 class="modal-title" id="southfourModalTitle"><strong>店家資訊</strong></h3>
+                                          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                              <span aria-hidden="true">&times;</span>
+                                          </button>
+                                      </div>
+                                      <div class="modal-body">
+                                      <img src="img/south4-2.jpg">
+                                        <div class="intro">
+                                          <span><h3><strong>介紹：</strong></h3></span>
+                                          <p>從市場內小攤販賣到在外面開店面的炸物攤，一賣就是20多年，下午才營業只賣3小時，所有產品都是當天備料現炸，經常一開店就排隊，是許多在地人從小吃到大的台式下午茶。</p>
+                                          <span><h3><strong>營業時間：</strong></h3></span>
+                                          <p>每日 15:00 ~ 18:00 </p>
+                                        </div>
+                                      </div>
+                                  </div>
+                              </div>
+                            </div>
+
+                            <li class="list-group-item">
+                              <a href="" type="input" data-toggle="modal" data-target="#southfourmapModal">觀看地圖</a>
+                            </li>
+                            <!-- Map Modal -->
+                            <div class="modal fade " id="southfourmapModal" >
+                              <div class="modal-dialog modal-lg  modal-dialog-centered">
+                                  <!-- Modal Content -->
+                                  <div class="modal-content">
+                                      <div class="modal-header">
+                                          <h3 class="modal-title" id="southfourmapModalTitle"><strong>店家位置</strong></h3>
+                                          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                              <span aria-hidden="true">&times;</span>
+                                          </button>
+                                      </div>
+                                      <div class="modal-body map">
+                                        <span>地址:台南市南區新興路533巷33弄38號</span>
+                                        <div class="maprwd">
+                                          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3673.36657061446!2d120.18595711484896!3d22.973544023923886!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x346e7573adedb6b9%3A0xfffcdb4d1cf7a36d!2z6ICB6Zmz54K46Zue!5e0!3m2!1szh-TW!2stw!4v1576656628799!5m2!1szh-TW!2stw" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
+                                        </div>
+                                      </div>
+                                  </div>
+                              </div>
+                            </div>
+
+                        </ul>
+                    </div>
+                  </div>
+            </div>
+
+            <div class="tab-pane fade" id="pills-anping" role="tabpanel" aria-labelledby="pills-contact-tab">
+                <div class="row carddeck">
+                    <div class="col-xs-5 col-sm-5 col-md-5  col-lg-3 col-xl-3 card">
+                      <img src="img/anping1.jpg" class="card-img-top " alt="...">
+                      <div class="card-body">
+                        <h3 class="card-title"><strong>碳佐麻里</strong></h3>
+                        <p class="card-text">碳佐麻里致力成為台灣最優質的燒肉餐廳，我們將全力打造最讓人放心的衛生環境，提供最高品質的食材，以及最專業親切的服務。</p>
+                      </div>
+                      <ul class="list-group list-group-flush">
+                        <li class="list-group-item">
+                            <a href="" type="input"  data-toggle="modal" data-target="#anpingoneModal">了解更多</a>
+                        </li>
+                        <!-- Modal -->
+                        <div class="modal fade" id="anpingoneModal" >
+                          <div class="modal-dialog modal-lg ">
+                              <!-- Modal Content -->
+                              <div class="modal-content">
+                                  <div class="modal-header">
+                                      <h3 class="modal-title" id="anpingoneModalTitle"><strong>店家資訊</strong></h3>
+                                      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                          <span aria-hidden="true">&times;</span>
+                                      </button>
+                                  </div>
+                                  <div class="modal-body">
+                                  <img src="img/anping1-2.jpg">
+                                    <div class="intro">
+                                      <span><h3><strong>介紹：</strong></h3></span>
+                                      <p>邱董事長學生時期留學日本，很喜歡吃燒烤，更愛邊吃燒烤邊品酒，他表示，每每坐在角落，觀看客人享受燒烤的樂趣，心中好生感動，特別是一家人圍在炭爐四周，大人烤給小孩吃或是小孩烤給父母吃，那種親子間的感情流露，也成為他再開分店的原因之一，堅持提供一個最優質的燒肉環境給愛好此道的好朋友，大口大口喝酒、 大嘴大嘴吃肉、大聲吆喝也沒關係、就算翹腿也無所謂，專業無煙燒肉，正是邱董事長心目中最理想的燒肉店。</p>
+                                      <span><h3><strong>營業時間：</strong></h3></span>
+                                      <p>每日 11:30 ~ 24:00 </p>
+                                    </div>
+                                  </div>
+                              </div>
+                          </div>
+                        </div>
+
+                        <li class="list-group-item">
+                          <a  href="" type="input" data-toggle="modal" data-target="#anpingonemapModal">觀看地圖</a>
+                        </li>
+                        <!-- Map Modal -->
+                        <div class="modal fade " id="anpingonemapModal" >
+                          <div class="modal-dialog modal-lg  modal-dialog-centered">
+                              <!-- Modal Content -->
+                              <div class="modal-content">
+                                  <div class="modal-header">
+                                      <h3 class="modal-title" id="anpingonemapModalTitle"><strong>店家位置</strong></h3>
+                                      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                          <span aria-hidden="true">&times;</span>
+                                      </button>
+                                  </div>
+                                  <div class="modal-body map">
+                                    <span>地址:台南市安平區府前路二段630號</span>
+                                    <div class="maprwd">
+                                      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d29386.92311213653!2d120.17063617327247!3d22.973587498300727!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x346e7672eacec435%3A0x98309e6dd400b108!2z56Kz5L2Q6bq76YeMIOeyvuWTgeeHkuiCiSAtIOWPsOWNl-W6nOWJjeW6lw!5e0!3m2!1szh-TW!2stw!4v1576656648708!5m2!1szh-TW!2stw" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
+                                    </div>
+                                  </div>
+                              </div>
+                          </div>
+                        </div>
+
+                      </ul>
+                    </div>
+
+                    <div class="col-xs-5 col-sm-5 col-md-5  col-lg-3 col-xl-3 card">
+                      <img src="img/anping2.jpg" class="card-img-top" alt="...">
+                      <div class="card-body">
+                        <h3 class="card-title"><strong>依蕾特布丁</strong></h3>
+                        <p class="card-text">依蕾特布丁的產品原創精神，就在於紮實用料，始終以作給女兒吃的誠摯心意來製作每一個令人感動的甜點。</p>
+                      </div>
+                      <ul class="list-group list-group-flush">
+                        <li class="list-group-item">
+                            <a href="" type="input"  data-toggle="modal" data-target="#anpingtwoModal">了解更多</a>
+                        </li>
+                        <!-- Modal -->
+                        <div class="modal fade" id="anpingtwoModal" >
+                          <div class="modal-dialog modal-lg ">
+                              <!-- Modal Content -->
+                              <div class="modal-content">
+                                  <div class="modal-header">
+                                      <h3 class="modal-title" id="anpingtwoModalTitle"><strong>店家資訊</strong></h3>
+                                      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                          <span aria-hidden="true">&times;</span>
+                                      </button>
+                                  </div>
+                                  <div class="modal-body">
+                                  <img src="img/anping2-2.jpg">
+                                    <div class="intro">
+                                      <span><h3><strong>介紹：</strong></h3></span>
+                                      <p>2000年的夏天，莘莘學子們正埋首苦讀準備七月的大專聯考，平日善廚的父親看著日夜苦讀的小女兒因為沒有食慾而日漸消瘦，覺得十分心疼，於是著手細心地調理出乳香濃郁、富水感而又兼具營養的鮮奶布丁，來替代女兒每天的餐點。</p>
+                                      <span><h3><strong>營業時間：</strong></h3></span>
+                                      <p>每日 10:30 ~ 21:00 </p>
+                                    </div>
+                                  </div>
+                              </div>
+                          </div>
+                        </div>
+
+                        <li class="list-group-item">
+                          <a href="" type="input"  data-toggle="modal" data-target="#anpingtwomapModal">觀看地圖</a>
+                        </li> 
+                        <!-- Map Modal -->
+                        <div class="modal fade " id="anpingtwomapModal" >
+                          <div class="modal-dialog modal-lg  modal-dialog-centered">
+                              <!-- Modal Content -->
+                              <div class="modal-content">
+                                  <div class="modal-header">
+                                      <h3 class="modal-title" id="anpingtwomapModalTitle"><strong>店家位置</strong></h3>
+                                      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                          <span aria-hidden="true">&times;</span>
+                                      </button>
+                                  </div>
+                                  <div class="modal-body map">
+                                    <span>地址:台南市安平區安平路422號</span>
+                                    <div class="maprwd">
+                                      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d29386.92311213653!2d120.17063617327247!3d22.973587498300727!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x346e7611c7ee33f9%3A0xe9ba4768fc39b826!2z5L6d6JW-54m55biD5LiB!5e0!3m2!1szh-TW!2stw!4v1576656663764!5m2!1szh-TW!2stw" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
+                                    </div>
+                                  </div>
+                              </div>
+                          </div>
+                        </div>
+
+                      </ul>
+                    </div>
+
+                    <div class="col-xs-5 col-sm-5 col-md-5  col-lg-3 col-xl-3 card">
+                      <img src="img/anping3.jpg" class="card-img-top" alt="...">
+                      <div class="card-body">
+                        <h3 class="card-title"><strong>同記安平豆花</strong></h3>
+                        <p class="card-text">同記安平豆花從創始到成為安平名產，近四十年歲月累積的足跡，都成為我們創始人黃慶同夫婦永生不可磨滅的回憶。</p>
+                      </div>
+                      <ul class="list-group list-group-flush">
+                        <li class="list-group-item">
+                            <a href="" type="input" data-toggle="modal" data-target="#anpingthreeModal">了解更多</a>
+                        </li>
+                        <!-- Modal -->
+                        <div class="modal fade" id="anpingthreeModal" >
+                          <div class="modal-dialog modal-lg ">
+                              <!-- Modal Content -->
+                              <div class="modal-content">
+                                  <div class="modal-header">
+                                      <h3 class="modal-title" id="anpingthreeModalTitle"><strong>店家資訊</strong></h3>
+                                      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                          <span aria-hidden="true">&times;</span>
+                                      </button>
+                                  </div>
+                                  <div class="modal-body">
+                                  <img src="img/anping3-2.jpg">
+                                    <div class="intro">
+                                      <span><h3><strong>介紹：</strong></h3></span>
+                                      <p>同記安平豆花的細緻，香濃是最大賣點。創始人黃慶同表示，為作出豆花的特色，因為市面上的豆花很多都以洋菜粉勾芡，不僅失去了豆花的原味與與香氣，也讓豆花口感完全喪失，他懷念起小時後的傳統豆花香，決定不厭其煩的依傳統製造，除採用價格貴一倍的非基因改造有機黃豆來製作，製程中不添加防腐劑及香料，保證是最天然健康又美味的小吃。</p>
+                                      <span><h3><strong>營業時間：</strong></h3></span>
+                                      <p>每日 10:00 ~ 22:00 </p>
+                                    </div>
+                                  </div>
+                              </div>
+                          </div>
+                        </div>
+
+                        <li class="list-group-item">
+                          <a href="" type="input"  data-toggle="modal" data-target="#anpingthreemapModal">觀看地圖</a>
+                        </li>
+                        <!-- Map Modal -->
+                        <div class="modal fade " id="anpingthreemapModal" >
+                          <div class="modal-dialog modal-lg  modal-dialog-centered">
+                              <!-- Modal Content -->
+                              <div class="modal-content">
+                                  <div class="modal-header">
+                                      <h3 class="modal-title" id="anpingthreemapModalTitle"><strong>店家位置</strong></h3>
+                                      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                          <span aria-hidden="true">&times;</span>
+                                      </button>
+                                  </div>
+                                  <div class="modal-body map">
+                                    <span>地址:台南市安平區安北路433號</span>
+                                    <div class="maprwd">
+                                      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14690.795655183178!2d120.1654280281794!3d22.998096657738348!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x346dd8a8caa4f10b%3A0x4cff94ea8c6109f0!2z5ZCM6KiY5a6J5bmz6LGG6Iqx!5e0!3m2!1szh-TW!2stw!4v1576656683497!5m2!1szh-TW!2stw" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
+                                    </div>
+                                  </div>
+                              </div>
+                          </div>
+                        </div>
+
+                      </ul>
+                    </div>
+
+                    <div class="col-xs-5 col-sm-5 col-md-5  col-lg-3 col-xl-3 card">
+                        <img src="img/anping4.jpg" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h3 class="card-title"><strong>王氏魚皮店</strong></h3>
+                          <p class="card-text">新鮮、美味、份量足，價格又很實在，湯頭是自然的鮮甜，當早餐也不會覺得負擔。</p>
+                        </div>
+                        <ul class="list-group list-group-flush">
+                            <li class="list-group-item">
+                                <a href="" type="input" data-toggle="modal" data-target="#anpingfourModal">了解更多</a>
+                            </li>    
+                            <!-- Modal -->
+                            <div class="modal fade" id="anpingfourModal" >
+                              <div class="modal-dialog modal-lg ">
+                                  <!-- Modal Content -->
+                                  <div class="modal-content">
+                                      <div class="modal-header">
+                                          <h3 class="modal-title" id="anpingfourModalTitle"><strong>店家資訊</strong></h3>
+                                          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                              <span aria-hidden="true">&times;</span>
+                                          </button>
+                                      </div>
+                                      <div class="modal-body">
+                                      <img src="img/anping4-2.jpg">
+                                        <div class="intro">
+                                          <span><h3><strong></strong>介紹：</strong></h3></span>
+                                          <p>王氏魚皮餐點的選擇挺豐富，重點是價位很平實，來碗肉燥飯和一碗湯，幫一天的開始注入滿滿的元氣，只要百元有找就能搞定！</p>
+                                          <span><h3><strong>營業時間：</strong></h3></span>
+                                          <p>每日 04:00 ~ 14:00 週六、日營業至15:00</p>
+                                        </div>
+                                      </div>
+                                  </div>
+                              </div>
+                            </div>
+
+                            <li class="list-group-item">
+                               <a href="" type="input" data-toggle="modal" data-target="#anpingfourmapModal">觀看地圖</a>
+                            </li>
+                            <!-- Map Modal -->
+                            <div class="modal fade " id="anpingfourmapModal" >
+                              <div class="modal-dialog modal-lg  modal-dialog-centered">
+                                  <!-- Modal Content -->
+                                  <div class="modal-content">
+                                      <div class="modal-header">
+                                          <h3 class="modal-title" id="anpingfourmapModalTitle"><strong>店家位置</strong></h3>
+                                          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                              <span aria-hidden="true">&times;</span>
+                                          </button>
+                                      </div>
+                                      <div class="modal-body map">
+                                        <span>地址:台南市安平區安平路612號</span>
+                                        <div class="maprwd">
+                                          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14690.795655183178!2d120.1654280281794!3d22.998096657738348!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x346e761ac0ceaf85%3A0x6ccc24c6324363a7!2z546L5rCP6a2a55qu5bqX!5e0!3m2!1szh-TW!2stw!4v1576656705021!5m2!1szh-TW!2stw" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
+                                        </div>
+                                      </div>
+                                  </div>
+                              </div>
+                            </div>
+
+                        </ul>
+                    </div>
+                  </div>
+            </div>    
+        </div>
+      </div>
+    </section>
+
+    <section class="container-fluid active activity"> 
+
+        <div class="sectiontitle"> 
+          <span>活動報報</span>
+        </div>  
+        
+        <div class="activegroup card-deck">
+         
+            <a class="area card" target="_blank" href="https://www.chimeimuseum.org/%E6%89%BE%E6%B4%BB%E5%8B%95/A891E828-042A-41F9-8B6F-D7F30E55FDC4/146">
+              <div class="imgbox">
+                <img src="img/active1.jpg" class="card-img-top" alt="...">
+              </div>  
+              <h4 class="card-title">奇美博物館</br>【聖誕週末 化裝舞會】</h4>
+            </a>
+        
+            <a class="area card" target="_blank" href="https://www.twtainan.net/zh-tw/event/activitydetail/3747">
+              <div class="imgbox">
+                <img src="img/active2.jpg" class="card-img-top" alt="...">
+              </div>
+              <h4 class="card-title">2019台南聖誕燈節</h4>
+            </a>
+         
+            <a class="area card" target="_blank" href="https://www.tainan2020.tw/?fbclid=IwAR1P8UHvWXJe4BZcHRFsa7Th6-K4nw3YWThD8x2xi-lBd7JQgJvYpCstKcQ">
+              <div class="imgbox">
+                <img src="img/active3.jpg" class="card-img-top" alt="...">
+              </div>
+              <h4 class="card-title">台南好Young</br>耶誕演唱會 </h4>
+            </a>
+         
+            <a class="area card" target="_blank" href="http://tainan-atgo.com/ch/index.php">
+              <div class="imgbox">
+                <img src="img/active4.jpg" class="card-img-top" alt="...">
+              </div>  
+              <h4 class="card-title">哇塞！台南好七淘</h4>
+            </a>
+        </div>
+
+    </section>
+
+
+    <section class="container-fluid land">
+      <div class="container">
+
+        <div class="sectiontitle"> 
+          <span>景點報報</span>
         </div>
 
 
+        <div class="areabtn">
+          <button class="navbar-toggler " type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="setarea"><strong>選擇區域</strong></span>
+          </button>
+        </div>
+
+        <div class="nav-bar  collapse "  id="navbarTogglerDemo02">
+          <ul class="nav nav-pills mb-3  justify-content-center" id="pills-tab" role="tablist">
+              <li class="nav-item ">
+              <a class="nav-link active" id="pills-westland-tab" data-toggle="pill" href="#pills-westland" role="tab" aria-controls="pills-westland" aria-selected="true">中西區</a>
+              </li>
+              <li class="nav-item ">
+              <a class="nav-link" id="pills-eastland-tab" data-toggle="pill" href="#pills-eastland" role="tab" aria-controls="pills-eastland" aria-selected="false">東區</a>
+              </li>
+              <li class="nav-item ">
+              <a class="nav-link" id="pills-northland-tab" data-toggle="pill" href="#pills-northland" role="tab" aria-controls="pills-northland" aria-selected="false">北區</a>
+              </li>
+              <li class="nav-item ">
+                  <a class="nav-link" id="pills-southland-tab" data-toggle="pill" href="#pills-southland" role="tab" aria-controls="pills-southland" aria-selected="false">南區</a>
+              </li>
+              <li class="nav-item ">
+                  <a class="nav-link" id="pills-anpingland-tab" data-toggle="pill" href="#pills-anpingland" role="tab" aria-controls="pills-anpingland" aria-selected="false">安平區</a>
+              </li>
+          </ul>
+        </div>
+
+        <div class="tab-content" id="pills-tabContent">
+          <div class="tab-pane fade show active" id="pills-westland" role="tabpanel" aria-labelledby="pills-home-tab">
+                <div class="row landgroup card-deck ">
+
+                  <a class="land card"  href="" data-toggle="modal" data-target="#westonelandModal">
+                    <div class="imgbox">
+                      <img src="img/landwest1.jpg" class="card-img-top" alt="...">
+                    </div>  
+                  </a>
+                  <!-- Modal -->
+                  <div class="modal fade" id="westonelandModal" >
+                      <div class="modal-dialog modal-lg modal-dialog-centered">
+                          <!-- Modal Content -->
+                          <div class="modal-content">
+                              <div class="modal-header">
+                                  <h3 class="modal-title" id="westonelandModalTitle"><strong>景點介紹</strong></h3>
+                                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                      <span aria-hidden="true">&times;</span>
+                                  </button>
+                              </div>
+                              <div class="modal-body">
+
+                                <ul class="nav nav-tabs" id="myTab" role="tablist">
+                                  <li class="nav-item">
+                                    <a class="nav-link active" id="westlandintroone-tab" data-toggle="tab" href="#westlandintroone" role="tab" aria-controls="westlandintroone" aria-selected="true"><span>介紹</span></a>
+                                  </li>
+                                  <li class="nav-item">
+                                    <a class="nav-link" id="westlandmapone-tab" data-toggle="tab" href="#westlandmapone" role="tab" aria-controls="westlandmapone" aria-selected="false"><span>地圖</span></a>
+                                  </li>
+                                </ul>
+                                <div class="tab-content" id="myTabContent">
+                                  <div class="tab-pane fade show active" id="westlandintroone" role="tabpanel" aria-labelledby="westlandintroone-tab">
+                                      <img src="img/landwest1-2.jpg">
+                                      <div class="intro">
+                                          <span><h3><strong>藍晒圖文創園區</strong></h3></span>
+                                          <p>位於西門路與國華街間的新昌里舊司法宿舍群，部分為日治時期興建之木造日式建築，部分是民國51年所建的老式連排宿舍，此區域舊稱為「第一司法新村」，是當時臺南監獄、臺南看守所、高等法院臺南分院及高檢署之員工宿舍。
+  
+                                            司法新村歷經五十年的變遷，隨著居民之搬遷以及鄰近街道興起，附近高樓大廈林立，在大幅整修之前，多數空屋早已被攀藤植物與榕樹氣根吞噬屋角與紅磚牆面，破敗傾頹、呈現深具歷史痕跡的時代變遷。為保存空間記憶、活化城市空間，賦予老舊宿舍新生命並連結臺南文創產業及老屋再利用的風潮，臺南市政府整合地主國有財產署以及地上權所有者南監及院檢等意見，予以修復轉型活化，搭配「3D藍晒圖裝置藝術」，並融合原有的老樹、紅磚、綠蔭、新創與藝術等特質，在眾多優質文創品牌業者與創意人才的進駐後，使「藍晒圖文創園區」成為臺南市最重要的文創聚落。</p>
+                                      </div>
+                                  </div>
+                                  <div class="tab-pane fade maprwd" id="westlandmapone" role="tabpanel" aria-labelledby="westlandmapone-tab">
+                                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3672.997974002248!2d120.19515671474467!3d22.987101984971076!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x346e767bd141b7b5%3A0x58fa83c5a93881d4!2z6JeN5pmS5ZyW5paH5Ym15ZyS5Y2A!5e0!3m2!1szh-TW!2stw!4v1576759981231!5m2!1szh-TW!2stw" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
+                                  </div>
+                                </div>
+                            </div>
+                        </div>
+                      </div>
+                    </div>
+
+
+                  <a class="land card"  href=""  data-toggle="modal" data-target="#westtwolandModal">
+                    <div class="imgbox">
+                      <img src="img/landwest2.jpg" class="card-img-top" alt="...">
+                    </div>  
+                  </a>
+                  <!-- Modal -->
+                  <div class="modal fade" id="westtwolandModal" >
+                    <div class="modal-dialog modal-lg modal-dialog-centered">
+                        <!-- Modal Content -->
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h3 class="modal-title" id="westtwolandModalTitle"><strong>景點介紹</strong></h3>
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                            </div>
+                            <div class="modal-body">
+
+                              <ul class="nav nav-tabs" id="myTab" role="tablist">
+                                <li class="nav-item">
+                                  <a class="nav-link active" id="westlandintrotwo-tab" data-toggle="tab" href="#westlandintrotwo" role="tab" aria-controls="westlandintrotwo" aria-selected="true"><span>介紹</span></a>
+                                </li>
+                                <li class="nav-item">
+                                  <a class="nav-link" id="westlandmaptwo-tab" data-toggle="tab" href="#westlandmaptwo" role="tab" aria-controls="westlandmaptwo" aria-selected="false"><span>地圖</span></a>
+                                </li>
+                              </ul>
+                              
+                              <div class="tab-content" id="myTabContent">
+                                <div class="tab-pane fade show active" id="westlandintrotwo" role="tabpanel" aria-labelledby="westlandintrotwo-tab">
+                                    <img src="img/landwest2-2.jpg">
+                                    <div class="intro">
+                                        <span><h3><strong>臺南市美術館2館</strong></h3></span>
+                                        <p>本館兩座建築分別為具古蹟身份的原臺南警察署，以及於公11基地上興建當代性建築，是由石昭永建築師及日本坂茂建築設計事務所共同設計建造。兩館所在區域富含深厚文化底蘊，新舊建築的重生與興起，為該區域融入藝術資源與創造互動，亦期盼作為臺南藝術發散與收攏的實驗基地。</p>
+                                    </div>
+                                </div>
+
+                                <div class="tab-pane fade maprwd" id="westlandmaptwo" role="tabpanel" aria-labelledby="westlandmaptwo-tab">
+                                  <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1544.2693493750617!2d120.20034496913442!3d22.990256060572587!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xae220201100c4e66!2z6Ie65Y2X5biC576O6KGT6aSoMumkqA!5e0!3m2!1szh-TW!2stw!4v1576767581873!5m2!1szh-TW!2stw" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
+                                </div>
+
+                              </div>
+                          </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <a class="land card"  href=""  data-toggle="modal" data-target="#westthreelandModal">
+                    <div class="imgbox">
+                      <img src="img/landwest3.jpg" class="card-img-top" alt="...">
+                    </div>  
+                  </a>
+                  <!-- Modal -->
+                  <div class="modal fade" id="westthreelandModal" >
+                    <div class="modal-dialog modal-lg modal-dialog-centered">
+                        <!-- Modal Content -->
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h3 class="modal-title" id="westthreelandModalTitle"><strong>景點介紹</strong></h3>
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                            </div>
+                            <div class="modal-body">
+
+                              <ul class="nav nav-tabs" id="myTab" role="tablist">
+                                <li class="nav-item">
+                                  <a class="nav-link active" id="westlandintrothree-tab" data-toggle="tab" href="#westlandintrothree" role="tab" aria-controls="westlandintrothree" aria-selected="true"><span>介紹</span></a>
+                                </li>
+                                <li class="nav-item">
+                                  <a class="nav-link" id="westlandmapthree-tab" data-toggle="tab" href="#westlandmapthree" role="tab" aria-controls="westlandmapthree" aria-selected="false"><span>地圖</span></a>
+                                </li>
+                              </ul>
+                              
+                              <div class="tab-content" id="myTabContent">
+                                <div class="tab-pane fade show active" id="westlandintrothree" role="tabpanel" aria-labelledby="westlandintrothree-tab">
+                                    <img src="img/landwest3-2.jpg">
+                                    <div class="intro">
+                                        <span><h3><strong>司法博物館</strong></h3></span>
+                                        <p>2016年11月是原台南地方法院修復後開放參觀的大日子，也是台南市當年的一大盛事，建於1912年的原台南地方法院，外觀有著壯觀的圓柱以及圓形的巴洛克式屋頂，進到內部之後就可見到美麗且採光極佳有如奇美博物館大廳一般的壯觀圓頂，圓頂邊的大圓柱雕刻非常精美，地板維持著日治時期原始的維多利亞風格幾何圖形彩色拼花地磚，進到法院裡面猶如進到真實版的近代巴洛克建築教科書中，處處令人讚嘆，這也都是來自森山松之助先生之手，在台灣的16年歲月裡不知設計出多少流傳後世的經典建築。</p>
+                                    </div>
+                                </div>
+
+                                <div class="tab-pane fade maprwd" id="westlandmapthree" role="tabpanel" aria-labelledby="westlandmapthree-tab">
+                                  <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1544.2704596079598!2d120.20109089354311!3d22.99015897202734!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x346e767cea4abcc9%3A0xcddeac2a17cb2a23!2z5Y-45rOV5Y2a54mp6aSo!5e0!3m2!1szh-TW!2stw!4v1576767820760!5m2!1szh-TW!2stw" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
+                                </div>
+
+                              </div>
+                          </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <a class="land card"  href=""  data-toggle="modal" data-target="#westfourlandModal">
+                    <div class="imgbox">
+                      <img src="img/landwest4.jpg" class="card-img-top" alt="...">
+                    </div>  
+                  </a>
+                  <!-- Modal -->
+                  <div class="modal fade" id="westfourlandModal" >
+                    <div class="modal-dialog modal-lg modal-dialog-centered">
+                        <!-- Modal Content -->
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h3 class="modal-title" id="westfourlandModalTitle"><strong>景點介紹</strong></h3>
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                            </div>
+                            <div class="modal-body">
+
+                              <ul class="nav nav-tabs" id="myTab" role="tablist">
+                                <li class="nav-item">
+                                  <a class="nav-link active" id="westlandintrofour-tab" data-toggle="tab" href="#westlandintrofour" role="tab" aria-controls="westlandintrofour" aria-selected="true"><span>介紹</span></a>
+                                </li>
+                                <li class="nav-item">
+                                  <a class="nav-link" id="westlandmapfour-tab" data-toggle="tab" href="#westlandmapfour" role="tab" aria-controls="westlandmapfour" aria-selected="false"><span>地圖</span></a>
+                                </li>
+                              </ul>
+                              
+                              <div class="tab-content" id="myTabContent">
+                                <div class="tab-pane fade show active" id="westlandintrofour" role="tabpanel" aria-labelledby="westlandintrofour-tab">
+                                    <img src="img/landwest4-2.jpg">
+                                    <div class="intro">
+                                        <span><h3><strong>赤崁樓</strong></h3></span>
+                                        <p>赤崁樓從荷蘭人據臺時期便是行政中心，西元1661年鄭成功驅逐荷蘭人後，即改普羅民遮城為承天府治。清初台江尚未淤塞前，浪濤可直達赤崁樓下，「赤崁夕照」是當時著名的臺灣八景之一。赤崁樓前有九座清代石龜馱碑，是從他處遷移至此，傳說石龜為龍生九子之一，因好負重而變成龜狀。另外「斷足石馬」的雕像有一傳說是因石馬入夜後會化作妖怪騷擾百姓，所以才被斷足，成為現在的模樣。後來，赤崁樓因民變的破壞及疏於管理而日漸頹圮，而原本荷式建築的主體也加上了中國式的建築，一度上面還祭祀了觀世音菩薩等神明。日治時期，赤崁樓改為陸軍衛戍醫院，也陸續展開修建及整修，光復後，將木製結構改建為鋼筋混凝土結構，並將主要入口改向，而成為今日赤崁樓的模樣。</p>
+                                    </div>
+                                </div>
+
+                                <div class="tab-pane fade maprwd" id="westlandmapfour" role="tabpanel" aria-labelledby="westlandmapfour-tab">
+                                  <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3672.7190446079035!2d120.20050711484922!3d22.997356723041257!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x346e7661777b896d%3A0xf2656ec0c86f579c!2z6LWk5bSB5qiT!5e0!3m2!1szh-TW!2stw!4v1576768000517!5m2!1szh-TW!2stw" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
+                                </div>
+
+                              </div>
+                          </div>
+                      </div>
+                    </div>
+                  </div>
+
+
+
+                  <a class="land card"  href=""  data-toggle="modal" data-target="#westfivelandModal">
+                    <div class="imgbox">
+                      <img src="img/landwest5.jpg" class="card-img-top" alt="...">
+                    </div>  
+                  </a>
+                  <!-- Modal -->
+                  <div class="modal fade" id="westfivelandModal" >
+                    <div class="modal-dialog modal-lg modal-dialog-centered">
+                        <!-- Modal Content -->
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h3 class="modal-title" id="westfivelandModalTitle"><strong>景點介紹</strong></h3>
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                            </div>
+                            <div class="modal-body">
+
+                              <ul class="nav nav-tabs" id="myTab" role="tablist">
+                                <li class="nav-item">
+                                  <a class="nav-link active" id="westlandintrofive-tab" data-toggle="tab" href="#westlandintrofive" role="tab" aria-controls="westlandintrofive" aria-selected="true"><span>介紹</span></a>
+                                </li>
+                                <li class="nav-item">
+                                  <a class="nav-link" id="westlandmapfive-tab" data-toggle="tab" href="#westlandmapfive" role="tab" aria-controls="westlandmapfive" aria-selected="false"><span>地圖</span></a>
+                                </li>
+                              </ul>
+                              
+                              <div class="tab-content" id="myTabContent">
+                                <div class="tab-pane fade show active" id="westlandintrofive" role="tabpanel" aria-labelledby="westlandintrofive-tab">
+                                    <img src="img/landwest4-2.jpg">
+                                    <div class="intro">
+                                        <span><h3><strong>孔廟文化園區</strong></h3></span>
+                                        <p>已有三百多年歷史的「全臺首學」台南孔廟，可說是台南為文化古都的核心，南門路上綿延的紅牆在穿透樹梢的陽光下顯得神聖，也呈現著台南古都的獨特韻味，以歷史悠久的孔廟為中心，串聯起舊街區並連接附近主要的古蹟點，大南門、府中街、延平郡王祠等，是一個可以穿街走巷盡情享受古城氛圍的文化園區。</p>
+                                    </div>
+                                </div>
+
+                                <div class="tab-pane fade maprwd" id="westlandmapfive" role="tabpanel" aria-labelledby="westlandmapfive-tab">
+                                  <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3672.9115369805104!2d120.20274346484915!3d22.990280273303622!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x346e7662acd5bc15%3A0xb225ac98ebd9091!2z6Ie65Y2X5a2U5buf!5e0!3m2!1szh-TW!2stw!4v1576768968216!5m2!1szh-TW!2stw" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen=""></iframe>                             
+                                </div>
+                              </div>
+                          </div>
+                      </div>
+                    </div>
+                  </div>
+
+                </div>
+          </div>
+
+  <!--EastLand-->       
+          <div class="tab-pane fade" id="pills-eastland" role="tabpanel" aria-labelledby="pills-eastland-tab">
+            <div class="landgroup card-deck">
+
+              <a class="land card"  href="" data-toggle="modal" data-target="#eastonelandModal">
+                <div class="imgbox">
+                  <img src="img/landeast1.jpg" class="card-img-top" alt="...">
+                </div>  
+              </a>
+              <!-- Modal -->
+              <div class="modal fade" id="eastonelandModal" >
+                  <div class="modal-dialog modal-lg modal-dialog-centered">
+                      <!-- Modal Content -->
+                      <div class="modal-content">
+                          <div class="modal-header">
+                              <h3 class="modal-title" id="eastonelandModalTitle"><strong>景點介紹</strong></h3>
+                              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                  <span aria-hidden="true">&times;</span>
+                              </button>
+                          </div>
+                          <div class="modal-body">
+
+                            <ul class="nav nav-tabs" id="myTab" role="tablist">
+                              <li class="nav-item">
+                                <a class="nav-link active" id="eastlandintroone-tab" data-toggle="tab" href="#eastlandintroone" role="tab" aria-controls="eastlandintroone" aria-selected="true"><span>介紹</span></a>
+                              </li>
+                              <li class="nav-item">
+                                <a class="nav-link" id="eastlandmapone-tab" data-toggle="tab" href="#eastlandmapone" role="tab" aria-controls="eastlandintroone" aria-selected="false"><span>地圖</span></a>
+                              </li>
+                            </ul>
+                            <div class="tab-content" id="myTabContent">
+                              <div class="tab-pane fade show active" id="eastlandintroone" role="tabpanel" aria-labelledby="eastlandintroone-tab">
+                                  <img src="img/landeast1-2.jpg">
+                                  <div class="intro">
+                                      <span><h3><strong>國立成功大學榕園</strong></h3></span>
+                                      <p>成大的榕樹一直都是台南的形象代表之一，傳說為1923年日本裕仁太子（即昭和天皇）巡視台灣時親手種植，時至今日，榕樹有如慈祥的老校友一樣每日屹立看守著成大校園，迎接來自各地的新生，也目送許多完成學業的畢業生，每到畢業季時總是有不少學生在此合影留念，離情依依。</p>
+                                  </div>
+                              </div>
+                              <div class="tab-pane fade maprwd" id="eastlandmapone" role="tabpanel" aria-labelledby="eastlandintroone-tab">
+                                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7345.351491182654!2d120.22228316870444!3d22.99894820795512!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xf5ff371618b46bab!2z5ZyL56uL5oiQ5Yqf5aSn5a245qaV5ZyS!5e0!3m2!1szh-TW!2stw!4v1576771844010!5m2!1szh-TW!2stw" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen=""></iframe>                            
+                              </div>
+                            </div>
+                        </div>
+                    </div>
+                  </div>
+                </div>
+
+
+                <a class="land card"  href="" data-toggle="modal" data-target="#easttwolandModal">
+                  <div class="imgbox">
+                    <img src="img/landeast2.jpg" class="card-img-top" alt="...">
+                  </div>  
+                </a>
+                <!-- Modal -->
+                <div class="modal fade" id="easttwolandModal" >
+                    <div class="modal-dialog modal-lg modal-dialog-centered">
+                        <!-- Modal Content -->
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h3 class="modal-title" id="easttwolandModalTitle"><strong>景點介紹</strong></h3>
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                            </div>
+                            <div class="modal-body">
+    
+                              <ul class="nav nav-tabs" id="myTab" role="tablist">
+                                <li class="nav-item">
+                                  <a class="nav-link active" id="eastlandintrotwo-tab" data-toggle="tab" href="#eastlandintrotwo" role="tab" aria-controls="eastlandintrotwo" aria-selected="true"><span>介紹</span></a>
+                                </li>
+                                <li class="nav-item">
+                                  <a class="nav-link" id="eastlandmaptwo-tab" data-toggle="tab" href="#eastlandmaptwo" role="tab" aria-controls="eastlandintrotwo" aria-selected="false"><span>地圖</span></a>
+                                </li>
+                              </ul>
+                              <div class="tab-content" id="myTabContent">
+                                <div class="tab-pane fade show active" id="eastlandintrotwo" role="tabpanel" aria-labelledby="eastlandintrotwo-tab">
+                                    <img src="img/landeast2-2.jpg">
+                                    <div class="intro">
+                                        <span><h3><strong>巴克禮紀念公園</strong></h3></span>
+                                        <p>位於台南市東區崇明里，與台南文化中心相對望的巴克禮公園腹地廣大，是台南的城市之肺，說是台南最受歡迎的且附有文藝氣息的公園也不為過，春夏時綠意盎然，夜間偶而伴隨著點點螢光，秋冬樹上則是多了黃紅色落羽松的點綴，走在裡面處處是光影，來到這裡的人們總是忍不住按了許多快門，陽光穿透林間，暗與亮的交界明顯，構成公園最美的景致，地面上僅存的老樹頭，像是縮小版的山峰一樣靜靜地座落於池塘倒影旁，有如國外景致一般的悠閒。走在裡面總是不難發現在樹下、草地上、長椅上，都可見歡樂野餐的人群們，有如紐約的中央公園一樣。</p>
+                                    </div>
+                                </div>
+                                <div class="tab-pane fade maprwd" id="eastlandmaptwo" role="tabpanel" aria-labelledby="eastlandintrotwo-tab">
+                                  <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d12355.848990440274!2d120.2186630129901!3d22.971729615765693!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x346e7421350b0a33%3A0x2dbbd32dfa02333c!2z5be05YWL56au57SA5b-15YWs5ZyS!5e0!3m2!1szh-TW!2stw!4v1576771922945!5m2!1szh-TW!2stw" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
+                                </div>
+                              </div>
+                          </div>
+                      </div>
+                    </div>
+                  </div>
+
+              
+                  <a class="land card"  href="" data-toggle="modal" data-target="#eastthreelandModal">
+                    <div class="imgbox">
+                      <img src="img/landeast3.jpg" class="card-img-top" alt="...">
+                    </div>  
+                  </a>
+                  <!-- Modal -->
+                  <div class="modal fade" id="eastthreelandModal" >
+                      <div class="modal-dialog modal-lg modal-dialog-centered">
+                          <!-- Modal Content -->
+                          <div class="modal-content">
+                              <div class="modal-header">
+                                  <h3 class="modal-title" id="eastthreelandModalTitle"><strong>景點介紹</strong></h3>
+                                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                      <span aria-hidden="true">&times;</span>
+                                  </button>
+                              </div>
+                              <div class="modal-body">
+      
+                                <ul class="nav nav-tabs" id="myTab" role="tablist">
+                                  <li class="nav-item">
+                                    <a class="nav-link active" id="eastlandintrothree-tab" data-toggle="tab" href="#eastlandintrothree" role="tab" aria-controls="eastlandintrothree" aria-selected="true"><span>介紹</span></a>
+                                  </li>
+                                  <li class="nav-item">
+                                    <a class="nav-link" id="eastlandmapthree-tab" data-toggle="tab" href="#eastlandmapthree" role="tab" aria-controls="eastlandintrothree" aria-selected="false"><span>地圖</span></a>
+                                  </li>
+                                </ul>
+                                <div class="tab-content" id="myTabContent">
+                                  <div class="tab-pane fade show active" id="eastlandintrothree" role="tabpanel" aria-labelledby="eastlandintrothree-tab">
+                                      <img src="img/landeast3-2.jpg">
+                                      <div class="intro">
+                                          <span><h3><strong>南紡購物中心</strong></h3></span>
+                                          <p>台南紡織股份有限公司秉持提供消費者更美好生活品質的使命，創立台南最大的複合式購物商場「南紡購物中心」！融合購物、娛樂、餐飲、休閒、藝文等五大元素，邀請您一同來南紡購物中心體驗創新的生活與幸福感動！</p>
+                                      </div>
+                                  </div>
+                                  <div class="tab-pane fade maprwd" id="eastlandmapthree" role="tabpanel" aria-labelledby="eastlandintrothree-tab">
+                                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d8736.12816596944!2d120.22637855280274!3d22.983738733875914!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x346e76bea4df0e25%3A0xe307d34670241186!2z5Y2X57Sh6LO854mp5Lit5b-D!5e0!3m2!1szh-TW!2stw!4v1576772013678!5m2!1szh-TW!2stw" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
+                                  </div>
+                                </div>
+                            </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <a class="land card"  href="" data-toggle="modal" data-target="#eastfourlandModal">
+                      <div class="imgbox">
+                        <img src="img/landeast4.jpg" class="card-img-top" alt="...">
+                      </div>  
+                    </a>
+                    <!-- Modal -->
+                    <div class="modal fade" id="eastfourlandModal" >
+                        <div class="modal-dialog modal-lg modal-dialog-centered">
+                            <!-- Modal Content -->
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h3 class="modal-title" id="eastfourlandModalTitle"><strong>景點介紹</strong></h3>
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                    </button>
+                                </div>
+                                <div class="modal-body">
+        
+                                  <ul class="nav nav-tabs" id="myTab" role="tablist">
+                                    <li class="nav-item">
+                                      <a class="nav-link active" id="eastlandintrofour-tab" data-toggle="tab" href="#eastlandintrofour" role="tab" aria-controls="eastlandintrothree" aria-selected="true"><span>介紹</span></a>
+                                    </li>
+                                    <li class="nav-item">
+                                      <a class="nav-link" id="eastlandmapfour-tab" data-toggle="tab" href="#eastlandmapfour" role="tab" aria-controls="eastlandintrothree" aria-selected="false"><span>地圖</span></a>
+                                    </li>
+                                  </ul>
+                                  <div class="tab-content" id="myTabContent">
+                                    <div class="tab-pane fade show active" id="eastlandintrofour" role="tabpanel" aria-labelledby="eastlandintrofour-tab">
+                                        <img src="img/landeast4-2.jpg">
+                                        <div class="intro">
+                                            <span><h3><strong>臺南神學院</strong></h3></span>
+                                            <p>在戲劇「一把青」中人物朱青就讀的神學院場景，取景地點就是台南神學院，也因為戲劇爆紅的緣故，讓原本就有許多遊客到訪的神學院更是紅透半邊天，位在台南東區的神學院在1903年建立，目前四周都是住宅區，寧靜的氛圍與神學院非常的契合，簡單樸素的灰色牆面點綴著清新TIFFANY綠的尖拱木窗，讓帶點歐式風格的神學院增添了不少浪漫，走在白色的教室長廊上，灑進廊裡的陽光更是讓神學院內充滿了神聖的氛圍，中央的小噴水池是許多遊客喜愛的地方，看著池裡優游的鯉魚有種心靈沉澱的感受。平日學生上課為求寧靜，校園並不開放參觀，只在假日開放進入。</p>
+                                        </div>
+                                    </div>
+                                    <div class="tab-pane fade maprwd" id="eastlandmapfour" role="tabpanel" aria-labelledby="eastlandintrofour-tab">
+                                      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3672.9587521548738!2d120.21184831484915!3d22.98854422336799!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x346e768f80f3692f%3A0xced611af8eb497e4!2z6Ie65Y2X56We5a246Zmi!5e0!3m2!1szh-TW!2stw!4v1576772052486!5m2!1szh-TW!2stw" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
+                                    </div>
+                                  </div>
+                              </div>
+                          </div>
+                        </div>
+                      </div>
+    
+                      <a class="land card"  href="" data-toggle="modal" data-target="#eastfivelandModal">
+                        <div class="imgbox">
+                          <img src="img/landeast5.jpg" class="card-img-top" alt="...">
+                        </div>  
+                      </a>
+                      <!-- Modal -->
+                      <div class="modal fade" id="eastfivelandModal" >
+                          <div class="modal-dialog modal-lg modal-dialog-centered">
+                              <!-- Modal Content -->
+                              <div class="modal-content">
+                                  <div class="modal-header">
+                                      <h3 class="modal-title" id="eastfivelandModalTitle"><strong>景點介紹</strong></h3>
+                                      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                          <span aria-hidden="true">&times;</span>
+                                      </button>
+                                  </div>
+                                  <div class="modal-body">
+          
+                                    <ul class="nav nav-tabs" id="myTab" role="tablist">
+                                      <li class="nav-item">
+                                        <a class="nav-link active" id="eastlandintrofive-tab" data-toggle="tab" href="#eastlandintrofive" role="tab" aria-controls="eastlandintrofive" aria-selected="true"><span>介紹</span></a>
+                                      </li>
+                                      <li class="nav-item">
+                                        <a class="nav-link" id="eastlandmapfive-tab" data-toggle="tab" href="#eastlandmapfive" role="tab" aria-controls="eastlandintrofive" aria-selected="false"><span>地圖</span></a>
+                                      </li>
+                                    </ul>
+                                    <div class="tab-content" id="myTabContent">
+                                      <div class="tab-pane fade show active" id="eastlandintrofive" role="tabpanel" aria-labelledby="eastlandintrofive-tab">
+                                          <img src="img/landeast5-2.jpg">
+                                          <div class="intro">
+                                              <span><h3><strong>台南知事官邸</strong></h3></span>
+                                              <p>原臺南縣知事官邸，建於1900年，是台南人口中的「時鐘樓」，會有此稱呼是因為原有屋頂山牆圖騰狀似時鐘而得名，該建築除作為縣知事的官邸外，另一個重要的用途是作為日本皇族外出時的「御泊所」，在台灣歷史上該建築是南台灣唯一設計作為供皇族居住的行館，至1941年為止，有近二十位日本皇族曾到訪停留於此地，比作為總督官邸的台北賓館數量還來得多，足見該建築在台灣日治時期歷史中重要的角色，尤其是1923年當時的裕仁皇太子(後為昭和天皇)來台南行啟時曾下塌於此，為了皇太子的來臨官邸左側還特地新建了木造的廂房，右側當時也還有兩座網球場供皇太子休閒運動，雖然現在網球場已經毫無痕跡，但仍可見當時對於皇族巡視的重視與謹慎。</p>
+                                          </div>
+                                      </div>
+                                      <div class="tab-pane fade maprwd" id="eastlandmapfive" role="tabpanel" aria-labelledby="eastlandintrofive-tab">
+                                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d5194.303132139794!2d120.20780127687871!3d22.989712895263512!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x346e768eed0351a9%3A0xc4ec76bfc1dc3738!2z5Y-w5Y2X55-l5LqL5a6Y6YK4!5e0!3m2!1szh-TW!2stw!4v1576772077866!5m2!1szh-TW!2stw" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
+                                      </div>
+                                    </div>
+                                </div>
+                            </div>
+                          </div>
+                        </div>
+            
+            </div>  
+          </div>
+          <div class="tab-pane fade" id="pills-northland" role="tabpanel" aria-labelledby="pills-northland-tab">
+            <div class="landgroup card-deck">
+
+              <a class="land card"  href="" data-toggle="modal" data-target="#northonelandModal">
+                <div class="imgbox">
+                  <img src="img/landnorth1.jpg" class="card-img-top" alt="...">
+                </div>  
+              </a>
+              <!-- Modal -->
+              <div class="modal fade" id="northonelandModal" >
+                  <div class="modal-dialog modal-lg modal-dialog-centered">
+                      <!-- Modal Content -->
+                      <div class="modal-content">
+                          <div class="modal-header">
+                              <h3 class="modal-title" id="northonelandModalTitle"><strong>景點介紹</strong></h3>
+                              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                  <span aria-hidden="true">&times;</span>
+                              </button>
+                          </div>
+                          <div class="modal-body">
+
+                            <ul class="nav nav-tabs" id="myTab" role="tablist">
+                              <li class="nav-item">
+                                <a class="nav-link active" id="northlandintroone-tab" data-toggle="tab" href="#northlandintroone" role="tab" aria-controls="northlandintroone" aria-selected="true"><span>介紹</span></a>
+                              </li>
+                              <li class="nav-item">
+                                <a class="nav-link" id="northlandmapone-tab" data-toggle="tab" href="#northlandmapone" role="tab" aria-controls="northlandintroone" aria-selected="false"><span>地圖</span></a>
+                              </li>
+                            </ul>
+                            <div class="tab-content" id="myTabContent">
+                              <div class="tab-pane fade show active" id="northlandintroone" role="tabpanel" aria-labelledby="northlandintroone-tab">
+                                  <img src="img/landnorth1-2.jpg">
+                                  <div class="intro">
+                                      <span><h3><strong>321巷 藝術聚落</strong></h3></span>
+                                      <p>「321巷藝術聚落」位於臺南市北區，2003年5月13日公告為市立古蹟。該區在臺灣日治時期屬於老松町，附近有山砲兵部隊與工兵營，為原日軍步兵第二聯隊官舍群。二戰後成為成大教授宿舍，其中一戶為臺灣知名美術家郭柏川故居，現為其紀念館。</p>
+                                  </div>
+                              </div>
+                              <div class="tab-pane fade maprwd" id="northlandmapone" role="tabpanel" aria-labelledby="northlandintroone-tab">
+                                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7344.898756610144!2d120.20755984319398!3d23.00726679717132!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xcf6853bf4ecf33d3!2zMzIx5be3IOiXneihk-iBmuiQvQ!5e0!3m2!1szh-TW!2stw!4v1576839895987!5m2!1szh-TW!2stw" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
+                              </div>
+                            </div>
+                        </div>
+                    </div>
+                  </div>
+                </div>
+
+
+                <a class="land card"  href="" data-toggle="modal" data-target="#northtwolandModal">
+                  <div class="imgbox">
+                    <img src="img/landnorth2.jpg" class="card-img-top" alt="...">
+                  </div>  
+                </a>
+                <!-- Modal -->
+                <div class="modal fade" id="northtwolandModal" >
+                    <div class="modal-dialog modal-lg modal-dialog-centered">
+                        <!-- Modal Content -->
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h3 class="modal-title" id="northtwolandModalTitle"><strong>景點介紹</strong></h3>
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                            </div>
+                            <div class="modal-body">
+    
+                              <ul class="nav nav-tabs" id="myTab" role="tablist">
+                                <li class="nav-item">
+                                  <a class="nav-link active" id="northlandintrotwo-tab" data-toggle="tab" href="#northlandintrotwo" role="tab" aria-controls="northlandintrotwo" aria-selected="true"><span>介紹</span></a>
+                                </li>
+                                <li class="nav-item">
+                                  <a class="nav-link" id="northlandmaptwo-tab" data-toggle="tab" href="#northlandmaptwo" role="tab" aria-controls="northlandintrotwo" aria-selected="false"><span>地圖</span></a>
+                                </li>
+                              </ul>
+                              <div class="tab-content" id="myTabContent">
+                                <div class="tab-pane fade show active" id="northlandintrotwo" role="tabpanel" aria-labelledby="northlandintrotwo-tab">
+                                    <img src="img/landnorth2-2.jpg">
+                                    <div class="intro">
+                                        <span><h3><strong>台南公園</strong></h3></span>
+                                        <p>已有百年歷史的台南公園最為人津津樂道的就是流傳已久的燕潭曉月，形容月亮高掛天空時，猶如明月落在燕潭的倒映美景。每天從早到晚都有不少遊客在潭邊散步運動或是約會談情，假日時潭邊更是許多親子嬉戲的場所，也是攝影留念的最佳取景點，是許多台南人與遊客對台南的共同印象。</p>
+                                    </div>
+                                </div>
+                                <div class="tab-pane fade maprwd" id="northlandmaptwo" role="tabpanel" aria-labelledby="northlandintrotwo-tab">
+                                  <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14689.66204632224!2d120.20421244644935!3d23.00851109358438!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x346e76f4a63bc707%3A0x8ded7cac76070cb5!2z5Y-w5Y2X5YWs5ZyS!5e0!3m2!1szh-TW!2stw!4v1576839880974!5m2!1szh-TW!2stw" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
+                                </div>
+                              </div>
+                          </div>
+                      </div>
+                    </div>
+                  </div>
+
+              
+                  <a class="land card"  href="" data-toggle="modal" data-target="#norththreelandModal">
+                    <div class="imgbox">
+                      <img src="img/landnorth3.jpg" class="card-img-top" alt="...">
+                    </div>  
+                  </a>
+                  <!-- Modal -->
+                  <div class="modal fade" id="norththreelandModal" >
+                      <div class="modal-dialog modal-lg modal-dialog-centered">
+                          <!-- Modal Content -->
+                          <div class="modal-content">
+                              <div class="modal-header">
+                                  <h3 class="modal-title" id="norththreelandModalTitle"><strong>景點介紹</strong></h3>
+                                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                      <span aria-hidden="true">&times;</span>
+                                  </button>
+                              </div>
+                              <div class="modal-body">
+      
+                                <ul class="nav nav-tabs" id="myTab" role="tablist">
+                                  <li class="nav-item">
+                                    <a class="nav-link active" id="northlandintrothree-tab" data-toggle="tab" href="#northlandintrothree" role="tab" aria-controls="northlandintrothree" aria-selected="true"><span>介紹</span></a>
+                                  </li>
+                                  <li class="nav-item">
+                                    <a class="nav-link" id="northlandmapthree-tab" data-toggle="tab" href="#northlandmapthree" role="tab" aria-controls="northlandintrothree" aria-selected="false"><span>地圖</span></a>
+                                  </li>
+                                </ul>
+                                <div class="tab-content" id="myTabContent">
+                                  <div class="tab-pane fade show active" id="northlandintrothree" role="tabpanel" aria-labelledby="northlandintrothree-tab">
+                                      <img src="img/landnorth3-2.jpg">
+                                      <div class="intro">
+                                          <span><h3><strong>Starbucks 星巴克台南-小北門市</strong></h3></span>
+                                          <p>星巴克(Starbucks)成立於1971年，總部在美國華盛頓州西雅圖市，台灣的統一星巴克股份有限公司於1998年1月1日正式成立，是由美國Starbucks Coffee International公司與台灣統一集團旗下統一企業、統一超商三家公司合資成立，共同在台灣開設經營Starbucks Coffee門市。</p>
+                                      </div>
+                                  </div>
+                                  <div class="tab-pane fade maprwd" id="northlandmapthree" role="tabpanel" aria-labelledby="northlandintrothree-tab">
+                                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14689.66204632224!2d120.20421244644935!3d23.00851109358438!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xd2110414e5f5284a!2zU3RhcmJ1Y2tzIOaYn-W3tOWFi-WPsOWNl-Wwj-WMl-mWgOW4gg!5e0!3m2!1szh-TW!2stw!4v1576839861275!5m2!1szh-TW!2stw" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
+                                  </div>
+                                </div>
+                            </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <a class="land card"  href="" data-toggle="modal" data-target="#northfourlandModal">
+                      <div class="imgbox">
+                        <img src="img/landnorth4.jpg" class="card-img-top" alt="...">
+                      </div>  
+                    </a>
+                    <!-- Modal -->
+                    <div class="modal fade" id="northfourlandModal" >
+                        <div class="modal-dialog modal-lg modal-dialog-centered">
+                            <!-- Modal Content -->
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h3 class="modal-title" id="northfourlandModalTitle"><strong>景點介紹</strong></h3>
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                    </button>
+                                </div>
+                                <div class="modal-body">
+        
+                                  <ul class="nav nav-tabs" id="myTab" role="tablist">
+                                    <li class="nav-item">
+                                      <a class="nav-link active" id="northlandintrofour-tab" data-toggle="tab" href="#northlandintrofour" role="tab" aria-controls="northlandintrothree" aria-selected="true"><span>介紹</span></a>
+                                    </li>
+                                    <li class="nav-item">
+                                      <a class="nav-link" id="northlandmapfour-tab" data-toggle="tab" href="#northlandmapfour" role="tab" aria-controls="northlandintrothree" aria-selected="false"><span>地圖</span></a>
+                                    </li>
+                                  </ul>
+                                  <div class="tab-content" id="myTabContent">
+                                    <div class="tab-pane fade show active" id="northlandintrofour" role="tabpanel" aria-labelledby="northlandintrofour-tab">
+                                        <img src="img/landnorth4-2.jpg">
+                                        <div class="intro">
+                                            <span><h3><strong>千畦種子博物館</strong></h3></span>
+                                            <p>這是一對夫妻在從事綠美化工程二十多年後，本著熱愛台灣這塊土地的心孕育出的美麗園地，這𥚃沒有人工斧鑿的精雕細琢，只有大自然的趣緻溫柔，這裡沒有僭越大地的人定勝天，只有與自然共存的草生採集。
+                                              歡迎各位來到我們的種子館，來到這塊為種子專設的園地。一直以來，我們只看見它們生成之後枝繁葉茂或是花團錦簇，卻忽略了那些沈默低調卻是植物之源的種子，其實它們長相和色彩絕對是你料想不到的多元和斑斕。</p>
+                                        </div>
+                                    </div>
+                                    <div class="tab-pane fade maprwd" id="northlandmapfour" role="tabpanel" aria-labelledby="northlandintrofour-tab">
+                                      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3672.3752738306184!2d120.20315801474513!3d23.009989384959454!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x346e76c2797fb1e5%3A0x3e14ca7e0eb902d0!2z5Y2D55Wm56iu5a2Q5Y2a54mp6aSo!5e0!3m2!1szh-TW!2stw!4v1576839821122!5m2!1szh-TW!2stw" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
+                                    </div>
+                                  </div>
+                              </div>
+                          </div>
+                        </div>
+                      </div>
+    
+                      <a class="land card"  href="" data-toggle="modal" data-target="#northfivelandModal">
+                        <div class="imgbox">
+                          <img src="img/landnorth5.jpg" class="card-img-top" alt="...">
+                        </div>  
+                      </a>
+                      <!-- Modal -->
+                      <div class="modal fade" id="northfivelandModal" >
+                          <div class="modal-dialog modal-lg modal-dialog-centered">
+                              <!-- Modal Content -->
+                              <div class="modal-content">
+                                  <div class="modal-header">
+                                      <h3 class="modal-title" id="northfivelandModalTitle"><strong>景點介紹</strong></h3>
+                                      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                          <span aria-hidden="true">&times;</span>
+                                      </button>
+                                  </div>
+                                  <div class="modal-body">
+          
+                                    <ul class="nav nav-tabs" id="myTab" role="tablist">
+                                      <li class="nav-item">
+                                        <a class="nav-link active" id="northlandintrofive-tab" data-toggle="tab" href="#northlandintrofive" role="tab" aria-controls="northlandintrofive" aria-selected="true"><span>介紹</span></a>
+                                      </li>
+                                      <li class="nav-item">
+                                        <a class="nav-link" id="northlandmapfive-tab" data-toggle="tab" href="#northlandmapfive" role="tab" aria-controls="northlandintrofive" aria-selected="false"><span>地圖</span></a>
+                                      </li>
+                                    </ul>
+                                    <div class="tab-content" id="myTabContent">
+                                      <div class="tab-pane fade show active" id="northlandintrofive" role="tabpanel" aria-labelledby="northlandintrofive-tab">
+                                          <img src="img/landnorth5-2.jpg">
+                                          <div class="intro">
+                                              <span><h3><strong>立德公園</strong></h3></span>
+                                              <p>這座北區的小型公園，藏著厲害的攀爬網設施，去年由編織藝術家曾靖婷改造的立德公園攀爬網，今年又追加了新的關卡，最新加強版的立德公園攀爬網，不但好玩，更可以讓孩子爬上爬下鍛鍊肌肉，可以說是名符其實的親子公園。</p>
+                                          </div>
+                                      </div>
+                                      <div class="tab-pane fade maprwd" id="northlandmapfive" role="tabpanel" aria-labelledby="northlandintrofive-tab">
+                                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3672.3752738306184!2d120.20315801474513!3d23.009989384959454!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x346e76f7d9163321%3A0xcda9eef5197c6d74!2z56uL5b635YWs5ZyS!5e0!3m2!1szh-TW!2stw!4v1576839781914!5m2!1szh-TW!2stw" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
+                                      </div>
+                                    </div>
+                                </div>
+                            </div>
+                          </div>
+                        </div>
+            
+            </div>  
+
+
+
+
+          </div>
+          <div class="tab-pane fade" id="pills-southland" role="tabpanel" aria-labelledby="pills-southland-tab">
+            <div class="landgroup card-deck">
+
+              <a class="land card"  href="" data-toggle="modal" data-target="#southonelandModal">
+                <div class="imgbox">
+                  <img src="img/landsouth1.jpg" class="card-img-top" alt="...">
+                </div>  
+              </a>
+              <!-- Modal -->
+              <div class="modal fade" id="southonelandModal" >
+                  <div class="modal-dialog modal-lg modal-dialog-centered">
+                      <!-- Modal Content -->
+                      <div class="modal-content">
+                          <div class="modal-header">
+                              <h3 class="modal-title" id="southonelandModalTitle"><strong>景點介紹</strong></h3>
+                              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                  <span aria-hidden="true">&times;</span>
+                              </button>
+                          </div>
+                          <div class="modal-body">
+
+                            <ul class="nav nav-tabs" id="myTab" role="tablist">
+                              <li class="nav-item">
+                                <a class="nav-link active" id="southlandintroone-tab" data-toggle="tab" href="#southlandintroone" role="tab" aria-controls="southlandintroone" aria-selected="true"><span>介紹</span></a>
+                              </li>
+                              <li class="nav-item">
+                                <a class="nav-link" id="southlandmapone-tab" data-toggle="tab" href="#southlandmapone" role="tab" aria-controls="southlandintroone" aria-selected="false"><span>地圖</span></a>
+                              </li>
+                            </ul>
+                            <div class="tab-content" id="myTabContent">
+                              <div class="tab-pane fade show active" id="southlandintroone" role="tabpanel" aria-labelledby="southlandintroone-tab">
+                                  <img src="img/landsouth1-2.jpg">
+                                  <div class="intro">
+                                      <span><h3><strong>水萍塭公園</strong></h3></span>
+                                      <p>水萍塭公園位於夏林路、永華路、建南路與金華路相交的四角方格內，以前為台江內港的一部分，後來因為海岸線西退，內港便成為了水塘，2000年經過重新規劃，將此改造成一處附近居民運動、散步的好去處。公園占地有十公頃，中間有一個大廣場，小朋友可以在此奔跑、遊戲，還另外設有兩個遊樂場，豐富的遊樂設施是週末假日親子共遊的歡樂之地，或是三五好友齊聚草地野餐、享受陽光，也是悠閒午後的好時光。</p>
+                                  </div>
+                              </div>
+                              <div class="tab-pane fade maprwd" id="southlandmapone" role="tabpanel" aria-labelledby="southlandintroone-tab">
+                                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14692.774421705059!2d120.20108451312913!3d22.97990708442114!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x346e767741ce0257%3A0x7c1cb74e5bb9ec17!2z5rC06JCN5aGt5YWs5ZyS!5e0!3m2!1szh-TW!2stw!4v1576840110758!5m2!1szh-TW!2stw" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
+                              </div>
+                            </div>
+                        </div>
+                    </div>
+                  </div>
+                </div>
+
+
+                <a class="land card"  href="" data-toggle="modal" data-target="#southtwolandModal">
+                  <div class="imgbox">
+                    <img src="img/landsouth2.jpg" class="card-img-top" alt="...">
+                  </div>  
+                </a>
+                <!-- Modal -->
+                <div class="modal fade" id="southtwolandModal" >
+                    <div class="modal-dialog modal-lg modal-dialog-centered">
+                        <!-- Modal Content -->
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h3 class="modal-title" id="southtwolandModalTitle"><strong>景點介紹</strong></h3>
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                            </div>
+                            <div class="modal-body">
+    
+                              <ul class="nav nav-tabs" id="myTab" role="tablist">
+                                <li class="nav-item">
+                                  <a class="nav-link active" id="southlandintrotwo-tab" data-toggle="tab" href="#southlandintrotwo" role="tab" aria-controls="southlandintrotwo" aria-selected="true"><span>介紹</span></a>
+                                </li>
+                                <li class="nav-item">
+                                  <a class="nav-link" id="southlandmaptwo-tab" data-toggle="tab" href="#southlandmaptwo" role="tab" aria-controls="southlandintrotwo" aria-selected="false"><span>地圖</span></a>
+                                </li>
+                              </ul>
+                              <div class="tab-content" id="myTabContent">
+                                <div class="tab-pane fade show active" id="southlandintrotwo" role="tabpanel" aria-labelledby="southlandintrotwo-tab">
+                                    <img src="img/landsouth2-2.jpg">
+                                    <div class="intro">
+                                        <span><h3><strong>黑橋牌香腸博物館</strong></h3></span>
+                                        <p>黑橋牌香腸博物館在台南頗富盛名，早期是由府前路旁的烏橋仔起家，所以命名為黑橋牌，來到工廠門口就令人驚豔，外觀有如精品店一般華麗，門口的大碗公仿造以往廟口香腸攤玩骰子的情景，讓遊客一進門就開始玩起來。</p>
+                                    </div>
+                                </div>
+                                <div class="tab-pane fade maprwd" id="southlandmaptwo" role="tabpanel" aria-labelledby="southlandintrotwo-tab">
+                                  <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d12355.635414229897!2d120.18862834044513!3d22.97406590264002!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x346e75de6122a339%3A0x9970a43ee4051ee6!2z6buR5qmL54mM6aaZ6IW45Y2a54mp6aSo!5e0!3m2!1szh-TW!2stw!4v1576840327374!5m2!1szh-TW!2stw" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
+                                </div>
+                              </div>
+                          </div>
+                      </div>
+                    </div>
+                  </div>
+
+              
+                  <a class="land card"  href="" data-toggle="modal" data-target="#souththreelandModal">
+                    <div class="imgbox">
+                      <img src="img/landsouth3.jpg" class="card-img-top" alt="...">
+                    </div>  
+                  </a>
+                  <!-- Modal -->
+                  <div class="modal fade" id="souththreelandModal" >
+                      <div class="modal-dialog modal-lg modal-dialog-centered">
+                          <!-- Modal Content -->
+                          <div class="modal-content">
+                              <div class="modal-header">
+                                  <h3 class="modal-title" id="souththreelandModalTitle"><strong>景點介紹</strong></h3>
+                                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                      <span aria-hidden="true">&times;</span>
+                                  </button>
+                              </div>
+                              <div class="modal-body">
+      
+                                <ul class="nav nav-tabs" id="myTab" role="tablist">
+                                  <li class="nav-item">
+                                    <a class="nav-link active" id="southlandintrothree-tab" data-toggle="tab" href="#southlandintrothree" role="tab" aria-controls="southlandintrothree" aria-selected="true"><span>介紹</span></a>
+                                  </li>
+                                  <li class="nav-item">
+                                    <a class="nav-link" id="southlandmapthree-tab" data-toggle="tab" href="#southlandmapthree" role="tab" aria-controls="southlandintrothree" aria-selected="false"><span>地圖</span></a>
+                                  </li>
+                                </ul>
+                                <div class="tab-content" id="myTabContent">
+                                  <div class="tab-pane fade show active" id="southlandintrothree" role="tabpanel" aria-labelledby="southlandintrothree-tab">
+                                      <img src="img/landsouth3-2.jpg">
+                                      <div class="intro">
+                                          <span><h3><strong>黃金海岸</strong></h3></span>
+                                          <p>黃金海岸是台南最南端的海岸線與高雄茄萣相鄰。從台南安平漁光島起至黃金海岸，有長達近5公里的海岸線沙灘，每天下午總是有許多遊客在此散步、踏浪、放風箏，金黃色的夕陽打在沙灘上呈現出一片有如黃金般閃亮的沙灘景致，這也是黃金海岸的名稱由來，日落傍晚時分是黃金海岸最熱鬧的時候，入夜後人潮不但沒有散去，反倒被海岸邊的露天咖啡座所吸引，此時繽紛色彩的燈光亮起，從熱情的黃金海岸變身為浪漫的月光海岸，是許多情侶約會跟三兩好友夜間聚會的好去處。</p>
+                                      </div>
+                                  </div>
+                                  <div class="tab-pane fade maprwd" id="southlandmapthree" role="tabpanel" aria-labelledby="southlandintrothree-tab">
+                                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d29394.370820923625!2d120.20079374583314!3d22.93931050479753!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x346e75721ffd3031%3A0xb4dec7201f75490b!2z6buD6YeR5rW35bK4!5e0!3m2!1szh-TW!2stw!4v1576840492832!5m2!1szh-TW!2stw" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
+                                  </div>
+                                </div>
+                            </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <a class="land card"  href="" data-toggle="modal" data-target="#southfourlandModal">
+                      <div class="imgbox">
+                        <img src="img/landsouth4.jpg" class="card-img-top" alt="...">
+                      </div>  
+                    </a>
+                    <!-- Modal -->
+                    <div class="modal fade" id="southfourlandModal" >
+                        <div class="modal-dialog modal-lg modal-dialog-centered">
+                            <!-- Modal Content -->
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h3 class="modal-title" id="southfourlandModalTitle"><strong>景點介紹</strong></h3>
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                    </button>
+                                </div>
+                                <div class="modal-body">
+        
+                                  <ul class="nav nav-tabs" id="myTab" role="tablist">
+                                    <li class="nav-item">
+                                      <a class="nav-link active" id="southlandintrofour-tab" data-toggle="tab" href="#southlandintrofour" role="tab" aria-controls="southlandintrothree" aria-selected="true"><span>介紹</span></a>
+                                    </li>
+                                    <li class="nav-item">
+                                      <a class="nav-link" id="southlandmapfour-tab" data-toggle="tab" href="#southlandmapfour" role="tab" aria-controls="southlandintrothree" aria-selected="false"><span>地圖</span></a>
+                                    </li>
+                                  </ul>
+                                  <div class="tab-content" id="myTabContent">
+                                    <div class="tab-pane fade show active" id="southlandintrofour" role="tabpanel" aria-labelledby="southlandintrofour-tab">
+                                        <img src="img/landsouth4-2.jpg">
+                                        <div class="intro">
+                                            <span><h3><strong>奇美食品幸福工廠</strong></h3></span>
+                                            <p>位在台南國際門戶-台南機場前的奇美食品幸福工廠，奇美一直都是台南精神的企業代表，但大家往往只想到博物館或奇美電子，比較少會想到奇美食品。但奇美食品也是大家平常會常接觸到的喔，7-11裡面常買到的包子，甚至是國外迪士尼買到的刈包通通來自這裡，很符合他們國際化的形象，工廠內部除了參觀食品製程以外，可愛的老街商店布景是親子家庭最愛的拍照留念處，精緻的烘焙DIY體驗讓孩子像是專業的小廚師一樣做出好吃的甜點，琳瑯滿目的商品區及餐廳除了填飽五臟廟更能買到不少精美的伴手禮。</p>
+                                        </div>
+                                    </div>
+                                    <div class="tab-pane fade maprwd" id="southlandmapfour" role="tabpanel" aria-labelledby="southlandintrofour-tab">
+                                      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d12357.937341805213!2d120.21268595207023!3d22.948873513946562!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x346e75f376ea9fb5%3A0xf3c1553119c2a00f!2z5aWH576O6aOf5ZOB5bm456aP5bel5bug!5e0!3m2!1szh-TW!2stw!4v1576840676208!5m2!1szh-TW!2stw" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
+                                    </div>
+                                  </div>
+                              </div>
+                          </div>
+                        </div>
+                      </div>
+    
+                      <a class="land card"  href="" data-toggle="modal" data-target="#southfivelandModal">
+                        <div class="imgbox">
+                          <img src="img/landsouth5.jpg" class="card-img-top" alt="...">
+                        </div>  
+                      </a>
+                      <!-- Modal -->
+                      <div class="modal fade" id="southfivelandModal" >
+                          <div class="modal-dialog modal-lg modal-dialog-centered">
+                              <!-- Modal Content -->
+                              <div class="modal-content">
+                                  <div class="modal-header">
+                                      <h3 class="modal-title" id="southfivelandModalTitle"><strong>景點介紹</strong></h3>
+                                      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                          <span aria-hidden="true">&times;</span>
+                                      </button>
+                                  </div>
+                                  <div class="modal-body">
+          
+                                    <ul class="nav nav-tabs" id="myTab" role="tablist">
+                                      <li class="nav-item">
+                                        <a class="nav-link active" id="southlandintrofive-tab" data-toggle="tab" href="#southlandintrofive" role="tab" aria-controls="southlandintrofive" aria-selected="true"><span>介紹</span></a>
+                                      </li>
+                                      <li class="nav-item">
+                                        <a class="nav-link" id="southlandmapfive-tab" data-toggle="tab" href="#southlandmapfive" role="tab" aria-controls="southlandintrofive" aria-selected="false"><span>地圖</span></a>
+                                      </li>
+                                    </ul>
+                                    <div class="tab-content" id="myTabContent">
+                                      <div class="tab-pane fade show active" id="southlandintrofive" role="tabpanel" aria-labelledby="southlandintrofive-tab">
+                                          <img src="img/landsouth5-2.jpg">
+                                          <div class="intro">
+                                              <span><h3><strong>喜樹老街</strong></h3></span>
+                                              <p>「喜樹老街」位於台南市南區，約有三百年歷史的老聚落，在都市發展、人口外移中逐漸罵沒落而被淡忘，隨著社區改造、藝術與文創發展，以海濱環境特色推廣休閒運動，以傳統歷史聚落和民俗人文為主軸，運用彩繪塗鴉出傳統的古樸風氣，讓這裡成為近年來新興的彩繪文創聚落。除了彩繪外，這裡還有街頭藝人市集可以逛遊，不定期還會舉辦「喜事集藝術聚落」相關活動，創造出海濱新聚落文化。</p>
+                                          </div>
+                                      </div>
+                                      <div class="tab-pane fade maprwd" id="southlandmapfive" role="tabpanel" aria-labelledby="southlandintrofive-tab">
+                                        <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d14697.068311970506!2d120.1777971!3d22.9403891!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xd494bfd0a66a9b63!2z5Zac5qi56ICB6KGX!5e0!3m2!1szh-TW!2stw!4v1576840924380!5m2!1szh-TW!2stw" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
+                                      </div>
+                                    </div>
+                                </div>
+                            </div>
+                          </div>
+                        </div>
+            
+            </div>  
+          </div>
+
+          <div class="tab-pane fade" id="pills-anpingland" role="tabpanel" aria-labelledby="pills-anpingland-tab">
+            <div class="landgroup card-deck">
+
+              <a class="land card"  href="" data-toggle="modal" data-target="#anpingonelandModal">
+                <div class="imgbox">
+                  <img src="img/landanping1.jpg" class="card-img-top" alt="...">
+                </div>  
+              </a>
+              <!-- Modal -->
+              <div class="modal fade" id="anpingonelandModal" >
+                  <div class="modal-dialog modal-lg modal-dialog-centered">
+                      <!-- Modal Content -->
+                      <div class="modal-content">
+                          <div class="modal-header">
+                              <h3 class="modal-title" id="anpingonelandModalTitle"><strong>景點介紹</strong></h3>
+                              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                  <span aria-hidden="true">&times;</span>
+                              </button>
+                          </div>
+                          <div class="modal-body">
+
+                            <ul class="nav nav-tabs" id="myTab" role="tablist">
+                              <li class="nav-item">
+                                <a class="nav-link active" id="anpinglandintroone-tab" data-toggle="tab" href="#anpinglandintroone" role="tab" aria-controls="anpinglandintroone" aria-selected="true"><span>介紹</span></a>
+                              </li>
+                              <li class="nav-item">
+                                <a class="nav-link" id="anpinglandmapone-tab" data-toggle="tab" href="#anpinglandmapone" role="tab" aria-controls="anpinglandintroone" aria-selected="false"><span>地圖</span></a>
+                              </li>
+                            </ul>
+                            <div class="tab-content" id="myTabContent">
+                              <div class="tab-pane fade show active" id="anpinglandintroone" role="tabpanel" aria-labelledby="anpinglandintroone-tab">
+                                  <img src="img/landanping1-2.jpg">
+                                  <div class="intro">
+                                      <span><h3><strong>安平古堡</strong></h3></span>
+                                      <p>17世紀初荷蘭人以軍商結合的隊伍，於1624年占領今日安平，並建熱蘭遮城為其防禦要塞，全部工程完成於1634年。1662年鄭成功取荷蘭城後，改稱安平鎮，改內城為內府，臺人因此稱其為王城。清領時代，因台江陸浮失卻其重要性，加上清兵破壞熱蘭遮城建億載金城，故日漸荒廢。日治後重建，二戰後乃稱「安平古堡」。目前真正的荷蘭時期遺跡僅存古堡前方外城南城垣的磚牆。老榕盤根，無限滄桑，見證著盡400年來的台江的歷史。</p>
+                                  </div>
+                              </div>
+                              <div class="tab-pane fade maprwd" id="anpinglandmapone" role="tabpanel" aria-labelledby="anpinglandintroone-tab">
+                                <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d7782.069103121937!2d120.16124851164336!3d22.999982164395607!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x346e767378e3e467%3A0x9b1e15dd6ac9adf1!2z5a6J5bmz5Y-k5aCh!5e0!3m2!1szh-TW!2stw!4v1576841229421!5m2!1szh-TW!2stw" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
+                              </div>
+                            </div>
+                        </div>
+                    </div>
+                  </div>
+                </div>
+
+
+                <a class="land card"  href="" data-toggle="modal" data-target="#anpingtwolandModal">
+                  <div class="imgbox">
+                    <img src="img/landanping2.jpg" class="card-img-top" alt="...">
+                  </div>  
+                </a>
+                <!-- Modal -->
+                <div class="modal fade" id="anpingtwolandModal" >
+                    <div class="modal-dialog modal-lg modal-dialog-centered">
+                        <!-- Modal Content -->
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h3 class="modal-title" id="anpingtwolandModalTitle"><strong>景點介紹</strong></h3>
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                            </div>
+                            <div class="modal-body">
+    
+                              <ul class="nav nav-tabs" id="myTab" role="tablist">
+                                <li class="nav-item">
+                                  <a class="nav-link active" id="anpinglandintrotwo-tab" data-toggle="tab" href="#anpinglandintrotwo" role="tab" aria-controls="anpinglandintrotwo" aria-selected="true"><span>介紹</span></a>
+                                </li>
+                                <li class="nav-item">
+                                  <a class="nav-link" id="anpinglandmaptwo-tab" data-toggle="tab" href="#anpinglandmaptwo" role="tab" aria-controls="anpinglandintrotwo" aria-selected="false"><span>地圖</span></a>
+                                </li>
+                              </ul>
+                              <div class="tab-content" id="myTabContent">
+                                <div class="tab-pane fade show active" id="anpinglandintrotwo" role="tabpanel" aria-labelledby="anpinglandintrotwo-tab">
+                                    <img src="img/landanping2-2.jpg">
+                                    <div class="intro">
+                                        <span><h3><strong>觀夕平臺</strong></h3></span>
+                                        <p>位於安平港國家歷史風景區內的觀夕平台是近年相當熱門的景點，三角形的平台與兩側的防風林營造出綠意盎然的景色，平台前就是湛藍的海洋美景，午後時分常見家庭帶著小孩在沙灘上玩沙放風箏，或是三兩好友捲起褲管沿著岸邊踏浪，夕陽黃昏時天空雲彩變化是最多人佇足的時候。</p>
+                                    </div>
+                                </div>
+                                <div class="tab-pane fade maprwd" id="anpinglandmaptwo" role="tabpanel" aria-labelledby="anpinglandintrotwo-tab">
+                                  <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d7782.450723423407!2d120.14619346460914!3d22.993362033451362!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x346e7603ffffffff%3A0xd4dc6d7696b10aa2!2z6KeA5aSV5bmz6Ie6!5e0!3m2!1szh-TW!2stw!4v1576841375353!5m2!1szh-TW!2stw" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
+                                </div>
+                              </div>
+                          </div>
+                      </div>
+                    </div>
+                  </div>
+
+              
+                  <a class="land card"  href="" data-toggle="modal" data-target="#anpingthreelandModal">
+                    <div class="imgbox">
+                      <img src="img/landanping3.jpg" class="card-img-top" alt="...">
+                    </div>  
+                  </a>
+                  <!-- Modal -->
+                  <div class="modal fade" id="anpingthreelandModal" >
+                      <div class="modal-dialog modal-lg modal-dialog-centered">
+                          <!-- Modal Content -->
+                          <div class="modal-content">
+                              <div class="modal-header">
+                                  <h3 class="modal-title" id="anpingthreelandModalTitle"><strong>景點介紹</strong></h3>
+                                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                      <span aria-hidden="true">&times;</span>
+                                  </button>
+                              </div>
+                              <div class="modal-body">
+      
+                                <ul class="nav nav-tabs" id="myTab" role="tablist">
+                                  <li class="nav-item">
+                                    <a class="nav-link active" id="anpinglandintrothree-tab" data-toggle="tab" href="#anpinglandintrothree" role="tab" aria-controls="anpinglandintrothree" aria-selected="true"><span>介紹</span></a>
+                                  </li>
+                                  <li class="nav-item">
+                                    <a class="nav-link" id="anpinglandmapthree-tab" data-toggle="tab" href="#anpinglandmapthree" role="tab" aria-controls="anpinglandintrothree" aria-selected="false"><span>地圖</span></a>
+                                  </li>
+                                </ul>
+                                <div class="tab-content" id="myTabContent">
+                                  <div class="tab-pane fade show active" id="anpinglandintrothree" role="tabpanel" aria-labelledby="anpinglandintrothree-tab">
+                                      <img src="img/landanping3-2.jpg">
+                                      <div class="intro">
+                                          <span><h3><strong>林默娘公園</strong></h3></span>
+                                          <p>來到安平漁港邊，最顯眼的莫過於聳立在港邊的林默娘雕像，有如台南的自由女神般的看顧著每天進出的船隻，白天的藍天白雲讓媽祖有如身在雲端神力無邊，直至黃昏，父母親開始帶著小朋友們出來散步，孩子們在周邊的草皮開心跟著泡泡街頭藝人嬉戲，或是放著風箏，當中也有不少主人帶著毛孩子解開束縛，歡欣的在草皮上奔跑。</p>
+                                      </div>
+                                  </div>
+                                  <div class="tab-pane fade maprwd" id="anpinglandmapthree" role="tabpanel" aria-labelledby="anpinglandintrothree-tab">
+                                    <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d11005.903414082375!2d120.15863025695083!3d22.995127939273292!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x140772ce114f5c1b%3A0xacf29a4cc22c2a88!2z5p6X6buY5aiY5YWs5ZyS!5e0!3m2!1szh-TW!2stw!4v1576841590853!5m2!1szh-TW!2stw" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
+                                  </div>
+                                </div>
+                            </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <a class="land card"  href="" data-toggle="modal" data-target="#anpingfourlandModal">
+                      <div class="imgbox">
+                        <img src="img/landanping4.jpg" class="card-img-top" alt="...">
+                      </div>  
+                    </a>
+                    <!-- Modal -->
+                    <div class="modal fade" id="anpingfourlandModal" >
+                        <div class="modal-dialog modal-lg modal-dialog-centered">
+                            <!-- Modal Content -->
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h3 class="modal-title" id="anpingfourlandModalTitle"><strong>景點介紹</strong></h3>
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                    </button>
+                                </div>
+                                <div class="modal-body">
+        
+                                  <ul class="nav nav-tabs" id="myTab" role="tablist">
+                                    <li class="nav-item">
+                                      <a class="nav-link active" id="anpinglandintrofour-tab" data-toggle="tab" href="#anpinglandintrofour" role="tab" aria-controls="anpinglandintrothree" aria-selected="true"><span>介紹</span></a>
+                                    </li>
+                                    <li class="nav-item">
+                                      <a class="nav-link" id="anpinglandmapfour-tab" data-toggle="tab" href="#anpinglandmapfour" role="tab" aria-controls="anpinglandintrothree" aria-selected="false"><span>地圖</span></a>
+                                    </li>
+                                  </ul>
+                                  <div class="tab-content" id="myTabContent">
+                                    <div class="tab-pane fade show active" id="anpinglandintrofour" role="tabpanel" aria-labelledby="anpinglandintrofour-tab">
+                                        <img src="img/landanping4-2.jpg">
+                                        <div class="intro">
+                                            <span><h3><strong>億載金城</strong></h3></span>
+                                            <p>億載金城又名「二鯤鯓砲台」，是一個四方型四周有稜堡且有護城河圍繞的紅色城堡，中央處的草皮則是當時用來操練士兵的所在地，從地圖上看是一個非常勻稱的菱形設計，隨著歷史演進，億載金城已失去軍事據點的作用，轉變為相當受歡迎的景點，假日偶有穿著清兵服裝的工作人員在砲台上演練著砲操，有如時光倒流的場景讓許多遊客驚喜不已，三-四月周邊黃花風鈴木盛開時更是絕美，常可見遊客踩踏著天鵝船在護城河中緩緩前進，與生活在此的野鴨及天鵝一同在水域裡嬉戲著。</p>
+                                        </div>
+                                    </div>
+                                    <div class="tab-pane fade maprwd" id="anpinglandmapfour" role="tabpanel" aria-labelledby="anpinglandintrofour-tab">
+                                      <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d5194.34467173811!2d120.16046087685126!3d22.988632874296727!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x346e75fff4a4fa93%3A0xb74ad4513660894e!2z5LqM6a-k6a-T56Cy6Ie6KOWEhOi8iemHkeWfjik!5e0!3m2!1szh-TW!2stw!4v1576841861028!5m2!1szh-TW!2stw" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
+                                    </div>
+                                  </div>
+                              </div>
+                          </div>
+                        </div>
+                      </div>
+    
+                      <a class="land card"  href="" data-toggle="modal" data-target="#anpingfivelandModal">
+                        <div class="imgbox">
+                          <img src="img/landanping5.jpg" class="card-img-top" alt="...">
+                        </div>  
+                      </a>
+                      <!-- Modal -->
+                      <div class="modal fade" id="anpingfivelandModal" >
+                          <div class="modal-dialog modal-lg modal-dialog-centered">
+                              <!-- Modal Content -->
+                              <div class="modal-content">
+                                  <div class="modal-header">
+                                      <h3 class="modal-title" id="anpingfivelandModalTitle"><strong>景點介紹</strong></h3>
+                                      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                          <span aria-hidden="true">&times;</span>
+                                      </button>
+                                  </div>
+                                  <div class="modal-body">
+          
+                                    <ul class="nav nav-tabs" id="myTab" role="tablist">
+                                      <li class="nav-item">
+                                        <a class="nav-link active" id="anpinglandintrofive-tab" data-toggle="tab" href="#anpinglandintrofive" role="tab" aria-controls="anpinglandintrofive" aria-selected="true"><span>介紹</span></a>
+                                      </li>
+                                      <li class="nav-item">
+                                        <a class="nav-link" id="anpinglandmapfive-tab" data-toggle="tab" href="#anpinglandmapfive" role="tab" aria-controls="anpinglandintrofive" aria-selected="false"><span>地圖</span></a>
+                                      </li>
+                                    </ul>
+                                    <div class="tab-content" id="myTabContent">
+                                      <div class="tab-pane fade show active" id="anpinglandintrofive" role="tabpanel" aria-labelledby="anpinglandintrofive-tab">
+                                          <img src="img/landanping5-2.jpg">
+                                          <div class="intro">
+                                              <span><h3><strong>漁光島</strong></h3></span>
+                                              <p>漁光島真的是一座島，位於台南府城安平港的南側，僅藉著漁光橋與府城相連，原本叫做三鯤鯓，是府城最僻靜的小漁村，但自從漁光島那1.5公里長的月牙灣海灘公諸於世，漁光島已經成為台南最熱血的景點，沖浪、風浪板、立槳沖浪都可以玩，也是最浪漫的景點，超級適合漫步、吹風、看夕陽。</p>
+                                          </div>
+                                      </div>
+                                      <div class="tab-pane fade maprwd" id="anpinglandmapfive" role="tabpanel" aria-labelledby="anpinglandintrofive-tab">
+                                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3673.162696624974!2d120.15348061474445!3d22.981043984974118!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x346e75fd29b0baf3%3A0x7f45ba897226e132!2z5ryB5YWJ5bO2!5e0!3m2!1szh-TW!2stw!4v1576841951387!5m2!1szh-TW!2stw" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
+                                      </div>
+                                    </div>
+                                </div>
+                            </div>
+                          </div>
+                        </div>
+            
+            </div>  
+
+
+
+          </div>
+
+
+        </div>
 
     </div>
 
-    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
-    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
-    <script>
+    </section>
 
-        new Vue({
-            el: '#todoclass',
+    <footer class="foot">
+      <span>Copyright © 2019 Tu ChihWei</span>
+    </footer>
 
-            data: {
-               
-                inputcontens: '',
-                isloading:false,
-                apidata: [],
-                difzone: [],
-                difkind: [],
-                areamod: 'all',
-                kindmod: 'all',
-                filterdatas: [],
-                checked: []
-            },
-            computed: {
-              
+    <!--Bootstrap Popper jquery script-->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
 
-                allfilter(){
-                    let vm = this;
-                    
-                    return vm.filtinput();
-                }
-                
-                
-          
-            },
-            created() {
-                let vm = this;
-
-                // var cors = "https://cors-anywhere.herokuapp.com/";
-                // var url = "https://khh.travel/foodxml.aspx";
-
-                vm.isloading=true;
-                axios.get('https://data.kcg.gov.tw/api/action/datastore_search?resource_id=92290ee5-6e61-456f-80c0-249eae2fcc97')
-                    .then((res) => {
-                        console.log(res.data.result.records);
-                        vm.apidata = res.data.result.records;
-                        vm.filterzone(vm.apidata);
-                        vm.filtercls(vm.apidata);
-                        vm.isloading=false;
-
-
-                    });
-
-
-            },
-            methods: {
-                filtinput(){
-                    let vm = this;
-                    var temparray=[];
-                    if(!vm.inputcontens){
-                        return vm.filteralltime();
-                    }
-                    else{
-                        console.log(vm.inputcontens)
-
-                        
-                        temparray=vm.filteralltime().filter(item => {
-                                return item.Name.toLowerCase().indexOf(vm.inputcontens.toLowerCase()) !== -1 
-                        })
-                        return temparray
-                      
-                        
-                    }
-                   
-                 
-                },
-                filteralltime(alltimearray) {
-                    let vm = this;
-                    var temparray = [];
-
-                    if (vm.checked.length == 0 ) {
-                        // console.log('check nothing');
-                        return this.filterareas();
-                    }
-                    else if (vm.checked.includes('forfree') && vm.checked.length == 1) {
-                        if (alltimearray) {
-                            alltimearray.forEach(item => {
-                                if (item.Ticketinfo == "免費參觀") {
-                                    temparray.push(item)
-                                }
-                            });
-                        }
-                        else {
-                            vm.apidata.forEach(item => {
-                                if (item.Ticketinfo == "免費參觀") {
-                                    temparray.push(item)
-                                }
-                            });
-                        }
-
-                        return vm.filterareas(temparray);
-                    }
-                    else if (vm.checked.includes('"alltime"') && vm.checked.length == 1) {
-                        if (alltimearray) {
-                            alltimearray.forEach(item => {
-                                if (item.Opentime == "全天候開放") {
-                                    temparray.push(item)
-                                }
-                            });
-                        }
-                        else {
-                            vm.apidata.forEach(item => {
-                                if (item.Opentime == "全天候開放") {
-                                    temparray.push(item)
-                                }
-                            });
-                        }
-
-                        return vm.filterareas(temparray);
-                    }
-                    else {
-                        if (alltimearray) {
-                            alltimearray.forEach(item => {
-                                if (item.Opentime == "全天候開放" && item.Ticketinfo == "免費參觀") {
-                                    temparray.push(item)
-                                }
-                            });
-                        }
-                        else {
-                            vm.apidata.forEach(item => {
-                                if (item.Opentime == "全天候開放" && item.Ticketinfo == "免費參觀") {
-                                    temparray.push(item)
-                                }
-                            });
-                        }
-
-                        return vm.filterareas(temparray);
-                    }
-
-                },
-                filterareas(freearray) {
-                    // console.log(freearray)
-                    let vm = this;
-                    var temparray = [];
-
-                    if (vm.areamod == 'all' && vm.kindmod == 'all') {
-                        if (freearray) {
-                            return freearray
-                        }
-                        else {
-                            return vm.apidata
-                        }
-                    }
-                    else if (vm.areamod !== 'all' && vm.kindmod == 'all') {
-                        if (freearray) {
-                            freearray.forEach(item => {
-                                if (item.Zone == vm.areamod) {
-                                    temparray.push(item)
-                                }
-                            })
-                        }
-                        else {
-                            vm.apidata.forEach(item => {
-                                if (item.Zone == vm.areamod) {
-                                    temparray.push(item)
-                                }
-                            })
-                        }
-
-                        return temparray;
-                    }
-
-                    else if (vm.areamod == 'all' && vm.kindmod !== 'all') {
-                        if (freearray) {
-                            freearray.forEach(item => {
-                                if (vm.cls(item.Class1) == vm.kindmod) {
-                                    temparray.push(item)
-                                }
-
-                            })
-                        }
-                        else {
-                            vm.apidata.forEach(item => {
-                                if (vm.cls(item.Class1) == vm.kindmod) {
-                                    temparray.push(item)
-                                }
-
-                            })
-                        }
-
-                        return temparray
-                    }
-                    else {
-                        if (freearray) {
-                            freearray.forEach(item => {
-                                if (vm.cls(item.Class1) == vm.kindmod && item.Zone == vm.areamod) {
-                                    temparray.push(item)
-                                }
-                            })
-                        }
-                        else {
-                            vm.apidata.forEach(item => {
-                                if (vm.cls(item.Class1) == vm.kindmod && item.Zone == vm.areamod) {
-                                    temparray.push(item)
-                                }
-                            })
-                        }
-
-                        return temparray
-                    }
-
-                },
-                cls(cate) {
-                    switch (cate) {
-                        case '1':
-                            return '文化類'
-                            break;
-                        case '2':
-                            return '生態類'
-                            break;
-                        case '3':
-                            return '古蹟類'
-                            break;
-                        case '4':
-                            return '廟宇類'
-                            break;
-                        case '5':
-                            return '藝術類'
-                            break;
-                        case '6':
-                            return '小吃 / 特產類'
-                            break;
-                        case '7':
-                            return '國家公園類'
-                            break;
-                        case '8':
-                            return '國家風景區類'
-                            break;
-                        case '9':
-                            return '休閒農業類'
-                            break;
-                        case '10':
-                            return '溫泉類'
-                            break;
-                        case '11':
-                            return '自然風景類'
-                            break;
-                        case '12':
-                            return '遊憩類'
-                            break;
-                        case '13':
-                            return '體育健身類'
-                            break;
-                        case '14':
-                            return '觀光工廠類'
-                            break;
-                        case '15':
-                            return '都會公園類'
-                            break;
-                        case '16':
-                            return '森林遊樂區類'
-                            break;
-                        case '17':
-                            return '林場類'
-                            break;
-                        case '18':
-                            return '其他'
-                            break;
-
-                    }
-                },
-                filterzone(data) {
-                    let vm = this;
-                    data.forEach(item => {
-                        if (vm.difzone.indexOf(item.Zone) == -1) {
-                            vm.difzone.push(item.Zone);
-                        }
-                    })
-                    console.log(vm.difzone)
-                },
-                filtercls(data) {
-                    let vm = this;
-                    data.forEach(item => {
-
-                        temparray = this.cls(item.Class1);
-
-                        if (vm.difkind.indexOf(temparray) == -1) {
-
-                            vm.difkind.push(temparray);
-                        }
-                    })
-                },
-
-
-
-
-            }
-        });
-
-
-
-
-
-
-
-
-    </script>
-
-
-
+    
 </body>
-
 </html>
